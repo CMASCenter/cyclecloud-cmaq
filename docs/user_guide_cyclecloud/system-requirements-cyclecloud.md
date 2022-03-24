@@ -6,6 +6,8 @@ It may be possible to set up daily or weekly spending alarms as well.
 
 ### Software Requirements for CMAQ on CycleCloud
 
+Tier 1: Native OS and associated system libraries, compilers
+
 * Tcsh shell
 * Centos7  (tried ubuntu but the module command did not provide updated compilers and openmpi)
 * Git
@@ -14,6 +16,20 @@ It may be possible to set up daily or weekly spending alarms as well.
 * NetCDF (with C, C++, and Fortran support)
 * I/O API
 * Slurm Scheduler
+
+Tier 2: additional libraries required for installing CMAQ
+
+* NetCDF (with C, C++, and Fortran support)
+* I/O API
+
+Tier 3: Software distributed thru the CMAS Center
+
+* CMAQv533
+* CMAQv533 Post Processors
+
+Tier 4: R packages and Scripts
+
+* R QA Scripts
 
 ### Hardware Requirements
 
