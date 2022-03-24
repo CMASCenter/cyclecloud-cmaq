@@ -26,6 +26,7 @@ nav:
         - 'CMAQ Support': 'help/cmaq_support.md'
         - 'Azure Free Training': 'help/azure-free-training.md'
         - 'Key References on Cloud Computing': 'help/key-references.md'
+        - 'Frequently Asked Questions': 'help/faq.md'
     - Future Work:
         - 'Future Work': 'user_guide_cyclecloud/future_work.md'
 
