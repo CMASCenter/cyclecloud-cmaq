@@ -8,3 +8,9 @@ A. Check the logs available in the following link
 
 If the resume step is failing, there will also be a 
 `vi /var/log/slurmctld/resume_fail.log`
+
+Q. Is there a tutorial on how to use SLURM?
+
+A. Yes
+
+<a href="https://hpc.llnl.gov/banks-jobs/running-jobs/slurm">Surm Tutorial</a> 
