@@ -33,7 +33,7 @@ sim2.file <- paste0(sim2.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_9x10pe_remove_nativ
 #MAKE.SPATIAL.PLOTS: Maps of the differencs for each hour saved, as a .pdf in the ouput directory.
 SAVE.DIFFERENCES <- TRUE  
 MAKE.BOXPLOTS <- TRUE
-MAKE.SPATIAL.PLOTS <- TRUE
+MAKE.SPATIAL.PLOTS <- FALSE
 
 #List of what species to compare.  If this is set to NULL, the code will compare all 
 #species that are common between the sim1 and sim2 files. Note this can be quite slow!
