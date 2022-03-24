@@ -214,19 +214,12 @@ sudo yum install epel-release
 sudo yum install gdal-devel
 ```
 
-configure: pkg-config proj not available
-  set PKG_CONFIG_PATH to the directory containing proj.pc
-configure: PROJ version not determined using pkg-config proj
-
-
-Lots of issues
-
 https://grasswiki.osgeo.org/wiki/Compile_and_Install
 
 Tried following above suggestion to install for GRASS
 
 ```
-yum install flex bison make zlib-devel gcc-c++ gettext \
+sudo yum install flex bison make zlib-devel gcc-c++ gettext \
              sqlite-devel mesa-libGL-devel mesa-libGLU-devel \
              libXmu-devel libX11-devel fftw-devel libtiff-devel \
              lesstif-devel python-devel numpy wxPython wxGTK-devel \
