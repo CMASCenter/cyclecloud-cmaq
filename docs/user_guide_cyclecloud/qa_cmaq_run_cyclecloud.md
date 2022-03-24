@@ -242,10 +242,17 @@ cd /shared/pcluster-cmaq/qa_scripts
 Rscript compare_EQUATES_benchmark_output_CMAS_cyclecloud.r
 ```
 
+View the Operating System
+
+`cat /etc/os-release`
+
 To view the script, install imagemagick
 
+
 ```
-sudo yum install ImageMagick ImageMagick-devel
+sudo yum groupinstall " Development Tools" -y
+sudo yum install ImageMagick
+sudo yum install ImageMagick-devel
 ```
 
 Make sure that you have Xquartz running on your local machine, and that you have given permission to display back from the cyclecloud server.
