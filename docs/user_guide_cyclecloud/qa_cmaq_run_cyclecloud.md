@@ -194,7 +194,9 @@ set path = ($path /shared/build/install/bin /shared/build/ioapi-3.2/Linux2_x86_6
 
 Run command to install ncdf4 package
 
-sudo R CMD INSTALL ncdf4_1.13.tar.gz --configure-args="--with-nc-config=/shared/build-hdf5/install/bin/nc-config"
+`cd /shared/cyclecloud-cmaq/qa_scripts/R_packages`
+
+`sudo R CMD INSTALL ncdf4_1.13.tar.gz --configure-args="--with-nc-config=/shared/build-hdf5/install/bin/nc-config"`
 
 
 Install additional packages as root so that all users will have access.
