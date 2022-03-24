@@ -145,6 +145,10 @@ edit the R script to specify the sim1.dir, sim1.file  and sim2.dir, sim2.file to
 
 <a href="https://linuxize.com/post/how-to-install-r-on-centos-7/">How to install R on Centos7</a>
 
+May need to install on head node into a local mylibs directory, and then copy to the compute nodes, in order to run post processing R scripts on HTC node using slurm..
+
+<a href="https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio">Using R on HPC Clusters</a>
+
 Use the following commands, and also install packages - note, see website above for full details:
 
 Install R
