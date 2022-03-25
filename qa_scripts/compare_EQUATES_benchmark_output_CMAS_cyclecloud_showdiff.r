@@ -16,14 +16,20 @@ my.diff.col <- function(n)c(my.col.cool1(n/2),my.col.warm1(n/2))
 output.dir <- "/shared/cyclecloud-cmaq/qa_scripts/qa_plots/"
 
 #Directory, file name, and label for first model simulation (sim1)
-sim1.label <- "(GCC 10x18 remove native)"
-sim1.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_10x18pe_remove_native_sleep/"
-sim1.file <- paste0(sim1.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_10x18pe_remove_native_sleep_20151222.nc")
+sim1.label <- "GCC 10x18PE)"
+sim1.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_10x18pe/"
+sim1.file <- paste0(sim1.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_10x18pe_20151222.nc")
+
+#sim1.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_10x18pe_remove_native_sleep/"
+#sim1.file <- paste0(sim1.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_10x18pe_remove_native_sleep_20151222.nc")
 
 #Directory, file name, and label for second model simulation (sim2)
-sim2.label <- "(GCC 9x10 remove native)"
-sim2.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_9x10pe_remove_native_sleep/"
-sim2.file <- paste0(sim2.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_9x10pe_remove_native_sleep_20151222.nc")
+sim2.label <- "GCC 12x20PE)"
+sim2.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_12x20pe/"
+sim2.file <- paste0(sim2.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_12x20pe_20151222.nc")
+
+#sim2.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_9x10pe_remove_native_sleep/"
+#sim2.file <- paste0(sim2.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_9x10pe_remove_native_sleep_20151222.nc")
 
 
 #Flags for toggling on or off different comparsions.
@@ -33,7 +39,7 @@ sim2.file <- paste0(sim2.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_9x10pe_remove_nativ
 #MAKE.SPATIAL.PLOTS: Maps of the differencs for each hour saved, as a .pdf in the ouput directory.
 SAVE.DIFFERENCES <- TRUE  
 MAKE.BOXPLOTS <- TRUE
-MAKE.SPATIAL.PLOTS <- FALSE
+MAKE.SPATIAL.PLOTS <- TRUE
 
 #List of what species to compare.  If this is set to NULL, the code will compare all 
 #species that are common between the sim1 and sim2 files. Note this can be quite slow!
