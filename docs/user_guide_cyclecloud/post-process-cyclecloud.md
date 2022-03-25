@@ -39,11 +39,11 @@ Show compute nodes
 
 You need to run the post processing scripts for every benchmark case.
 
-cp /shared/cyclecloud-cmaq/run_scripts/run_combine_conus.csh .
+`cp /shared/cyclecloud-cmaq/run_scripts/run_combine_conus.csh .`
 
 Examine the run script
 
-cat run_combine_conus.csh
+`cat run_combine_conus.csh`
 
 The post processing scripts are set up for a specific case, example:
 
