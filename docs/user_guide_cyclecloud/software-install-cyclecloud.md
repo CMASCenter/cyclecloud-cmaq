@@ -54,9 +54,9 @@ logout and log back in to have it take effect
 
 `cd /shared`
 
-`git clone -b main https://github.com/lizadams/pcluster-cmaq.git pcluster-cmaq`
+`git clone -b main https://github.com/lizadams/cyclecloud-cmaq.git cyclecloud-cmaq`
 
-`cd pcluster-cmaq`
+`cd cyclecloud-cmaq`
 
 ### Change the group to cmaq recursively for the /shared directory
 
@@ -90,7 +90,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ### Change directories to install and build the libraries and CMAQ
 
-`cd /shared/pcluster-cmaq`
+`cd /shared/cyclecloud-cmaq`
 
 ### Build netcdf C and netcdf F libraries - these scripts work for the gcc 8+ compiler
 

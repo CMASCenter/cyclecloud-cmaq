@@ -148,7 +148,7 @@ edit the R script to specify the sim1.dir, sim1.file  and sim2.dir, sim2.file to
 Then run the R scripts!
 
 ```
-cd /shared/pcluster-cmaq/qa_scripts
+cd /shared/cyclecloud-cmaq/qa_scripts
 Rscript compare_EQUATES_benchmark_output_CMAS_cyclecloud.r
 ```
 

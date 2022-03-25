@@ -45,7 +45,7 @@ sudo yum install libcurl-devel
 ```
 
 ```
-cd /shared/pcluster-cmaq
+cd /shared/cyclecloud-cmaq
 ./gcc_install_hdf5.cyclecloud.csh
 ```
 Need to specify the location of nc-config in your .cshrc
