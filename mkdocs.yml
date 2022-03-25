@@ -12,7 +12,7 @@ nav:
         - 4 CMAQ CONUS Benchmark Option 2:
              - '4.1 Run CMAQ CONUS Benchmark from pre-installed Azure volume': 'user_guide_cyclecloud/preinstall.md'
         - 5 Azure CycleCloud install R and packages:
-             - '5.1 Install R and packages': 'userguide_cyclecloud/install_r_and_packages.md'
+             - '5.1 Install R and packages': 'user_guide_cyclecloud/install_r_and_packages.md'
         - 6 Azure CycleCloud Post-Processing and QA:
              - '6.1 Compile and Run Post-processors': 'user_guide_cyclecloud/post-process-cyclecloud.md'
              - '6.2 Compare timings': 'user_guide_cyclecloud/parse_timing_cyclecloud.md'
