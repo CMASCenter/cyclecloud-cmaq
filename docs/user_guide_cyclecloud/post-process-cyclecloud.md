@@ -5,9 +5,10 @@
 
 Copy the buildit script from the repo, as it was corrected to use CMAQv533 rather than CMAQv532
 
-`cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts`
-
-`cp /shared/cyclecloud-cmaq/run_scripts/bldit_combine.csh .`
+```
+cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts
+cp /shared/cyclecloud-cmaq/run_scripts/bldit_combine.csh .
+```
 
 `cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts`
 
@@ -118,6 +119,7 @@ sed -i 's/Bench_2016_12SE1/2016_CONUS_10x18pe/g' run_hr2day_conus.csh
 sed -i 's/intel/gcc/g' run_hr2day_conus.csh
 sed -i 's/2016182/2015356/g' run_hr2day_conus.csh
 sed -i 's/2016195/2015357/g' run_hr2day_conus.csh
+sed -i 's/201607/201512/g' run_hr2day_conus.csh
 setenv CMAQ_DATA /shared/data
 ./run_hr2day_conus.csh
 
