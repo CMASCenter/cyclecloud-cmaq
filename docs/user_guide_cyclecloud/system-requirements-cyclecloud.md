@@ -148,13 +148,17 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 
 | Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | SBATCH --exclusive | Data Imported or Copied | DisableSimultaneousMultithreading| Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag |
 | ------------- | -----------    | -----------   | ----------------     | ---------------      | -------------------        | ------------------ | --------------          | ---------                              |   -------- | --------- | ------ | ---------------      |
-| 36           |  1x35     | 6x6            | 1223.52              |  1126.19             |    2349.71                 |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
+| 36           |  1x36     | 6x6            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
 | 40           | 1x40      | 4x10           | 6685.74              | 5935.01              | 12620.75                   |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * 3.5 = $4.9 | 3.6/hr * 1 nodes * 3.5 = $12.6 | with -march=native compiler flag |
+| 72           |  2x36     | 8x9            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
+| 180           |  5x36     | 10x18            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
+| 288           |  8x36     | 16x18            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
+
 
 
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
-Figure 2. Cost by Instance Type - update for Azure 
+Fost by Instance Type - update for Azure 
 
 ![Azure Cost Management Console - Cost by Instance Type](../qa_plots/cost_plots/Azure_Bench_Cost.png)
 
