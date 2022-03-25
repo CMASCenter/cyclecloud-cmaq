@@ -11,13 +11,15 @@ nav:
              - '3.3 Run CMAQ CONUS Benchmark on Cycle Cloud': 'user_guide_cyclecloud/run-cmaq-benchmark-cyclecloud.md'
         - 4 CMAQ CONUS Benchmark Option 2:
              - '4.1 Run CMAQ CONUS Benchmark from pre-installed Azure volume': 'user_guide_cyclecloud/preinstall.md'
-        - 5 Azure CycleCloud Post-Processing and QA:
-             - '5.1 Compile and Run Post-processors': 'user_guide_cyclecloud/post-process-cyclecloud.md'
-             - '5.2 Compare timings': 'user_guide_cyclecloud/parse_timing_cyclecloud.md'
-             - '5.3 QA CMAQ Output': 'user_guide_cyclecloud/qa_cmaq_run_cyclecloud.md'
-             - '5.4 Saving Output': 'user_guide_cyclecloud/copy_output_to_archive_cyclecloud.md'
-        - 6 Logout and Delete CycleCloud:
-             - '6.1 Logout and Delete Cluster': 'user_guide_cyclecloud/logout_delete_cyclecloud.md'
+        - 5 Azure CycleCloud install R and packages:
+             - '5.1 Install R and packages': 'userguide_cyclecloud/install_r_and_packages.md'
+        - 6 Azure CycleCloud Post-Processing and QA:
+             - '6.1 Compile and Run Post-processors': 'user_guide_cyclecloud/post-process-cyclecloud.md'
+             - '6.2 Compare timings': 'user_guide_cyclecloud/parse_timing_cyclecloud.md'
+             - '6.3 QA CMAQ Output': 'user_guide_cyclecloud/qa_cmaq_run_cyclecloud.md'
+             - '6.4 Saving Output': 'user_guide_cyclecloud/copy_output_to_archive_cyclecloud.md'
+        - 7 Logout and Delete CycleCloud:
+             - '7.1 Logout and Delete Cluster': 'user_guide_cyclecloud/logout_delete_cyclecloud.md'
     - About:
         - 'License': 'license.md'
         - 'Release Notes': 'release-notes.md'
