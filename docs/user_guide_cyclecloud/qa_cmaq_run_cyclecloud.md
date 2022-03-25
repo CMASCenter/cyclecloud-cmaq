@@ -174,99 +174,82 @@ Example output plots are available for the CONUS Benchmark in the following dire
 
 When NPCOL is fixed, we are seeing no difference in the answers.
 
-Example comparsion was done on dogwood using: 8x8 compared to 8x16
+Example comparison of 10x18 compared to 9x10 with the -march=native compiler flag removed
 
-```
-cd ../qa_plots/
+Box Plot for ANO3J when -march=native compiler flag is removed 
 
-cd box_plots
-
-cd 8x8_vs_8x16
-
-```
-Box Plot for ANO3J when NPCOL is identical 
-
-![ANO3J_BOXPLOT_CMAQv5.3.3wGCC8x8pe_vs_CMAQv5.3.3wGCC8x8pe.jpeg](../qa_plots/box_plots/8x8_vs_8x16/ANO3J_BOXPLOT_CMAQv5.3.3wGCC8x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg)
+![ANO3J_BOXPLOT_GCC10x18removenative_vs_GCC9x10removenative.jpeg](../qa_plots/box_plots/ANO3J_BOXPLOT_GCC10x18removenative_vs_GCC9x10removenative.jpeg)
 
 
 
-Box plot shows no difference between ACONC output for a CMAQv5.3.3 run using different PE configurations as long as NPCOL is fixed (this is true for all species that were plotted (AOTHRJ, CO, NH3, NO2, O3, OH, SO2)
+Box plot shows no difference between ACONC output for a CMAQv5.3.3 run using different PE configurations as long as NPCOL is fixed (this is true for all species that were plotted (AOTHRJ, CO, NH3, NO2, O3, OH, SO2), or when not using march=native in the compiler flag
 
-```
-cd 16x8_vs_8x16
 
-```
-
-Box plot shows a difference betweeen ACONC output for a CMAQv5.3.3 run using different PE configurations when NPCOL is different
+Box plot shows a difference betweeen ACONC output for a CMAQv5.3.3 run using different PE configurations when NPCOL is different, if march=native option is used
 
 ANO3J
 
-![ANO3J_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg](../qa_plots/box_plots/16x8_vs_8x16/ANO3J_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg)
+![ANO3J_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg](../qa_plots/box_plots/ANO3J_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg)
 
 AOTHRJ
 
-![AOTHRJ_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg](../qa_plots/box_plots/16x8_vs_8x16/AOTHRJ_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg)
+![AOTHRJ_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg](../qa_plots/box_plots/AOTHRJ_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg)
 
 CO
 
-![CO_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg](../qa_plots/box_plots/16x8_vs_8x16/CO_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg)
+![CO_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg](../qa_plots/box_plots/CO_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg)
 
 NH3
 
-![NH3_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg](../qa_plots/box_plots/16x8_vs_8x16/NH3_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg)
+![NH3_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg](../qa_plots/box_plots/NH3_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg)
 
 NO2
 
-![NO2_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg](../qa_plots/box_plots/16x8_vs_8x16/NO2_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg)
+![NO2_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg](../qa_plots/box_plots/NO2_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg)
 
 O3
 
-![O3_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg](../qa_plots/box_plots/16x8_vs_8x16/O3_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg)
+![O3_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg](../qa_plots/box_plots/O3_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg)
 
 OH
 
-![OH_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg](../qa_plots/box_plots/16x8_vs_8x16/OH_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg)
+![OH_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg](../qa_plots/box_plots/OH_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg)
 
 SO2
 
-![SO2_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg](../qa_plots/box_plots/16x8_vs_8x16/SO2_BOXPLOT_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpeg)
+![SO2_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg](../qa_plots/box_plots/SO2_BOXPLOT_GCC10x18PE_vs_GCC12x20PE.jpeg)
 
-```
-cd spatial_plots
 
-cd 16x8_vs_8x16
-```
-
-Spatial Plot for when NPCOL is different
+Spatial Plot for when NPCOL is different and when -march=native compiler flag is used
 
 ANO3J
 
-![ANO3J_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../qa_plots/spatial_plots/16x8_vs_8x16/ANO3J_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg)
+![ANO3J_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg ](../qa_plots/spatial_plots/ANO3J_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg)
 
 AOTHRJ
 
-![AOTHRJ_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../qa_plots/spatial_plots/16x8_vs_8x16/AOTHRJ_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg)
+![AOTHRJ_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg ](../qa_plots/spatial_plots/AOTHRJ_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg)
 
 CO
 
-![CO_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../qa_plots/spatial_plots/16x8_vs_8x16/CO_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg)
+![CO_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg ](../qa_plots/spatial_plots/CO_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg)
 
 NH3
 
-![NH3_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../qa_plots/spatial_plots/16x8_vs_8x16/NH3_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg)
+![NH3_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg ](../qa_plots/spatial_plots/NH3_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg)
 
 
 NO2
 
-![NO2_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../qa_plots/spatial_plots/16x8_vs_8x16/NO2_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg)
+![NO2_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg ](../qa_plots/spatial_plots/NO2_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg)
 
 O3
 
-![O3_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../qa_plots/spatial_plots/16x8_vs_8x16/O3_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg)
+![O3_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg ](../qa_plots/spatial_plots/O3_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg)
 
 OH
 
-![OH_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../qa_plots/spatial_plots/16x8_vs_8x16/OH_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg)
+![O3_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg ](../qa_plots/spatial_plots/O3_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg)
 
 SO2
 ![SO2_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../qa_plots/spatial_plots/16x8_vs_8x16/SO2_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg)
