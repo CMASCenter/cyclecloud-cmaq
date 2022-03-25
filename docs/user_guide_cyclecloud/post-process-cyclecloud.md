@@ -10,21 +10,53 @@ cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts
 cp /shared/cyclecloud-cmaq/run_scripts/bldit_combine.csh .
 ```
 
-`cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts`
+Run the bldit script for combine.
 
-`./bldit_combine.csh gcc |& tee ./bldit_combine.gcc.log`
+```
+cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts
+./bldit_combine.csh gcc |& tee ./bldit_combine.gcc.log
+```
 
-`cd /shared/build/openmpi_gcc/CMAQ_v533/POST/calc_tmetric/scripts`
+Copy the bldit script from the repo.
 
-`./bldit_calc_tmetric.csh gcc |& tee ./bldit_calc_tmetric.gcc.log`
+```
+cd /shared/build/openmpi_gcc/CMAQ_v533/POST/calc_tmetric/scripts
+cp /shared/cyclecloud-cmaq/run_scripts/bldit_calc_tmetric.csh .
+```
 
-`cd /shared/build/openmpi_gcc/CMAQ_v533/POST/hr2day/scripts`
+Run the bldit script for calc_tmetric
 
-`./bldit_hr2day.csh gcc |& tee ./bldit_hr2day.gcc.log`
+```
+cd /shared/build/openmpi_gcc/CMAQ_v533/POST/calc_tmetric/scripts
+./bldit_calc_tmetric.csh gcc |& tee ./bldit_calc_tmetric.gcc.log
+```
 
-`cd /shared/build/openmpi_gcc/CMAQ_v533/POST/bldoverlay/scripts`
+Copy the bldit script from the repo.
 
-`./bldit_bldoverlay.csh gcc |& tee ./bldit_bldoverlay.gcc.log`
+```
+cd /shared/build/openmpi_gcc/CMAQ_v533/POST/hr2day/scripts
+cp /shared/cyclecloud-cmaq/run_scripts/bldit_hr2day.csh .
+```
+Run the bldit script for hr2day
+
+```
+cd /shared/build/openmpi_gcc/CMAQ_v533/POST/hr2day/scripts
+./bldit_hr2day.csh gcc |& tee ./bldit_hr2day.gcc.log
+```
+
+Copy the bldit script from the repo.
+
+```
+cd /shared/build/openmpi_gcc/CMAQ_v533/POST/bldoverlay/scripts
+cp /shared/cyclecloud-cmaq/run_scripts/bldit_bldoverlay.csh .
+```
+
+Run the bldit script for  bldoverlay.
+
+```
+cd /shared/build/openmpi_gcc/CMAQ_v533/POST/bldoverlay/scripts
+./bldit_bldoverlay.csh gcc |& tee ./bldit_bldoverlay.gcc.log
+```
 
 
 # Scripts to post-process CMAQ output
@@ -83,7 +115,7 @@ cd /shared/build/openmpi_gcc/CMAQ_v533/POST/bldoverlay/scripts
 sbatch run_bldoverlay_conus.csh
 ```
 
-If you used the CMAQ Bechmark Option 2 to install CMAQ yourself, you will need to save and run the following script.
+If you used the CMAQ Bechmark Option 2 to install CMAQ yourself, you will need to save and modify the scripts using the instructions below.
 
 ```
 setenv DIR /shared/build/openmpi_gcc/CMAQ_v533/
