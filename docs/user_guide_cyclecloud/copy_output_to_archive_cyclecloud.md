@@ -15,13 +15,13 @@ It is also important to know what volume was used to read and write the input an
 
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts
-cp run*.log /fsx/data/output
-cp run*.csh /fsx/data/output
+cp run*.log /shared/data/output
+cp run*.csh /shared/data/output
 ```
 ### Examine the output files
 
 ```
-cd /fsx/data/output/output_CCTM_v533_gcc_2016_CONUS_16x18pe_full
+cd /shared/data/output/output_CCTM_v533_gcc_2016_CONUS_16x18pe_full
 ls -lht
 ```
 
@@ -59,7 +59,7 @@ Examine the example script
 
 ```
 cd s3_scripts
-cat s3_upload.c5n.18xlarge.csh
+cat s3_upload.HBv3-120.csh
 
 ```
 
@@ -70,13 +70,18 @@ output:
 # Script to upload output data to S3 bucket
 # NOTE: a new bucket needs to be created to store each set of cluster runs
 
-aws s3 mb s3://c5n-head-c5n.18xlarge-compute-conus-output
-aws s3 cp --recursive /fsx/data/output/ s3://c5n-head-c5n.18xlarge-compute-conus-output/fsx/data/output/2022-02-09/
+cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts
+cp run*.log /fsx/data/output
+cp run*.csh /fsx/data/output
+
+aws s3 mb s3://hbv3-120-compute-conus-output
+aws s3 cp --recursive /shared/data/output/ s3://hbv3-120-compute-conus-output/
+aws s3 cp --recursive /shared/data/POST s3://hbv3-120-compute-conus-output/
 ```
 
 If you do not have permissions to write to the s3 bucket listed above, you will need to edit the script to specify the s3 bucket that you have permissions to write to.
 In addition, edit the script to include a new date stamp, then run the script to copy all of the CMAQ output and logs to the S3 bucket.
 
 ```
-./s3_upload.c5n.18xlarge.csh
+./s3_upload.HBv3-120.csh
 ```
