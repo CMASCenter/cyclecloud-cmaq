@@ -128,7 +128,7 @@ Table 1. Azure Instance On-Demand versus Spot Pricing (price is subject to chang
 
 
 
-Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes
+Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node)
 
 | Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | SBATCH --exclusive | Data Imported or Copied | DisableSimultaneousMultithreading| Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag | 
 | ------------- | -----------    | -----------   | ----------------     | ---------------      | -------------------        | ------------------ | --------------          | ---------                              |   -------- | --------- | ------ | ---------------      |
@@ -143,6 +143,14 @@ Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 
 Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = $1.4/hr
 <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Azure Spot and On-Demand Pricing</a>
+
+Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
+
+| Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | SBATCH --exclusive | Data Imported or Copied | DisableSimultaneousMultithreading| Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag |
+| ------------- | -----------    | -----------   | ----------------     | ---------------      | -------------------        | ------------------ | --------------          | ---------                              |   -------- | --------- | ------ | ---------------      |
+| 36           |  1x35     | 6x6            | 1223.52              |  1126.19             |    2349.71                 |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
+| 40           | 1x40      | 4x10           | 6685.74              | 5935.01              | 12620.75                   |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * 3.5 = $4.9 | 3.6/hr * 1 nodes * 3.5 = $12.6 | with -march=native compiler flag |
+
 
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
