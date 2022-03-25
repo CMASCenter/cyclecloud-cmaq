@@ -3,6 +3,11 @@
 
 ### Build the POST processing routines
 
+Copy the buildit script from the repo, as it was corrected to use CMAQv533 rather than CMAQv532
+
+cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts
+cp /shared/cyclecloud-cmaq/run_scripts/bldit_combine.csh .
+
 cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts
 ./bldit_combine.csh gcc |& tee ./bldit_combine.gcc.log
 
@@ -18,7 +23,7 @@ cd /shared/build/openmpi_gcc/CMAQ_v533/POST/bldoverlay/scripts
 
 # Scripts to post-process CMAQ output
 
-### Note, the post-processing analysis should be done on the head node.
+### Note, the post-processing analysis should be done on the htc node
 Verify that the compute nodes are no longer running if you have completed all of the benchmark runs
 
 `squeue`
@@ -29,25 +34,24 @@ Show compute nodes
 
 `scontrol show nodes`
 
-### Stop the compute nodes
-
-`pcluster update-compute-fleet --region us-east-1 --cluster-name cmaq --status STOP_REQUESTED`
-
 
 ### Edit, Build and Run the POST processing routines
 
 You need to run the post processing scripts for every benchmark case.
 
-The post processing scripts are set up for one of the cases:
+cp /shared/cyclecloud-cmaq/run_scripts/run_combine_conus.csh .
 
-setenv APPL 2016_CONUS_6x18pe
+Examine the run script
+
+cat run_combine_conus.csh
+
+The post processing scripts are set up for a specific case, example:
+
+setenv APPL 2016_CONUS_10x18pe
 
 note, you will need to change the sed command to a different configuration if you ran another case, example:
 
 setenv APPL 2016_CONUS_12x9pe
-
-
-Note, the following script was used to modify the base post processing scripts (set up for the Bench_2016_12SE1 case to the CONUS domain.
 
 If you used the CMAQ Benchmark Option 1, with the pre-loaded software, then these scripts have already been modified.
 
@@ -55,25 +59,22 @@ Run the following scripts
 
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts
-./run_combine_conus_6x18pe.csh |& tee ./run_combine_conus_6x18pe.log
-./run_combine_conus_12x9pe.csh |& tee ./run_combine_conus_12x9pe.log
+sbatch run_combine_conus.csh
 ```
 
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v533/POST/calc_tmetric/scripts
-./run_calc_tmetric_conus_12x9pe.csh | & tee ./run_calc_tmetric_conus_12x9pe.log
-./run_calc_tmetric_conus_6x18pe.csh | & tee ./run_calc_tmetric_conus_6x18pe.log
+sbatch run_calc_tmetric_conus.csh 
 ```
 
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v533/POST/hr2day/scripts
-./run_hr2day_conus_6x18.csh |& tee ./run_hr2day_conus_6x18.log
-./run_hr2day_conus_12x9pe.csh | & tee ./run_hr2day_conus_12x9pe.log
+sbatch run_hr2day_conus.csh 
 ```
 
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v533/POST/bldoverlay/scripts
-./run_bldoverlay_conus.csh | & tee ./run_bldoverlay_conus.log
+sbatch run_bldoverlay_conus.csh
 ```
 
 If you used the CMAQ Bechmark Option 2 to install CMAQ yourself, you will need to save and run the following script.
