@@ -153,7 +153,7 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 40           | 1x40      | 4x10           | 6685.74              | 5935.01              | 12620.75                   |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * 3.5 = $4.9 | 3.6/hr * 1 nodes * 3.5 = $12.6 | with -march=native compiler flag |
 | 72           |  2x36     | 8x9            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
 | 180           |  5x36     | 10x18            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
-| 288           |  8x36     | 16x18            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
+| 288           |  8x36     | 16x18            |  1750.36             |  1593.29            |   3343.65                  |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
 
 
 
