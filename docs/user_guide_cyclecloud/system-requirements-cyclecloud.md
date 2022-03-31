@@ -167,6 +167,10 @@ HC44RS SPOT Pricing $.3168
 HC44RS ONDEMAND pricing $3.168
 Savings is ~ 90% for spot versus ondemand pricing for HC44RS compute nodes.
 
+Figure 3. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
+
+![Scaling Plot Comparison of Parallel Cluster and Cycle Cloud](../qa_plots/scaling_plots/Scaling_Parallel_Cluster_vs_Cycle_Cloud.png)
+
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
 Fost by Instance Type - update for Azure 
