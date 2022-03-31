@@ -155,6 +155,7 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 36           |  1x36     | 6x6            |  7349.06      | 6486.37   |   13835.43  |  1.92 | no  | copied    |   yes   | $.3168/hr * 1 nodes * 3.84 = $1.22 | 3.186/hr * 1 nodes * 3.84 = $12.23   | with -march=native compiler flag |
 | 40           | 1x40      | 4x10           | 6685.74       | 5935.01   | 12620.75    |  1.75 | no  | copied    |   yes   | $.3168/hr * 1 nodes * 3.5 = $1.11 | 3.168/hr * 1 nodes * 3.5 = $11 | with -march=native compiler flag |
 | 72           |  2x36     | 8x9            |  4090.80      | 3549.60  | 7640.40      |  1.06 | no  | copied    |   yes   | $.3168/hr * 2 nodes * 2.12 = $1.34 | 3.168/hr * 2 nodes * 2.12 = $13.4   | with -march=native compiler flag |
+| 108          |  3x36     | 9x12           | 2912.59       | 2551.08  | 5463.67      |  .758 | no  | copied   |   yes    | $.3168/hr * 3 nodes * 1.517 = $1.44 | 3.168/hr * 3 nodes * 1.517 = $14.41 | with -march=native compiler flag |
 | 180           |  5x36     | 10x18            |  2077.22   |   1851.77   | 3928.99   |  .545 | no | copied    |   yes   | $.3168/hr * 5 nodes * 1.09 = $1.72 | 3.168/hr * 5 nodes * 1.09 = $17.26   | with -march=native compiler flag |
 | 288           |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no | copied    |   yes   | $.3168/hr * 8 nodes * .928 = $2.35 | 3.168/hr * 8 nodes * .928 = $39.54   | with -march=native compiler flag |
 
@@ -167,9 +168,13 @@ HC44RS SPOT Pricing $.3168
 HC44RS ONDEMAND pricing $3.168
 Savings is ~ 90% for spot versus ondemand pricing for HC44RS compute nodes.
 
-Figure 3. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
+Figure 2. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
 
 ![Scaling Plot Comparison of Parallel Cluster and Cycle Cloud](../qa_plots/scaling_plots/Scaling_Parallel_Cluster_vs_Cycle_Cloud.png)
+
+Note CMAQ scales well up to ~ 200 processors for the CONUS domain.  As more processors are added beyond 200 processors, the CMAQ gets less efficient at using all of them.
+The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
+cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster
 
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
