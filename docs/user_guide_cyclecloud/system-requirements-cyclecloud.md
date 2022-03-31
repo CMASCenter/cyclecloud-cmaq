@@ -197,8 +197,6 @@ Figure 4. Cost by Service Type - Azure Console
 
 Scheduler node D12v2 compute cost = entire time that the parallel cluster is running ( creation to deletion) = 6 hours * $0.?/hr = $ ? using spot pricing, 6 hours * $?/hr = $? using on demand pricing.
 
-Total HBv3-120 cost of Running Benchmarking Suite using ONDEMAND pricing = $52.00 (sum of all ondemand cost for Table 2)
-
 
 Using 360 cpus on the Cycle Cloud Cluster, it would take ~6.11 days to run a full year, using 3 HBv3-120 compute nodes.
 
@@ -209,6 +207,7 @@ Table 3. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation bas
 | 2 day CONUS    |  360          |          3       |    SPOT    |    1.4/hour |     2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $1.4 = $617.4 |
 | 2 day CONUS    |  360          |          3       |  ONDEMAND  |    3.6/hour   | 2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $3.6 = $1,587.6 |
 
+(note, this assumes using 3 nodes versus 8 nodes)
 
 
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared">Azure SSD Disk Pricing</a>
