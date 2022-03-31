@@ -163,8 +163,8 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 < a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Spot and On Demand Pricing</a>
 ```
 
-HC44RS Spot Pricing $.3168
-HC44RS Onddemand pricing $3.168
+HC44RS SPOT Pricing $.3168
+HC44RS ONDEMAND pricing $3.168
 Savings is ~ 90% for spot versus ondemand pricing for HC44RS compute nodes.
 
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
