@@ -147,13 +147,13 @@ Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = $
 
 Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
 
-| Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | SBATCH --exclusive | Data Imported or Copied | DisableSimultaneousMultithreading| Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag |
-| ------------- | -----------    | -----------   | ----------------     | ---------------      | -------------------        | ------------------ | --------------          | ---------                              |   -------- | --------- | ------ | ---------------      |
-| 36           |  1x36     | 6x6            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
-| 40           | 1x40      | 4x10           | 6685.74              | 5935.01              | 12620.75                   |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * 3.5 = $4.9 | 3.6/hr * 1 nodes * 3.5 = $12.6 | with -march=native compiler flag |
-| 72           |  2x36     | 8x9            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
-| 180           |  5x36     | 10x18            |               |              |                     |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
-| 288           |  8x36     | 16x18            |  1750.36             |  1593.29            |   3343.65                  |  no              | copied                    |  false                  |   | $1.4/hr * 1 nodes * ? = $? | 3.6/hr * 1 nodes * ? = $?   | with -march=native compiler flag |
+| Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied | DisableSimultaneousMultithreading| Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag |
+| ------------- | -----------    | -----------   | ----------------     | ---------------      | ----------- | -----      | ------------------ | --------------          | ---------                              |   -------- | --------- | ------ | ---------------      |
+| 36           |  1x36     | 6x6            |  7349.06      | 6486.37   |   13835.43  |  1.92 | no  | copied    |  false                  |   | $1.4/hr * 1 nodes * 3.84 = $5.38 | 3.6/hr * 1 nodes * 3.84 = $13.824   | with -march=native compiler flag |
+| 40           | 1x40      | 4x10           | 6685.74       | 5935.01   | 12620.75    |  1.75 | no  | copied    |  false                  |   | $1.4/hr * 1 nodes * 3.5 = $4.9 | 3.6/hr * 1 nodes * 3.5 = $12.6 | with -march=native compiler flag |
+| 72           |  2x36     | 8x9            |  4090.80      | 3549.60  | 7640.40      |  1.06 | no  | copied    |  false                  |   | $1.4/hr * 2 nodes * 2.12 = $5.94 | 3.6/hr * 2 nodes * 2.12 = $15.3   | with -march=native compiler flag |
+| 180           |  5x36     | 10x18            |  2077.22   |   1851.77   | 3928.99   |  .545 | no | copied    |  false                  |   | $1.4/hr * 5 nodes * 1.09 = $7.63 | 3.6/hr * 5 nodes * 1.09 = $19.62   | with -march=native compiler flag |
+| 288           |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no | copied    |  false                  |   | $1.4/hr * 8 nodes * .928 = $10.4 | 3.6/hr * 8 nodes * .928 = $26.7   | with -march=native compiler flag |
 
 
 
