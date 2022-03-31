@@ -143,7 +143,9 @@ Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 960           |  8x120     | 30x32             | 1223.52              |  1126.19             |    2349.71    | .326             |  no              | copied                    |  no   | $1.4/hr * 8 nodes * .653 = $7.31 | 3.6/hr * 8 nodes * .653 = $18.8   | with -march=native compiler flag |
 
 Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = $1.4/hr
+
 Total HBv3-120 compute cost of Running Benchmarking Suite using ONDEMAND pricing = $3.6/hr
+
 Savings is ~ 60% for spot versus  ondemand pricing for HBv3-120 compute nodes.
 
 <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Azure Spot and On-Demand Pricing</a>
