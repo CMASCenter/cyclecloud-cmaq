@@ -143,19 +143,29 @@ Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 960           |  8x120     | 30x32             | 1223.52              |  1126.19             |    2349.71    | .326             |  no              | copied                    |  no   | $1.4/hr * 8 nodes * .653 = $7.31 | 3.6/hr * 8 nodes * .653 = $18.8   | with -march=native compiler flag |
 
 Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = $1.4/hr
+Total HBv3-120 compute cost of Running Benchmarking Suite using ONDEMAND pricing = $3.6/hr
+Savings is ~ 60% for spot versus  ondemand pricing for HBv3-120 compute nodes.
+
 <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Azure Spot and On-Demand Pricing</a>
 
 Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
 
 | Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag |
 | -----------    | -----------   | ----------------     | ---------------      | ----------- | -----      | ------------------ | --------------          | ---------                              |   -------- | --------- | ------ | ---------------      |
-| 36           |  1x36     | 6x6            |  7349.06      | 6486.37   |   13835.43  |  1.92 | no  | copied    |   yes   | $1.4/hr * 1 nodes * 3.84 = $5.38 | 3.6/hr * 1 nodes * 3.84 = $13.824   | with -march=native compiler flag |
-| 40           | 1x40      | 4x10           | 6685.74       | 5935.01   | 12620.75    |  1.75 | no  | copied    |   yes   | $1.4/hr * 1 nodes * 3.5 = $4.9 | 3.6/hr * 1 nodes * 3.5 = $12.6 | with -march=native compiler flag |
-| 72           |  2x36     | 8x9            |  4090.80      | 3549.60  | 7640.40      |  1.06 | no  | copied    |   yes   | $1.4/hr * 2 nodes * 2.12 = $5.94 | 3.6/hr * 2 nodes * 2.12 = $15.3   | with -march=native compiler flag |
-| 180           |  5x36     | 10x18            |  2077.22   |   1851.77   | 3928.99   |  .545 | no | copied    |   yes   | $1.4/hr * 5 nodes * 1.09 = $7.63 | 3.6/hr * 5 nodes * 1.09 = $19.62   | with -march=native compiler flag |
-| 288           |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no | copied    |   yes   | $1.4/hr * 8 nodes * .928 = $10.4 | 3.6/hr * 8 nodes * .928 = $26.7   | with -march=native compiler flag |
+| 36           |  1x36     | 6x6            |  7349.06      | 6486.37   |   13835.43  |  1.92 | no  | copied    |   yes   | $.3168/hr * 1 nodes * 3.84 = $1.22 | 3.186/hr * 1 nodes * 3.84 = $12.23   | with -march=native compiler flag |
+| 40           | 1x40      | 4x10           | 6685.74       | 5935.01   | 12620.75    |  1.75 | no  | copied    |   yes   | $.3168/hr * 1 nodes * 3.5 = $1.11 | 3.168/hr * 1 nodes * 3.5 = $11 | with -march=native compiler flag |
+| 72           |  2x36     | 8x9            |  4090.80      | 3549.60  | 7640.40      |  1.06 | no  | copied    |   yes   | $.3168/hr * 2 nodes * 2.12 = $1.34 | 3.168/hr * 2 nodes * 2.12 = $13.4   | with -march=native compiler flag |
+| 180           |  5x36     | 10x18            |  2077.22   |   1851.77   | 3928.99   |  .545 | no | copied    |   yes   | $.3168/hr * 5 nodes * 1.09 = $1.72 | 3.168/hr * 5 nodes * 1.09 = $17.26   | with -march=native compiler flag |
+| 288           |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no | copied    |   yes   | $.3168/hr * 8 nodes * .928 = $2.35 | 3.168/hr * 8 nodes * .928 = $39.54   | with -march=native compiler flag |
 
 
+```{seealso}
+< a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Spot and On Demand Pricing</a>
+```
+
+HC44RS Spot Pricing $.3168
+HC44RS Onddemand pricing $3.168
+Savings is ~ 90% for spot versus ondemand pricing for HC44RS compute nodes.
 
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
