@@ -167,7 +167,9 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 ```
 
 HC44RS SPOT Pricing $.3168
+
 HC44RS ONDEMAND pricing $3.168
+
 Savings is ~ 90% for spot versus ondemand pricing for HC44RS compute nodes.
 
 Figure 2. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
