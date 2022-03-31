@@ -162,9 +162,6 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 288           |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no | copied    |   yes   | $.3168/hr * 8 nodes * .928 = $2.35 | 3.168/hr * 8 nodes * .928 = $39.54   | with -march=native compiler flag |
 
 
-```{seealso}
-< a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Spot and On Demand Pricing</a>
-```
 
 HC44RS SPOT Pricing $.3168
 
