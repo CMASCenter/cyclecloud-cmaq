@@ -176,7 +176,7 @@ Figure 2. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
 
 Note CMAQ scales well up to ~ 200 processors for the CONUS domain.  As more processors are added beyond 200 processors, the CMAQ gets less efficient at using all of them.
 The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
-cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster
+cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster for the 2-Day 12US1 CONUS Benchmark.
 
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
@@ -223,6 +223,7 @@ Table 4. Shared SSD File System Pricing
 
 
 Table 5. Extrapolated Cost of File system for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
+
 
 Need to create table
 
