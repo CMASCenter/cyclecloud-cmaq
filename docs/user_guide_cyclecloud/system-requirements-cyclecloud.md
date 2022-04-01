@@ -61,7 +61,7 @@ CycleCloud allows you to:
 
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas">Azure VM Quotas</a>
 
-#### Recommended Cycle Cloud Configuration for CONUS Domain 12US2
+#### 12US2 Benchmark Domain Description
 
 ```
 GRIDDESC
@@ -71,6 +71,8 @@ GRIDDESC
 
 ![CMAQ Domain](../qa_plots/tileplots/CMAQ_ACONC_12US2_Benchmark_Tileplot.png)
 
+
+#### Recommended Cycle Cloud Configuration for CONUS Domain 12US2
 
 Scheduler node:
 
