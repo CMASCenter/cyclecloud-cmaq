@@ -128,19 +128,19 @@ Table 1. Azure Instance On-Demand versus Spot Pricing (price is subject to chang
 
 
 
-Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node)
+Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node) I/O on /shared directory
 
 | Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag | 
 | ------------- | -----------    | -----------   | ----------------     | ---------------      | ------------------- | -----       | ------------------ |  ---------        |   -------- | --------- | ------ | ---------------      |
-| 36        |   1x36     |    6x6             | 5933.48              | 5230.05             |   11163.53      | 1.55            |   no                | copied                  |  yes         | $1.4/hr * 1 nodes * 3.1 hr = $4.34                    | $3.6/hr * 1 nodes * 3.1 hr = $11.2                        | without -march=native compiler flag 
-| 90           |   1x90     |    9x10            |   3153.33            |  2758.12             |   5911.45      | .821            |  no                | copied                  |  yes          | $1.4/hr * 1 nodes * 1.642 hr = $2.29             |  $3.6/hr * 1 nodes * 1.642 hr = $ $5.911           |  without -march=native compiler flag |
-| 120          |   1x120    |    10x12           | 2829.84              |  2516.07             |   5345.91      | .742            |  no                | copied                  |  yes           | $1.4/hr * 1 nodes * 1.484 hr = $2.08           | $3.6/hr * 1 nodes * 1.484 hr = $5.34                     | without -march=native compiler flag            |
-| 180           |  2x90          | 10x18         | 2097.37              | 1809.84              |    3907.21     | .542            |  no                | copied                  |  yes          | $1.4/hr * 2 nodes * 1.08 hr = $3.03 | $3.6/hr * 2 nodes * 1.08 hr = $7.81 | with -march=native compiler flag |
-| 180          |   2x90     |    10 x 18         | 1954.20              | 1773.86              |    3728.06      | .518           |  no                | copied                  |   no    | $1.4/hr * 2 nodes * 1.036 hr = $2.9 | $3.6/hr * 2 nodes * 1.036 hr = $7.46 | without -march=native compiler flag |
-| 240          |   2x120    |   20x12            |  1856.50             | 1667.68                     |    3524.18    | .4895            |  no                | copied                  |   yes   |   $1.4/hr * 2 nodes * .97 hr = $2.716           |  $3.6/hr * 2 nodes * .97 hr = $6.984   | without -march=native compiler flag |  
-| 270           |  3x90          | 15x18         | 1703.19              | 1494.17              |    3197.36       | .444          |  no                | copied                  |   no | $1.4/hr * 3 nodes * .888hr = $3.72 | 3.6/hr * 3 nodes * .888 = $9.59  | with -march=native compiler flag |
-| 360           |  3x120     |  20x18             | 1520.29              |  1375.54             |    2895.83   | .402              |  no                | copied                  |  no   | $1.4/hr * 3 nodes * .804 = $3.38 | 3.6/hr * 3 nodes * .804 = $8.687 | with -march=native compiler flag | 
-| 960           |  8x120     | 30x32             | 1223.52              |  1126.19             |    2349.71    | .326             |  no              | copied                    |  no   | $1.4/hr * 8 nodes * .653 = $7.31 | 3.6/hr * 8 nodes * .653 = $18.8   | with -march=native compiler flag |
+| 36        |   1x36     |    6x6             | 5933.48              | 5230.05             |   11163.53      | 1.55  |   no | copied |  yes         | $1.4/hr * 1 nodes * 3.1 hr = $4.34                    | $3.6/hr * 1 nodes * 3.1 hr = $11.2                        | without -march=native compiler flag 
+| 90           |   1x90     |    9x10            |   3153.33            |  2758.12             |   5911.45   | .821 |  no | copied   |  yes          | $1.4/hr * 1 nodes * 1.642 hr = $2.29             |  $3.6/hr * 1 nodes * 1.642 hr = $ $5.911           |  without -march=native compiler flag |
+| 120          |   1x120    |    10x12           | 2829.84              |  2516.07             |   5345.91   | .742 |  no | copied   |  yes           | $1.4/hr * 1 nodes * 1.484 hr = $2.08           | $3.6/hr * 1 nodes * 1.484 hr = $5.34                     | without -march=native compiler flag            |
+| 180           |  2x90          | 10x18         | 2097.37              | 1809.84              |    3907.21  | .542 |  no | copied   |  yes          | $1.4/hr * 2 nodes * 1.08 hr = $3.03 | $3.6/hr * 2 nodes * 1.08 hr = $7.81 | with -march=native compiler flag |
+| 180          |   2x90     |    10 x 18         | 1954.20              | 1773.86              |    3728.06  | .518 |  no | copied   |   no    | $1.4/hr * 2 nodes * 1.036 hr = $2.9 | $3.6/hr * 2 nodes * 1.036 hr = $7.46 | without -march=native compiler flag |
+| 240          |   2x120    |   20x12            |  1856.50             | 1667.68              |    3524.18  | .4895  |  no | copied |   yes   |   $1.4/hr * 2 nodes * .97 hr = $2.716           |  $3.6/hr * 2 nodes * .97 hr = $6.984   | without -march=native compiler flag |  
+| 270           |  3x90          | 15x18         | 1703.19              | 1494.17              |    3197.36  | .444  |  no | copied  |   no | $1.4/hr * 3 nodes * .888hr = $3.72 | 3.6/hr * 3 nodes * .888 = $9.59  | with -march=native compiler flag |
+| 360           |  3x120     |  20x18             | 1520.29              |  1375.54             |    2895.83 | .402   |  no | copied |  no   | $1.4/hr * 3 nodes * .804 = $3.38 | 3.6/hr * 3 nodes * .804 = $8.687 | with -march=native compiler flag | 
+| 960           |  8x120     | 30x32             | 1223.52              |  1126.19             |    2349.71  | .326   |  no | copied |  no   | $1.4/hr * 8 nodes * .653 = $7.31 | 3.6/hr * 8 nodes * .653 = $18.8   | with -march=native compiler flag |
 
 Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = $1.4/hr
 
@@ -150,14 +150,31 @@ Savings is ~ 60% for spot versus  ondemand pricing for HBv3-120 compute nodes.
 
 <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Azure Spot and On-Demand Pricing</a>
 
+Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /data directory
+
+| Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag |
+| ------------- | -----------    | -----------   | ----------------     | ---------------      | ------------------- | -----       | ------------------ |  ---------        |   -------- | --------- | ------ | ---------------      |
+| 36        |   1x36     |    6x6             |               |              |         |  |   no | copied |  yes         | $1.4/hr * 1 nodes *  hr = $                    | $3.6/hr * 1 nodes *  hr = $                        | without -march=native compiler flag
+| 90           |   1x90     |    9x10            |               |              |     |  |  no | copied   |  yes          | $1.4/hr * 1 nodes * 1.642 hr = $2.29             |  $3.6/hr * 1 nodes * 1.642 hr = $ $5.911           |  without -march=native compiler flag |
+| 120          |   1x120    |    10x12           |               |              |     |  |  no | copied   |  yes           | $1.4/hr * 1 nodes * 1.484 hr = $2.08           | $3.6/hr * 1 nodes * 1.484 hr = $5.34                     | without -march=native compiler flag            |
+| 180           |  2x90          | 10x18         |               |               |     |  |  no | copied   |  yes          | $1.4/hr * 2 nodes * 1.08 hr = $3.03 | $3.6/hr * 2 nodes * 1.08 hr = $7.81 | with -march=native compiler flag |
+| 180          |   2x90     |    10 x 18         |               |               |      |  |  no | copied   |   no    | $1.4/hr * 2 nodes * 1.036 hr = $2.9 | $3.6/hr * 2 nodes * 1.036 hr = $7.46 | without -march=native compiler flag |
+| 240          |   2x120    |   20x12            |               |               |      |   |  no | copied |   yes   |   $1.4/hr * 2 nodes * .97 hr = $2.716           |  $3.6/hr * 2 nodes * .97 hr = $6.984   | without -march=native compiler flag |
+| 270           |  3x90          | 15x18         |               |               |      |   |  no | copied  |   no | $1.4/hr * 3 nodes * .888hr = $3.72 | 3.6/hr * 3 nodes * .888 = $9.59  | with -march=native compiler flag |
+| 360           |  3x120     |  20x18             |              |              |     |    |  no | copied |  no   | $1.4/hr * 3 nodes * .804 = $3.38 | 3.6/hr * 3 nodes * .804 = $8.687 | with -march=native compiler flag |
+| 960           |  8x120     | 30x32             |               |              |     |    |  no | copied |  no   | $1.4/hr * 8 nodes * .653 = $7.31 | 3.6/hr * 8 nodes * .653 = $18.8   | with -march=native compiler flag |
+
+
 Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
 
 | Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag |
 | -----------    | -----------   | ----------------     | ---------------      | ----------- | -----      | ------------------ | --------------          | ---------                              |   -------- | --------- | ------ | ---------------      |
+| 18           |  1x18     |                |               |           |             |      | no   | copied    |   yes   |                                    |                                      |                                  |
 | 36           |  1x36     | 6x6            |  7349.06      | 6486.37   |   13835.43  |  1.92 | no  | copied    |   yes   | $.3168/hr * 1 nodes * 3.84 = $1.22 | 3.186/hr * 1 nodes * 3.84 = $12.23   | with -march=native compiler flag |
 | 40           | 1x40      | 4x10           | 6685.74       | 5935.01   | 12620.75    |  1.75 | no  | copied    |   yes   | $.3168/hr * 1 nodes * 3.5 = $1.11 | 3.168/hr * 1 nodes * 3.5 = $11 | with -march=native compiler flag |
 | 72           |  2x36     | 8x9            |  4090.80      | 3549.60  | 7640.40      |  1.06 | no  | copied    |   yes   | $.3168/hr * 2 nodes * 2.12 = $1.34 | 3.168/hr * 2 nodes * 2.12 = $13.4   | with -march=native compiler flag |
 | 108          |  3x36     | 9x12           | 2912.59       | 2551.08  | 5463.67      |  .758 | no  | copied   |   yes    | $.3168/hr * 3 nodes * 1.517 = $1.44 | 3.168/hr * 3 nodes * 1.517 = $14.41 | with -march=native compiler flag |
+| 126          | 7x18      |  9x14          | 2646.52       | 2374.21  | 5020.73      | .69   | no  | copied   |   yes   | $.3168/hr * 7 nodes * 1.517 = $3.36 | 3.168/hr * 7 nodes * 1.517 = $33.64 | with -march=native compiler flag |
 | 144          |  4x36     |  12x12         | 2449.39       | 2177.28  | 4626.67      |  .64  | no  | copied   |   yes   | $.3168/hr * 4 nodes * 1.285 = $1.63 | 3.168/hr * 4 nodes * 1.285 = $16.28 | with -march=native compiler flag |
 | 180           |  5x36     | 10x18            |  2077.22   |   1851.77   | 3928.99   |  .545 | no | copied    |   yes   | $.3168/hr * 5 nodes * 1.09 = $1.72 | 3.168/hr * 5 nodes * 1.09 = $17.26   | with -march=native compiler flag |
 | 288           |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no | copied    |   yes   | $.3168/hr * 8 nodes * .928 = $2.35 | 3.168/hr * 8 nodes * .928 = $39.54   | with -march=native compiler flag |
