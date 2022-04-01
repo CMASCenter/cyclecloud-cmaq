@@ -61,7 +61,15 @@ CycleCloud allows you to:
 
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas">Azure VM Quotas</a>
 
-#### Recommended Cycle Cloud Configuration for CONUS Domain
+#### Recommended Cycle Cloud Configuration for CONUS Domain 12US2
+
+```
+GRIDDESC
+'12US2'
+'12CONUS'     -2412000.0 -1620000.0 12000.0 12000.0 396 246 1
+```
+![CMAQ Domain](../qa_plots/tileplots/CMAQ_ACONC_12US2_Benchmark_Tileplot.png)
+
 
 Scheduler node:
 
@@ -195,7 +203,7 @@ Figure 2. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
 
 Note CMAQ scales well up to ~ 200 processors for the CONUS domain.  As more processors are added beyond 200 processors, the CMAQ gets less efficient at using all of them.
 The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
-cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster for the 2-Day 12US1 CONUS Benchmark.
+cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster for the 2-Day 12US2 CONUS Benchmark.
 
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
