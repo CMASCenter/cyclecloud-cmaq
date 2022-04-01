@@ -167,7 +167,7 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 960           |  8x120    | 30x32              | 1189.21              |  1065.73             |   2254.94   | .313   |  no | copied | no    |                                  |                                   | with -march=native compiler flag | /data/output | new  |
 
 
-Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
+Table 4. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
 
 | Number of PEs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | Total Time(2days)(sec) | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Cost using Spot Pricing | Cost using On Demand Pricing | compiler flag |
 | -----------    | -----------   | ----------------     | ---------------      | ----------- | -----      | ------------------ | --------------          | ---------                              |   -------- | --------- | ------ | ---------------      |
@@ -217,7 +217,7 @@ Scheduler node D12v2 compute cost = entire time that the parallel cluster is run
 
 Using 360 cpus on the Cycle Cloud Cluster, it would take ~6.11 days to run a full year, using 3 HBv3-120 compute nodes.
 
-Table 3. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
+Table 5. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
 
 | Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation                 |  
 | -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    |
@@ -233,7 +233,7 @@ Table 3. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation bas
 <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Azure SSD Disk Pricing</a>
 
 
-Table 4. Shared SSD File System Pricing
+Table 6. Shared SSD File System Pricing
 
 | Storage Type | Storage options   | 	Max IOPS (Max IOPS w/ bursting)	| Pricing (monthly)  |  Pricing | Price per mount per month (Shared Disk) |
 | --------     | ----------------  |   ------------------------------------    | -----------------  |  ---------------  | ------  |
@@ -241,7 +241,7 @@ Table 4. Shared SSD File System Pricing
 
 
 
-Table 5. Extrapolated Cost of File system for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
+Table 7. Extrapolated Cost of File system for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
 
 
 Need to create table
