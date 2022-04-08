@@ -44,6 +44,14 @@ sudo yum install curl
 sudo yum install libcurl-devel
 ```
 
+Load the gcc and openmpi module before building the hdf5 enabled netcdf libraries.
+
+```
+module avail
+module load gcc-9.2.0 
+module load mpi/openmpi-4.1.0
+```
+
 ```
 cd /shared/cyclecloud-cmaq
 ./gcc_install_hdf5.cyclecloud.csh
