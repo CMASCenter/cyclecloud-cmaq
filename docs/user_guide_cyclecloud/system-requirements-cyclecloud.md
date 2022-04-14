@@ -141,7 +141,7 @@ Table 1. Azure Instance On-Demand versus Spot Pricing (price is subject to chang
 
 Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node) I/O on /shared directory
 
-| CPUs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | 
+| CPUs | NodesxCPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | 
 | ------------- | -----------    | -----------   | ----------------     | ---------------      | ------------------- | -----       | ------------------ |  ---------        |   -------- | --------- | ------ | ---------------      | -- | -- |
 | 90           |   1x90     |    9x10            |   3153.33            |  2758.12             |   5911.45   | .821 |  no | copied   |  yes    | $1.4/hr * 1 nodes * 1.642 hr = | $2.29             |  $3.6/hr * 1 nodes * 1.642 hr = |  $5.911           |  without -march=native compiler flag |
 | 120          |   1x120    |    10x12           | 2829.84              |  2516.07             |   5345.91   | .742 |  no | copied   |  yes    |  $1.4/hr * 1 nodes * 1.484 hr = | $2.08           | $3.6/hr * 1 nodes * 1.484 hr = | $5.34                     | without -march=native compiler flag            |
@@ -162,7 +162,7 @@ Savings is ~ 60% for spot versus  ondemand pricing for HBv3-120 compute nodes.
 
 Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on mnt/resource/data2 directory
 
-| CPUs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | i/o dir | cpu old/new |
+| CPUs | NodesxCPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | i/o dir | cpu old/new |
 | ------------- | -----------    | -----------   | ----------------     | ---------------      | ------------------- | -----       | ------------------ |  ---------        |   -------- | --------- | ------ | ---------------      | --- |  --  | -- | -- |
 | 36        |   1x36     |    6x6             | 5933.48              | 5230.05  | 11163.53  | 1.55  |   no | copied |  yes         | $1.4/hr * 1 nodes * 3.1 hr = |  $4.34                    | $3.6/hr * 1 nodes * 3.1 hr = | $11.2                        | without -march=native compiler flag |  /data/output | new |
 | 36        |   1x36     |    6x6             | 5841.81              | 5153.47  | 10995.28  | 1.52  |  no  | copied |  yes         | $1.4/hr * 1 nodes * 3.0 hr = | $4.26   | $3.6/hr * 1 nodes * 3.0 hr = | $10.8           | without -march=native compiler flag | /mnt/resource/data2/ | new |
@@ -180,7 +180,7 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 
 Table 4. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
 
-| CPUs | #Nodesx#CPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | i/o dir |
+| CPUs | NodesxCPU | NPCOLxNPROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCH --exclusive | Data Imported or Copied |  Answers Matched | Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | i/o dir |
 | -----------    | -----------   | ----------------     | ---------------      | ----------- | -----      | ------------------ | --------------          | ---------                              |   -------- | --------- | ------ | ---------------      | --- | ---- | ---- |
 | 18          |   1x18     |    3x6        | 13525.66       | 12107.02  |   25632.68  | 3.56  |  no  | copied |    yes   | $.3168/hr * 1 nodes * 7.12 = | $2.26 | 3.186/hr * 1 nodes * 7.12 = | $22.68   | with -march=native compiler flag | shared/data |
 | 36           |  1x36     | 6x6            |  7349.06      | 6486.37   |   13835.43  |  1.92 | no  | copied    |   yes   | $.3168/hr * 1 nodes * 3.84 = | $1.22 | 3.186/hr * 1 nodes * 3.84 = | $12.23   | with -march=native compiler flag | /shared/data |
