@@ -214,7 +214,7 @@ cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster for the 
 
 Figure 3. Plot of Total Time and On Demand Cost versus CPUs for HC44RS.
 
-![Plot of Total Time and On Demand Cost versus CPUs for HC44RS](../../qa_scripts/HC44rs_Time_Cost_CPUs.png)
+![Plot of Total Time and On Demand Cost versus CPUs for HC44RS](../qa_plots/scaling_plots/HC44rs_Time_Cost_CPUs.png)
 
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
