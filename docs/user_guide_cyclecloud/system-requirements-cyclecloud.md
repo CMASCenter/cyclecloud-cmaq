@@ -190,8 +190,8 @@ Table 4. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 126          | 7x18      |  9x14          | 2646.52       | 2374.21  | 5020.73      | .69   | no  | copied   |   yes   | $.3168/hr * 7 nodes * 1.517 = $3.36 | 3.168/hr * 7 nodes * 1.517 = $33.64 | with -march=native compiler flag | /shared/data |
 | 144          |  4x36     |  12x12         | 2449.39       | 2177.28  | 4626.67      |  .64  | no  | copied   |   yes   | $.3168/hr * 4 nodes * 1.285 = $1.63 | 3.168/hr * 4 nodes * 1.285 = $16.28 | with -march=native compiler flag | /shared/data |
 | 180           |  5x36     | 10x18            |  2077.22   |   1851.77   | 3928.99   |  .545 | no | copied    |   yes   | $.3168/hr * 5 nodes * 1.09 = $1.72 | 3.168/hr * 5 nodes * 1.09 = $17.26   | with -march=native compiler flag | /shared/data |
-| 216           |  6x36     | 18x12            |            |             |           |       |    |           |         |                                    |                                      |                                  | /shared/data |
-| 288           |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no | copied    |   yes   | $.3168/hr * 8 nodes * .928 = $2.35 | 3.168/hr * 8 nodes * .928 = $39.54   | with -march=native compiler flag | /shared/data |
+| 216           |  6x36     | 18x12            |  1908.15   | 1722.07    | 3630.22    |  .504 | no   | copied  |  yes    | $.3168/hr * 6 nodes * 1.01 = $1.92 |  3.168/hr * 6 nodes * 1.01 = $19.16 | with -march=native compiler flag  | /shared/data |
+| 288           |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no | copied    |   yes   | $.3168/hr * 8 nodes * .928 = $2.35 | 3.168/hr * 8 nodes * .928 = $39.54   | with -march=native compiler flag | /shared/data | 
 
 
 
