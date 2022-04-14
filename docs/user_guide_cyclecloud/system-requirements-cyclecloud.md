@@ -175,7 +175,7 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 270           |  3x90          | 15x18         |               |               |      |   |  no | copied  |   no | $1.4/hr * 3 nodes * .888hr = | $3.72 | 3.6/hr * 3 nodes * .888 = | $9.59  | with -march=native compiler flag |     |        |
 | 360           |  3x120     |  20x18             |              |              |     |    |  no | copied |  no   | $1.4/hr * 3 nodes * .804 = | $3.38 | 3.6/hr * 3 nodes * .804 = | $8.687 | with -march=native compiler flag |        |        | 
 | 960           |  8x120     | 30x32             | 1223.52              |  1126.19             |    2349.71  | .326   |  no | copied |  no   | $1.4/hr * 8 nodes * .653 = | $7.31 | 3.6/hr * 8 nodes * .653 = | $18.8   | with -march=native compiler flag | /data/ouput  |  old | 
-| 960           |  8x120    | 30x32              | 1189.21              |  1065.73             |   2254.94   | .313   |  no | copied | no    |         |                         |            |                       | with -march=native compiler flag | /data/output | new  |
+| 960           |  8x120    | 30x32              | 1189.21              |  1065.73             |   2254.94   | .313   |  no | copied | no    | $1.4/hr * 8 nodes * .626 = | 7.01  | 3.6/hr * 8 nodes * .626 = | $18.0   | with -march=native compiler flag | /data/output | new  |
 
 
 Table 4. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
