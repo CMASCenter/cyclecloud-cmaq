@@ -209,6 +209,10 @@ Note CMAQ scales well up to ~ 200 processors for the CONUS domain.  As more proc
 The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
 cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster for the 2-Day 12US2 CONUS Benchmark.
 
+Figure 3. Plot of Total Time and On Demand Cost versus CPUs for HC44RS.
+
+![Plot of Total Time and On Demand Cost versus CPUs for HC44RS](../../qa_scripts/HC44rs_Time_Cost_CPUs.png)
+
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
 Fost by Instance Type - update for Azure 
