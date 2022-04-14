@@ -29,7 +29,7 @@ par(new = TRUE)
 plot(x, y2, pch = 15, col = 3, axes = FALSE, xlab = "", ylab = "")
 
 axis(side = 4, at = pretty(range(y2)))
-mtext("OnDemand Cost $", side = 4, line = 3, col="green")
+mtext("OnDemand Cost $", side = 4, line = 3, col="black")
 text(x, y2, labels, cex=0.65, pos=3,col="black")
 legend("top", legend=c("Total Time", "OnDemand Cost"),
        col=c("red", "green"), lty=1:2, cex=0.8)
