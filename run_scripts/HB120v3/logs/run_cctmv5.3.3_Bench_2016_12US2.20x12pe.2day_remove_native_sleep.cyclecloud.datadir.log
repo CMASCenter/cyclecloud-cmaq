@@ -1,0 +1,453 @@
+Start Model Run At  Wed Mar 9 22:04:45 UTC 2022
+information about processor including whether using hyperthreading
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                120
+On-line CPU(s) list:   0-119
+Thread(s) per core:    1
+Core(s) per socket:    60
+Socket(s):             2
+NUMA node(s):          4
+Vendor ID:             AuthenticAMD
+CPU family:            25
+Model:                 1
+Model name:            AMD EPYC 7V13 64-Core Processor
+Stepping:              0
+CPU MHz:               2445.400
+BogoMIPS:              4890.80
+Hypervisor vendor:     Microsoft
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              512K
+L3 cache:              32768K
+NUMA node0 CPU(s):     0-29
+NUMA node1 CPU(s):     30-59
+NUMA node2 CPU(s):     60-89
+NUMA node3 CPU(s):     90-119
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl extd_apicid aperfmperf eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single retpoline_amd vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr arat umip vaes vpclmulqdq
+information about cluster
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+hpc*         up   infinite      2  idle~ cmaq-hbv3-hpc-pg0-[2,4]
+hpc*         up   infinite      2  alloc cmaq-hbv3-hpc-pg0-[1,3]
+htc          up   infinite      1  idle~ cmaq-hbv3-htc-1
+information about filesystem
+Filesystem                                               Size  Used Avail Use% Mounted on
+devtmpfs                                                 221G     0  221G   0% /dev
+tmpfs                                                    221G     0  221G   0% /dev/shm
+tmpfs                                                    221G  9.1M  221G   1% /run
+tmpfs                                                    221G     0  221G   0% /sys/fs/cgroup
+/dev/sda2                                                 30G   30G  628K 100% /
+/dev/sda1                                                494M   75M  419M  16% /boot
+/dev/sda15                                               495M   12M  484M   3% /boot/efi
+cmasstorage.file.core.windows.net:/cmasstorage/cmaqdata  1.0T   63G  962G   7% /data
+10.3.0.9:/sched                                           30G   33M   30G   1% /sched
+10.3.0.9:/shared                                        1000G  202G  799G  21% /shared
+/dev/sdb1                                                473G   73M  449G   1% /mnt/resource
+list the mounted volumes
+clnt_create: RPC: Program not registered
+Compiler is set to gcc
+
+Working Directory is /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts
+Build Directory is /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc_remove_native
+Output Directory is /data/output/output_CCTM_v533_gcc_2016_CONUS_20x12pe_datadir
+Log Directory is /data/output/output_CCTM_v533_gcc_2016_CONUS_20x12pe_datadir/LOGS
+Executable Name is CCTM_v533.exe
+
+---CMAQ EXECUTION ID: CMAQ_CCTMv533_lizadams_20220309_220445_959939958 ---
+
+Set up input and output files for Day 2015-12-22.
+
+Existing Logs and Output Files for Day 2015-12-22 Will Be Deleted
+/bin/rm: No match.
+
+CMAQ Processing of Day 20151222 Began at Wed Mar  9 22:04:46 UTC 2022
+
+[ip-0a03000c:09381] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09351] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09359] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09367] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09320] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09307] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09415] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09417] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09343] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09366] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09353] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09345] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09358] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09375] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09374] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09362] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09371] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09347] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09332] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09344] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09424] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09341] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09428] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09340] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09327] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09370] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09339] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09431] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09420] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09334] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09311] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09330] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09400] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09382] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09404] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09391] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09383] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09386] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09333] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09326] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09308] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09324] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09377] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09315] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09433] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09413] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09435] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09328] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09436] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09349] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09329] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09397] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09419] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09363] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09355] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09348] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09409] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09422] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09338] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09380] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09392] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+[ip-0a03000c:09402] OPAL ERROR: Unreachable in file pmix3x_client.c at line 112
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09381] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09359] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09415] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09367] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09375] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09358] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09353] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09366] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09345] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09307] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09320] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09343] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09417] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09351] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09374] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09362] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09371] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09347] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09344] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09332] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09424] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09428] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09341] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09340] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09327] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09370] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09339] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09431] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09420] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09311] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09330] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09334] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09400] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09404] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09382] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09386] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09391] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09383] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09326] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09333] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09308] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09324] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09377] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09315] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09433] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09413] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09435] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09328] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09349] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09436] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09329] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09397] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09409] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09419] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09422] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09363] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09348] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09355] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09338] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09380] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09392] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+*** An error occurred in MPI_Init
+*** on a NULL communicator
+*** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+***    and potentially your MPI job)
+[ip-0a03000c:09402] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+slurmstepd: error: *** JOB 39 ON cmaq-hbv3-hpc-pg0-1 CANCELLED AT 2022-03-09T22:10:13 ***
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[59818,1],3]
+  Exit code:    1
+--------------------------------------------------------------------------
+real 327.27
+user 0.02
+sys 0.08

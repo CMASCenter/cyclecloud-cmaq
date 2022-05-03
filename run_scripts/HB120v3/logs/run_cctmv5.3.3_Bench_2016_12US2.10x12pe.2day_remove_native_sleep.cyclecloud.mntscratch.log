@@ -1,0 +1,186 @@
+Start Model Run At  Wed Mar 9 20:37:44 UTC 2022
+information about processor including whether using hyperthreading
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                120
+On-line CPU(s) list:   0-119
+Thread(s) per core:    1
+Core(s) per socket:    60
+Socket(s):             2
+NUMA node(s):          4
+Vendor ID:             AuthenticAMD
+CPU family:            25
+Model:                 1
+Model name:            AMD EPYC 7V13 64-Core Processor
+Stepping:              0
+CPU MHz:               2445.401
+BogoMIPS:              4890.80
+Hypervisor vendor:     Microsoft
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              512K
+L3 cache:              32768K
+NUMA node0 CPU(s):     0-29
+NUMA node1 CPU(s):     30-59
+NUMA node2 CPU(s):     60-89
+NUMA node3 CPU(s):     90-119
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl extd_apicid aperfmperf eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single retpoline_amd vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr arat umip vaes vpclmulqdq
+information about cluster
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+hpc*         up   infinite      2  idle~ cmaq-hbv3-hpc-pg0-[3-4]
+hpc*         up   infinite      1  alloc cmaq-hbv3-hpc-pg0-1
+hpc*         up   infinite      1   idle cmaq-hbv3-hpc-pg0-2
+htc          up   infinite      1  idle~ cmaq-hbv3-htc-1
+information about filesystem
+Filesystem                                               Size  Used Avail Use% Mounted on
+devtmpfs                                                 221G     0  221G   0% /dev
+tmpfs                                                    221G     0  221G   0% /dev/shm
+tmpfs                                                    221G  9.1M  221G   1% /run
+tmpfs                                                    221G     0  221G   0% /sys/fs/cgroup
+/dev/sda2                                                 30G   30G  196K 100% /
+/dev/sda1                                                494M   75M  419M  16% /boot
+/dev/sda15                                               495M   12M  484M   3% /boot/efi
+cmasstorage.file.core.windows.net:/cmasstorage/cmaqdata  1.0T   63G  962G   7% /data
+10.3.0.9:/sched                                           30G   33M   30G   1% /sched
+10.3.0.9:/shared                                        1000G  202G  799G  21% /shared
+/dev/sdb1                                                473G   73M  449G   1% /mnt/resource
+list the mounted volumes
+clnt_create: RPC: Program not registered
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/othpt/inln_mole_othpt_20160105_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/othpt/inln_mole_othpt_20160105_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/othpt/inln_mole_othpt_20160104_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/othpt/inln_mole_othpt_20160104_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/inln_point/stack_groups/stack_groups_pt_oilgas_12US1_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/inln_point/stack_groups/stack_groups_pt_oilgas_12US1_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20160102_12US2_withbeis_withrwc_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20160102_12US2_withbeis_withrwc_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20160102_12US2_nobeis_norwc_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20160102_12US2_nobeis_norwc_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20160101_12US2_withbeis_withrwc_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20160101_12US2_withbeis_withrwc_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20160101_12US2_nobeis_norwc_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20160101_12US2_nobeis_norwc_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20151223_12US2_withbeis_withrwc_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20151223_12US2_withbeis_withrwc_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20151223_12US2_nobeis_norwc_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20151223_12US2_nobeis_norwc_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20151222_12US2_withbeis_withrwc_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20151222_12US2_withbeis_withrwc_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20151222_12US2_nobeis_norwc_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/emis_mole_all_20151222_12US2_nobeis_norwc_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/stack_groups_cmv_c3_12_12US1_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/stack_groups_cmv_c3_12_12US1_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/inln_mole_cmv_c3_12_20160102_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/inln_mole_cmv_c3_12_20160102_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/inln_mole_cmv_c3_12_20160101_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/inln_mole_cmv_c3_12_20160101_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/inln_mole_cmv_c3_12_20151223_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/inln_mole_cmv_c3_12_20151223_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/inln_mole_cmv_c3_12_20151222_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c3_12/inln_mole_cmv_c3_12_20151222_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/stack_groups_cmv_c1c2_12_12US1_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/stack_groups_cmv_c1c2_12_12US1_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20160102_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20160102_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20160101_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20160101_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20151223_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20151223_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20151222_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/emissions/cmv_c1c2_12/inln_mole_cmv_c1c2_12_20151222_12US1_cmaq_cb6_2016fh_16j.ncf’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/METDOT3D.12US2.35L.151223’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/METDOT3D.12US2.35L.151223’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/METDOT3D.12US2.35L.151222’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/METDOT3D.12US2.35L.151222’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/METCRO3D.12US2.35L.151223’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/METCRO3D.12US2.35L.151223’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/METCRO3D.12US2.35L.151222’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/METCRO3D.12US2.35L.151222’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/METCRO2D.12US2.35L.151223’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/METCRO2D.12US2.35L.151223’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/METCRO2D.12US2.35L.151222’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/METCRO2D.12US2.35L.151222’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/METBDY3D.12US2.35L.151223’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/METBDY3D.12US2.35L.151223’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/METBDY3D.12US2.35L.151222’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/METBDY3D.12US2.35L.151222’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/GRIDDOT2D.12US2.35L.151223’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/GRIDDOT2D.12US2.35L.151223’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/GRIDDOT2D.12US2.35L.151222’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/GRIDDOT2D.12US2.35L.151222’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/GRIDCRO2D.12US2.35L.151223’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/GRIDCRO2D.12US2.35L.151223’: No space left on device
+cp: error writing ‘/mnt/scratch/CONUS/12US2/MCIP/GRIDCRO2D.12US2.35L.151222’: No space left on device
+cp: failed to extend ‘/mnt/scratch/CONUS/12US2/MCIP/GRIDCRO2D.12US2.35L.151222’: No space left on device
+cp: cannot create symbolic link ‘/mnt/scratch/CONUS/12US2/GRIDDESC’: No space left on device
+Compiler is set to gcc
+
+Working Directory is /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts
+Build Directory is /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc_remove_native
+Output Directory is /data/output/output_CCTM_v533_gcc_2016_CONUS_10x12pe_mnt_scratch
+Log Directory is /data/output/output_CCTM_v533_gcc_2016_CONUS_10x12pe_mnt_scratch/LOGS
+Executable Name is CCTM_v533.exe
+
+---CMAQ EXECUTION ID: CMAQ_CCTMv533_lizadams_20220309_204045_937274954 ---
+grep: /mnt/scratch/CONUS/12US2/GRIDDESC: No such file or directory
+grep: /mnt/scratch/CONUS/12US2/GRIDDESC: No such file or directory
+(standard_in) 1: syntax error
+
+Set up input and output files for Day 2015-12-22.
+
+Existing Logs and Output Files for Day 2015-12-22 Will Be Deleted
+/bin/rm: No match.
+
+CMAQ Processing of Day 20151222 Began at Wed Mar  9 20:40:46 UTC 2022
+
+--------------------------------------------------------------------------
+A call to mkdir was unable to create the desired directory:
+
+  Directory: /tmp/ompi.ip-0a03000c.20004
+  Error:     No space left on device
+
+Please check to ensure you have adequate permissions to perform
+the desired operation.
+--------------------------------------------------------------------------
+[ip-0a03000c:12492] [[64807,0],0] ORTE_ERROR_LOG: Error in file util/session_dir.c at line 107
+[ip-0a03000c:12492] [[64807,0],0] ORTE_ERROR_LOG: Error in file util/session_dir.c at line 346
+--------------------------------------------------------------------------
+It looks like orte_init failed for some reason; your parallel process is
+likely to abort.  There are many reasons that a parallel process can
+fail during orte_init; some of which are due to configuration or
+environment problems.  This failure appears to be an internal failure;
+here's some additional information (which may only be relevant to an
+Open MPI developer):
+
+  orte_session_dir failed
+  --> Returned value Error (-1) instead of ORTE_SUCCESS
+--------------------------------------------------------------------------
+real 0.90
+user 0.01
+sys 0.05
+
+**************************************************************
+** Runscript Detected an Error: CGRID file was not written. **
+**   This indicates that CMAQ was interrupted or an issue   **
+**   exists with writing output. The runscript will now     **
+**   abort rather than proceeding to subsequent days.       **
+**************************************************************
+
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2015-12-22
+End Day:   2015-12-23
+Number of Simulation Days: 1
+Domain Name:               12US2
+Number of Grid Cells:        (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       120
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2015-12-22   0.90
+     Total Time = .90
+      Avg. Time = .90

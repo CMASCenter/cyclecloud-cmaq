@@ -1,0 +1,1323 @@
+Start Model Run At  Thu Mar 24 00:54:29 UTC 2022
+information about processor including whether using hyperthreading
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                120
+On-line CPU(s) list:   0-119
+Thread(s) per core:    1
+Core(s) per socket:    60
+Socket(s):             2
+NUMA node(s):          4
+Vendor ID:             AuthenticAMD
+CPU family:            25
+Model:                 1
+Model name:            AMD EPYC 7V73X 64-Core Processor
+Stepping:              2
+CPU MHz:               1846.532
+BogoMIPS:              3693.06
+Hypervisor vendor:     Microsoft
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              512K
+L3 cache:              98304K
+NUMA node0 CPU(s):     0-29
+NUMA node1 CPU(s):     30-59
+NUMA node2 CPU(s):     60-89
+NUMA node3 CPU(s):     90-119
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm art rep_good nopl extd_apicid aperfmperf eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single retpoline_amd vmmcall fsgsbase bmi1 avx2 smep bmi2 invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr arat umip vaes vpclmulqdq
+information about cluster
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+hpc*         up   infinite      7  idle~ cmaq-hbv3-hpc-pg0-[2-8]
+hpc*         up   infinite      1  alloc cmaq-hbv3-hpc-pg0-1
+htc          up   infinite      1  idle~ cmaq-hbv3-htc-1
+information about filesystem
+Filesystem                                               Size  Used Avail Use% Mounted on
+devtmpfs                                                 221G     0  221G   0% /dev
+tmpfs                                                    221G     0  221G   0% /dev/shm
+tmpfs                                                    221G  9.1M  221G   1% /run
+tmpfs                                                    221G     0  221G   0% /sys/fs/cgroup
+/dev/sda2                                                 30G   13G   17G  43% /
+/dev/sda1                                                494M   75M  419M  16% /boot
+/dev/sda15                                               495M   12M  484M   3% /boot/efi
+cmasstorage.file.core.windows.net:/cmasstorage/cmaqdata  1.0T  164G  861G  16% /data
+10.3.0.9:/sched                                           30G   33M   30G   1% /sched
+10.3.0.9:/shared                                        1000G  202G  799G  21% /shared
+/dev/sdb1                                                473G   73M  449G   1% /mnt/resource
+list the mounted volumes
+clnt_create: RPC: Program not registered
+mkdir: cannot create directory ‘/mnt/resource/data2’: Permission denied
+permissions for /mnt/resource
+total 20
+drwx------. 2 root root 16384 Mar 24 00:50 lost+found
+-rw-r--r--. 1 root root   366 Mar 24 00:50 DATALOSS_WARNING_README.txt
+cp: cannot create directory ‘/mnt/resource/data2/’: Permission denied
+Compiler is set to gcc
+
+Working Directory is /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts
+Build Directory is /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc_remove_native
+Output Directory is /data/output/output_CCTM_v533_gcc_2016_CONUS_6x6pe_mntresource-i.datadir-o_newcpu
+Log Directory is /data/output/output_CCTM_v533_gcc_2016_CONUS_6x6pe_mntresource-i.datadir-o_newcpu/LOGS
+Executable Name is CCTM_v533.exe
+
+---CMAQ EXECUTION ID: CMAQ_CCTMv533_lizadams_20220324_005430_295758149 ---
+grep: /mnt/resource/data2/CONUS/12US2/GRIDDESC: No such file or directory
+grep: /mnt/resource/data2/CONUS/12US2/GRIDDESC: No such file or directory
+(standard_in) 1: syntax error
+
+Set up input and output files for Day 2015-12-22.
+grep: /mnt/resource/data2/CONUS/12US2/emissions/smk_merge_dates_201512.txt: No such file or directory
+intable: Subscript out of range.
+intable: Subscript out of range.
+intable: Subscript out of range.
+intable: Subscript out of range.
+intable: Subscript out of range.
+intable: Subscript out of range.
+intable: Subscript out of range.
+intable: Subscript out of range.
+
+Existing Logs and Output Files for Day 2015-12-22 Will Be Deleted
+/bin/rm: No match.
+
+CMAQ Processing of Day 20151222 Began at Thu Mar 24 00:54:30 UTC 2022
+
+        CTM_APPL  |  v533_gcc_2016_CONUS_6x6pe_mntresource-i.datadir-o_newcpu_20151222
+================================================================================          
+|                                                                              |          
+|               The Community Multiscale Air Quality (CMAQ) Model              |          
+|                                   Version 5.3.3                              |          
+|                                                                              |          
+|                          Built and Maintained by the                         |          
+|                        Office of Research and Development                    |          
+|                   United States Environmental Protection Agency              |          
+|                                                                              |          
+|                            https://www.epa.gov/cmaq                          |          
+|                                                                              |          
+|       Source Code:   https://www.github.com/USEPA/cmaq/tree/main             |          
+|       Documentation: https://www.github.com/USEPA/cmaq/tree/main/DOCS        |          
+|                                                                              |          
+|         The CMAQ Model is tested and released with cooperation from          |          
+|         the Community Modeling and Analysis System (CMAS) Center via         |          
+|         contract support. CMAS is managed by the Institute for the           |          
+|         Environment, University of North Carolina at Chapel Hill.            |          
+|         CMAS URL: (https://www.cmascenter.org)                               |          
+|                                                                              |          
+================================================================================          
+[1648083276.512745] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid f00003056 is not released, refcount 2
+[1648083276.512768] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1000003056 is not released, refcount 2
+[1648083276.512772] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1100003056 is not released, refcount 2
+[1648083276.512775] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1200003056 is not released, refcount 2
+[1648083276.512777] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1300003056 is not released, refcount 2
+[1648083276.512779] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1400003056 is not released, refcount 2
+[1648083276.512784] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1600003056 is not released, refcount 2
+[1648083276.512787] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1500003056 is not released, refcount 2
+[1648083276.512789] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1700003056 is not released, refcount 2
+[1648083276.512791] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1800003056 is not released, refcount 2
+[1648083276.512794] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1a00003056 is not released, refcount 2
+[1648083276.512796] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1900003056 is not released, refcount 2
+[1648083276.512798] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1b00003056 is not released, refcount 2
+[1648083276.512800] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 1c00003056 is not released, refcount 2
+[1648083276.512802] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 1e00003056 is not released, refcount 2
+[1648083276.512805] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 1d00003056 is not released, refcount 2
+[1648083276.512807] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 1f00003056 is not released, refcount 2
+[1648083276.512809] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 2000003056 is not released, refcount 2
+[1648083276.512811] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 2200003056 is not released, refcount 2
+[1648083276.512814] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 2100003056 is not released, refcount 2
+[1648083276.512816] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 2300003056 is not released, refcount 2
+[1648083276.512818] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 2400003056 is not released, refcount 2
+[1648083276.512820] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 200003056 is not released, refcount 2
+[1648083276.512823] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 100003056 is not released, refcount 2
+[1648083276.512825] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 300003056 is not released, refcount 2
+[1648083276.512827] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 400003056 is not released, refcount 2
+[1648083276.512830] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 700003056 is not released, refcount 2
+[1648083276.512832] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 500003056 is not released, refcount 2
+[1648083276.512834] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 600003056 is not released, refcount 2
+[1648083276.512836] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 800003056 is not released, refcount 2
+[1648083276.512839] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid a00003056 is not released, refcount 2
+[1648083276.512841] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 900003056 is not released, refcount 2
+[1648083276.512843] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid b00003056 is not released, refcount 2
+[1648083276.512880] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid c00003056 is not released, refcount 2
+[1648083276.512882] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid e00003056 is not released, refcount 2
+[1648083276.512885] [ip-0a03000d:12374:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid d00003056 is not released, refcount 2
+[1648083276.519843] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid e00003057 is not released, refcount 2
+[1648083276.519871] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid f00003057 is not released, refcount 2
+[1648083276.519876] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1000003057 is not released, refcount 2
+[1648083276.519878] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1100003057 is not released, refcount 2
+[1648083276.519881] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1200003057 is not released, refcount 2
+[1648083276.519883] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1300003057 is not released, refcount 2
+[1648083276.519888] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1500003057 is not released, refcount 2
+[1648083276.519890] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1400003057 is not released, refcount 2
+[1648083276.519892] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1600003057 is not released, refcount 2
+[1648083276.519895] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1700003057 is not released, refcount 2
+[1648083276.519897] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1900003057 is not released, refcount 2
+[1648083276.519899] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1800003057 is not released, refcount 2
+[1648083276.519901] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1a00003057 is not released, refcount 2
+[1648083276.519904] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 1b00003057 is not released, refcount 2
+[1648083276.519906] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 1d00003057 is not released, refcount 2
+[1648083276.519908] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 1c00003057 is not released, refcount 2
+[1648083276.519911] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 1e00003057 is not released, refcount 2
+[1648083276.519913] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 1f00003057 is not released, refcount 2
+[1648083276.519915] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 2100003057 is not released, refcount 2
+[1648083276.519917] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 2000003057 is not released, refcount 2
+[1648083276.519920] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 2200003057 is not released, refcount 2
+[1648083276.519922] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 2300003057 is not released, refcount 2
+[1648083276.519924] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 100003057 is not released, refcount 2
+[1648083276.519927] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 2400003057 is not released, refcount 2
+[1648083276.519929] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 200003057 is not released, refcount 2
+[1648083276.519932] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 300003057 is not released, refcount 2
+[1648083276.519934] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 600003057 is not released, refcount 2
+[1648083276.519936] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 400003057 is not released, refcount 2
+[1648083276.519938] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 500003057 is not released, refcount 2
+[1648083276.519941] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 700003057 is not released, refcount 2
+[1648083276.519943] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 900003057 is not released, refcount 2
+[1648083276.519945] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 800003057 is not released, refcount 2
+[1648083276.519947] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid a00003057 is not released, refcount 2
+[1648083276.520033] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid b00003057 is not released, refcount 2
+[1648083276.520038] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid d00003057 is not released, refcount 2
+[1648083276.520042] [ip-0a03000d:12375:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid c00003057 is not released, refcount 2
+[1648083276.524514] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1300003052 is not released, refcount 2
+[1648083276.524540] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1400003052 is not released, refcount 2
+[1648083276.524544] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1500003052 is not released, refcount 2
+[1648083276.524547] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1600003052 is not released, refcount 2
+[1648083276.524550] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1700003052 is not released, refcount 2
+[1648083276.524554] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1800003052 is not released, refcount 2
+[1648083276.524557] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1a00003052 is not released, refcount 2
+[1648083276.524559] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1900003052 is not released, refcount 2
+[1648083276.524561] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1b00003052 is not released, refcount 2
+[1648083276.524563] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1c00003052 is not released, refcount 2
+[1648083276.524566] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1e00003052 is not released, refcount 2
+[1648083276.524568] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1d00003052 is not released, refcount 2
+[1648083276.524570] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1f00003052 is not released, refcount 2
+[1648083276.524572] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 2000003052 is not released, refcount 2
+[1648083276.524574] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 2200003052 is not released, refcount 2
+[1648083276.524577] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 2100003052 is not released, refcount 2
+[1648083276.524579] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 2300003052 is not released, refcount 2
+[1648083276.524581] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 2400003052 is not released, refcount 2
+[1648083276.524584] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 200003052 is not released, refcount 2
+[1648083276.524586] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 100003052 is not released, refcount 2
+[1648083276.524589] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 300003052 is not released, refcount 2
+[1648083276.524591] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 400003052 is not released, refcount 2
+[1648083276.524593] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 600003052 is not released, refcount 2
+[1648083276.524595] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 500003052 is not released, refcount 2
+[1648083276.524598] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 700003052 is not released, refcount 2
+[1648083276.524600] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 800003052 is not released, refcount 2
+[1648083276.524602] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid b00003052 is not released, refcount 2
+[1648083276.524605] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 900003052 is not released, refcount 2
+[1648083276.524607] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid a00003052 is not released, refcount 2
+[1648083276.524609] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid c00003052 is not released, refcount 2
+[1648083276.524611] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid e00003052 is not released, refcount 2
+[1648083276.524614] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid d00003052 is not released, refcount 2
+[1648083276.524616] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid f00003052 is not released, refcount 2
+[1648083276.524702] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 1000003052 is not released, refcount 2
+[1648083276.524707] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 1200003052 is not released, refcount 2
+[1648083276.524710] [ip-0a03000d:12370:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 1100003052 is not released, refcount 2
+                                                                     
+     This program uses the EPA-AREAL/MCNC-EnvPgms/BAMS Models-3      
+     I/O Applications Programming Interface, [I/O API] which is      
+     built on top of the netCDF I/O library (Copyright 1993, 1996    
+     University Corporation for Atmospheric Research/Unidata         
+     Program) and the PVM parallel-programming library (from         
+     Oak Ridge National Laboratory).                                 
+     Copyright (C) 1992-2002 MCNC,                                   
+     (C) 1992-2018 Carlie J. Coats, Jr.,                             
+     (C) 2003-2012 Baron Advanced Meteorological Systems, LLC, and   
+     (C) 2014-2021 UNC Institute for the Environment.                
+     Released under the GNU LGPL  License, version 2.1.  See URL     
+                                                                     
+         https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html     
+                                                                     
+     for conditions of use.                                          
+                                                                     
+     ioapi-3.2: $Id: init3.F90 200 2021-05-10 14:06:20Z coats $
+     netCDF version 4.7.1 of Feb 16 2022 20:13:38 $
+      
+[1648083276.532574] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 70000303a is not released, refcount 2
+[1648083276.532597] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 80000303a is not released, refcount 2
+[1648083276.532601] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 90000303a is not released, refcount 2
+[1648083276.532603] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid a0000303a is not released, refcount 2
+[1648083276.532606] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid b0000303a is not released, refcount 2
+[1648083276.532608] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid c0000303a is not released, refcount 2
+[1648083276.532610] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid e0000303a is not released, refcount 2
+[1648083276.532613] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid d0000303a is not released, refcount 2
+[1648083276.532615] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid f0000303a is not released, refcount 2
+[1648083276.532617] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 100000303a is not released, refcount 2
+[1648083276.532620] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 120000303a is not released, refcount 2
+[1648083276.532622] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 110000303a is not released, refcount 2
+[1648083276.532624] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 130000303a is not released, refcount 2
+[1648083276.532627] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 140000303a is not released, refcount 2
+[1648083276.532629] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 160000303a is not released, refcount 2
+[1648083276.532631] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 150000303a is not released, refcount 2
+[1648083276.532633] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 170000303a is not released, refcount 2
+[1648083276.532637] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 180000303a is not released, refcount 2
+[1648083276.532640] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 1a0000303a is not released, refcount 2
+[1648083276.532642] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 190000303a is not released, refcount 2
+[1648083276.532644] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 1b0000303a is not released, refcount 2
+[1648083276.532647] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1c0000303a is not released, refcount 2
+[1648083276.532649] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1e0000303a is not released, refcount 2
+[1648083276.532651] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1d0000303a is not released, refcount 2
+[1648083276.532653] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1f0000303a is not released, refcount 2
+[1648083276.532655] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 200000303a is not released, refcount 2
+[1648083276.532658] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 230000303a is not released, refcount 2
+[1648083276.532660] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 210000303a is not released, refcount 2
+[1648083276.532663] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 220000303a is not released, refcount 2
+[1648083276.532665] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 240000303a is not released, refcount 2
+[1648083276.532667] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 20000303a is not released, refcount 2
+[1648083276.532669] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 10000303a is not released, refcount 2
+[1648083276.532672] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 30000303a is not released, refcount 2
+[1648083276.532755] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 40000303a is not released, refcount 2
+[1648083276.532760] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 60000303a is not released, refcount 2
+[1648083276.532764] [ip-0a03000d:12346:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 50000303a is not released, refcount 2
+[1648083276.535296] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 2300003043 is not released, refcount 2
+[1648083276.535320] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 2400003043 is not released, refcount 2
+[1648083276.535324] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 100003043 is not released, refcount 2
+[1648083276.535327] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 200003043 is not released, refcount 2
+[1648083276.535330] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 300003043 is not released, refcount 2
+[1648083276.535332] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 400003043 is not released, refcount 2
+[1648083276.535336] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 600003043 is not released, refcount 2
+[1648083276.535338] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 500003043 is not released, refcount 2
+[1648083276.535340] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 700003043 is not released, refcount 2
+[1648083276.535343] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 800003043 is not released, refcount 2
+[1648083276.535345] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid a00003043 is not released, refcount 2
+[1648083276.535347] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 900003043 is not released, refcount 2
+[1648083276.535350] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid b00003043 is not released, refcount 2
+[1648083276.535352] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid c00003043 is not released, refcount 2
+[1648083276.535354] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid e00003043 is not released, refcount 2
+[1648083276.535356] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid d00003043 is not released, refcount 2
+[1648083276.535359] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid f00003043 is not released, refcount 2
+[1648083276.535361] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 1000003043 is not released, refcount 2
+[1648083276.535363] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 1200003043 is not released, refcount 2
+[1648083276.535366] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 1100003043 is not released, refcount 2
+[1648083276.535368] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 1300003043 is not released, refcount 2
+[1648083276.535370] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1400003043 is not released, refcount 2
+[1648083276.535372] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1600003043 is not released, refcount 2
+[1648083276.535395] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1500003043 is not released, refcount 2
+[1648083276.535398] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1700003043 is not released, refcount 2
+[1648083276.535400] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1800003043 is not released, refcount 2
+[1648083276.535403] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 1b00003043 is not released, refcount 2
+[1648083276.535405] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1900003043 is not released, refcount 2
+[1648083276.535407] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 1a00003043 is not released, refcount 2
+[1648083276.535409] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 1c00003043 is not released, refcount 2
+[1648083276.535411] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 1e00003043 is not released, refcount 2
+[1648083276.535414] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 1d00003043 is not released, refcount 2
+[1648083276.535416] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 1f00003043 is not released, refcount 2
+[1648083276.535475] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 2000003043 is not released, refcount 2
+[1648083276.535479] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 2200003043 is not released, refcount 2
+[1648083276.535481] [ip-0a03000d:12355:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 2100003043 is not released, refcount 2
+
+     ===========================================
+     |>---   ENVIRONMENT VARIABLE REPORT   ---<|
+     ===========================================
+
+     |> Grid and High-Level Model Parameters:
+     +=========================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+             BLD  |             (default)
+          OUTDIR  |  /data/output/output_CCTM_v533_gcc_2016_CONUS_6x6pe_mntresource-i.datadir-o_newcpu
+       NEW_START  |          T
+  ISAM_NEW_START  |  Y (default)
+       GRID_NAME  |  12US2
+       CTM_TSTEP  |       10000
+      CTM_RUNLEN  |      240000
+    CTM_PROGNAME  |  DRIVER (default)
+      CTM_STDATE  |     2015356
+      CTM_STTIME  |           0
+     NPCOL_NPROW  |  6 6
+     CTM_MAXSYNC  |         300
+     CTM_MINSYNC  |          60
+
+     |> Multiprocess control, output and error checking:
+     +====================================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+ PRINT_PROC_TIME  |          T
+     FL_ERR_STOP  |          F
+       CTM_CKSUM  |          T
+AVG_FILE_ENDTIME  |          F
+   AVG_CONC_SPCS  |  ALL
+       CONC_SPCS  |  O3 NO ANO3I ANO3J NO2 FORM ISOP NH3 ANH4I ANH4J ASO4I ASO4J
+ ACONC_BLEV_ELEV  |   1 1
+  CONC_BLEV_ELEV  |   1 1
+ IOAPI_LOG_WRITE  |          F
+         VERTEXT  |          F
+VERTEXT_COORD_PA  |  /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/lonlat.csv
+   gc_matrix_nml  |  /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc_remove_native/GC_cb6r3_ae7_aq.nml
+   ae_matrix_nml  |  /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc_remove_native/AE_cb6r3_ae7_aq.nml
+   nr_matrix_nml  |  /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc_remove_native/NR_cb6r3_ae7_aq.nml
+   tr_matrix_nml  |  /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc_remove_native/Species_Table_TR_0.nml
+
+     |> Chemistry and Photolysis:
+     +=============================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+    CTM_PHOTDIAG  |          F
+CORE_SHELL_OPTIC  |          F (default)
+ OPTICS_MIE_CALC  |          F (default)
+       GEAR_ATOL  |   0.100E-08 (default)
+       GEAR_RTOL  |   0.100E-02 (default)
+         RB_RTOL  |   0.100E-02 (default)
+         RB_ATOL  |   0.100E-06 (default)
+
+     |> Aerosols:
+     +=============
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+    CTM_AVISDIAG  |          F (default)
+  CTM_ZERO_PCSOA  |          F (default)
+         CTM_AOD  |          F (default)
+      CTM_PMDIAG  |          F
+     CTM_APMDIAG  |          T
+APMDIAG_BLEV_ELE  |  1 1
+ AVG_PMDIAG_SPCS  |             (default)
+    STM_SO4TRACK  |          T
+      STM_ADJSO4  |          T
+
+     |> Cloud Processes:
+     +====================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+        CLD_DIAG  |          F
+
+     |> Air-Surface Exchange Processes:
+     +===================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+      PX_VERSION  |          T
+      CTM_ABFLUX  |          F
+      CTM_MOSAIC  |          F
+    CTM_SFC_HONO  |          T
+     CLM_VERSION  |          F
+    NOAH_VERSION  |          F
+       CTM_STAGE  |          F (default)
+   CTM_DEPV_FILE  |          F
+      CTM_HGBIDI  |          F
+CTM_BIDI_FERT_NH  |          T
+ CTM_WBDUST_BELD  |  BELD3
+
+     |> Transport Processes:
+     +========================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+CTM_VDIFF_DIAG_F  |          F (default)
+  SIGMA_SYNC_TOP  |   0.700E+00
+    ADV_HDIV_LIM  |   0.900E+00 (default)
+     CTM_ADV_CFL  |   0.950E+00
+           KZMIN  |          T
+        CTM_WVEL  |          T
+   CTM_GRAV_SETL  |          T
+
+     |> Emissions Parameters:
+     +=========================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+   EMISSCTRL_NML  |  /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc_remove_native/EmissCtrl_cb6r3_ae7_aq.nml
+      CTM_EMLAYS  |           0 (default)
+       N_EMIS_GR  |           2
+       N_EMIS_TR  |           0 (default)
+     CTM_EMISCHK  |          F
+    CTM_BIOGEMIS  |          F
+       BIOG_SPRO  |  DEFAULT (default)
+        BIOSW_YN  |          F (default)
+       SUMMER_YN  |          T (default)
+      B3GTS_DIAG  |          F
+    CTM_MGEMDIAG  |          F (default)
+  CTM_OCEAN_CHEM  |          T
+     CTM_WB_DUST  |          F
+ CTM_DUSTEM_DIAG  |          F
+    CTM_SSEMDIAG  |          F
+     CTM_LTNG_NO  |          F
+   LTNG_ASSIM_DT  |           0 (default)
+          LTNGNO  |  InLine (default)
+        USE_NLDN  |          F (default)
+        LTNGDIAG  |          F
+         MOLSNCG  |   0.350E+03 (default)
+         MOLSNIC  |   0.350E+03 (default)
+       N_EMIS_PT  |           9
+          IPVERT  |           0 (default)
+        EMISDIAG  |  F
+   EMIS_SYM_DATE  |          F (default)
+
+     |> Process Analysis Parameters:
+     +================================
+      --Env Variable-- | --Value--
+      --------------------------------------------------------------------------------
+      CTM_PROCAN  |          F
+    PA_BCOL_ECOL  |             (default)
+    PA_BROW_EROW  |             (default)
+    PA_BLEV_ELEV  |             (default)
+[1648083276.541914] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1a0000304b is not released, refcount 2
+[1648083276.541941] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1b0000304b is not released, refcount 2
+[1648083276.541946] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1c0000304b is not released, refcount 2
+[1648083276.541948] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1d0000304b is not released, refcount 2
+[1648083276.541951] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1e0000304b is not released, refcount 2
+[1648083276.541953] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1f0000304b is not released, refcount 2
+[1648083276.541955] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 210000304b is not released, refcount 2
+[1648083276.541958] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 200000304b is not released, refcount 2
+[1648083276.541960] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 220000304b is not released, refcount 2
+[1648083276.541963] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 230000304b is not released, refcount 2
+[1648083276.541965] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 10000304b is not released, refcount 2
+[1648083276.541968] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 240000304b is not released, refcount 2
+[1648083276.541970] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 20000304b is not released, refcount 2
+[1648083276.541973] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 30000304b is not released, refcount 2
+[1648083276.541975] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 50000304b is not released, refcount 2
+[1648083276.541978] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 40000304b is not released, refcount 2
+[1648083276.541980] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 60000304b is not released, refcount 2
+[1648083276.541982] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 70000304b is not released, refcount 2
+[1648083276.541985] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 90000304b is not released, refcount 2
+[1648083276.541987] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 80000304b is not released, refcount 2
+[1648083276.541990] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid a0000304b is not released, refcount 2
+[1648083276.541992] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid b0000304b is not released, refcount 2
+[1648083276.541994] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid d0000304b is not released, refcount 2
+[1648083276.541997] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid c0000304b is not released, refcount 2
+[1648083276.541999] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid e0000304b is not released, refcount 2
+[1648083276.542004] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid f0000304b is not released, refcount 2
+[1648083276.542006] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 120000304b is not released, refcount 2
+[1648083276.542009] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 100000304b is not released, refcount 2
+[1648083276.542011] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 110000304b is not released, refcount 2
+[1648083276.542014] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 130000304b is not released, refcount 2
+[1648083276.542016] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 150000304b is not released, refcount 2
+[1648083276.542018] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 140000304b is not released, refcount 2
+[1648083276.542021] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 160000304b is not released, refcount 2
+[1648083276.542122] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 170000304b is not released, refcount 2
+[1648083276.542125] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 190000304b is not released, refcount 2
+[1648083276.542130] [ip-0a03000d:12363:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 180000304b is not released, refcount 2
+[1648083276.546716] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid b00003036 is not released, refcount 2
+[1648083276.546738] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid c00003036 is not released, refcount 2
+[1648083276.546742] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid d00003036 is not released, refcount 2
+[1648083276.546745] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid e00003036 is not released, refcount 2
+[1648083276.546747] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid f00003036 is not released, refcount 2
+[1648083276.546750] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1000003036 is not released, refcount 2
+[1648083276.546753] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1200003036 is not released, refcount 2
+[1648083276.546755] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1100003036 is not released, refcount 2
+[1648083276.546757] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1300003036 is not released, refcount 2
+[1648083276.546759] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1400003036 is not released, refcount 2
+[1648083276.546762] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1600003036 is not released, refcount 2
+[1648083276.546764] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1500003036 is not released, refcount 2
+[1648083276.546766] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1700003036 is not released, refcount 2
+[1648083276.546768] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 1800003036 is not released, refcount 2
+[1648083276.546771] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 1a00003036 is not released, refcount 2
+[1648083276.546773] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 1900003036 is not released, refcount 2
+[1648083276.546775] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 1b00003036 is not released, refcount 2
+[1648083276.546777] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 1c00003036 is not released, refcount 2
+[1648083276.546779] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 1e00003036 is not released, refcount 2
+[1648083276.546782] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 1d00003036 is not released, refcount 2
+[1648083276.546784] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 1f00003036 is not released, refcount 2
+[1648083276.546786] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 2000003036 is not released, refcount 2
+[1648083276.546788] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 2200003036 is not released, refcount 2
+[1648083276.546793] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 2100003036 is not released, refcount 2
+[1648083276.546795] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 2300003036 is not released, refcount 2
+[1648083276.546797] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 2400003036 is not released, refcount 2
+[1648083276.546800] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 300003036 is not released, refcount 2
+[1648083276.546802] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 100003036 is not released, refcount 2
+[1648083276.546805] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 200003036 is not released, refcount 2
+[1648083276.546807] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 400003036 is not released, refcount 2
+[1648083276.546809] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 600003036 is not released, refcount 2
+[1648083276.546812] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 500003036 is not released, refcount 2
+[1648083276.546814] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 700003036 is not released, refcount 2
+[1648083276.546917] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 800003036 is not released, refcount 2
+[1648083276.546919] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid a00003036 is not released, refcount 2
+[1648083276.546923] [ip-0a03000d:12342:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 900003036 is not released, refcount 2
+[1648083276.550931] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 170000304e is not released, refcount 2
+[1648083276.550953] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 180000304e is not released, refcount 2
+[1648083276.550957] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 190000304e is not released, refcount 2
+[1648083276.550960] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1a0000304e is not released, refcount 2
+[1648083276.550963] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1b0000304e is not released, refcount 2
+[1648083276.550966] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1c0000304e is not released, refcount 2
+[1648083276.550970] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1e0000304e is not released, refcount 2
+[1648083276.550973] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1d0000304e is not released, refcount 2
+[1648083276.550976] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1f0000304e is not released, refcount 2
+[1648083276.550978] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 200000304e is not released, refcount 2
+[1648083276.550981] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 220000304e is not released, refcount 2
+[1648083276.550983] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 210000304e is not released, refcount 2
+[1648083276.550986] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 230000304e is not released, refcount 2
+[1648083276.550988] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 240000304e is not released, refcount 2
+[1648083276.550991] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 20000304e is not released, refcount 2
+[1648083276.550993] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 10000304e is not released, refcount 2
+[1648083276.550996] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 30000304e is not released, refcount 2
+[1648083276.550998] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 40000304e is not released, refcount 2
+[1648083276.551000] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 60000304e is not released, refcount 2
+[1648083276.551003] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 50000304e is not released, refcount 2
+[1648083276.551005] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 70000304e is not released, refcount 2
+[1648083276.551008] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 80000304e is not released, refcount 2
+[1648083276.551010] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid a0000304e is not released, refcount 2
+[1648083276.551012] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 90000304e is not released, refcount 2
+[1648083276.551015] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid b0000304e is not released, refcount 2
+[1648083276.551017] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid c0000304e is not released, refcount 2
+[1648083276.551020] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid f0000304e is not released, refcount 2
+[1648083276.551022] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid d0000304e is not released, refcount 2
+[1648083276.551025] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid e0000304e is not released, refcount 2
+[1648083276.551027] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 100000304e is not released, refcount 2
+[1648083276.551029] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 120000304e is not released, refcount 2
+[1648083276.551032] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 110000304e is not released, refcount 2
+[1648083276.551034] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 130000304e is not released, refcount 2
+[1648083276.551124] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 140000304e is not released, refcount 2
+[1648083276.551127] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 160000304e is not released, refcount 2
+[1648083276.551132] [ip-0a03000d:12366:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 150000304e is not released, refcount 2
+[1648083276.555612] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1b0000304a is not released, refcount 2
+[1648083276.555636] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1c0000304a is not released, refcount 2
+[1648083276.555641] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1d0000304a is not released, refcount 2
+[1648083276.555643] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1e0000304a is not released, refcount 2
+[1648083276.555645] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1f0000304a is not released, refcount 2
+[1648083276.555648] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 200000304a is not released, refcount 2
+[1648083276.555651] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 220000304a is not released, refcount 2
+[1648083276.555653] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 210000304a is not released, refcount 2
+[1648083276.555655] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 230000304a is not released, refcount 2
+[1648083276.555658] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 240000304a is not released, refcount 2
+[1648083276.555660] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 20000304a is not released, refcount 2
+[1648083276.555663] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 10000304a is not released, refcount 2
+[1648083276.555665] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 30000304a is not released, refcount 2
+[1648083276.555667] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 40000304a is not released, refcount 2
+[1648083276.555670] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 60000304a is not released, refcount 2
+[1648083276.555672] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 50000304a is not released, refcount 2
+[1648083276.555674] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 70000304a is not released, refcount 2
+[1648083276.555677] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 80000304a is not released, refcount 2
+[1648083276.555679] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid a0000304a is not released, refcount 2
+[1648083276.555681] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 90000304a is not released, refcount 2
+[1648083276.555683] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid b0000304a is not released, refcount 2
+[1648083276.555686] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid c0000304a is not released, refcount 2
+[1648083276.555688] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid e0000304a is not released, refcount 2
+[1648083276.555690] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid d0000304a is not released, refcount 2
+[1648083276.555692] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid f0000304a is not released, refcount 2
+[1648083276.555695] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 100000304a is not released, refcount 2
+[1648083276.555697] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 130000304a is not released, refcount 2
+[1648083276.555700] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 110000304a is not released, refcount 2
+[1648083276.555702] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 120000304a is not released, refcount 2
+[1648083276.555704] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 140000304a is not released, refcount 2
+[1648083276.555707] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 160000304a is not released, refcount 2
+[1648083276.555709] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 150000304a is not released, refcount 2
+[1648083276.555711] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 170000304a is not released, refcount 2
+[1648083276.555796] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 180000304a is not released, refcount 2
+[1648083276.555799] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 1a0000304a is not released, refcount 2
+[1648083276.555803] [ip-0a03000d:12362:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 190000304a is not released, refcount 2
+[1648083276.561337] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1f00003046 is not released, refcount 2
+[1648083276.561359] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 2000003046 is not released, refcount 2
+[1648083276.561363] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 2100003046 is not released, refcount 2
+[1648083276.561366] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 2200003046 is not released, refcount 2
+[1648083276.561368] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 2300003046 is not released, refcount 2
+[1648083276.561371] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 2400003046 is not released, refcount 2
+[1648083276.561374] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 200003046 is not released, refcount 2
+[1648083276.561393] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 100003046 is not released, refcount 2
+[1648083276.561395] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 300003046 is not released, refcount 2
+[1648083276.561398] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 400003046 is not released, refcount 2
+[1648083276.561400] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 600003046 is not released, refcount 2
+[1648083276.561402] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 500003046 is not released, refcount 2
+[1648083276.561405] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 700003046 is not released, refcount 2
+[1648083276.561407] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 800003046 is not released, refcount 2
+[1648083276.561410] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid a00003046 is not released, refcount 2
+[1648083276.561412] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 900003046 is not released, refcount 2
+[1648083276.561414] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid b00003046 is not released, refcount 2
+[1648083276.561417] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid c00003046 is not released, refcount 2
+[1648083276.561419] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid e00003046 is not released, refcount 2
+[1648083276.561422] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid d00003046 is not released, refcount 2
+[1648083276.561424] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid f00003046 is not released, refcount 2
+[1648083276.561426] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1000003046 is not released, refcount 2
+[1648083276.561429] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1200003046 is not released, refcount 2
+[1648083276.561431] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1100003046 is not released, refcount 2
+[1648083276.561434] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1300003046 is not released, refcount 2
+[1648083276.561436] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1400003046 is not released, refcount 2
+[1648083276.561440] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 1700003046 is not released, refcount 2
+[1648083276.561443] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1500003046 is not released, refcount 2
+[1648083276.561445] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 1600003046 is not released, refcount 2
+[1648083276.561448] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 1800003046 is not released, refcount 2
+[1648083276.561450] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 1a00003046 is not released, refcount 2
+[1648083276.561453] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 1900003046 is not released, refcount 2
+[1648083276.561455] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 1b00003046 is not released, refcount 2
+[1648083276.561519] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 1c00003046 is not released, refcount 2
+[1648083276.561524] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 1e00003046 is not released, refcount 2
+[1648083276.561527] [ip-0a03000d:12358:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 1d00003046 is not released, refcount 2
+[1648083276.569440] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 60000303b is not released, refcount 2
+[1648083276.569463] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 70000303b is not released, refcount 2
+[1648083276.569468] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 80000303b is not released, refcount 2
+[1648083276.569471] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 90000303b is not released, refcount 2
+[1648083276.569473] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid a0000303b is not released, refcount 2
+[1648083276.569476] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid b0000303b is not released, refcount 2
+[1648083276.569478] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid d0000303b is not released, refcount 2
+[1648083276.569481] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid c0000303b is not released, refcount 2
+[1648083276.569483] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid e0000303b is not released, refcount 2
+[1648083276.569486] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid f0000303b is not released, refcount 2
+[1648083276.569489] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 110000303b is not released, refcount 2
+[1648083276.569491] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 100000303b is not released, refcount 2
+[1648083276.569494] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 120000303b is not released, refcount 2
+[1648083276.569496] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 130000303b is not released, refcount 2
+[1648083276.569499] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 150000303b is not released, refcount 2
+[1648083276.569502] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 140000303b is not released, refcount 2
+[1648083276.569505] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 160000303b is not released, refcount 2
+[1648083276.569508] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 170000303b is not released, refcount 2
+[1648083276.569510] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 190000303b is not released, refcount 2
+[1648083276.569513] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 180000303b is not released, refcount 2
+[1648083276.569515] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 1a0000303b is not released, refcount 2
+[1648083276.569518] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1b0000303b is not released, refcount 2
+[1648083276.569520] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1d0000303b is not released, refcount 2
+[1648083276.569523] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1c0000303b is not released, refcount 2
+[1648083276.569526] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1e0000303b is not released, refcount 2
+[1648083276.569528] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1f0000303b is not released, refcount 2
+[1648083276.569531] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 220000303b is not released, refcount 2
+[1648083276.569534] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 200000303b is not released, refcount 2
+[1648083276.569536] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 210000303b is not released, refcount 2
+[1648083276.569539] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 230000303b is not released, refcount 2
+[1648083276.569541] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 10000303b is not released, refcount 2
+[1648083276.569544] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 240000303b is not released, refcount 2
+[1648083276.569547] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 20000303b is not released, refcount 2
+[1648083276.569634] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 30000303b is not released, refcount 2
+[1648083276.569639] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 50000303b is not released, refcount 2
+[1648083276.569643] [ip-0a03000d:12347:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 40000303b is not released, refcount 2
+[1648083276.581274] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 30000303e is not released, refcount 2
+[1648083276.581299] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 40000303e is not released, refcount 2
+[1648083276.581303] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 50000303e is not released, refcount 2
+[1648083276.581306] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 60000303e is not released, refcount 2
+[1648083276.581309] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 70000303e is not released, refcount 2
+[1648083276.581313] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 80000303e is not released, refcount 2
+[1648083276.581315] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid a0000303e is not released, refcount 2
+[1648083276.581318] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 90000303e is not released, refcount 2
+[1648083276.581320] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid b0000303e is not released, refcount 2
+[1648083276.581322] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid c0000303e is not released, refcount 2
+[1648083276.581324] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid e0000303e is not released, refcount 2
+[1648083276.581327] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid d0000303e is not released, refcount 2
+[1648083276.581329] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid f0000303e is not released, refcount 2
+[1648083276.581332] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 100000303e is not released, refcount 2
+[1648083276.581334] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 120000303e is not released, refcount 2
+[1648083276.581336] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 110000303e is not released, refcount 2
+[1648083276.581339] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 130000303e is not released, refcount 2
+[1648083276.581341] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 140000303e is not released, refcount 2
+[1648083276.581343] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 160000303e is not released, refcount 2
+[1648083276.581346] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 150000303e is not released, refcount 2
+[1648083276.581348] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 170000303e is not released, refcount 2
+[1648083276.581350] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 180000303e is not released, refcount 2
+[1648083276.581353] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1a0000303e is not released, refcount 2
+[1648083276.581355] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 190000303e is not released, refcount 2
+[1648083276.581357] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1b0000303e is not released, refcount 2
+[1648083276.581359] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1c0000303e is not released, refcount 2
+[1648083276.581362] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 1f0000303e is not released, refcount 2
+[1648083276.581364] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1d0000303e is not released, refcount 2
+[1648083276.581367] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 1e0000303e is not released, refcount 2
+[1648083276.581369] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 200000303e is not released, refcount 2
+[1648083276.581371] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 220000303e is not released, refcount 2
+[1648083276.581374] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 210000303e is not released, refcount 2
+[1648083276.581400] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 230000303e is not released, refcount 2
+[1648083276.581468] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 240000303e is not released, refcount 2
+[1648083276.581472] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 20000303e is not released, refcount 2
+[1648083276.581475] [ip-0a03000d:12350:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 10000303e is not released, refcount 2
+[1648083276.583411] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 180000304c is not released, refcount 2
+[1648083276.583443] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 190000304c is not released, refcount 2
+[1648083276.583447] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1a0000304c is not released, refcount 2
+[1648083276.583450] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1b0000304c is not released, refcount 2
+[1648083276.583453] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1c0000304c is not released, refcount 2
+[1648083276.583455] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1d0000304c is not released, refcount 2
+[1648083276.583458] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1f0000304c is not released, refcount 2
+[1648083276.583460] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1e0000304c is not released, refcount 2
+[1648083276.583462] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 200000304c is not released, refcount 2
+[1648083276.583464] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 210000304c is not released, refcount 2
+[1648083276.583466] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 230000304c is not released, refcount 2
+[1648083276.583468] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 220000304c is not released, refcount 2
+[1648083276.583471] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 240000304c is not released, refcount 2
+[1648083276.583473] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 10000304c is not released, refcount 2
+[1648083276.583475] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 30000304c is not released, refcount 2
+[1648083276.583477] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 20000304c is not released, refcount 2
+[1648083276.583480] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 40000304c is not released, refcount 2
+[1648083276.583482] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 50000304c is not released, refcount 2
+[1648083276.583484] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 70000304c is not released, refcount 2
+[1648083276.583486] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 60000304c is not released, refcount 2
+[1648083276.583488] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 80000304c is not released, refcount 2
+[1648083276.583490] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 90000304c is not released, refcount 2
+[1648083276.583492] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid b0000304c is not released, refcount 2
+[1648083276.583494] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid a0000304c is not released, refcount 2
+[1648083276.583497] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid c0000304c is not released, refcount 2
+[1648083276.583500] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid d0000304c is not released, refcount 2
+[1648083276.583502] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 100000304c is not released, refcount 2
+[1648083276.583505] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid e0000304c is not released, refcount 2
+[1648083276.583507] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid f0000304c is not released, refcount 2
+[1648083276.583509] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 110000304c is not released, refcount 2
+[1648083276.583511] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 130000304c is not released, refcount 2
+[1648083276.583513] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 120000304c is not released, refcount 2
+[1648083276.583515] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 140000304c is not released, refcount 2
+[1648083276.583615] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 150000304c is not released, refcount 2
+[1648083276.583622] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 170000304c is not released, refcount 2
+[1648083276.583626] [ip-0a03000d:12364:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 160000304c is not released, refcount 2
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+[1648083276.590856] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid c00003058 is not released, refcount 2
+[1648083276.590885] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid d00003058 is not released, refcount 2
+[1648083276.590889] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid e00003058 is not released, refcount 2
+[1648083276.590892] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid f00003058 is not released, refcount 2
+[1648083276.590894] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1000003058 is not released, refcount 2
+[1648083276.590896] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1100003058 is not released, refcount 2
+[1648083276.590899] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1300003058 is not released, refcount 2
+[1648083276.590902] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1200003058 is not released, refcount 2
+[1648083276.590905] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1400003058 is not released, refcount 2
+[1648083276.590907] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1500003058 is not released, refcount 2
+[1648083276.590909] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1700003058 is not released, refcount 2
+[1648083276.590912] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1600003058 is not released, refcount 2
+[1648083276.590914] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1800003058 is not released, refcount 2
+[1648083276.590916] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 1900003058 is not released, refcount 2
+[1648083276.590918] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 1b00003058 is not released, refcount 2
+[1648083276.590920] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 1a00003058 is not released, refcount 2
+[1648083276.590923] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 1c00003058 is not released, refcount 2
+[1648083276.590925] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 1d00003058 is not released, refcount 2
+[1648083276.590927] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 1f00003058 is not released, refcount 2
+[1648083276.590929] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 1e00003058 is not released, refcount 2
+[1648083276.590932] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 2000003058 is not released, refcount 2
+[1648083276.590934] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 2100003058 is not released, refcount 2
+[1648083276.590936] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 2300003058 is not released, refcount 2
+[1648083276.590938] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 2200003058 is not released, refcount 2
+[1648083276.590940] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 2400003058 is not released, refcount 2
+[1648083276.590943] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 100003058 is not released, refcount 2
+[1648083276.590945] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 400003058 is not released, refcount 2
+[1648083276.590948] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 200003058 is not released, refcount 2
+[1648083276.590950] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 300003058 is not released, refcount 2
+[1648083276.590952] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 500003058 is not released, refcount 2
+[1648083276.590954] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 700003058 is not released, refcount 2
+[1648083276.590956] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 600003058 is not released, refcount 2
+[1648083276.590958] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 800003058 is not released, refcount 2
+[1648083276.591061] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 900003058 is not released, refcount 2
+[1648083276.591068] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid b00003058 is not released, refcount 2
+[1648083276.591072] [ip-0a03000d:12376:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid a00003058 is not released, refcount 2
+[1648083276.597366] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid d00003059 is not released, refcount 2
+[1648083276.597433] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid e00003059 is not released, refcount 2
+[1648083276.597438] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid f00003059 is not released, refcount 2
+[1648083276.597441] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1000003059 is not released, refcount 2
+[1648083276.597444] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1100003059 is not released, refcount 2
+[1648083276.597446] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1200003059 is not released, refcount 2
+[1648083276.597451] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1400003059 is not released, refcount 2
+[1648083276.597454] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1300003059 is not released, refcount 2
+[1648083276.597456] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1500003059 is not released, refcount 2
+[1648083276.597458] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1600003059 is not released, refcount 2
+[1648083276.597460] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1800003059 is not released, refcount 2
+[1648083276.597463] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1700003059 is not released, refcount 2
+[1648083276.597465] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1900003059 is not released, refcount 2
+[1648083276.597467] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 1a00003059 is not released, refcount 2
+[1648083276.597469] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 1c00003059 is not released, refcount 2
+[1648083276.597472] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 1b00003059 is not released, refcount 2
+[1648083276.597474] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 1d00003059 is not released, refcount 2
+[1648083276.597476] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 1e00003059 is not released, refcount 2
+[1648083276.597478] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 2000003059 is not released, refcount 2
+[1648083276.597480] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 1f00003059 is not released, refcount 2
+[1648083276.597483] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 2100003059 is not released, refcount 2
+[1648083276.597485] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 2200003059 is not released, refcount 2
+[1648083276.597487] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 2400003059 is not released, refcount 2
+[1648083276.597489] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 2300003059 is not released, refcount 2
+[1648083276.597491] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 100003059 is not released, refcount 2
+[1648083276.597494] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 200003059 is not released, refcount 2
+[1648083276.597496] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 500003059 is not released, refcount 2
+[1648083276.597498] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 300003059 is not released, refcount 2
+[1648083276.597500] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 400003059 is not released, refcount 2
+[1648083276.597503] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 600003059 is not released, refcount 2
+[1648083276.597505] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 800003059 is not released, refcount 2
+[1648083276.597507] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 700003059 is not released, refcount 2
+[1648083276.597509] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 900003059 is not released, refcount 2
+[1648083276.597591] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid a00003059 is not released, refcount 2
+[1648083276.597598] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid c00003059 is not released, refcount 2
+[1648083276.597601] [ip-0a03000d:12377:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid b00003059 is not released, refcount 2
+[1648083276.603149] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 160000304f is not released, refcount 2
+[1648083276.603174] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 170000304f is not released, refcount 2
+[1648083276.603178] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 180000304f is not released, refcount 2
+[1648083276.603180] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 190000304f is not released, refcount 2
+[1648083276.603183] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1a0000304f is not released, refcount 2
+[1648083276.603185] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1b0000304f is not released, refcount 2
+[1648083276.603187] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1d0000304f is not released, refcount 2
+[1648083276.603190] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1c0000304f is not released, refcount 2
+[1648083276.603192] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1e0000304f is not released, refcount 2
+[1648083276.603196] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1f0000304f is not released, refcount 2
+[1648083276.603199] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 210000304f is not released, refcount 2
+[1648083276.603202] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 200000304f is not released, refcount 2
+[1648083276.603204] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 220000304f is not released, refcount 2
+[1648083276.603206] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 230000304f is not released, refcount 2
+[1648083276.603209] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 10000304f is not released, refcount 2
+[1648083276.603211] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 240000304f is not released, refcount 2
+[1648083276.603214] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 20000304f is not released, refcount 2
+[1648083276.603216] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 30000304f is not released, refcount 2
+[1648083276.603218] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 50000304f is not released, refcount 2
+[1648083276.603221] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 40000304f is not released, refcount 2
+[1648083276.603223] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 60000304f is not released, refcount 2
+[1648083276.603226] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 70000304f is not released, refcount 2
+[1648083276.603228] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 90000304f is not released, refcount 2
+[1648083276.603230] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 80000304f is not released, refcount 2
+[1648083276.603233] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid a0000304f is not released, refcount 2
+[1648083276.603235] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid b0000304f is not released, refcount 2
+[1648083276.603237] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid e0000304f is not released, refcount 2
+[1648083276.603240] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid c0000304f is not released, refcount 2
+[1648083276.603242] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid d0000304f is not released, refcount 2
+[1648083276.603245] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid f0000304f is not released, refcount 2
+[1648083276.603247] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 110000304f is not released, refcount 2
+[1648083276.603249] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 100000304f is not released, refcount 2
+[1648083276.603252] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 120000304f is not released, refcount 2
+[1648083276.603341] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 130000304f is not released, refcount 2
+[1648083276.603346] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 150000304f is not released, refcount 2
+[1648083276.603349] [ip-0a03000d:12367:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 140000304f is not released, refcount 2
+[1648083276.611285] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1e00003047 is not released, refcount 2
+[1648083276.611307] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1f00003047 is not released, refcount 2
+[1648083276.611311] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 2000003047 is not released, refcount 2
+[1648083276.611314] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 2100003047 is not released, refcount 2
+[1648083276.611316] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 2200003047 is not released, refcount 2
+[1648083276.611318] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 2300003047 is not released, refcount 2
+[1648083276.611321] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 100003047 is not released, refcount 2
+[1648083276.611323] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 2400003047 is not released, refcount 2
+[1648083276.611325] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 200003047 is not released, refcount 2
+[1648083276.611328] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 300003047 is not released, refcount 2
+[1648083276.611330] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 500003047 is not released, refcount 2
+[1648083276.611332] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 400003047 is not released, refcount 2
+[1648083276.611335] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 600003047 is not released, refcount 2
+[1648083276.611337] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 700003047 is not released, refcount 2
+[1648083276.611339] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 900003047 is not released, refcount 2
+[1648083276.611342] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 800003047 is not released, refcount 2
+[1648083276.611344] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid a00003047 is not released, refcount 2
+[1648083276.611346] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid b00003047 is not released, refcount 2
+[1648083276.611349] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid d00003047 is not released, refcount 2
+[1648083276.611353] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid c00003047 is not released, refcount 2
+[1648083276.611355] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid e00003047 is not released, refcount 2
+[1648083276.611358] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid f00003047 is not released, refcount 2
+[1648083276.611360] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1100003047 is not released, refcount 2
+[1648083276.611362] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1000003047 is not released, refcount 2
+[1648083276.611364] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1200003047 is not released, refcount 2
+[1648083276.611367] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1300003047 is not released, refcount 2
+[1648083276.611369] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 1600003047 is not released, refcount 2
+[1648083276.611372] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1400003047 is not released, refcount 2
+[1648083276.611374] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 1500003047 is not released, refcount 2
+[1648083276.611402] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 1700003047 is not released, refcount 2
+[1648083276.611405] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 1900003047 is not released, refcount 2
+[1648083276.611407] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 1800003047 is not released, refcount 2
+[1648083276.611409] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 1a00003047 is not released, refcount 2
+[1648083276.611480] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 1b00003047 is not released, refcount 2
+[1648083276.611486] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 1d00003047 is not released, refcount 2
+[1648083276.611490] [ip-0a03000d:12359:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 1c00003047 is not released, refcount 2
+[1648083276.618489] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1400003050 is not released, refcount 2
+[1648083276.618521] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1500003050 is not released, refcount 2
+[1648083276.618526] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1600003050 is not released, refcount 2
+[1648083276.618528] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1700003050 is not released, refcount 2
+[1648083276.618530] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1800003050 is not released, refcount 2
+[1648083276.618533] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1900003050 is not released, refcount 2
+[1648083276.618535] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1b00003050 is not released, refcount 2
+[1648083276.618538] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1a00003050 is not released, refcount 2
+[1648083276.618541] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1c00003050 is not released, refcount 2
+[1648083276.618543] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1d00003050 is not released, refcount 2
+[1648083276.618545] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1f00003050 is not released, refcount 2
+[1648083276.618547] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1e00003050 is not released, refcount 2
+[1648083276.618550] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 2000003050 is not released, refcount 2
+[1648083276.618552] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 2100003050 is not released, refcount 2
+[1648083276.618554] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 2300003050 is not released, refcount 2
+[1648083276.618557] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 2200003050 is not released, refcount 2
+[1648083276.618559] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 2400003050 is not released, refcount 2
+[1648083276.618561] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 100003050 is not released, refcount 2
+[1648083276.618564] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 300003050 is not released, refcount 2
+[1648083276.618566] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 200003050 is not released, refcount 2
+[1648083276.618568] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 400003050 is not released, refcount 2
+[1648083276.618570] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 500003050 is not released, refcount 2
+[1648083276.618573] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 700003050 is not released, refcount 2
+[1648083276.618575] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 600003050 is not released, refcount 2
+[1648083276.618577] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 800003050 is not released, refcount 2
+[1648083276.618580] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 900003050 is not released, refcount 2
+[1648083276.618582] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid c00003050 is not released, refcount 2
+[1648083276.618584] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid a00003050 is not released, refcount 2
+[1648083276.618587] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid b00003050 is not released, refcount 2
+[1648083276.618589] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid d00003050 is not released, refcount 2
+[1648083276.618591] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid f00003050 is not released, refcount 2
+[1648083276.618594] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid e00003050 is not released, refcount 2
+[1648083276.618596] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 1000003050 is not released, refcount 2
+[1648083276.618679] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 1100003050 is not released, refcount 2
+[1648083276.618684] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 1300003050 is not released, refcount 2
+[1648083276.618686] [ip-0a03000d:12368:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 1200003050 is not released, refcount 2
+[1648083276.625100] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 40000303c is not released, refcount 2
+[1648083276.625127] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 50000303c is not released, refcount 2
+[1648083276.625131] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 60000303c is not released, refcount 2
+[1648083276.625134] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 70000303c is not released, refcount 2
+[1648083276.625136] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 80000303c is not released, refcount 2
+[1648083276.625139] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 90000303c is not released, refcount 2
+[1648083276.625141] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid b0000303c is not released, refcount 2
+[1648083276.625143] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid a0000303c is not released, refcount 2
+[1648083276.625145] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid c0000303c is not released, refcount 2
+[1648083276.625148] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid d0000303c is not released, refcount 2
+[1648083276.625150] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid f0000303c is not released, refcount 2
+[1648083276.625152] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid e0000303c is not released, refcount 2
+[1648083276.625154] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 100000303c is not released, refcount 2
+[1648083276.625157] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 110000303c is not released, refcount 2
+[1648083276.625159] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 130000303c is not released, refcount 2
+[1648083276.625162] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 120000303c is not released, refcount 2
+[1648083276.625164] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 140000303c is not released, refcount 2
+[1648083276.625166] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 150000303c is not released, refcount 2
+[1648083276.625168] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 170000303c is not released, refcount 2
+[1648083276.625171] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 160000303c is not released, refcount 2
+[1648083276.625173] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 180000303c is not released, refcount 2
+[1648083276.625175] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 190000303c is not released, refcount 2
+[1648083276.625177] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1b0000303c is not released, refcount 2
+[1648083276.625180] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1a0000303c is not released, refcount 2
+[1648083276.625182] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1c0000303c is not released, refcount 2
+[1648083276.625184] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1d0000303c is not released, refcount 2
+[1648083276.625187] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 200000303c is not released, refcount 2
+[1648083276.625189] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1e0000303c is not released, refcount 2
+[1648083276.625191] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 1f0000303c is not released, refcount 2
+[1648083276.625197] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 210000303c is not released, refcount 2
+[1648083276.625199] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 230000303c is not released, refcount 2
+[1648083276.625201] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 220000303c is not released, refcount 2
+[1648083276.625204] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 240000303c is not released, refcount 2
+[1648083276.625278] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 10000303c is not released, refcount 2
+[1648083276.625282] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 30000303c is not released, refcount 2
+[1648083276.625285] [ip-0a03000d:12348:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 20000303c is not released, refcount 2
+[1648083276.631845] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 190000304d is not released, refcount 2
+[1648083276.631877] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1a0000304d is not released, refcount 2
+[1648083276.631882] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1b0000304d is not released, refcount 2
+[1648083276.631885] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1c0000304d is not released, refcount 2
+[1648083276.631887] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1d0000304d is not released, refcount 2
+[1648083276.631889] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1e0000304d is not released, refcount 2
+[1648083276.631891] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 200000304d is not released, refcount 2
+[1648083276.631894] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1f0000304d is not released, refcount 2
+[1648083276.631896] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 210000304d is not released, refcount 2
+[1648083276.631901] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 220000304d is not released, refcount 2
+[1648083276.631903] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 240000304d is not released, refcount 2
+[1648083276.631905] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 230000304d is not released, refcount 2
+[1648083276.631908] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 10000304d is not released, refcount 2
+[1648083276.631910] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 20000304d is not released, refcount 2
+[1648083276.631912] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 40000304d is not released, refcount 2
+[1648083276.631914] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 30000304d is not released, refcount 2
+[1648083276.631917] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 50000304d is not released, refcount 2
+[1648083276.631919] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 60000304d is not released, refcount 2
+[1648083276.631921] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 80000304d is not released, refcount 2
+[1648083276.631924] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 70000304d is not released, refcount 2
+[1648083276.631926] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 90000304d is not released, refcount 2
+[1648083276.631928] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid a0000304d is not released, refcount 2
+[1648083276.631930] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid c0000304d is not released, refcount 2
+[1648083276.631933] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid b0000304d is not released, refcount 2
+[1648083276.631935] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid d0000304d is not released, refcount 2
+[1648083276.631937] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid e0000304d is not released, refcount 2
+[1648083276.631940] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 110000304d is not released, refcount 2
+[1648083276.631942] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid f0000304d is not released, refcount 2
+[1648083276.631944] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003039 apid 100000304d is not released, refcount 2
+[1648083276.631946] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003038 apid 120000304d is not released, refcount 2
+[1648083276.631948] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303b apid 140000304d is not released, refcount 2
+[1648083276.631951] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303a apid 130000304d is not released, refcount 2
+[1648083276.631953] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303d apid 150000304d is not released, refcount 2
+[1648083276.632026] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303c apid 160000304d is not released, refcount 2
+[1648083276.632030] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303f apid 180000304d is not released, refcount 2
+[1648083276.632033] [ip-0a03000d:12365:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000303e apid 170000304d is not released, refcount 2
+[1648083276.636951] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1000003054 is not released, refcount 2
+[1648083276.636979] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1100003054 is not released, refcount 2
+[1648083276.636983] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1200003054 is not released, refcount 2
+[1648083276.636986] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1300003054 is not released, refcount 2
+[1648083276.636988] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1400003054 is not released, refcount 2
+[1648083276.636991] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1500003054 is not released, refcount 2
+[1648083276.636993] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1700003054 is not released, refcount 2
+[1648083276.636995] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1600003054 is not released, refcount 2
+[1648083276.636997] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1800003054 is not released, refcount 2
+[1648083276.637000] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1900003054 is not released, refcount 2
+[1648083276.637004] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1b00003054 is not released, refcount 2
+[1648083276.637006] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1a00003054 is not released, refcount 2
+[1648083276.637008] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1c00003054 is not released, refcount 2
+[1648083276.637011] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 1d00003054 is not released, refcount 2
+[1648083276.637013] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 1f00003054 is not released, refcount 2
+[1648083276.637015] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 1e00003054 is not released, refcount 2
+[1648083276.637018] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 2000003054 is not released, refcount 2
+[1648083276.637020] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 2100003054 is not released, refcount 2
+[1648083276.637022] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 2300003054 is not released, refcount 2
+[1648083276.637025] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 2200003054 is not released, refcount 2
+[1648083276.637027] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 2400003054 is not released, refcount 2
+[1648083276.637029] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 100003054 is not released, refcount 2
+[1648083276.637032] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 300003054 is not released, refcount 2
+[1648083276.637034] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 200003054 is not released, refcount 2
+[1648083276.637036] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 400003054 is not released, refcount 2
+[1648083276.637038] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 500003054 is not released, refcount 2
+[1648083276.637041] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 800003054 is not released, refcount 2
+[1648083276.637043] [ip-0a03000d:12372:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 600003054 is not release[1648083276.645003] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 800003038 is not released, refcount 2
+[1648083276.645028] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 900003038 is not released, refcount 2
+[1648083276.645033] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid a00003038 is not released, refcount 2
+[1648083276.645035] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid b00003038 is not released, refcount 2
+[1648083276.645038] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid c00003038 is not released, refcount 2
+[1648083276.645040] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid d00003038 is not released, refcount 2
+[1648083276.645042] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid f00003038 is not released, refcount 2
+[1648083276.645044] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid e00003038 is not released, refcount 2
+[1648083276.645047] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1000003038 is not released, refcount 2
+[1648083276.645049] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1100003038 is not released, refcount 2
+[1648083276.645051] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1300003038 is not released, refcount 2
+[1648083276.645054] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1200003038 is not released, refcount 2
+[1648083276.645056] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1400003038 is not released, refcount 2
+[1648083276.645058] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 1500003038 is not released, refcount 2
+[1648083276.645060] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 1700003038 is not released, refcount 2
+[1648083276.645063] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 1600003038 is not released, refcount 2
+[1648083276.645065] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 1800003038 is not released, refcount 2
+[1648083276.645067] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 1900003038 is not released, refcount 2
+[1648083276.645069] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 1b00003038 is not released, refcount 2
+[1648083276.645071] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 1a00003038 is not released, refcount 2
+[1648083276.645074] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 1c00003038 is not released, refcount 2
+[1648083276.645076] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1d00003038 is not released, refcount 2
+[1648083276.645078] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1f00003038 is not released, refcount 2
+[1648083276.645080] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1e00003038 is not released, refcount 2
+[1648083276.645083] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 2000003038 is not released, refcount 2
+[1648083276.645085] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 2100003038 is not released, refcount 2
+[1648083276.645088] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 2400003038 is not released, refcount 2
+[1648083276.645090] [ip-0a03000d:12344:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 2200003038 is not released[1648083276.650828] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 50000303d is not released, refcount 2
+[1648083276.650856] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 60000303d is not released, refcount 2
+[1648083276.650860] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 70000303d is not released, refcount 2
+[1648083276.650863] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 80000303d is not released, refcount 2
+[1648083276.650865] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 90000303d is not released, refcount 2
+[1648083276.650868] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid a0000303d is not released, refcount 2
+[1648083276.650870] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid c0000303d is not released, refcount 2
+[1648083276.650872] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid b0000303d is not released, refcount 2
+[1648083276.650875] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid d0000303d is not released, refcount 2
+[1648083276.650877] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid e0000303d is not released, refcount 2
+[1648083276.650879] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 100000303d is not released, refcount 2
+[1648083276.650881] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid f0000303d is not released, refcount 2
+[1648083276.650884] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 110000303d is not released, refcount 2
+[1648083276.650886] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 120000303d is not released, refcount 2
+[1648083276.650888] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 140000303d is not released, refcount 2
+[1648083276.650890] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 130000303d is not released, refcount 2
+[1648083276.650892] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 150000303d is not released, refcount 2
+[1648083276.650895] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 160000303d is not released, refcount 2
+[1648083276.650897] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 180000303d is not released, refcount 2
+[1648083276.650899] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 170000303d is not released, refcount 2
+[1648083276.650901] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 190000303d is not released, refcount 2
+[1648083276.650904] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1a0000303d is not released, refcount 2
+[1648083276.650906] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1c0000303d is not released, refcount 2
+[1648083276.650908] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1b0000303d is not released, refcount 2
+[1648083276.650910] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1d0000303d is not released, refcount 2
+[1648083276.650913] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1e0000303d is not released, refcount 2
+[1648083276.650915] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 210000303d is not released, refcount 2
+[1648083276.650917] [ip-0a03000d:12349:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1f0000303d is not released, r[1648083276.657405] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 2400003040 is not released, refcount 2
+[1648083276.657430] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 100003040 is not released, refcount 2
+[1648083276.657434] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 200003040 is not released, refcount 2
+[1648083276.657437] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 300003040 is not released, refcount 2
+[1648083276.657439] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 400003040 is not released, refcount 2
+[1648083276.657442] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 500003040 is not released, refcount 2
+[1648083276.657444] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 700003040 is not released, refcount 2
+[1648083276.657446] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 600003040 is not released, refcount 2
+[1648083276.657449] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 800003040 is not released, refcount 2
+[1648083276.657451] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 900003040 is not released, refcount 2
+[1648083276.657453] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid b00003040 is not released, refcount 2
+[1648083276.657455] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid a00003040 is not released, refcount 2
+[1648083276.657457] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid c00003040 is not released, refcount 2
+[1648083276.657460] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid d00003040 is not released, refcount 2
+[1648083276.657462] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid f00003040 is not released, refcount 2
+[1648083276.657464] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid e00003040 is not released, refcount 2
+[1648083276.657466] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 1000003040 is not released, refcount 2
+[1648083276.657469] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 1100003040 is not released, refcount 2
+[1648083276.657471] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 1300003040 is not released, refcount 2
+[1648083276.657473] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 1200003040 is not released, refcount 2
+[1648083276.657475] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 1400003040 is not released, refcount 2
+[1648083276.657480] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1500003040 is not released, refcount 2
+[1648083276.657482] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1700003040 is not released, refcount 2
+[1648083276.657485] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1600003040 is not released, refcount 2
+[1648083276.657487] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1800003040 is not released, refcount 2
+[1648083276.657489] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1900003040 is not released, refcount 2
+[1648083276.657491] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 1c00003040 is not released, refcount 2
+[1648083276.657494] [ip-0a03000d:12352:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1a00003040 is not released, refco[1648083276.663517] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1d00003049 is not released, refcount 2
+[1648083276.663541] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1e00003049 is not released, refcount 2
+[1648083276.663545] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1f00003049 is not released, refcount 2
+[1648083276.663548] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 2000003049 is not released, refcount 2
+[1648083276.663550] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 2100003049 is not released, refcount 2
+[1648083276.663552] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 2200003049 is not released, refcount 2
+[1648083276.663555] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 2400003049 is not released, refcount 2
+[1648083276.663557] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 2300003049 is not released, refcount 2
+[1648083276.663559] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 100003049 is not released, refcount 2
+[1648083276.663562] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 200003049 is not released, refcount 2
+[1648083276.663564] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 400003049 is not released, refcount 2
+[1648083276.663566] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 300003049 is not released, refcount 2
+[1648083276.663568] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 500003049 is not released, refcount 2
+[1648083276.663571] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 600003049 is not released, refcount 2
+[1648083276.663573] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 800003049 is not released, refcount 2
+[1648083276.663576] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 700003049 is not released, refcount 2
+[1648083276.663578] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 900003049 is not released, refcount 2
+[1648083276.663580] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid a00003049 is not released, refcount 2
+[1648083276.663582] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid c00003049 is not released, refcount 2
+[1648083276.663585] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid b00003049 is not released, refcount 2
+[1648083276.663587] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid d00003049 is not released, refcount 2
+[1648083276.663589] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid e00003049 is not released, refcount 2
+[1648083276.663592] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1000003049 is not released, refcount 2
+[1648083276.663594] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid f00003049 is not released, refcount 2
+[1648083276.663596] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1100003049 is not released, refcount 2
+[1648083276.663598] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1200003049 is not released, refcount 2
+[1648083276.663601] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 1500003049 is not released, refcount 2
+[1648083276.663605] [ip-0a03000d:12361:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1300003049 is not released, refco[1648083276.668403] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 100003041 is not released, refcount 2
+[1648083276.668429] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 200003041 is not released, refcount 2
+[1648083276.668434] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 300003041 is not released, refcount 2
+[1648083276.668436] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 400003041 is not released, refcount 2
+[1648083276.668439] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 500003041 is not released, refcount 2
+[1648083276.668441] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 600003041 is not released, refcount 2
+[1648083276.668443] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 800003041 is not released, refcount 2
+[1648083276.668445] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 700003041 is not released, refcount 2
+[1648083276.668448] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 900003041 is not released, refcount 2
+[1648083276.668450] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid a00003041 is not released, refcount 2
+[1648083276.668452] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid c00003041 is not released, refcount 2
+[1648083276.668454] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid b00003041 is not released, refcount 2
+[1648083276.668457] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid d00003041 is not released, refcount 2
+[1648083276.668459] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid e00003041 is not released, refcount 2
+[1648083276.668462] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 1000003041 is not released, refcount 2
+[1648083276.668464] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid f00003041 is not released, refcount 2
+[1648083276.668466] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 1100003041 is not released, refcount 2
+[1648083276.668469] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 1200003041 is not released, refcount 2
+[1648083276.668471] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 1400003041 is not released, refcount 2
+[1648083276.668475] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 1300003041 is not released, refcount 2
+[1648083276.668477] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 1500003041 is not released, refcount 2
+[1648083276.668480] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1600003041 is not released, refcount 2
+[1648083276.668482] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1800003041 is not released, refcount 2
+[1648083276.668484] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1700003041 is not released, refcount 2
+[1648083276.668486] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1900003041 is not released, refcount 2
+[1648083276.668489] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1a00003041 is not released, refcount 2
+[1648083276.668491] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 1d00003041 is not released, refcount 2
+[1648083276.668493] [ip-0a03000d:12353:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1b00003041 is not released, refco[1648083276.679405] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1500003051 is not released, refcount 2
+[1648083276.679431] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1600003051 is not released, refcount 2
+[1648083276.679435] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1700003051 is not released, refcount 2
+[1648083276.679438] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1800003051 is not released, refcount 2
+[1648083276.679440] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1900003051 is not released, refcount 2
+[1648083276.679443] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1a00003051 is not released, refcount 2
+[1648083276.679445] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1c00003051 is not released, refcount 2
+[1648083276.679447] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1b00003051 is not released, refcount 2
+[1648083276.679450] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1d00003051 is not released, refcount 2
+[1648083276.679452] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1e00003051 is not released, refcount 2
+[1648083276.679454] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 2000003051 is not released, refcount 2
+[1648083276.679456] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1f00003051 is not released, refcount 2
+[1648083276.679459] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 2100003051 is not released, refcount 2
+[1648083276.679461] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 2200003051 is not released, refcount 2
+[1648083276.679463] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 2400003051 is not released, refcount 2
+[1648083276.679465] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 2300003051 is not released, refcount 2
+[1648083276.679468] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 100003051 is not released, refcount 2
+[1648083276.679470] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 200003051 is not released, refcount 2
+[1648083276.679472] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 400003051 is not released, refcount 2
+[1648083276.679474] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 300003051 is not released, refcount 2
+[1648083276.679477] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 500003051 is not released, refcount 2
+[1648083276.679479] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 600003051 is not released, refcount 2
+[1648083276.679481] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 800003051 is not released, refcount 2
+[1648083276.679484] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 700003051 is not released, refcount 2
+[1648083276.679486] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 900003051 is not released, refcount 2
+[1648083276.679488] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid a00003051 is not released, refcount 2
+[1648083276.679490] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid d00003051 is not released, refcount 2
+[1648083276.679495] [ip-0a03000d:12369:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid b00003051 is not released, re[1648083276.682202] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 2200003042 is not released, refcount 2
+[1648083276.682227] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 2300003042 is not released, refcount 2
+[1648083276.682231] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 2400003042 is not released, refcount 2
+[1648083276.682233] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 100003042 is not released, refcount 2
+[1648083276.682236] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 200003042 is not released, refcount 2
+[1648083276.682238] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 300003042 is not released, refcount 2
+[1648083276.682240] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 500003042 is not released, refcount 2
+[1648083276.682243] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 400003042 is not released, refcount 2
+[1648083276.682245] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 600003042 is not released, refcount 2
+[1648083276.682247] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 700003042 is not released, refcount 2
+[1648083276.682249] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 900003042 is not released, refcount 2
+[1648083276.682252] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 800003042 is not released, refcount 2
+[1648083276.682256] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid a00003042 is not released, refcount 2
+[1648083276.682259] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid b00003042 is not released, refcount 2
+[1648083276.682261] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid d00003042 is not released, refcount 2
+[1648083276.682263] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid c00003042 is not released, refcount 2
+[1648083276.682265] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid e00003042 is not released, refcount 2
+[1648083276.682268] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid f00003042 is not released, refcount 2
+[1648083276.682270] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 1100003042 is not released, refcount 2
+[1648083276.682272] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 1000003042 is not released, refcount 2
+[1648083276.682275] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 1200003042 is not released, refcount 2
+[1648083276.682277] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1300003042 is not released, refcount 2
+[1648083276.682279] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 1500003042 is not released, refcount 2
+[1648083276.682281] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 1400003042 is not released, refcount 2
+[1648083276.682284] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1600003042 is not released, refcount 2
+[1648083276.682286] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1700003042 is not released, refcount 2
+[1648083276.682288] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 1a00003042 is not released, refcount 2
+[1648083276.682290] [ip-0a03000d:12354:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1800003042 is not released, refco[1648083276.688407] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid a00003039 is not released, refcount 2
+[1648083276.688432] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid b00003039 is not released, refcount 2
+[1648083276.688436] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid c00003039 is not released, refcount 2
+[1648083276.688439] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid d00003039 is not released, refcount 2
+[1648083276.688441] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid e00003039 is not released, refcount 2
+[1648083276.688443] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid f00003039 is not released, refcount 2
+[1648083276.688446] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1100003039 is not released, refcount 2
+[1648083276.688448] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1000003039 is not released, refcount 2
+[1648083276.688450] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1200003039 is not released, refcount 2
+[1648083276.688453] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1300003039 is not released, refcount 2
+[1648083276.688455] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1500003039 is not released, refcount 2
+[1648083276.688457] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1400003039 is not released, refcount 2
+[1648083276.688460] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1600003039 is not released, refcount 2
+[1648083276.688462] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 1700003039 is not released, refcount 2
+[1648083276.688464] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 1900003039 is not released, refcount 2
+[1648083276.688467] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 1800003039 is not released, refcount 2
+[1648083276.688469] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 1a00003039 is not released, refcount 2
+[1648083276.688471] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 1b00003039 is not released, refcount 2
+[1648083276.688473] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 1d00003039 is not released, refcount 2
+[1648083276.688476] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 1c00003039 is not released, refcount 2
+[1648083276.688478] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 1e00003039 is not released, refcount 2
+[1648083276.688480] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 1f00003039 is not released, refcount 2
+[1648083276.688483] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 2100003039 is not released, refcount 2
+[1648083276.688485] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 2000003039 is not released, refcount 2
+[1648083276.688487] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 2200003039 is not released, refcount 2
+[1648083276.688489] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 2300003039 is not released, refcount 2
+[1648083276.688493] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 200003039 is not released, refcount 2
+[1648083276.688495] [ip-0a03000d:12345:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 2400003039 is not release[1648083276.692668] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 1200003053 is not released, refcount 2
+[1648083276.692693] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 1300003053 is not released, refcount 2
+[1648083276.692697] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 1400003053 is not released, refcount 2
+[1648083276.692702] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 1500003053 is not released, refcount 2
+[1648083276.692704] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 1600003053 is not released, refcount 2
+[1648083276.692706] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 1700003053 is not released, refcount 2
+[1648083276.692709] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 1900003053 is not released, refcount 2
+[1648083276.692711] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 1800003053 is not released, refcount 2
+[1648083276.692714] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid 1a00003053 is not released, refcount 2
+[1648083276.692716] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid 1b00003053 is not released, refcount 2
+[1648083276.692718] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid 1d00003053 is not released, refcount 2
+[1648083276.692720] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid 1c00003053 is not released, refcount 2
+[1648083276.692723] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid 1e00003053 is not released, refcount 2
+[1648083276.692725] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid 1f00003053 is not released, refcount 2
+[1648083276.692727] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 2100003053 is not released, refcount 2
+[1648083276.692730] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 2000003053 is not released, refcount 2
+[1648083276.692732] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 2200003053 is not released, refcount 2
+[1648083276.692734] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 2300003053 is not released, refcount 2
+[1648083276.692736] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 100003053 is not released, refcount 2
+[1648083276.692739] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 2400003053 is not released, refcount 2
+[1648083276.692741] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 200003053 is not released, refcount 2
+[1648083276.692743] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 300003053 is not released, refcount 2
+[1648083276.692745] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 500003053 is not released, refcount 2
+[1648083276.692748] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 400003053 is not released, refcount 2
+[1648083276.692750] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 600003053 is not released, refcount 2
+[1648083276.692752] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 700003053 is not released, refcount 2
+[1648083276.692754] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid a00003053 is not released, refcount 2
+[1648083276.692756] [ip-0a03000d:12371:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 800003053 is not released,[1648083276.698883] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003041 apid 20000303f is not released, refcount 2
+[1648083276.698909] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003040 apid 30000303f is not released, refcount 2
+[1648083276.698915] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003043 apid 40000303f is not released, refcount 2
+[1648083276.698918] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003042 apid 50000303f is not released, refcount 2
+[1648083276.698920] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003045 apid 60000303f is not released, refcount 2
+[1648083276.698923] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003044 apid 70000303f is not released, refcount 2
+[1648083276.698925] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003047 apid 90000303f is not released, refcount 2
+[1648083276.698927] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003046 apid 80000303f is not released, refcount 2
+[1648083276.698929] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003049 apid a0000303f is not released, refcount 2
+[1648083276.698931] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003048 apid b0000303f is not released, refcount 2
+[1648083276.698934] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304b apid d0000303f is not released, refcount 2
+[1648083276.698936] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304a apid c0000303f is not released, refcount 2
+[1648083276.698938] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304d apid e0000303f is not released, refcount 2
+[1648083276.698940] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304c apid f0000303f is not released, refcount 2
+[1648083276.698943] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304f apid 110000303f is not released, refcount 2
+[1648083276.698945] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 20000304e apid 100000303f is not released, refcount 2
+[1648083276.698947] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003051 apid 120000303f is not released, refcount 2
+[1648083276.698949] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003050 apid 130000303f is not released, refcount 2
+[1648083276.698952] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003053 apid 150000303f is not released, refcount 2
+[1648083276.698954] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003052 apid 140000303f is not released, refcount 2
+[1648083276.698956] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003055 apid 160000303f is not released, refcount 2
+[1648083276.698959] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003054 apid 170000303f is not released, refcount 2
+[1648083276.698962] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003057 apid 190000303f is not released, refcount 2
+[1648083276.698964] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003056 apid 180000303f is not released, refcount 2
+[1648083276.698966] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003059 apid 1a0000303f is not released, refcount 2
+[1648083276.698968] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003058 apid 1b0000303f is not released, refcount 2
+[1648083276.698971] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003037 apid 1e0000303f is not released, refcount 2
+[1648083276.698973] [ip-0a03000d:12351:0]       mm_xpmem.c:82   UCX  WARN  remote segment id 200003036 apid 1c0000303f is not released, refc--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[22088,1],32]
+  Exit code:    1
+--------------------------------------------------------------------------
+real 7.92
+user 0.03
+sys 0.08
+
+**************************************************************
+** Runscript Detected an Error: CGRID file was not written. **
+**   This indicates that CMAQ was interrupted or an issue   **
+**   exists with writing output. The runscript will now     **
+**   abort rather than proceeding to subsequent days.       **
+**************************************************************
+
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2015-12-22
+End Day:   2015-12-23
+Number of Simulation Days: 1
+Domain Name:               12US2
+Number of Grid Cells:        (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       36
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2015-12-22   7.92
+     Total Time = 7.92
+      Avg. Time = 7.92
