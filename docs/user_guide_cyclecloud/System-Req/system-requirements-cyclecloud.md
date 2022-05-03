@@ -69,7 +69,7 @@ GRIDDESC
 '12CONUS'     -2412000.0 -1620000.0 12000.0 12000.0 396 246 1
 ```
 
-![CMAQ Domain](../qa_plots/tileplots/CMAQ_ACONC_12US2_Benchmark_Tileplot.png)
+![CMAQ Domain](../../qa_plots/tileplots/CMAQ_ACONC_12US2_Benchmark_Tileplot.png)
 
 
 #### Recommended Cycle Cloud Configuration for CONUS Domain 12US2
@@ -206,7 +206,7 @@ Savings is ~ 90% for spot versus ondemand pricing for HC44RS compute nodes.
 
 Figure 2. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
 
-![Scaling Plot Comparison of Parallel Cluster and Cycle Cloud](../qa_plots/scaling_plots/Scaling_Parallel_Cluster_vs_Cycle_Cloud.png)
+![Scaling Plot Comparison of Parallel Cluster and Cycle Cloud](../../qa_plots/scaling_plots/Scaling_Parallel_Cluster_vs_Cycle_Cloud.png)
 
 Note CMAQ scales well up to ~ 200 processors for the CONUS domain.  As more processors are added beyond 200 processors, the CMAQ gets less efficient at using all of them.
 The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
@@ -214,22 +214,22 @@ cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster for the 
 
 Figure 3. Plot of Total Time and On Demand Cost versus CPUs for HC44RS.
 
-![Plot of Total Time and On Demand Cost versus CPUs for HC44RS](../qa_plots/scaling_plots/HC44rs_Time_Cost_CPUs.png)
+![Plot of Total Time and On Demand Cost versus CPUs for HC44RS](../../qa_plots/scaling_plots/HC44rs_Time_Cost_CPUs.png)
 
 Figures: todo - need screenshots of Azure Pricing from Rob Zelt
 
 Fost by Instance Type - update for Azure 
 
-![Azure Cost Management Console - Cost by Instance Type](../qa_plots/cost_plots/Azure_Bench_Cost.png)
+![Azure Cost Management Console - Cost by Instance Type](../../qa_plots/cost_plots/Azure_Bench_Cost.png)
 
 
 Figure 3. Cost by Usage Type - Azure Console
 
-![Azure Cost Management Console - Cost by Usage Type](../qa_plots/cost_plots/Azure_Bench_Usage_Type_Cost.png)
+![Azure Cost Management Console - Cost by Usage Type](../../qa_plots/cost_plots/Azure_Bench_Usage_Type_Cost.png)
 
 Figure 4. Cost by Service Type - Azure Console
 
-![Azure Cost Management Console - Cost by Service Type](../qa_plots/cost_plots/Azure_Bench_Service_Type_Cost.png)
+![Azure Cost Management Console - Cost by Service Type](../../qa_plots/cost_plots/Azure_Bench_Service_Type_Cost.png)
 
 Scheduler node D12v2 compute cost = entire time that the parallel cluster is running ( creation to deletion) = 6 hours * $0.?/hr = $ ? using spot pricing, 6 hours * $?/hr = $? using on demand pricing.
 
