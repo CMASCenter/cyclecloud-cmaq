@@ -164,7 +164,7 @@ for(species.name in species.compare.list){
 
   if(MAKE.SPATIAL.PLOTS){
   #Spatial plots of hourly difference
-  plot.diff.matrix <- sim1.spec-sim2.spec
+  plot.diff.matrix <- log(sim1.spec-sim2.spec)
   zlim.range <- c(-max(abs(plot.diff.matrix)),max(abs(plot.diff.matrix)))
   
   #Plot 24 timesteps at a time, with the color bar in the top left panel.

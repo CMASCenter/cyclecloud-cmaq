@@ -16,20 +16,14 @@ my.diff.col <- function(n)c(my.col.cool1(n/2),my.col.warm1(n/2))
 output.dir <- "/shared/cyclecloud-cmaq/qa_scripts/qa_plots/"
 
 #Directory, file name, and label for first model simulation (sim1)
-sim1.label <- "GCC 10x18PE)"
-sim1.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_10x18pe/"
-sim1.file <- paste0(sim1.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_10x18pe_20151222.nc")
-
-#sim1.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_10x18pe_remove_native_sleep/"
-#sim1.file <- paste0(sim1.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_10x18pe_remove_native_sleep_20151222.nc")
+sim1.label <- "(CMAQv533_16x18pe)"
+sim1.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_16x18pe/"
+sim1.file <- paste0(sim1.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_16x18pe_20151222.nc")
 
 #Directory, file name, and label for second model simulation (sim2)
-sim2.label <- "GCC 18x12PE)"
+sim2.label <- "(CMAQv533_18x12pe)"
 sim2.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_18x12pe/"
 sim2.file <- paste0(sim2.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_18x12pe_20151222.nc")
-
-#sim2.dir <- "/shared/data/output/output_CCTM_v533_gcc_2016_CONUS_9x10pe_remove_native_sleep/"
-#sim2.file <- paste0(sim2.dir,"CCTM_ACONC_v533_gcc_2016_CONUS_9x10pe_remove_native_sleep_20151222.nc")
 
 
 #Flags for toggling on or off different comparsions.
@@ -170,17 +164,17 @@ for(species.name in species.compare.list){
 
   if(MAKE.SPATIAL.PLOTS){
   #Spatial plots of hourly difference
-  plot.diff.matrix <- 10^(sim1.spec-sim2.spec)
+  plot.diff.matrix <- sim1.spec-sim2.spec
   zlim.range <- c(-max(abs(plot.diff.matrix)),max(abs(plot.diff.matrix)))
   
   #Plot 24 timesteps at a time, with the color bar in the top left panel.
-  pdf(paste0(output.dir,species.name,"_MAPS_",sim1.label.simple,"_vs_",sim2.label.simple,".pdf"),pointsize=1,height=7.5,width=11)  
+  jpeg(paste0(output.dir,species.name,"_MAPS_",sim1.label.simple,"_vs_",sim2.label.simple,".jpeg"),pointsize=1,height=7.5,width=11)  
   par(mfrow=c(5,5))
   plotting.seq <- seq(1,n.time,by=24)
   for(t in plotting.seq){
     par(mar=c(.1,.1,2,8))
     plot(1,1,axes=F,type="n",xlab="",ylab="")
-    image.plot(legend.only=T,zlim=zlim.range,legend.width=4,col=my.diff.col(20))
+    image.plot(legend.only=T,zlim=zlim.range,legend.width=4,col=my.diff.col(100))
 	legend("center",bty="n",text.font=2,cex=1.5,legend=paste0(species.name," (",species.units,"): ",sim1.label," - ","\n",sim2.label))
     for(i in t:(t+23)){
 	  if(n.time < i) break
@@ -190,7 +184,7 @@ for(species.name in species.compare.list){
       plot.diff.i[plot.diff.i==0] <- NA
       image(x.proj.coord,y.proj.coord,plot.diff.i,zlim=zlim.range,
       main=paste(date.seq.overlap.format[i],species.name),
-      axes=F,xlab="",ylab="",col=my.diff.col(20))
+      axes=F,xlab="",ylab="",col=my.diff.col(100))
       lines(map.lines,lwd=.5,col=grey(.3)) 
       box()
     }
