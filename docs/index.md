@@ -51,8 +51,8 @@ user_guide_cyclecloud/qa/index.md
 user_guide_cyclecloud/timing/index.md
 user_guide_cyclecloud/output/index.md
 user_guide_cyclecloud/logout/index.md
-user_guide_pcluster/Performance-Opt/index.md
-user_guide_pcluster/help/index.md
-user_guide_pcluster/future/index.md
-user_guide_pcluster/contribute/index.md
+user_guide_cyclecloud/Performance-Opt/index.md
+user_guide_cyclecloud/help/index.md
+user_guide_cyclecloud/future/index.md
+user_guide_cyclecloud/contribute/index.md
 
