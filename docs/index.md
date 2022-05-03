@@ -1,4 +1,4 @@
-% pcluster-cmaq documentation master file, created by
+% cyclecloud-cmaq documentation master file, created by
 %   sphinx-quickstart on Tue Jan 11 11:07:40 2022.
 %   You can adapt this file completely to your liking, but it should at least
 %   contain the root `toctree` directive.
@@ -12,13 +12,13 @@ This documentation is under continuous development
 
 ## Overview
 
-This document provides tutorials and information on using the CycleCloud on Azure. The tutorials are aimed at users with cloud computing experience that are already familiar with Amazon Web Service (AWS).  For those with no cloud computing experience we recommend reviewing the Additional Resources listed in [chapter 12](user_guide_pcluster/help/index.md) of this document.
+This document provides tutorials and information on using the CycleCloud on Azure. The tutorials are aimed at users with cloud computing experience that are already familiar with Azure.  For those with no cloud computing experience we recommend reviewing the Additional Resources listed in [chapter 12](user_guide_cyclecloud/help/index.md) of this document.
 
 
 
 ## Format of this documentation
 
-This document provides three hands-on tutorials that are designed to be read in order.  The Introductory Tutorial will walk you through creating a demo CycleCloud.  You will learn how to set up your AWS Identity and Access Management Roles, configure and create a demo cluster, and exit and delete the cluster.  The Intermediate Tutorial steps you through running a CMAQ test case on CycleCloud using pre-loaded software and input data.  The Advanced Tutorial explains how to scale the CycleCloud for larger compute jobs and install CMAQ and required libraries from scratch on the cloud.  The remaining sections provide instructions on post-processing CMAQ output, comparing output and runtimes from multiple simulations, and copying output from CycleCloud to an AWS Simple Storage Service (S3) bucket.
+This document provides three hands-on tutorials that are designed to be read in order.  The Introductory Tutorial will walk you through creating a demo CycleCloud.  You will learn how to set up your Azure Resource ID, configure and create a demo cluster, and exit and delete the cluster.  The Intermediate Tutorial steps you through running a CMAQ test case on CycleCloud using pre-loaded software and input data.  The Advanced Tutorial explains how to scale the CycleCloud for larger compute jobs and install CMAQ and required libraries from scratch on the cloud.  The remaining sections provide instructions on post-processing CMAQ output, comparing output and runtimes from multiple simulations, and copying output from CycleCloud to an AWS Simple Storage Service (S3) bucket.
 
 
 
