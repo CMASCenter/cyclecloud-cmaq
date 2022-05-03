@@ -1,4 +1,4 @@
-## Contribute to Pcluster-cmaq Documentation
+## Contribute to CycleCloud-cmaq Documentation
 
 Please take note of any issues and submit to <a href="https://github.com/lizadams/cyclecloud-cmaq/issues">Github Issue</a>
 
