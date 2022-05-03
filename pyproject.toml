@@ -1,0 +1,17 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "cyclecloud-cmaq"
+authors = [{name = "LizAdams", email = "lizadams@email.unc.edu"}]
+dynamic = ["version", "description"]
+
+[project.optional-dependencies]
+doc = [
+    "sphinx~=4.2.0",
+    "myst_parser",
+    "furo",
+    "nbsphinx",
+]
+~               
