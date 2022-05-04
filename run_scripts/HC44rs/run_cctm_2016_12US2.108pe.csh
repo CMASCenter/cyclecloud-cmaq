@@ -1,6 +1,5 @@
 #!/bin/csh -f
 ## For HC44RS Compute Nodes (44 cpus per node)
-## works with cluster-ubuntu.yaml
 ## data on /shared directory
 #SBATCH --nodes=3
 #SBATCH --ntasks-per-node=36

@@ -1,6 +1,5 @@
 #!/bin/csh -f
-## For hbv44
-## works with cluster-ubuntu.yaml
+## For HB44rs (44 cpu/node)
 ## data on /shared directory
 #SBATCH --nodes=8
 #SBATCH --ntasks-per-node=36
