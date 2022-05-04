@@ -1,4 +1,4 @@
-Q. How do you figure out why a job isn't successfully running in the slurm queue
+Q. How do you figure out why a job is not successfully running in the slurm queue
 
 A. Check the logs available in the following link
 
