@@ -1,7 +1,11 @@
 ### Copy the run scripts from the parallel_cluster repo
-To ensure you have the correct directory specified
+Note, the run scripts are tailored to the Compute Node. This assumes the cluster was built with HC44rs compute nodes.
 
-`cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts`
+Change directories to where the run scripts are available from the git repo.
+
+`cd /shared/cyclecloud-cmaq/run_scripts/HC44rs`
+
+Copy the run scripts to the run directory
 
 `cp * /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/`
 
