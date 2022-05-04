@@ -3,7 +3,7 @@
 ### Login to updated cluster
 (note, replace the centos.pem with your Key Pair)
 
-`ssh -v -Y -i ~/[your_azure].pem [your-IP-address]`
+`ssh -v -Y -i ~/[your_azure].pem [scheduler-node-ip-address]`
 
 
 ### Change shell to use .tcsh
@@ -12,10 +12,6 @@
 
 ### Log out and then log back in to activate the tcsh shell
 
-
-### Change permissions of /shared directory
-
-`sudo chmod 777 /shared`
 
 ### Add group name to users
 `sudo groupadd cmaq`
@@ -47,7 +43,19 @@ logout and log back in to have it take effect
 
 ## Make the /shared/build directory
 
-`mkdir /shared/build`
+`sudo mkdir /shared/build`
+
+## Change ownership to your username
+
+`sudo chown lizadams /shared/build`
+
+## Make the /shared/cyclecloud-cmaq directory
+
+`sudo mkdir /shared/cyclecloud-cmaq`
+
+## Change ownership to your username
+
+`sudo chown lizadams /shared/cyclecloud-cmaq`
 
 
 ### Install the cluster-cmaq git repo to the /shared directory
