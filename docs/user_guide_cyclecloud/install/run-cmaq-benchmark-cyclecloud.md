@@ -41,6 +41,12 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 
 The 180 pe job should take 60 minutes to run (30 minutes per day)
 
+Note, if the job does not get scheduled, examine the slurm logs
+
+`sudo vi /var/log/slurmctld/slurmctld.log`
+
+`sudo vi //var/log/slurmctld/resume.log` 
+
 
 ### check the timings while the job is still running using the following command
 
