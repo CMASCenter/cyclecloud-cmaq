@@ -96,6 +96,9 @@ Num  Day        Wall Time
 ```
 
 Note, if you use the HB120 compute nodes that have up to 120 cpus per node, you can use fewer nodes to run 180 processors.
+To run on an HB120 compute node, you will need to create another hpc queue using these compute nodes, and then copy the scripts that are available here.
+
+cp /shared/cyclecloud-cmaq/run_scripts/HB120v3/*.csh /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/
 
 ### Submit a request for a 180 pe job using (2 x 90 pe), without the -march=native, and the sleep 60 command after mpirun to avoid second day error
 
@@ -296,14 +299,3 @@ cmaq-hbv3-hpc-pg0-2      1      hpc*       idle% 120   120:1:1 435814        0  
 cmaq-hbv3-hpc-pg0-3      1      hpc*       idle% 120   120:1:1 435814        0      1    cloud none                
 cmaq-hbv3-htc-1          1       htc       idle~ 1       1:1:2   3072        0      1    cloud none           
 ```
-
-
-### After run has successfully completed
-
-1. [Compare timings and verify that the run completed successfully](parse_timing.md)
-2. [Run combine and post processing scripts](post_combine.md)
-3. [Run QA scripts](qa_cmaq_run.md)
-4. [Copy the output to the S3 Bucket](copy_output_to_S3_Bucket.md)
-5. Exit the cluster
-6. Delete the Cluster
-
