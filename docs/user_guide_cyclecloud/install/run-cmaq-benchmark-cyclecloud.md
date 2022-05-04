@@ -14,7 +14,7 @@ Copy the run scripts to the run directory
 
 `cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/`
 
-`sbatch run_cctm_2016_12US2.180pe.2x90.csh`
+`sbatch run_cctm_2016_12US2.180pe.csh`
 
 Note, it will take about 3-5 minutes for the compute notes to start up This is reflected in the Status (ST) of PD (pending), with the NODELIST reason being that it is configuring the partitions for the cluster
 
@@ -26,7 +26,7 @@ output:
 
 ```
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                 1       hpc     CMAQ     chef CF       0:22      1 cmaq-hbv3-hpc-pg0-[1-2]
+                 1       hpc     CMAQ     lizadams CF       0:22      1 cluster-cmaq-slurm-spot-la-hpc-pg0-[1-5]
 ```
 After 5 minutes the status will change once the compute nodes have been created and the job is running
 
@@ -35,8 +35,8 @@ After 5 minutes the status will change once the compute nodes have been created 
 output:
 
 ```
-JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                 2       hpc     CMAQ     chef  R      58:42      2 cmaq-hbv3-hpc-pg0-[1-2]
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                 4       hpc     CMAQ lizadams  R       5:37      5 cluster-cmaq-slurm-spot-la-hpc-pg0-[1-5]
 ```
 
 The 180 pe job should take 60 minutes to run (30 minutes per day)
@@ -70,7 +70,7 @@ output:
 
 ### When the job has completed, use tail to view the timing from the log file.
 
-`tail /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.10x18pe.2day.log `
+`tail /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.2x90.10x18pe.2day.log `
 
 output:
 
@@ -94,6 +94,8 @@ Num  Day        Wall Time
       Avg. Time = 1953.60
 
 ```
+
+Note, if you use the HB120 compute nodes that have up to 120 cpus per node, you can use fewer nodes to run 180 processors.
 
 ### Submit a request for a 180 pe job using (2 x 90 pe), without the -march=native, and the sleep 60 command after mpirun to avoid second day error
 
