@@ -1,6 +1,6 @@
 #!/bin/csh -f
-## For Cyclecloud HBV3  (120 cpu)
-## data on /shared/data directory
+## For Cyclecloud HB120v3 (120 cpu/node)
+## data on /shared directory
 #SBATCH --nodes=3
 #SBATCH --ntasks-per-node=90
 #SBATCH --exclusive

@@ -1,6 +1,6 @@
 #!/bin/csh -f
-## For Cyclecloud HBV3  (120 cpu)
-## data on /data directory
+## For Cyclecloud HB120v3 (120 cpu/node)
+## data on /mnt directory
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=120
 #SBATCH --exclusive

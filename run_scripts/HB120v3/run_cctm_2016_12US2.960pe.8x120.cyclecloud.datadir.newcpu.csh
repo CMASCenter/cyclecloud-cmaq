@@ -1,12 +1,12 @@
 #!/bin/csh -f
 ## For Cyclecloud HB120v3 (120 cpu/node)
 ## data on /data directory
-#SBATCH --nodes=2
+#SBATCH --nodes=8
 #SBATCH --ntasks-per-node=120
 #SBATCH --exclusive
 #SBATCH -J CMAQ
-#SBATCH -o /shared/build/hpcx_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.20x12pe.2day.sleep.remove-native.cyclecloud.datadir.newcpu.hpcx.log
-#SBATCH -e /shared/build/hpcx_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.20x12pe.2day.sleep.remove-native.cyclecloud.datadir.newcpu.hpcx.log
+#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.30x32pe.2day_remove_native_sleep.cyclecloud.datadir.newcpu.log
+#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.30x32pe.2day_remove_native_sleep.cyclecloud.datadir.newcpu.log
 
 
 # ===================== CCTMv5.3.X Run Script ========================= 
@@ -30,8 +30,6 @@ echo 'information about filesystem'
 df -h
 echo 'list the mounted volumes'
 showmount -e localhost
-echo 'show loaded modules'
-module list
 
 #> Toggle Diagnostic Mode which will print verbose information to 
 #> standard output
@@ -56,7 +54,7 @@ module list
  set PROC      = mpi               #> serial or mpi
  set MECH      = cb6r3_ae7_aq      #> Mechanism ID
  set EMIS      = 2016ff            #> Emission Inventory Details
- set APPL      = 2016_CONUS_20x12pe_datadir_newcpu_hpcx       #> Application Name (e.g. Gridname)
+ set APPL      = 2016_CONUS_30x32pe_datadir_newcpu        #> Application Name (e.g. Gridname)
 
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy
@@ -107,7 +105,7 @@ set TSTEP      = 010000            #> output time step interval (HHMMSS)
 if ( $PROC == serial ) then
    setenv NPCOL_NPROW "1 1"; set NPROCS   = 1 # single processor setting
 else
-   @ NPCOL  =  20; @ NPROW = 12
+   @ NPCOL  =  30; @ NPROW = 32
    @ NPROCS = $NPCOL * $NPROW
    setenv NPCOL_NPROW "$NPCOL $NPROW"; 
 endif
@@ -720,7 +718,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   # set MPIRUN = $MPI/mpirun
   ( /usr/bin/time -p mpirun -np $NPROCS $BLD/$EXEC ) |& tee buff_${EXECUTION_ID}.txt
 
- sleep 60 
+  sleep 60
 
   #> Harvest Timing Output so that it may be reported below
   set rtarray = "${rtarray} `tail -3 buff_${EXECUTION_ID}.txt | grep -Eo '[+-]?[0-9]+([.][0-9]+)?' | head -1` "
