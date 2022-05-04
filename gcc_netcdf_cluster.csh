@@ -37,8 +37,7 @@
    setenv DIR /shared/build
    mkdir $DIR
    cd $DIR
-   #wget https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-c-4.7.1.tar.gz
-  wget https://downloads.unidata.ucar.edu/netcdf-c/4.8.1/src/netcdf-c-4.8.1.tar.gz
+  wget https://downloads.unidata.ucar.edu/netcdf-c/4.8.1/netcdf-c-4.8.1.tar.gz
   tar xvf netcdf-c-4.8.1.tar.gz
    rm -f netcdf-c-4.8.1.tar.gz
    cd netcdf-c-4.8.1
@@ -55,6 +54,7 @@
 #  ---------------------------------
    cd $DIR
    #wget https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-fortran-4.5.2.tar.gz
+   #wget https://downloads.unidata.ucar.edu/netcdf-fortran/4.5.3/netcdf-fortran-4.5.3.tar.gz
    wget https://github.com/Unidata/netcdf-fortran/archive/refs/tags/v4.5.3.tar.gz
    #tar xvf netcdf-fortran-4.5.2.tar.gz
     tar xzvf v4.5.3.tar.gz
@@ -84,4 +84,4 @@ cd $DIR/netcdf/bin
 #    setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/shared/build/netcdf/lib
 #endif
 
-cp /shared/pcluster-cmaq/dot.cshrc ~/.cshrc
+cp /shared/cyclecloud-cmaq/dot.cshrc ~/.cshrc

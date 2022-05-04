@@ -13,14 +13,14 @@ git clone -b main https://github.com/USEPA/CMAQ.git CMAQ_REPO_v533
 
 echo "downloaded CMAQ"
 cd CMAQ_REPO_v533
-setenv PCLUSTER /shared/pcluster-cmaq
-cp $PCLUSTER/bldit_project_v533_cyclecloud.csh /shared/build/CMAQ_REPO_v533
+setenv CLUSTER /shared/cyclecloud-cmaq
+cp $CLUSTER/bldit_project_v533_cyclecloud.csh /shared/build/CMAQ_REPO_v533
 ./bldit_project_v533_cyclecloud.csh
 module load openmpi
 cd $BUILD/openmpi_gcc/CMAQ_v533/CCTM/scripts/
-cp $PCLUSTER/config_cmaq_cyclecloud.csh ../../config_cmaq.csh
+cp $CLUSTER/config_cmaq_cyclecloud.csh ../../config_cmaq.csh
 ./bldit_cctm.csh gcc |& tee ./bldit_cctm.log
-cp $PCLUSTER/run_scripts/cmaq533/run*cyclecloud.csh $BUILD/openmpi_gcc/CMAQ_v533/CCTM/scripts/
+cp $CLUSTER/run_scripts/cmaq533/run*cyclecloud.csh $BUILD/openmpi_gcc/CMAQ_v533/CCTM/scripts/
 cd $BUILD/openmpi_gcc/CMAQ_v533/CCTM/scripts/
 
 # submit job to the queue using 
