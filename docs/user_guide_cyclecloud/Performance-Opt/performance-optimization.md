@@ -26,6 +26,7 @@ Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 240  | 2 |   2x120    |   20x12            |  1856.50             | 1667.68              |    3524.18  | .4895  |  no | shared |    $1.4/hr * 2 nodes * .97 hr = | $2.716           |  $3.6/hr * 2 nodes * .97 hr = | 6.984   | without -march=native compiler flag |  
 | 270  | 3 |  3x90          | 15x18         | 1703.19              | 1494.17              |    3197.36  | .444  |  no | shared |   $1.4/hr * 3 nodes * .888hr = | $3.72 | 3.6/hr * 3 nodes * .888 = | 9.59  | with -march=native compiler flag |
 | 360  | 3 |  3x120     |  20x18             | 1520.29              |  1375.54             |    2895.83 | .402   |  no | shared |  $1.4/hr * 3 nodes * .804 = | $3.38 | 3.6/hr * 3 nodes * .804 = | 8.687 | with -march=native compiler flag | 
+| 360  |  3    |  3x120     | 20x18             | 1512.33     | 1349.54      | 2861.87 | .397   | no  | shared |   $1.4/hr * 3 nodes * .795 = | $3.339 | 3.6/hr * 3 nodes * .795 = | 8.586 |      with -march=native compiler flag |
 
 Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = $1.4/hr
 
@@ -46,12 +47,6 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 120 | 1  |   1x120    |    10x12           | 3031.81         |  2378.64   | 5410.45   | .751 |  no |  $1.4/hr * 1 nodes * 1.484 hr = | $2.08 | $3.6/hr * 1 nodes * 1.484 hr = | 5.34  | without -march=native compiler flag   | /mnt/resource/data2       | new |
 | 120 |  1 | 1x120      |  10x20             | 2691.40         | 2380.51    | 5071.91   | .704  | no |  $1.4/hr * 1 nodes * 1.408 hr = | 1.97   | $3.6/hr * 1 nodes * 1.408 = |  5.07 |   without -march=native compiler flag | i: /mnt/resource/data2 o: /data/output/ | new |
 | 180 | 5   |   5x36      |  10x18            | 1749.80      | 1571.50        | 3321.30  | .461  | no |  $1.4/hr * 5 nodes * .923 = | 6.45  |  $3.6/hr * 5 nodes * .923 hr = | 16.614 | without -march=native compiler flag | /shared/data | new |         
-| 180   | 2  |  2x90          | 10x18         |  2097.37    | 1809.84     | 3907.21    | .543  |  no |  $1.4/hr * 2 nodes * 1.08 hr = | $3.03 | $3.6/hr * 2 nodes * 1.08 hr = | 7.81 | with -march=native compiler flag |    |  |
-| 180  |  2   |   2x90     |    10 x 18         |  1954.20      |  1773.86      | 3728.06 | .5177 |  no |  $1.4/hr * 2 nodes * 1.036 hr = |  $2.9 | $3.6/hr * 2 nodes * 1.036 hr = | 7.46 | without -march=native compiler flag |     |   |
-| 240  | 2  |   2x120    |   20x12            | 1856.50       |  1667.68      | 3524.18 |  .489  |  no |   $1.4/hr * 2 nodes * .97 hr = | $2.716 |  $3.6/hr * 2 nodes * .97 hr = | 6.984   | without -march=native compiler flag | /shared/data   | old   |
-| 270  |  3  |  3x90          | 15x18         |  1703.19     | 1494.17     | 3197.36 | .444   |  no |  $1.4/hr * 3 nodes * .888hr = | $3.72 | 3.6/hr * 3 nodes * .888 = | 9.59  | with -march=native compiler flag |     |        |
-| 360  |  3   |  3x120     |  20x18             | 1520.29    | 1375.54      | 2895.83 | .402   |  no |  $1.4/hr * 3 nodes * .804 = | $3.38 | 3.6/hr * 3 nodes * .804 = | 8.687 | with -march=native compiler flag | /shared/data   | old       | 
-| 360  |  3    |  3x120     | 20x18             | 1512.33     | 1349.54      | 2861.87 | .397   | no  |  $1.4/hr * 3 nodes * .795 = | $3.339 | 3.6/hr * 3 nodes * .795 = | 8.586 |      with -march=native compiler flag | /shared/data/ | new | 
 | 960 | 8   |  8x120     | 30x32             | 1223.52              |  1126.19             |    2349.71  | .326   |  no | $1.4/hr * 8 nodes * .653 = | $7.31 | 3.6/hr * 8 nodes * .653 = | 18.8   | with -march=native compiler flag | /data/ouput  |  old | 
 | 960 |  8  |  8x120    | 30x32              | 1189.21              |  1065.73             |   2254.94   | .313   |  no | $1.4/hr * 8 nodes * .626 = | 7.01  | 3.6/hr * 8 nodes * .626 = | 18.0   | with -march=native compiler flag | /data/output | new  |
 
