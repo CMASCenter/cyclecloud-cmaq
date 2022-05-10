@@ -37,14 +37,14 @@ Output:
 ## Use the S3 script to copy the CONUS input data from the CMAS s3 bucket
 Modify the script if you want to change where the data is saved to.  Script currently uses /shared/data 
 
-`/shared/cyclecloud-cmaq/s3_scripts/s3_copy_nosign_conus_cmas_to_shared.csh`
+`/shared/cyclecloud-cmaq/s3_scripts/s3_copy_nosign_conus_cmas_opendata_to_shared.csh`
 
 
 check that the resulting directory structure matches the run script
 
 Note, this input data requires 44 GB of disk space  (if you use the yaml file to import the data to the lustre file system rather than copying the data you save this space)
 
-`cd /shared/data/CONUS`
+`cd /shared/data/CMAQ_Modeling_Platform_2016/CONUS/12US2`
 
 `du -sh`
 
