@@ -1,0 +1,9 @@
+CPUs,Nodes,NodesxCPU,COLROW,Day1 Timing (sec),Day2 Timing (sec),TotalTime,CPU Hours/day,SBATCHexclusive,InputData,Equation using Spot Pricing,SpotCost,Equation using On Demand Pricing,OnDemandCost,compiler flag,Scaling,IdealScaling,Efficiency
+90,1,1x90,9x10,3153.33,2758.12,5911.45,0.821,no,shared,$1.4/hr * 1 nodes * 1.642 hr =,$2.29 ,$3.6/hr * 1 nodes * 1.642 hr =,5.911,without -march=native compiler flag,1,1,100
+120,1,1x120,10x12,2829.84,2516.07,5345.91,0.742,no,shared,$1.4/hr * 1 nodes * 1.484 hr =,$2.08 ,$3.6/hr * 1 nodes * 1.484 hr =,5.34,without -march=native compiler flag,1,1,100
+180,2,2x90,10x18,2097.37,1809.84,3907.21,0.542,no,shared,$1.4/hr * 2 nodes * 1.08 hr =,$3.03 ,$3.6/hr * 2 nodes * 1.08 hr =,7.81,with -march=native compiler flag,1.512959375,2,75.64796876
+180,2,2x90,10 x 18,1954.2,1773.86,3728.06,0.518,no,shared,$1.4/hr * 2 nodes * 1.036 hr =,$2.90 ,$3.6/hr * 2 nodes * 1.036 hr =,7.46,without -march=native compiler flag,1.512959375,2,79.28319287
+180,5,5x36,10x18,1749.8,1571.5,3321.3,0.461,no,shared,$1.4/hr * 5 nodes * .922 hr =,$6.46 ,$3.6/hr * 5 nodes * .922 hr =,16.596,without -march=native compiler flag,,,
+240,2,2x120,20x12,1856.5,1667.68,3524.18,0.4895,no,shared,$1.4/hr * 2 nodes * .97 hr =,$2.72 ,$3.6/hr * 2 nodes * .97 hr =,6.984,without -march=native compiler flag,1.516923086,2,75.84615428
+270,3,3x90,15x18,1703.19,1494.17,3197.36,0.444,no,shared,$1.4/hr * 3 nodes * .888hr =,$3.72 ,3.6/hr * 3 nodes * .888 =,9.59,with -march=native compiler flag,1.848853429,3,61.62844764
+360,3,3x120,20x18,1520.29,1375.54,2895.83,0.402,no,shared,$1.4/hr * 3 nodes * .804 =,$3.38 ,3.6/hr * 3 nodes * .804 =,8.687,with -march=native compiler flag,1.829150734,3,61.53572551
