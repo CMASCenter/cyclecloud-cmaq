@@ -75,7 +75,7 @@ showmount -e localhost
  setenv DISK shared                             # FAST I/O DISK /shared or /fsx
  setenv CMAQ_DATA /$DISK/data/output
  setenv OUTDIR  ${CMAQ_DATA}/output_CCTM_${RUNID} #> Output Directory
- setenv INPDIR  /$DISK/data/CONUS/12US2  #Input Directory
+ setenv INPDIR  /$DISK/data/CMAQ_Modeling_Platform_2016/CONUS/12US2  #Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
  setenv NMLpath ${BLD}             #> Location of Namelists. Common places are: 
                                    #>   ${WORKDIR} | ${CCTM_SRC}/MECHS/${MECH} | ${BLD}
