@@ -1,9 +1,49 @@
-## Performance Optimization for Cycle Cloud
+Performance Optimization for Cycle Cloud
+
+## Right-sizing Compute Nodes for the CycleCloud
+
+Selection of the compute nodes depends on the domain size and resolution for the CMAQ case, and what your model run time requirements are.
+Larger hardware and memory configurations may also be required for instrumented versions of CMAQ incuding CMAQ-ISAM and CMAQ-DDM3D.
+The CycleCloud allows you to run the compute nodes only as long as the job requires, and you can also update the compute nodes as needed for your domain.
+
+## An explanation of why a scaling analysis is required for Multinode or Parallel MPI Codes
+
+Quote from the following link.
+
+"IMPORTANT: The optimal value of --nodes and --ntasks for a parallel code must be determined empirically by conducting a scaling analysis. As these quantities increase, the parallel efficiency tends to decrease. The parallel efficiency is the serial execution time divided by the product of the parallel execution time and the number of tasks. If multiple nodes are used then in most cases one should try to use all of the CPU-cores on each node."
+
+```{note}
+For the scaling analysis that was performed with CMAQ, the parallel efficiency was determined as the runtime for the smallest number of CPUs divided by the product of the parallel execution time and the number of additional cpus used. If smallest NPCOLxNPROW configuration was 18 cpus, the run time for that case was used, and then the parallel efficiency for the case where 36 cpus were used would be parallel efficiency = runtime_18cpu/(runtime_36cpu*2)*100
+```
+
+```{seealso}
+<a href="https://researchcomputing.princeton.edu/support/knowledge-base/scaling-analysis">Scaling Analysis - see section on Multinode or Parallel MPI Codes</a>
+
+<a href="https://researchcomputing.princeton.edu/support/knowledge-base/slurm#multinode">Example Slurm script for Multinode Runs</a>
+```
+
+## Slurm Compute Node Provisioning
+
+Azure CycleCloud relies on SLURM to make the job allocation and scaling decisions. The jobs are launched, terminated, and resources maintained according to the Slurm instructions in the CMAQ run script. The CycleCloud Web Interface is used to set the identity of the head node and the compute node, and the maximum number of compute nodes that can be submitted to the queue. 
+
+Number of compute nodes dispatched by the slurm scheduler is specified in the run script using #SBATCH --nodes=XX #SBATCH --ntasks-per-node=YY where the maximum value of tasks per node or YY limited by many CPUs are on the compute node.
+
+As an example:
+
+For HC44rs, there are 44 CPUs/node, so maximum value of YY is 44 or --ntask-per-node=44.
+For many of the runs that were done, we set --ntask-per-node=36 so that we could compare to the c5n.9xlarge on Parallel Cluster
+
+If running a job with 180 processors, this would require the --nodes=XX or XX to be set to 5 compute nodes, as 36x5=180.
+
+The setting for NPCOLxNPROW must also be a maximum of 180, ie. 18 x 10 or 10 x 18 to use all of the CPUs in the parallel cluster.
+
+For HBv120, there are 120 CPUS/node, so maximum value of YY is 120 or --ntask-per-node=120.
+
+If running a job with 240 processors, this would require the --nodes=XX or XX to be set to 2 compute nodes, as 120x2=240.
 
 <a href="https://azure.com/e/a5d6f8654d634e8b93973574cbda428d">Azure HBv3-120 Pricing</a>
 
 ![Azure HPC HBv3_120pe Pricing](./Azure_HPC_HBv3_Pricing.png)
-
 
 
 Table 1. Azure Instance On-Demand versus Spot Pricing (price is subject to change)
@@ -99,6 +139,26 @@ BogoMIPS:              5387.52
 | 180 |  5 |  5x36     | 10x18            |  2077.22   |   1851.77   | 3928.99   |  .545 | no |   $.3168/hr * 5 nodes * 1.09 = | $1.72 | 3.168/hr * 5 nodes * 1.09 = | 17.26   | with -march=native compiler flag | /shared |
 | 216 |  6  |  6x36     | 18x12            |  1908.15   | 1722.07    | 3630.22    |  .504 | no   |  $.3168/hr * 6 nodes * 1.01 = | $1.92 |  3.168/hr * 6 nodes * 1.01 = | 19.16 | with -march=native compiler flag  | /shared |
 | 288 |  8  |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no |   $.3168/hr * 8 nodes * .928 = | $2.35 | 3.168/hr * 8 nodes * .928 = | 39.54   | with -march=native compiler flag | /shared | 
+
+# Benchmark Scaling Plots
+
+## Benchmark Scaling Plot for HC44rs
+
+Figure 1. Scaling per Node on HC44rs Compute Nodes (44 cpu/node)
+
+![Scaling per Node for HC44rs Compute Nodes (44cpu/node)](../../qa_plots/scaling_plots/hc44rs_Scaling_Node.png)
+
+Figure 2. Scaling per CPU on HC44rs Compute Nodes (44 cpu/node)
+
+![Scaling per CPU for HC44rs Comput Nodes (44cpu/node)]((../../qa_plots/scaling_plots/hc44rs_Scaling_CPUs.png)
+
+Figure 3.  Scaling per Node on HBv120 Compute Nodes (120 cpu/node)
+
+![Scaling per Node for HBv120 Compute Nodes (120cpu/node](../../qa_plots/scaling_plots/hbv120_Scaling_Node.png)
+
+Figure 4. Scaling per CPU on HBv120 Compute Node (120 cpu/node)
+
+![Scaling per CPU for HBv120 Compute Nodes (120cpu/node](../../qa_plots/scaling_plots/hbv120_Scaling_CPUs.png)
 
 
 

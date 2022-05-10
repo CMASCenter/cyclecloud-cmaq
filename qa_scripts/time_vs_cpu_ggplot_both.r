@@ -6,13 +6,13 @@ library(patchwork) # To display 2 charts together
 # example from http://monashbioinformaticsplatform.github.io/2015-11-30-intro-r/ggplot.html
 # 2nd example from https://r-graph-gallery.com/line-chart-dual-Y-axis-ggplot2.html
 
-png(file = paste('hc44rs','_','Time','_','CPUs','.png',sep=''), width = 1024, height = 768, bg='white')
-csv_data<- read.csv("/shared/cyclecloud-cmaq/docs/user_guide_cyclecloud/qa/scaling_HC44rs.csv",sep="\t", skip =0, header = TRUE, comment.char = "",check.names = FALSE, quote="", )
+png(file = paste('HC44rs','_','HBv120','_','Time','_','CPUs','.png',sep=''), width = 1024, height = 768, bg='white')
+csv_data<- read.csv("/shared/cyclecloud-cmaq/docs/user_guide_cyclecloud/qa/timing_both.csv",sep="\t", skip =0, header = TRUE, comment.char = "",check.names = FALSE, quote="", )
 print(csv_data)
-p1 <- ggplot(csv_data, aes(y=TotalTime, x=CPUs, size=Nodes, color=COLROW)) +
+p1 <- ggplot(csv_data, aes(y=TotalTime, x=CPUs, size=Nodes, color=COLROW, shape=ComputeNode)) +
     geom_point() + ggtitle("2 Day Benchmark Total Time versus CPUs") + scale_y_continuous(name = "Total Time (seconds)")
 
-p2 <- ggplot(csv_data, aes(y=OnDemandCost, x=CPUs, size=Nodes, color=COLROW)) +
+p2 <- ggplot(csv_data, aes(y=OnDemandCost, x=CPUs, size=Nodes, color=COLROW, shape=ComputeNode)) +
     geom_point() + ggtitle("2 Day Benchmark On Demand Cost versus CPUs") + scale_y_continuous(name = "On Demand Cost ($)")
 
 # Display both charts side by side thanks to the patchwork package
