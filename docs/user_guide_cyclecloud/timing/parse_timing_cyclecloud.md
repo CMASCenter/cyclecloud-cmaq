@@ -8,7 +8,7 @@ CycleCloud Configurations can impact the model run times.
 It is up the the user, as to what model run configurations are used to run CMAQ on the CycleCloud.
 The following configurations may impact the run time of the model.
 
-### For different PE configurations, using 36 cpus out of 44 cpus on HC44rs
+* For different PE configurations, using 36 cpus out of 44 cpus on HC44rs
          
          NPCOL x NPROW    
    - [ ] 6x6    #SBATCH --nodes=1, #SBATCH --ntasks-per-node=36 
@@ -17,22 +17,22 @@ The following configurations may impact the run time of the model.
    - [ ] 16x16   #SBATCH --nodes=8, #SBATCH --ntasks-per-node=36
    - [ ] 16x18   #SBATCH --nodes=8, #SBATCH --ntasks-per-node=36
 
-### For different PE configurations, using 18 cpus out of 44 cpus on HC44rs
+* For different PE configurations, using 18 cpus out of 44 cpus on HC44rs
 
    - [ ] 3x6     #SBATCH --nodes=1, #SBATCH --ntasks-per-node=18
    - [ ] 9x14    #SBATCH --nodes=7, #SBATCH --ntasks-per-node=18
 
-### For different compute nodes   
+* For different compute nodes   
 
    - [ ] HC44rs  (44 cpus) - with Elastic Fabric Adapter (see above)
    - [ ] HBv120  (120 cpus -  with Elastic Fabric Adapter
 
-### For different PE configurations, using 36 cpus out of 120 cpus on HBv120s
+* For different PE configurations, using 36 cpus out of 120 cpus on HBv120s
 
    - [ ] 6x6    #SBATCH --nodes=2, #SBATCH --ntasks-per-node=18
    - [ ] 6x6    #SBATCH --nodes=1, #SBATCH --ntasks-per-node=36 
 
-### For different PE configurations, using 90 cpus out of 120 cpus on HBv120s
+* For different PE configurations, using 90 cpus out of 120 cpus on HBv120s
 
    - [ ] 9x10    #SBATCH --nodes=1, #SBATCH --ntasks-per-node=90
    - [ ] 10x18    #SBATCH --nodes=2, #SBATCH --ntasks-per-node=90
@@ -40,11 +40,11 @@ The following configurations may impact the run time of the model.
    - [ ] 20x18    #SBATCH --nodes=4, #SBATCH --ntasks-per-node=90
  
 
-### For with and without Elastic Fabric and Elastic Netaork Adapter 
+* For with and without Elastic Fabric and Elastic Netaork Adapter 
 
-### For with and without network placement 
+* For with and without network placement 
 
-### For /shared versus /data
+* For /shared versus /data
 
    - [ ] input data copied to /shared
    - [ ] input data  copied to /data
@@ -58,7 +58,8 @@ First check to see what log files are available:
 
 Modify the name of the log file to match what is avaible on your system.
 
-cd /shared/pcluster-cmaq/qa_scripts
+`cd /shared/pcluster-cmaq/qa_scripts`
+
 `vi parse_timing_pcluster.r`
 
 Edit the following section of the script to specify the log file names available on your ParallelCluster
