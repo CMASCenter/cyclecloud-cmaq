@@ -160,6 +160,12 @@ Figure 4. Scaling per CPU on HBv120 Compute Node (120 cpu/node)
 
 ![Scaling per CPU for HBv120 Compute Nodes (120cpu/node](../../qa_plots/scaling_plots/hbv120_Scaling_CPUs.png)
 
+Figure 5 shows the scaling per-node, as the configurations that were run were multiples of the number of cpus per node.  CMAQ was not run on a single cpu, as this would have been costly and inefficient.
+
+Figure 6. Plot of Total Time and On Demand Cost versus CPUs for both HC44rs and HBv120 
+
+![Plot of Total Time and On Demand Cost versus CPUs for HC44rs and HBv120](../../qa_plots/scaling_plots/HC44rs_HBv120_Time_CPUs.png)
+
 
 
 HC44RS SPOT Pricing $.3168
