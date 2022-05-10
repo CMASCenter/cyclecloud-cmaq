@@ -92,7 +92,7 @@ Compute Node for HPC Queue - used to run CMAQ:
 
 Figure 1. Cycle Cloud Recommended Cluster Configuration (Number of compute nodes depends on setting for NPCOLxNPROW and #SBATCH --nodes=XX #SBATCH --ntasks-per-node=YY )
 
-![Azure Minimum Viable Product Configuration](../diagrams/microsoft_azure_minimum_viable_product.png)
+![Azure Minimum Viable Product Configuration](../../diagrams/microsoft_azure_minimum_viable_product.png)
 
 #### Azure CycleCloud specifies what resource to use for disks, scheduler node, and compute nodes. 
 Cycle Cloud simply tries to schedule the job according to the slurm scheduler instructions. Slurm controls the launch, terminate, and maintain resources.
