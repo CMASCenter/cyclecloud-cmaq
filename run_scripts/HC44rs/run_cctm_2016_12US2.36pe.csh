@@ -1,6 +1,5 @@
 #!/bin/csh -f
-## For c5n.4xlarge (16 vcpu - 8 cpu)
-## works with cluster-ubuntu.yaml
+## For HB44rs (44 cpu/node)
 ## data on /shared directory
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=36

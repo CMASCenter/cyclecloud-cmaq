@@ -1,7 +1,11 @@
 ### Copy the run scripts from the parallel_cluster repo
-To ensure you have the correct directory specified
+Note, the run scripts are tailored to the Compute Node. This assumes the cluster was built with HC44rs compute nodes.
 
-`cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts`
+Change directories to where the run scripts are available from the git repo.
+
+`cd /shared/cyclecloud-cmaq/run_scripts/HC44rs`
+
+Copy the run scripts to the run directory
 
 `cp * /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/`
 
@@ -10,7 +14,7 @@ To ensure you have the correct directory specified
 
 `cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/`
 
-`sbatch run_cctm_2016_12US2.180pe.2x90.csh`
+`sbatch run_cctm_2016_12US2.180pe.csh`
 
 Note, it will take about 3-5 minutes for the compute notes to start up This is reflected in the Status (ST) of PD (pending), with the NODELIST reason being that it is configuring the partitions for the cluster
 
@@ -22,7 +26,7 @@ output:
 
 ```
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                 1       hpc     CMAQ     chef CF       0:22      1 cmaq-hbv3-hpc-pg0-[1-2]
+                 1       hpc     CMAQ     lizadams CF       0:22      1 cluster-cmaq-slurm-spot-la-hpc-pg0-[1-5]
 ```
 After 5 minutes the status will change once the compute nodes have been created and the job is running
 
@@ -31,11 +35,17 @@ After 5 minutes the status will change once the compute nodes have been created 
 output:
 
 ```
-JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                 2       hpc     CMAQ     chef  R      58:42      2 cmaq-hbv3-hpc-pg0-[1-2]
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                 4       hpc     CMAQ lizadams  R       5:37      5 cluster-cmaq-slurm-spot-la-hpc-pg0-[1-5]
 ```
 
 The 180 pe job should take 60 minutes to run (30 minutes per day)
+
+Note, if the job does not get scheduled, examine the slurm logs
+
+`sudo vi /var/log/slurmctld/slurmctld.log`
+
+`sudo vi //var/log/slurmctld/resume.log` 
 
 
 ### check the timings while the job is still running using the following command
@@ -60,7 +70,7 @@ output:
 
 ### When the job has completed, use tail to view the timing from the log file.
 
-`tail /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.10x18pe.2day.log `
+`tail /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.2x90.10x18pe.2day.log `
 
 output:
 
@@ -84,6 +94,11 @@ Num  Day        Wall Time
       Avg. Time = 1953.60
 
 ```
+
+Note, if you use the HB120 compute nodes that have up to 120 cpus per node, you can use fewer nodes to run 180 processors.
+To run on an HB120 compute node, you will need to create another hpc queue using these compute nodes, and then copy the scripts that are available here.
+
+cp /shared/cyclecloud-cmaq/run_scripts/HB120v3/*.csh /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/
 
 ### Submit a request for a 180 pe job using (2 x 90 pe), without the -march=native, and the sleep 60 command after mpirun to avoid second day error
 
@@ -284,14 +299,3 @@ cmaq-hbv3-hpc-pg0-2      1      hpc*       idle% 120   120:1:1 435814        0  
 cmaq-hbv3-hpc-pg0-3      1      hpc*       idle% 120   120:1:1 435814        0      1    cloud none                
 cmaq-hbv3-htc-1          1       htc       idle~ 1       1:1:2   3072        0      1    cloud none           
 ```
-
-
-### After run has successfully completed
-
-1. [Compare timings and verify that the run completed successfully](parse_timing.md)
-2. [Run combine and post processing scripts](post_combine.md)
-3. [Run QA scripts](qa_cmaq_run.md)
-4. [Copy the output to the S3 Bucket](copy_output_to_S3_Bucket.md)
-5. Exit the cluster
-6. Delete the Cluster
-

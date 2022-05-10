@@ -1,10 +1,12 @@
 # Create Cyclecloud CMAQ Cluster
+
 Documentation for Azure
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/?view=cyclecloud-8">CycleCloud Documentation</a>
 
 ## Configure the Cycle Cloud Cluster using the Azure Web Interface
 
-Create a virtual Machine
+Create a virtual Machine - 
+Note: this virtual machine will be used to create the Cycle Cloud Cluster from it's Web located at: UI https://IP-address/home
 
 ![Azure Create a Virtual Machine Console](../../azure_web_interface_images/Create_Virtual_Machine.png)
 
