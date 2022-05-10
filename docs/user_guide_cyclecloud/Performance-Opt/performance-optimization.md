@@ -59,6 +59,8 @@ Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 Note, two different CPUs were used, 
 
 Old CPU (logs between Feb. 16 - March 21, 2022)
+
+```
 Vendor ID:             AuthenticAMD
 CPU family:            25
 Model:                 1
@@ -66,8 +68,11 @@ Model name:            AMD EPYC 7V13 64-Core Processor
 Stepping:              0
 CPU MHz:               2445.405
 BogoMIPS:              4890.81
+```
 
 New CPU (logs after March 22, 2022)
+
+```
 Vendor ID:             AuthenticAMD
 CPU family:            25
 Model:                 1
@@ -75,6 +80,7 @@ Model name:            AMD EPYC 7V73X 64-Core Processor
 Stepping:              2
 CPU MHz:               1846.530
 BogoMIPS:              3693.06
+```
 
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |   Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | cpuMhz |
