@@ -18,7 +18,7 @@ This document provides tutorials and information on using the CycleCloud on Azur
 
 ## Format of this documentation
 
-This document provides three hands-on tutorials that are designed to be read in order.  The Introductory Tutorial will walk you through creating a demo CycleCloud.  You will learn how to set up your Azure Resource ID, configure and create a demo cluster, and exit and delete the cluster.  The Intermediate Tutorial steps you through running a CMAQ test case on CycleCloud using pre-loaded software and input data.  The Advanced Tutorial explains how to scale the CycleCloud for larger compute jobs and install CMAQ and required libraries from scratch on the cloud.  The remaining sections provide instructions on post-processing CMAQ output, comparing output and runtimes from multiple simulations, and copying output from CycleCloud to an AWS Simple Storage Service (S3) bucket.
+This document provides three hands-on tutorials that are designed to be read in order.  The Introductory Tutorial will walk you through creating a demo CycleCloud.  You will learn how to set up your Azure Resource ID, configure and create a demo cluster, and exit and delete the cluster.  The Intermediate Tutorial steps you through running a CMAQ test case on a single Virtual Machine with instructions to install CMAQ and libraries.  The Advanced Tutorial explains how to create a CycleCloud for larger compute jobs and install CMAQ and required libraries from scratch on the cloud.  The remaining sections provide instructions on post-processing CMAQ output, comparing output and runtimes from multiple simulations, and copying output from CycleCloud to an AWS Simple Storage Service (S3) bucket.
 
 
 
