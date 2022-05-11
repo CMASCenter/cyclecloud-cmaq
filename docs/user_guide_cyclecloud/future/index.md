@@ -2,4 +2,5 @@
 
 ```{toctree}
 future_work.md
+```
 
