@@ -24,13 +24,12 @@ nav:
         - 'License': 'license.md'
         - 'Release Notes': 'release-notes.md'
     - Help:
-        - 'CycleCloud Support': 'help/cyclecloud_support.md'
-        - 'CMAQ Support': 'help/cmaq_support.md'
-        - 'Azure Free Training': 'help/azure-free-training.md'
-        - 'Key References on Cloud Computing': 'help/key-references.md'
-        - 'Frequently Asked Questions': 'help/faq.md'
+        - 'CycleCloud Support': 'user_guide_cyclecloud/docs/help/cyclecloud_support.md'
+        - 'CMAQ Support': 'user_guide_cyclecloud/docs/help/cmaq_support.md'
+        - 'Key References on Cloud Computing': 'user_guide_cyclecloud/docs/help/key-references.md'
+        - 'Frequently Asked Questions': 'user_guide_cyclecloud/docs/help/faq.md'
     - Future Work:
-        - 'Future Work': 'user_guide_cyclecloud/future_work.md'
+        - 'Future Work': 'user_guide_cyclecloud/docs/future/future_work.md'
 
 theme:
   name: readthedocs
