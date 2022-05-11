@@ -30,10 +30,10 @@ see:
 
 ncdf4 REQUIRES the netcdf library be version 4 or above,
 AND installed with HDF-5 support (i.e., the netcdf library must be
-compiled with the --enable-netcdf-4 flag). If you don't want to install
+compiled with the --enable-netcdf-4 flag). If you do not want to install
 the full version of netcdf-4 with HDF-5 support, then please install
 the old, deprecated ncdf package instead.
--------------------------------------------------------------------
+
 ERROR: configuration failed for package ‘ncdf4’
 * removing ‘/usr/lib64/R/library/ncdf4’
 
@@ -102,5 +102,6 @@ sudo yum install flex bison make zlib-devel gcc-c++ gettext \
 sudo -i R
 install.packages("rgdal")
 install.packages("M3")
+install.packages("ggplot2")
 ```
 
