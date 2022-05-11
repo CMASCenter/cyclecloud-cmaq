@@ -155,7 +155,7 @@ Figure 1. Scaling per Node on HC44rs Compute Nodes (44 cpu/node)
 
 Figure 2. Scaling per CPU on HC44rs Compute Nodes (44 cpu/node)
 
-![Scaling per CPU for HC44rs Comput Nodes (44cpu/node)]((../../qa_plots/scaling_plots/hc44rs_Scaling_CPUs.png)
+![Scaling per CPU for HC44rs Comput Nodes (44cpu/node)](../../qa_plots/scaling_plots/hc44rs_Scaling_CPUs.png)
 
 Figure 3.  Scaling per Node on HBv120 Compute Nodes (120 cpu/node)
 
