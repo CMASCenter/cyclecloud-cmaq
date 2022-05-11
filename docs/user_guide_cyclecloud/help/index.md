@@ -1,7 +1,5 @@
 # Additional Resources
 
-
-
 ```{toctree}
 azure-resources.md
 azure-free-training.md
