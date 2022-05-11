@@ -6,7 +6,8 @@ CycleCloud itself is installed as an application server on a VM in Azure that re
 
 Follow these quickstart instructions to create CycleCloud.
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/qs-install-marketplace?view=cyclecloud-8">Quickstart CycleCloud from Marketplace VM</a> 
-note, I could not get the above instructions to work for me. I had to follow the isnstructions from Rob, which was to create a VM and then from that VM create a cycle cloud instance.
+
+Note, I could not get the above instructions to work. I had to follow the isnstructions from Rob, which was to create a VM and then from that VM create a cycle cloud instance.
 I need to review both sets of instructions again to see if I can figure out the disconnect.
 
 <a href="https://github.com/Azure/cyclecloud-slurm">Git Repo to set up Auto-scaling Slurm CycleCloud Cluster</a>
