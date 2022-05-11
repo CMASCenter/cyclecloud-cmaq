@@ -11,8 +11,8 @@ Tier 1: Native OS and associated system libraries, compilers
 * Tcsh shell
 * Centos7  (tried ubuntu but the module command did not provide updated compilers and openmpi)
 * Git
-* Compilers (C, C++, and Fortran) - GNU compilers version ≥ gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)
-* MPI (Message Passing Interface) -  OpenMPI ≥ 4.1.0
+* Compilers (C, C++, and Fortran) - GNU compilers version ≥ gcc (GCC) 9.2.0 (need to use module load gcc-9.2.0)
+* MPI (Message Passing Interface) -  OpenMPI ≥ 4.1.0  (need to use module load mpi/openmpi-4.1.0)
 * NetCDF (with C, C++, and Fortran support)
 * I/O API
 * Slurm Scheduler

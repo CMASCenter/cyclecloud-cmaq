@@ -24,16 +24,24 @@ grep A:B REPORT
 Should see all zeros. There are some non-zero values.
 It appears to have all zeros if the domain decomposition  is the same NPCOL, here, NPCOL differs (10 vs 16)
 Did a test to determine if removing the compiler option -march=native would result in zero differences if NPCOL differs.
-This seems to work on CycleCloud, but didn't work on Parallel Cluster. ????
+This seems to work on CycleCloud, but did not work on Parallel Cluster.
 
-On CycleCloud the compiler is
+Verify that you have loaded the gcc and openmpi modules.
+
+`module avail`
+
+`module load gcc-9.2.0`
+
+`module load mpi/openmpi-4.1.0`
+
+Verfiy the compiler version:
 
 `gcc --version`
 
 Output
 
 ```
-gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)
+gcc (GCC) 9.2.0
 ```
 
 Comparison of the Makefiles on Cyclecloud:

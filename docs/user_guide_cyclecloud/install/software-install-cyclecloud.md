@@ -13,10 +13,12 @@
 ### Log out and then log back in to activate the tcsh shell
 
 
-### Add group name to users
+### Optional Step to allow multiple users to run on the CycleCloud Cluster
+
+Add group name to users
 `sudo groupadd cmaq`
 
-### Add the new group for each user
+Add the new group for each user
 
 `sudo usermod -a -G cmaq lizadams`
 
@@ -24,16 +26,12 @@
 
 `sudo usermod -a -G cmaq chef`
 
-### Logout and log back in to reset the new group 
+Logout and log back in to reset the new group 
 
 
-### Set the group to be default group for files created by the user
+Set the group to be default group for files created by the user
 
 `sudo usermod -g cmaq lizadams`
-
-`sudo usermod -g cmaq chef`
-
-`sudo usermod -g cmaq robz`
 
 logout and log back in to have it take effect
 
@@ -66,9 +64,9 @@ logout and log back in to have it take effect
 
 `cd cyclecloud-cmaq`
 
-### Change the group to cmaq recursively for the /shared directory
+### Optional - Change the group to cmaq recursively for the /shared directory/build
 
-    `sudo chgrp -R cmaq /shared`
+    `sudo chgrp -R cmaq /shared/build`
 
 ### Check what modules are available on the cluster
 
