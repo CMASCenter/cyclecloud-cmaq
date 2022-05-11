@@ -21,6 +21,7 @@ Install packages as root - to make them available to all users
 ```
 sudo -i R
 install.packages("stringr")
+install.packages("patchwork")
 ```
 
 Had an issue installing ncdf4
