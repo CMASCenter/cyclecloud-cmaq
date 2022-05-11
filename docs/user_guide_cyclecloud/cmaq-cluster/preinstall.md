@@ -1,4 +1,4 @@
-# Run CMAQ from HBv120 Compute Node
+## Run CMAQ from HBv120 Compute Node
 
 Provide instructions to build and install CMAQ on HBv120 compute node without using Cycle Cloud.
 Provide instructions and sample run script to run CMAQ on up to 120 processors on a single instance.
