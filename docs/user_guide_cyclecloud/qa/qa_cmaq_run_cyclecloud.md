@@ -4,7 +4,7 @@
 ### run m3diff to compare the output data for two runs that have different values for NPCOL
 
 ```
-cd shared/data/output
+cd /shared/data/output
 ls */*ACONC*
 ```
 ```
@@ -33,7 +33,7 @@ On CycleCloud the compiler is
 Output
 
 ```
-gcc (GCC) 9.2.0
+gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)
 ```
 
 Comparison of the Makefiles on Cyclecloud:
@@ -155,6 +155,26 @@ Rscript compare_EQUATES_benchmark_output_CMAS_cyclecloud.r
 View the Operating System
 
 `cat /etc/os-release`
+
+Output:
+
+```
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+
+CENTOS_MANTISBT_PROJECT="CentOS-7"
+CENTOS_MANTISBT_PROJECT_VERSION="7"
+REDHAT_SUPPORT_PRODUCT="centos"
+REDHAT_SUPPORT_PRODUCT_VERSION="7"
+```
 
 To view the script, install imagemagick
 
