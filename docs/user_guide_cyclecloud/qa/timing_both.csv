@@ -14,7 +14,6 @@ CPUs	Nodes	NodesxCPU	COLROW	Day1 Timing (sec)	Day2 Timing (sec)	TotalTime	CPU Ho
 120	1	1x120	10x12	2781.89	2465.87	5247.76	0.729	no	$1.4/hr * 1 nodes * 1.642 hr =	$2.29 	$3.6/hr * 1 nodes * 1.642 hr =	5.911	without -march=native compiler flag	/data	1846.533	3.837566886	6.666666667	57.56350329	HB120
 120	1	1x120	10x12	3031.81	2378.64	5410.45	0.751	no	$1.4/hr * 1 nodes * 1.484 hr =	$2.08 	$3.6/hr * 1 nodes * 1.484 hr =	5.34	without -march=native compiler flag	/mnt/resource/data2	1846.533	3.722172832	6.666666667	55.83259248	HB120
 120	1	1x120	10x20	2691.4	2380.51	5071.91	0.704	no	$1.4/hr * 1 nodes * 1.408 hr =	1.97	$3.6/hr * 1 nodes * 1.408 =	5.07	without -march=native compiler flag	i: /mnt/resource/data2 o: /data	1846.533	3.970620535	6.666666667	59.55930803	HB120
-180	5	5x36	10x18	1749.8	1571.5	3321.3	0.461	no	$1.4/hr * 5 nodes * .923 =	6.45	$3.6/hr * 5 nodes * .923 hr =	16.614	without -march=native compiler flag	/shared	1846.533	6.063478156	10	60.63478156	HB120
 960	8	8x120	30x32	1223.52	1126.19	2349.71	0.326	no	$1.4/hr * 8 nodes * .653 =	$7.31 	3.6/hr * 8 nodes * .653 =	18.8	with -march=native compiler flag	/data	2445.399	8.570687447	53.33333333	16.07003896	HB120
 960	8	8x120	30x32	1189.21	1065.73	2254.94	0.313	no	$1.4/hr * 8 nodes * .626 =	7.01	3.6/hr * 8 nodes * .626 =	18	with -march=native compiler flag	/data	1846.533	8.930893948	53.33333333	16.74542615	HB120
 18	1	1x18	3x6	13525.66	12107.02	25632.68	3.56	no	$.3168/hr * 1 nodes * 7.12 =	$2.26 	3.186/hr * 1 nodes * 7.12 =	22.68	with -march=native compiler flag	shared	2693.671	1	1	100	HC44rs
