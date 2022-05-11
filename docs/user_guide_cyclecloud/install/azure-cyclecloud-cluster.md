@@ -59,7 +59,7 @@ Azure Create Storage Account Details
 Azure Review Storate Account Details
 ![Review Details of Storage Account on Azure](../../azure_web_interface_images/Azure_Create_A_Storage_Account_Review+create.png)
 
-Web Interface to CycleCloud
+Web Interface to CycleCloud - connect using the ip address for the virtual machine above http://-IP-ADDRESS/welcome
 ![Web Interface to CycleCloud](../../azure_web_interface_images/Cyclecloud-ea_Virtual_Machine.png)
 
 Azure CycleCloud Web Login
