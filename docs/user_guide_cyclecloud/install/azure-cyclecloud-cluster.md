@@ -47,7 +47,7 @@ Add Role Assignment
 Add Reader Role to Virtual Machine
 ![Add Reader Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Reader.png)
 
-Review REader Role on Virtual Machine
+Review Reader Role on Virtual Machine
 ![Review Reader Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Reader_Review.png)
 
 Azure Create Storage Account
