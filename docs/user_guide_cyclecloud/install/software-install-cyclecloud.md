@@ -87,7 +87,6 @@ logout and log back in to have it take effect
 output:
 
 ```
-gcc --version
 gcc (GCC) 9.2.0
 Copyright (C) 2019 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
