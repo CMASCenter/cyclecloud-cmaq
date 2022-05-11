@@ -98,7 +98,7 @@ Num  Day        Wall Time
 Note, if you use the HB120 compute nodes that have up to 120 cpus per node, you can use fewer nodes to run 180 processors.
 To run on an HB120 compute node, you will need to create another hpc queue using these compute nodes, and then copy the scripts that are available here.
 
-cp /shared/cyclecloud-cmaq/run_scripts/HB120v3/*.csh /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/
+`cp /shared/cyclecloud-cmaq/run_scripts/HB120v3/*.csh /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/`
 
 ### Submit a request for a 180 pe job using (2 x 90 pe), without the -march=native, and the sleep 60 command after mpirun to avoid second day error
 
