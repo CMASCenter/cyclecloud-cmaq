@@ -48,7 +48,7 @@ showmount -e localhost
  set PROC      = mpi               #> serial or mpi
  set MECH      = cb6r3_ae7_aq      #> Mechanism ID
  set EMIS      = 2016ff            #> Emission Inventory Details
- set APPL      = 2016_CONUS_10x12pe_remove_native_sleep        #> Application Name (e.g. Gridname)
+ set APPL      = 2016_CONUS_10x12pe #> Application Name (e.g. Gridname)
 
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy

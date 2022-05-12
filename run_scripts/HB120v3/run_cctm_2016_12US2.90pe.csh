@@ -48,7 +48,7 @@ showmount -e localhost
  set PROC      = mpi               #> serial or mpi
  set MECH      = cb6r3_ae7_aq      #> Mechanism ID
  set EMIS      = 2016ff            #> Emission Inventory Details
- set APPL      = 2016_CONUS_9x10pe_remove_native_sleep        #> Application Name (e.g. Gridname)
+ set APPL      = 2016_CONUS_9x10pe        #> Application Name (e.g. Gridname)
 
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy
@@ -57,7 +57,7 @@ showmount -e localhost
 
 #> Set the build directory (this is where the CMAQ executable
 #> is located by default).
- set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}_remove_native
+ set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}
  set EXEC      = CCTM_${VRSN}.exe  
 
 #> Output Each line of Runscript to Log File

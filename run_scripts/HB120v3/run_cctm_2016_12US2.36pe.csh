@@ -66,7 +66,7 @@ cp -r /data/CONUS /mnt/resource/data2/
 
 #> Set the build directory (this is where the CMAQ executable
 #> is located by default).
- set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}_remove_native
+ set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}
  set EXEC      = CCTM_${VRSN}.exe  
 
 #> Output Each line of Runscript to Log File
