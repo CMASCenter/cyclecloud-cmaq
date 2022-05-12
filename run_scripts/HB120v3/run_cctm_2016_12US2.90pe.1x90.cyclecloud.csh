@@ -5,8 +5,8 @@
 #SBATCH --ntasks-per-node=90
 #SBATCH --exclusive
 #SBATCH -J CMAQ
-#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.9x10pe.2day_remove_native_sleep.cyclecloud.log
-#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.9x10pe.2day_remove_native_sleep.cyclecloud.log
+#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.9x10pe.2day.log
+#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.9x10pe.2day.log
 
 
 # ===================== CCTMv5.3.X Run Script ========================= 
@@ -75,7 +75,7 @@ showmount -e localhost
  setenv DISK shared                            # FAST I/O DISK /shared or /fsx
  setenv CMAQ_DATA /$DISK/data/output
  setenv OUTDIR  ${CMAQ_DATA}/output_CCTM_${RUNID} #> Output Directory
- setenv INPDIR  /$DISK/data/CONUS/12US2  #Input Directory
+ setenv INPDIR  /$DISK/data/CMAQ_Modeling_Platform_2016/CONUS/12US2 #Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
  setenv NMLpath ${BLD}             #> Location of Namelists. Common places are: 
                                    #>   ${WORKDIR} | ${CCTM_SRC}/MECHS/${MECH} | ${BLD}

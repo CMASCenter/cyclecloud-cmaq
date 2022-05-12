@@ -1,12 +1,12 @@
 #!/bin/csh -f
 ## For Cyclecloud HB120v3 (120 cpu/node)
-## data on /shared directory
+## data on /shared/data directory
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=120
+#SBATCH --ntasks-per-node=36
 #SBATCH --exclusive
 #SBATCH -J CMAQ
-#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.10x12pe.2day.cyclecloud.log
-#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.10x12pe.2day.cyclecloud.log
+#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.6x6pe.2day.log
+#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.6x6pe.2day.log
 
 
 # ===================== CCTMv5.3.X Run Script ========================= 
@@ -31,6 +31,15 @@ df -h
 echo 'list the mounted volumes'
 showmount -e localhost
 
+mkdir /mnt/resource/data2
+
+echo 'permissions for /mnt/resource'
+ls -lrt /mnt/resource
+
+## Copy data from /data to /mnt/resource/data2
+
+cp -r /data/CONUS /mnt/resource/data2/
+
 #> Toggle Diagnostic Mode which will print verbose information to 
 #> standard output
  setenv CTM_DIAG_LVL 0
@@ -54,7 +63,7 @@ showmount -e localhost
  set PROC      = mpi               #> serial or mpi
  set MECH      = cb6r3_ae7_aq      #> Mechanism ID
  set EMIS      = 2016ff            #> Emission Inventory Details
- set APPL      = 2016_CONUS_10x12pe_remove_native_sleep        #> Application Name (e.g. Gridname)
+ set APPL      = 2016_CONUS_6x6pe_mnt_resource_data2        #> Application Name (e.g. Gridname)
 
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy
@@ -63,7 +72,7 @@ showmount -e localhost
 
 #> Set the build directory (this is where the CMAQ executable
 #> is located by default).
- set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}
+ set BLD       = ${CMAQ_HOME}/CCTM/scripts/BLD_CCTM_${VRSN}_${compilerString}_remove_native
  set EXEC      = CCTM_${VRSN}.exe  
 
 #> Output Each line of Runscript to Log File
@@ -72,8 +81,8 @@ showmount -e localhost
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts       #> Working Directory. Where the runscript is.
  #setenv CMAQ_DATA /21dayscratch/scr/l/i/lizadams/CMAQv5.3.2_CONUS/output
- setenv DISK shared                            # FAST I/O DISK /shared or /fsx
- setenv CMAQ_DATA /$DISK/data/output
+ setenv DISK /shared                           # FAST I/O DISK /shared or /fsx
+ setenv CMAQ_DATA /shared/data
  setenv OUTDIR  ${CMAQ_DATA}/output_CCTM_${RUNID} #> Output Directory
  setenv INPDIR  /$DISK/data/CMAQ_Modeling_Platform_2016/CONUS/12US2  #Input Directory
  setenv LOGDIR  ${OUTDIR}/LOGS     #> Log Directory Location
@@ -105,7 +114,7 @@ set TSTEP      = 010000            #> output time step interval (HHMMSS)
 if ( $PROC == serial ) then
    setenv NPCOL_NPROW "1 1"; set NPROCS   = 1 # single processor setting
 else
-   @ NPCOL  =  10; @ NPROW = 12
+   @ NPCOL  =  6; @ NPROW = 6 
    @ NPROCS = $NPCOL * $NPROW
    setenv NPCOL_NPROW "$NPCOL $NPROW"; 
 endif
