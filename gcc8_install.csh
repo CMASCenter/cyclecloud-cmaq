@@ -38,8 +38,8 @@
    setenv DIR /shared/build
    cd $DIR
    wget https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.8.1.tar.gz 
-   tar xvf netcdf-c-4.8.1.tar.gz
-   rm -f netcdf-c-4.8.1.tar.gz
+   tar xvf v4.8.1.tar.gz
+   rm -f v4.8.1.tar.gz
    cd netcdf-c-4.8.1
    #./configure --with-pic --with-hdf5=/home/centos/build/hdf5-1.10.5/hdf5/ --enable-netcdf-4 --enable-shared --prefix=$DIR/netcdf
 #configure: error: curl required for remote access. Install curl or build with --disable-dap.
