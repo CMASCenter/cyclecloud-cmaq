@@ -43,7 +43,7 @@ Additional information on Azure CycleCloud:
 
 user_guide_cyclecloud/demo/index.md
 user_guide_cyclecloud/System-Req/index.md
-user_guide_cyclecloud/cmaq-cluster/index.md
+user_guide_cyclecloud/cmaq-vm/index.md
 user_guide_cyclecloud/install/index.md
 user_guide_cyclecloud/post/index.md
 user_guide_cyclecloud/r-packages/index.md
