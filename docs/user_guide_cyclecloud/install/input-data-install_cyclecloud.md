@@ -12,6 +12,14 @@ see https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.htm
 
 `sudo ./aws/install`
 
+## edit .cshrc file to add /usr/local/bin to path
+
+`vi ~/.cshrc`
+
+add /usr/local/bin to the set path line
+
+Run csh at the command line 
+
 ### Verify you can run the aws command
 
 ` aws --help`
