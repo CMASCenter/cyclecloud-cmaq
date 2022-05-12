@@ -53,10 +53,10 @@
 #  Download and build netCDF-Fortran
 #  ---------------------------------
    cd /shared/build
-   wget https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-fortran-4.5.2.tar.gz
-   tar xvf netcdf-fortran-4.5.2.tar.gz
-   rm -f netcdf-fortran-4.5.2.tar.gz
-   cd netcdf-fortran-4.5.2
+   wget https://github.com/Unidata/netcdf-fortran/archive/refs/tags/v4.5.4.tar.gz
+   tar xvf v4.5.4.tar.gz
+   rm -f v4.5.4.tar.gz
+   cd netcdf-fortran-4.5.4
    setenv NCDIR /shared/build/netcdf
    setenv CPPFLAGS -I${NCDIR}/include
    setenv LDFLAGS -L${NCDIR}/lib
