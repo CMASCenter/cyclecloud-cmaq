@@ -19,3 +19,6 @@ Links to additional resources
 
 6. Tutorial on Getting Started with GEOS Chem:
 <a href="https://www.youtube.com/watch?v=BV4BIj8WAxE">Getting Started with GEOS Chem Tutorial</a>
+
+7. Git repo for Auto-scaling Slurm CycleCloud Cluster 
+<a href="https://github.com/Azure/cyclecloud-slurm">Git Repo to set up Auto-scaling Slurm CycleCloud Cluster</a>
