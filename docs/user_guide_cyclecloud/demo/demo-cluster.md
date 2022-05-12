@@ -3,6 +3,7 @@ Introductory Tutorial
 ## Create an Azure Account
 
 Create an account and configure your azure cyclecloud credentials.
+<a href="https://azure.microsoft.com/en-us/free/>Create Free Azure Account</a>
 
 ## Introduction to CycleCloud.  
 
