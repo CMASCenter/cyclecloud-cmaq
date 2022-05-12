@@ -19,6 +19,6 @@ The goal is for users to get started and make sure they can spin up a node, laun
 
 Need to add information about how to set up and use Managed Identities.
 
-https://docs.microsoft.com/en-us/azure/cyclecloud/how-to/managed-identities?view=cyclecloud-8
+<a href="https://docs.microsoft.com/en-us/azure/cyclecloud/how-to/managed-identities?view=cyclecloud-8">Set up and use Managed Identities</a>
 
 
