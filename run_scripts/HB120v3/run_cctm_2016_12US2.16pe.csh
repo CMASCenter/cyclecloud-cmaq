@@ -1,12 +1,7 @@
 #!/bin/csh -f
-## For Cyclecloud HB120v3 (120 cpu/node)
+## For Single VM HB120v3 (120 cpu/node)
 ## data on /shared/data directory
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=16
-#SBATCH --exclusive
-#SBATCH -J CMAQ
-#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.4x4pe.2day.log
-#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.4x4pe.2day.log
+## to run: ./run_cctm_2016_12US2.16pe.csh |& tee ./run_cctm_2016_12US2.16pe.log
 
 
 # ===================== CCTMv5.3.X Run Script ========================= 
