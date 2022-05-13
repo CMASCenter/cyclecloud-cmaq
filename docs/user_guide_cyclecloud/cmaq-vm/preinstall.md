@@ -201,7 +201,7 @@ Load the openmpi module
 module load mpi/openmpi-4.1.1 
 ```
 
-Install Cycle Cloud
+Install Cycle Cloud Repo
 
 `git clone -b main https://github.com/lizadams/cyclecloud-cmaq.git`
 
@@ -259,12 +259,8 @@ Install I/O API
 `./gcc_ioapi.csh`
 
 
-Install CMAQ
 
-`./gcc_cmaq.csh`
-
-
-Find the operating system
+Find what operating system is on the system:
 
 ` cat /etc/os-release`
 
