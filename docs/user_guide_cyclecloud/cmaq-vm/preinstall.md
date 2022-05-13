@@ -352,9 +352,17 @@ see https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.htm
 `sudo ./aws/install`
 
 
+Install the input data using the s3 script
 
+`cd /shared/cyclecloud-cmaq/s3_scripts/`
 
-Note, this Virtual Machine does not have Slurm installed or configured, so you run it interactively.
+`./s3_copy_nosign_conus_cmas_opendata_to_shared.csh`
+
+Note, this Virtual Machine does not have Slurm installed or configured.
+
+Run CMAQ interactively using the following command:
+
+`cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts`
 
 `./run_cctm_2016_12US2.120pe.csh |& tee ./run_cctm_2016_12US2.120pe.log`
 
