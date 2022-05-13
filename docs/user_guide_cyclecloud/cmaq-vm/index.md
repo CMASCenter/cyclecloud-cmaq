@@ -1,6 +1,6 @@
 # Intermediate Tutorial
 
-Run CMAQ on a CycleCloud using pre-loaded software and input data.
+Run CMAQ on a single Virtual Machine (VM) using HBv120 and AlmaLinux 8.5 HPC - Gen2.
 
 ```{toctree}
 preinstall.md
