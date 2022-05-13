@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('_ext'))
 # -- Project information -----------------------------------------------------
 
 project = 'cyclecloud-cmaq'
-copyright = '2022, CMAS Ceenter'
+copyright = '2022, CMAS Center'
 author = 'Liz Adams'
 html_logo = 'CMAQLogo.jpg'
 github_url = 'https://github.com/lizadams/cyclecloud-cmaq'
