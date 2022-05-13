@@ -1,6 +1,6 @@
 ## Run CMAQ from HBv120 Compute Node
 
-Provide instructions to build and install CMAQ on HBv120 compute node installed from HPC AlmaLinux 8.5 HPC-Gen2 Image that provides modules for git, openmpi and gcc.
+Instructions are provided to build and install CMAQ on HBv120 compute node installed from HPC AlmaLinux 8.5 HPC-Gen2 Image that contains modules for git, openmpi and gcc.
 The compute node does not have a SLURM scheduler on it, so jobs are run interactively from the command line. 
 
 Instructions to install data and CMAQ libraries and model are provided along with sample run scripts to run CMAQ on 16, 36, 90, and 120 processors on a single HBv120 instance.
