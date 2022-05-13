@@ -8,6 +8,7 @@
 4. Figure out how to save the machine image with the software installed and re-use for the creation of a new Virtual Machine.
 5. Learn how to set alarms or alerts or automatic shut-down of Virtual Machine if costs exceed budget.
 6. Learn how to use spot instances for running CMAQ for both a single Virtual Machine and also for the compute nodes in Cycle Cloud. I ran into difficulty using a spot node machine for the Cycle Cloud VM Application Server. (it may make it difficult to terminate the Cycle Cloud)
+7. Look into the Azure Open Data Program. Is there any reason to save the input data for the benchmark there in addition to on the AWs S3 Bucket?
 
 <b>Documentation</b>
 
