@@ -4,7 +4,7 @@
 
 see https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
-`cd /shared`
+`cd /shared/build`
 
 `curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"`
 
