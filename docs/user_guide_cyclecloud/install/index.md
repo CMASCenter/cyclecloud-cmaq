@@ -1,10 +1,6 @@
-# Advanced Tutorial (optional)
+# Advanced Tutorial
 
 * Learn how to install CMAQ software and underlying libraries, copy input data, and run CMAQ.
-```{admonition} Notice
-:class: warning
-
-```
 
 ```{toctree}
 azure-cyclecloud-cluster.md
