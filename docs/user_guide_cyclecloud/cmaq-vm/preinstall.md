@@ -340,7 +340,7 @@ First, examing the run scripts and also download the input data using the aws co
 
 Install aws command line
 
-see https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+see <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Install AWS CLI</a>
 
 
 `cd /shared/build`
