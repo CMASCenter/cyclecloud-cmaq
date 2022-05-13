@@ -387,3 +387,30 @@ Num  Day        Wall Time
      Total Time = 4663.43
       Avg. Time = 2331.71
 ```
+
+Run second job interactively using the following command:
+
+`./run_cctm_2016_12US2.90pe.csh | & tee ./run_cctm_2016_12US2.90pe.log`
+
+Output
+
+```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2015-12-22
+End Day:   2015-12-23
+Number of Simulation Days: 2
+Domain Name:               12US2
+Number of Grid Cells:      3409560  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       90
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2015-12-22   2786.21
+02   2015-12-23   2417.74
+     Total Time = 5203.95
+      Avg. Time = 2601.97
+```
+
