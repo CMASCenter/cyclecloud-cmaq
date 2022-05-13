@@ -73,7 +73,7 @@ Login to the Virtual Machine
 
 Mount the disk on the server as /shared using the instructions on the following link:
 
-https://docs.microsoft.com/en-us/azure/virtual-machines/linux/add-disk
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/add-disk">Mount Disk on Azure Linux Virtual Machine</a>
 
 Find the disk
 
