@@ -1,8 +1,7 @@
 #!/bin/csh -f
 ## For Single VM HB120v3 (120 cpu/node)
 ## data on /shared/data directory
-## to run: ./run_cctm_2016_12US2.16pe.csh |& tee ./run_cctm_2016_12US2.16pe.log
-
+## to run: ./run_cctm_2016_12US2.72pe.csh |& tee ./run_cctm_2016_12US2.72pe.log
 
 # ===================== CCTMv5.3.X Run Script ========================= 
 # Usage: run.cctm >&! cctm_2016_12US1.log &                                
@@ -23,6 +22,8 @@ echo 'information about cluster'
 sinfo
 echo 'information about filesystem'
 df -h
+echo 'list the mounted volumes'
+showmount -e localhost
 
 #> Toggle Diagnostic Mode which will print verbose information to 
 #> standard output
@@ -47,7 +48,7 @@ df -h
  set PROC      = mpi               #> serial or mpi
  set MECH      = cb6r3_ae7_aq      #> Mechanism ID
  set EMIS      = 2016ff            #> Emission Inventory Details
- set APPL      = 2016_CONUS_4x4pe    #> Application Name (e.g. Gridname)
+ set APPL      = 2016_CONUS_8x9pe  #> Application Name (e.g. Gridname)
 
 #> Define RUNID as any combination of parameters above or others. By default,
 #> this information will be collected into this one string, $RUNID, for easy
@@ -98,7 +99,7 @@ set TSTEP      = 010000            #> output time step interval (HHMMSS)
 if ( $PROC == serial ) then
    setenv NPCOL_NPROW "1 1"; set NPROCS   = 1 # single processor setting
 else
-   @ NPCOL  =  4; @ NPROW = 4
+   @ NPCOL  =  8; @ NPROW = 9 
    @ NPROCS = $NPCOL * $NPROW
    setenv NPCOL_NPROW "$NPCOL $NPROW"; 
 endif
