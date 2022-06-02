@@ -175,17 +175,17 @@ sudo mkdir cyclecloud-cmaq
 Change the ownership to your username
 
 ```
-sudo chown lizadams /shared/build
-sudo chown lizadams /shared/data
-sudo chown lizadams//shared/cyclecloud-cmaq
+sudo chown azureuser /shared/build
+sudo chown azureuser /shared/data
+sudo chown azureuser //shared/cyclecloud-cmaq
 ```
 
 Change the group to your username
 
 ```
-sudo chgrp lizadams /shared/build
-sudo chgrp lizadams /shared/data
-sudo chgrp lizadams /shared/cyclecloud-cmaq
+sudo chgrp azureuser /shared/build
+sudo chgrp azureuser /shared/data
+sudo chgrp azureuser /shared/cyclecloud-cmaq
 ```
 
 ## Obtain the Cyclecloud-cmaq code from github
@@ -293,7 +293,7 @@ ALMALINUX_MANTISBT_PROJECT_VERSION="8.5"
 
 Change shell to use tcsh
 
-`sudo usermod -s /bin/tcsh lizadams`
+`sudo usermod -s /bin/tcsh azureuser`
 
 
 Log out and then log back in to have the shell take effect.
