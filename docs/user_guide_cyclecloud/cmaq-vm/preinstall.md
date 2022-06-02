@@ -12,6 +12,8 @@ The full HBv120 instance will incur charges as long as it is on, even if a job i
 
 This is different than the Azure Cycle-Cloud, where if CMAQ is not running in the queue, then the HBv120 Compute nodes are down, and not incurring costs.
 
+## Create a HB120rs_v2 Virtual Machine
+
 1. Login to Azure Portal
 2. Select Create a Virtual Machine
 3. Click on See all images next to Image and use the search bar to search for HPC. Look for the AlmaLinux 8.5 HPC.
@@ -61,21 +63,21 @@ Click on Go to Resource once the deployment is completed.
 
 ![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HCv120/Azure_Virtual_Machine_Go_to_resource.png)
 
-Login using ssh to the IP address using the public key.
+## Login to the Virtual Machine 
 
 Change the permissions on the public key using command
 
 `chmod 400  HPC-CMAQ-AlmaLinux-HB120_key.pem`
 
-Login to the Virtual Machine
+Login to the Virtual Machine using ssh to the IP address using the public key.
 
 `ssh -Y -i ./xxxxxxx_key.pem username@xx.xx.xx.xx`
 
-Mount the disk on the server as /shared using the instructions on the following link:
+## Mount the disk on the server as /shared using the instructions on the following link:
 
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/add-disk">Mount Disk on Azure Linux Virtual Machine</a>
 
-Find the disk
+### Find the disk
 
 `lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"`
 
@@ -94,7 +96,7 @@ sdc     1:0:0:0        1T
 
 In the above case, the IT disk was added as sdc
 
-Format the disk
+### Format the disk
 
 ```
 sudo parted /dev/sdc --script mklabel gpt mkpart xfspart xfs 0% 100%
@@ -102,15 +104,15 @@ sudo mkfs.xfs /dev/sdc1
 sudo partprobe /dev/sdc1
 ```
 
-Mount the disk
+### Mount the disk
 
 `sudo mkdir /shared`
 
-Use mount to mount the filesystem
+### Use mount to mount the filesystem
 
 `sudo mount /dev/sdc1 /shared`
 
-Persist the mount
+### Persist the mount
 
 `sudo blkid`
 
@@ -125,6 +127,8 @@ Output
 /dev/sda14: PARTUUID="14abf57d-419d-4263-8078-aa7a849c1d58"
 ```
 
+### Edit fstab 
+
 Next, open the /etc/fstab file in a text editor as follows:
 
 `sudo nano /etc/fstab`
@@ -132,6 +136,8 @@ Next, open the /etc/fstab file in a text editor as follows:
 In this example, use the UUID value for the /dev/sdc1 device that was created in the previous steps, and the mountpoint of /shared. Add the following line to the end of the /etc/fstab file:
 
 `UUID=09e461c7-2ac6-4e07-b3c8-6e7f593dfba2    /shared   xfs   defaults,nofail   1   2
+
+## Verify the /shared directory
 
 Change directories and verify that you see the /shared directory with Size of 1T 
 
@@ -154,6 +160,8 @@ tmpfs           213G     0  213G   0% /sys/fs/cgroup
 tmpfs            43G     0   43G   0% /run/user/1000
 /dev/sdc1       1.0T  7.2G 1017G   1% /shared
 ```
+
+## Create subdirectories on /shared
 
 Create a /shared/build, /shared/data and /shared/cyclecloud-cmaq directory and change the permissions from root to your username.
 
@@ -180,7 +188,7 @@ sudo chgrp lizadams /shared/data
 sudo chgrp lizadams /shared/cyclecloud-cmaq
 ```
 
-Obtain the Cyclecloud-cmaq code from github
+## Obtain the Cyclecloud-cmaq code from github
 
 Load the git module
 
@@ -188,24 +196,23 @@ Load the git module
 module load module-git
 ```
 
-(note I couldn't find git after loading the above module.  Need to load git by hand)
-(or it may have been because I was in the csh shell and not the bash shell.)
+If you do not see git available as a module, you may need to install it as follows:
 
 
 `sudo yum install git`
 
 
-Load the openmpi module
+### Load the openmpi module
 
 ```
 module load mpi/openmpi-4.1.1 
 ```
 
-Install Cycle Cloud Repo
+### Install Cycle Cloud Repo
 
 `git clone -b main https://github.com/lizadams/cyclecloud-cmaq.git`
 
-Install and build netcdf C, netcdf Fortran, I/O API, and CMAQ
+### Install and build netcdf C, netcdf Fortran, I/O API, and CMAQ
 
 `cd /shared/cyclecloud-cmaq`
 
@@ -297,7 +304,7 @@ Copy a file to set paths
 
 `cp dot.cshrc.vm ~/.cshrc`
 
-Install and Build CMAQ
+## Install and Build CMAQ
 
 `./gcc_cmaq.csh`
 
@@ -311,7 +318,7 @@ Output
 /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc/CCTM_v533.exe
 ```
 
-Copy the run scripts from the repo to the run directory
+## Copy the run scripts from the repo to the run directory
 
 `cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts`
 
@@ -330,11 +337,9 @@ run_cctm_2016_12US2.16pe.csh
 run_cctm_2016_12US2.120pe.csh
 ```
 
-Run CMAQ using all 120 processors
+## Download the Input data from the S3 Bucket 
 
-First, examing the run scripts and also download the input data using the aws command line.
-
-Install aws command line
+### Install aws command line
 
 see <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Install AWS CLI</a>
 
@@ -348,7 +353,7 @@ see <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 `sudo ./aws/install`
 
 
-Install the input data using the s3 script
+### Install the input data using the s3 script
 
 `cd /shared/cyclecloud-cmaq/s3_scripts/`
 
@@ -356,7 +361,7 @@ Install the input data using the s3 script
 
 Note, this Virtual Machine does not have Slurm installed or configured.
 
-Run CMAQ interactively using the following command:
+## Run CMAQ interactively using the following command:
 
 `cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts`
 
@@ -388,7 +393,7 @@ Num  Day        Wall Time
       Avg. Time = 2331.71
 ```
 
-Run second job interactively using the following command:
+## Run second job interactively using the following command:
 
 `./run_cctm_2016_12US2.90pe.csh | & tee ./run_cctm_2016_12US2.90pe.log`
 
