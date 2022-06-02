@@ -137,7 +137,7 @@ In this example, use the UUID value for the /dev/sdc1 device that was created in
 
 `UUID=09e461c7-2ac6-4e07-b3c8-6e7f593dfba2    /shared   xfs   defaults,nofail   1   2
 
-## Verify the /shared directory
+### Verify the /shared directory
 
 Change directories and verify that you see the /shared directory with Size of 1T 
 
@@ -161,7 +161,7 @@ tmpfs            43G     0   43G   0% /run/user/1000
 /dev/sdc1       1.0T  7.2G 1017G   1% /shared
 ```
 
-## Create subdirectories on /shared
+### Create subdirectories on /shared
 
 Create a /shared/build, /shared/data and /shared/cyclecloud-cmaq directory and change the permissions from root to your username.
 
@@ -393,7 +393,7 @@ Num  Day        Wall Time
       Avg. Time = 2331.71
 ```
 
-## Run second job interactively using the following command:
+### Run second job interactively using the following command:
 
 `./run_cctm_2016_12US2.90pe.csh | & tee ./run_cctm_2016_12US2.90pe.log`
 
