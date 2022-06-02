@@ -175,17 +175,17 @@ sudo mkdir cyclecloud-cmaq
 Change the ownership to your username
 
 ```
-sudo chown azureuser /shared/build
-sudo chown azureuser /shared/data
-sudo chown azureuser //shared/cyclecloud-cmaq
+sudo chown azureuser build
+sudo chown azureuser data
+sudo chown azureuser cyclecloud-cmaq
 ```
 
 Change the group to your username
 
 ```
-sudo chgrp azureuser /shared/build
-sudo chgrp azureuser /shared/data
-sudo chgrp azureuser /shared/cyclecloud-cmaq
+sudo chgrp azureuser build
+sudo chgrp azureuser data
+sudo chgrp azureuser cyclecloud-cmaq
 ```
 
 ## Obtain the Cyclecloud-cmaq code from github
