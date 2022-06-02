@@ -18,11 +18,11 @@ Follow these quickstart instructions to create CycleCloud.
 
 The goal is for users to get started and make sure they can spin up a node, launch the CycleCloud and terminate it.
 
-Need to add information about how to set up and use Managed Identities.
+Follow the instructions provided in the following link to create a managed identity.  This is the recommended practice versus using an application ID.
 
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/how-to/managed-identities?view=cyclecloud-8">Set up and use Managed Identities</a>
 
-### Ensure your vCPU quota has been increased before attempting to run large-scale workloads.
+### Follow the instructions in the link below to increase your vCPU quota before attempting to run large-scale workloads.
 
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas">Azure VM Quotas</a>
 

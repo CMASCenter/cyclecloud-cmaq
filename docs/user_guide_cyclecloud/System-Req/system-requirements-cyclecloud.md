@@ -6,6 +6,8 @@ It may be possible to set up daily or weekly spending alarms as well.
 
 ## Software Requirements for CMAQ on CycleCloud
 
+The software requirements to run CMAQ on Azure are split into three tiers. The first tier includes the software that is provided with the operating system, the second tier includes the libraries required by CMAQ, the third tier includes the CMAQ code and associated pre and post processors, and the third tier includes the R software and packages requried by the analysis scripts for verifying output or doing a quality assurance of CMAQ.
+
 Tier 1: Native Operating System (OS) and associated system libraries, compilers
 
 * Tcsh shell
@@ -13,8 +15,6 @@ Tier 1: Native Operating System (OS) and associated system libraries, compilers
 * Git
 * Compilers (C, C++, and Fortran) - GNU compilers version ≥ gcc (GCC) 9.2.0 (need to use module load gcc-9.2.0)
 * MPI (Message Passing Interface) -  OpenMPI ≥ 4.1.0  (need to use module load mpi/openmpi-4.1.0)
-* NetCDF (with C, C++, and Fortran support)
-* I/O API
 * Slurm Scheduler
 
 Tier 2: additional libraries required for installing CMAQ
@@ -41,7 +41,7 @@ Larger hardware and memory configurations are also required for instrumented ver
 
 ### Azure CycleCloud
 
-Azure CycleCloud Provides the simplest way to manage HPC workloads using any scheduler (like Slurm, Grid Engine, HPC Pack, HTCondor, LSF, PBS Pro, or Symphony), on Azure
+Azure CycleCloud Provides the simplest way to manage HPC workloads using any scheduler (like Slurm, Grid Engine, HPC Pack, HTCondor, LSF, PBS Pro, or Symphony).
 
 CycleCloud allows you to:
 
@@ -53,13 +53,8 @@ CycleCloud allows you to:
 * Take advantage of built-in autoscaling and battle-tested reference architectures for a wide range of HPC workloads and industries
 
 
-<a href="https://docs.microsoft.com/en-us/azure/architecture/topics/high-performance-computing#azure-cyclecloud">High Performance Computing on Azure CycleCloud</a>
-
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/?view=cyclecloud-8">Azure CycleCloud</a>
 
-### Ensure your vCPU quota has been increased before attempting to run large-scale workloads.
-
-<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas">Azure VM Quotas</a>
 
 #### 12US2 Benchmark Domain Description
 
