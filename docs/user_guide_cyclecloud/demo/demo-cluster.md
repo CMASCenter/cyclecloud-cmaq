@@ -26,3 +26,7 @@ Follow the instructions provided in the following link to create a managed ident
 
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas">Azure VM Quotas</a>
 
+### Request access to virtual machines that are not available by default.
+
+HB-120 are not available by default, but you can request them. This tutorial was developed using UNC's enterprise account.  It is unknown if Azure will grant access to these virtual machines on a credit card account.
+
