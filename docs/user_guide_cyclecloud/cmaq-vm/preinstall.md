@@ -166,27 +166,16 @@ tmpfs            43G     0   43G   0% /run/user/1000
 Create a /shared/build, /shared/data and /shared/cyclecloud-cmaq directory and change the permissions from root to your username.
 
 ```
+cd /
+sudo chown azureuser shared
+sudo chgrp azureuser shared
+
 cd /shared
-sudo mkdir build
-sudo mkdir data
-sudo mkdir cyclecloud-cmaq
+mkdir build
+mkdir data
+mkdir cyclecloud-cmaq
 ```
 
-Change the ownership to your username
-
-```
-sudo chown azureuser build
-sudo chown azureuser data
-sudo chown azureuser cyclecloud-cmaq
-```
-
-Change the group to your username
-
-```
-sudo chgrp azureuser build
-sudo chgrp azureuser data
-sudo chgrp azureuser cyclecloud-cmaq
-```
 
 ## Obtain the Cyclecloud-cmaq code from github
 
