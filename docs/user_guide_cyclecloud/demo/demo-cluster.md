@@ -11,7 +11,8 @@ CycleCloud itself is installed as an application server on a Virtual Machine (VM
 
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/?view=cyclecloud-8">Azure CycleCloud Documentation</a>
 
-Create an Virtual Machine for the CycleCloud 8.2 Image and then from that VM configure a cycle cloud instance which will create a Cycle Cloud Scheduler use your credentials to ssh into the scheduler. 
+Create an Virtual Machine for the CycleCloud 8.2 Image and then from that VM configure a cycle cloud instance which will create a Cycle Cloud Scheduler. Use your credentials to ssh into the scheduler. 
+
 Follow these quickstart instructions to create CycleCloud.
 
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/qs-install-marketplace?view=cyclecloud-8">Quickstart CycleCloud from Marketplace VM</a>
