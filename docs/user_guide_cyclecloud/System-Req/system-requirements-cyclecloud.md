@@ -4,9 +4,9 @@
 Set alarm to receive an email alert if you exceed $100 per month (or what ever monthly spending limit you need).
 It may be possible to set up daily or weekly spending alarms as well.
 
-### Software Requirements for CMAQ on CycleCloud
+## Software Requirements for CMAQ on CycleCloud
 
-Tier 1: Native OS and associated system libraries, compilers
+Tier 1: Native Operating System (OS) and associated system libraries, compilers
 
 * Tcsh shell
 * Centos7  (tried ubuntu but the module command did not provide updated compilers and openmpi)
@@ -72,7 +72,7 @@ GRIDDESC
 ![CMAQ Domain](../../qa_plots/tileplots/CMAQ_ACONC_12US2_Benchmark_Tileplot.png)
 
 
-#### Recommended Cycle Cloud Configuration for CONUS Domain 12US2
+## Recommended Cycle Cloud Configuration for CONUS Domain 12US2
 
 Note, first create a VM using the image: CycleCloud 8.2, and from that VM, the Cycle Cloud is built.
 VM:
