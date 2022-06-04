@@ -78,11 +78,11 @@ CycleCloud Configuration:
 
 Scheduler node:
 
-* D12v2
+* D4s_v3
 
 Compute Node for HTC Queue - used for Post-Processing (combine, etc):
 
-* F2sV2
+* F2sV2 (part of the Fsv2-series instances)
 
 Compute Node for HPC Queue - used to run CMAQ:
 
