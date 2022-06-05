@@ -15,7 +15,7 @@ Click on the heart in the Azure CycleCloud box to add this as a favorite resourc
 
 Use the Create pulldown menu to select `Azure CycleCloud 8.2` 
 
-## Customize Scheduler node for CycleCloud
+## Customize Host Virtual Machine for CycleCloud
 
 1. Choose your Subscription
 2. Select or create a new Resource Group that your CycleCloud instance will run in
@@ -32,7 +32,7 @@ Use the Create pulldown menu to select `Azure CycleCloud 8.2`
 
 
 
-Figure 1. Create a virtual Machine - Customize Scheduler Node 
+Figure 1. Create a virtual Machine - Customize Host Virtual Machine
 Note: this virtual machine will be used to create the Cycle Cloud Cluster from it's Web located at: UI https://IP-address/home
 
 ![Azure Create a Virtual Machine Console](../../azure_web_interface_images/Create_Virtual_Machine.png)
@@ -54,6 +54,10 @@ Figure 5. Create a Virtual Machine
 
 ![Create the Virtual Machine](../../azure_web_interface_images/Create_VM.png)
 
+
+For the following figures, additional instructions are needed, as it is unclear where users go to add the contributor role. 
+
+1. Where do you find the Managed Identity options, is the contributor role part of managed identities??
 
 Figure 6. Add Contributor Role to Virtual Machine
 
