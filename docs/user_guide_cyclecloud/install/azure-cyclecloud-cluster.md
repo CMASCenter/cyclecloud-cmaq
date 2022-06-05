@@ -64,6 +64,10 @@ Figure 7. Add Role Assignment - Management Identity
 
 Figure 8. Add Role Assignment
 
+1. Click Identity Icon under Settings on the left side menu 
+2. Click Azure role assignments
+3. Click Add role assignment  (note I don't seem to have permissions to do this.)
+
 ![Add Role Assignment](../../azure_web_interface_images/VM_Add_Role_Assignment.png)
 
 Figure 9. Add Reader Role to Virtual Machine
@@ -88,7 +92,25 @@ Figure 13. Azure Review Storate Account Details
 ## Click Go to Resoure after the deployment is complete.
 ![Deployment Complete Click on Go to Resource](../../azure_web_interface_images/Azure_Deployment_Complete.png)
 
+Click on Copy next to the Public IP address to copy it.
+
+![CycleCloudMarketPlace Scheduler Node](../../azure_web_interface_images/Azure_CycleCloud_Virtual_Machine.png)
+
 ## Connect to Cyclecloud Web Interface
+
+In your web browser, create a new tab, and enter the IP address that you copied from the step above.
+
+`https://-IP-ADDRESS/welcome`
+
+1. Enter a Site Name - a unique name for the CycleCloud.
+
+CycleCloudCMAQ
+
+2. Read and click that you agree to the CycleCloud Software License Agreement
+
+![CycleCloudMarketPlace Scheduler Node](../../azure_web_interface_images/Azure_CycleCloud_Step2.png)
+
+3. Create your CycleCloud Administrator Account. Use the same username that you used for the scheduler node. 
 
 Figure 14. Web Interface to CycleCloud - connect using the ip address for the Scheduler Node above http://-IP-ADDRESS/welcome
 ![Web Interface to CycleCloud](../../azure_web_interface_images/Cyclecloud-ea_Virtual_Machine.png)
