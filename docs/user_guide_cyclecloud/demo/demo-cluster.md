@@ -12,12 +12,6 @@ With a pay-as-you go account or a free account, you need to sign up for the $29.
 With an enterprise account, the support plan is included.
 
 
-## Request quotas increase for access to virtual machines used in this tutorial
-
-### Follow the instructions in the link below to increase your vCPU quota before attempting to run large-scale workloads.
-
-<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas">Azure VM Quotas</a>
-
 ## Use Azure CLI to examine your quota
 
 `az vm list-usage --location "East US" -o table`
@@ -164,6 +158,9 @@ Gallery Image                             0               1000
 Gallery Image Version                     0               10000
 ```
 
+### Follow the instructions in the link below to increase your vCPU quota before attempting to run large-scale workloads.
+
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas">Azure VM Quotas</a>
 
 ### Request a quota increase for the HTC Queue - HC Family of vCPUs
 
@@ -230,10 +227,6 @@ The goal is for users to get started and make sure they can spin up a node, laun
 Follow the instructions provided in the following link to create a managed identity.  This is the recommended practice versus using an application ID.
 
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/how-to/managed-identities?view=cyclecloud-8">Set up and use Managed Identities</a>
-
-### Follow the instructions in the link below to increase your vCPU quota before attempting to run large-scale workloads.
-
-<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas">Azure VM Quotas</a>
 
 ### Request access to virtual machines that are not available by default.
 
