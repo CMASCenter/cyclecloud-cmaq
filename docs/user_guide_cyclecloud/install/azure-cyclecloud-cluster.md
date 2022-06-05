@@ -66,7 +66,9 @@ Figure 8. Add Role Assignment
 
 1. Click Identity Icon under Settings on the left side menu 
 2. Click Azure role assignments
-3. Click Add role assignment  (note I don't seem to have permissions to do this.)
+3. Click Add role assignment  
+
+Note, many of the screen shots below don't show how to get to that menu. When I tried to reproduce these steps, I was getting permission issues.
 
 ![Add Role Assignment](../../azure_web_interface_images/VM_Add_Role_Assignment.png)
 
