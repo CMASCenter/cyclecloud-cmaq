@@ -32,71 +32,89 @@ Use the Create pulldown menu to select `Azure CycleCloud 8.2`
 
 
 
-Create a virtual Machine - 
+Figure 1. Create a virtual Machine - Customize Scheduler Node 
 Note: this virtual machine will be used to create the Cycle Cloud Cluster from it's Web located at: UI https://IP-address/home
 
 ![Azure Create a Virtual Machine Console](../../azure_web_interface_images/Create_Virtual_Machine.png)
 
-Select a VM Size of D4s_v3
+Figure 2. Select Disks for the Azure Virtual Machine - use default options
 
-Selects Disks for the Azure Virtual Machine
 ![Select Disks for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Select_DIsks.png)
 
-Selects Network Interface for the Azure Virtual Machine
+Figure 3. Select Network Interface for the Azure Virtual Machine - use default options
+
 ![Select Network Interface for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Select_Network_Interface.png)
 
-Create Virtual Machine Management Identity
+Figure 4. Select System assigned Managed Identity
+
 ![Select Network Interface for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Management_Identity.png)
 
 
-Create a Virtual Machine
+Figure 5. Create a Virtual Machine
+
 ![Create the Virtual Machine](../../azure_web_interface_images/Create_VM.png)
 
-Add Contributor Role to Virtual Machine
+
+Figure 6. Add Contributor Role to Virtual Machine
+
 ![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Contributor.png)
 
-Add Role Assignment - Management Identity
+Figure 7. Add Role Assignment - Management Identity
 ![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Members_Managed_Identity.png)
 
-Add Role Assignment
+Figure 8. Add Role Assignment
+
 ![Add Role Assignment](../../azure_web_interface_images/VM_Add_Role_Assignment.png)
 
-Add Reader Role to Virtual Machine
+Figure 9. Add Reader Role to Virtual Machine
+
 ![Add Reader Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Reader.png)
 
-Review Reader Role on Virtual Machine
+Figure 10. Review Reader Role on Virtual Machine
+
 ![Review Reader Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Reader_Review.png)
 
-Azure Create Storage Account
+Figure 11. Azure Create Storage Account
+
 ![Create Storage Account on Azure](../../azure_web_interface_images/Azure_Create_Storage_Account.png)
 
-Azure Create Storage Account Details
+Figure 12. Azure Create Storage Account Details
+
 ![Details of Storage Account on Azure](../../azure_web_interface_images/Azure_Create_A_Storage_Account_details.png)
 
-Azure Review Storate Account Details
+Figure 13. Azure Review Storate Account Details
 ![Review Details of Storage Account on Azure](../../azure_web_interface_images/Azure_Create_A_Storage_Account_Review+create.png)
 
-Web Interface to CycleCloud - connect using the ip address for the virtual machine above http://-IP-ADDRESS/welcome
+## Click Go to Resoure after the deployment is complete.
+![Deployment Complete Click on Go to Resource](../../azure_web_interface_images/Azure_Deployment_Complete.png)
+
+## Connect to Cyclecloud Web Interface
+
+Figure 14. Web Interface to CycleCloud - connect using the ip address for the Scheduler Node above http://-IP-ADDRESS/welcome
 ![Web Interface to CycleCloud](../../azure_web_interface_images/Cyclecloud-ea_Virtual_Machine.png)
 
-Azure CycleCloud Web Login
+Figure 15. Azure CycleCloud Web Login
 ![Azure CycleCloud Web Login](../../azure_web_interface_images/Azure_CycleCloud_Web_Login.png)
 
-Azure CycleCloud Add Subscription
+Figure 16. Azure CycleCloud Add Subscription
 ![Azure CycleCloud Add Subscription](../../azure_web_interface_images/Azure_CycleCloud_Add_Subscription.png)
 
-Azure CycleCloud Add Subscription and Validate Credentials
+Figure 17. Azure CycleCloud Add Subscription and Validate Credentials
 ![Azure CycleCloud Add Subscription and Validate Credentials](../../azure_web_interface_images/Azure_CycleCloud_Add_Subscription_Validate_Credentials.png)
 
+Figure 18. 
 Azure CycleCloud HPC Queue Select Machine
 ![Azure CycleCloud HPC Queue Select Machine](../../azure_web_interface_images/Azure_CycleCloud_Select_A_Machine_Type_HC44rs.png)
 
+Figure 19. 
 Azure CycleCloud HPC VM Type Confirmed
 ![Azure CycleCloud HPC VM Type Confirmed](../../azure_web_interface_images/Azure_CycleCloud_HPC_VM_TYPE_HC44rs.png)
 
+Figure 20.
 Azure CycleCloud Network Attached Storage
 ![Azure CycleCloud Network Attached Storage](../../azure_web_interface_images/Azure_CycleCloud_Network_Attached_Storage.png)
 
+Figure 21.
 Azure CycleCloud Select OS and Uncheck Name as HostName
 ![Azure CycleCloud Select OS](../../azure_web_interface_images/Azure_CycleCloud_Advanced_Settings_Choose_OS.png)
 
