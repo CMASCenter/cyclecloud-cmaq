@@ -3,7 +3,34 @@
 Documentation for Azure
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/?view=cyclecloud-8">CycleCloud Documentation</a>
 
-## Configure the Cycle Cloud Cluster using the Azure Web Interface
+## Configure the Cycle Cloud Cluster using the Azure Portal
+
+Log into the [Azure Portal](https://ms.portal.azure.com/)
+
+In the search bar, enter "Marketplace", Click on Marketplace Icon.
+
+In the Marketplace search bar, enter "CycleCloud".
+
+Click on the heart in the Azure CycleCloud box to add this as a favorite resource.
+
+Use the Create pulldown menu to select `Azure CycleCloud 8.2` 
+
+## Customize Scheduler node for CycleCloud
+
+1. Choose your Subscription
+2. Select or create a new Resource Group that your CycleCloud instance will run in
+3. Name your CycleCloud instance using Virtual Machine name 
+4. Select Region
+5. Verify Image is Azure CycleCloud 8.2 - Gen 1
+6. Select Size, click on see all sizes, enter D4s into the search button and select Standard_D4s_v3- 4cpus, 16GiB memory ($140.16/month)
+7. Select Authentication Type `SSH public key`
+5. Create the Username that you will use to log into the instance
+6. SSH public key source - select `Generate new key pair`
+7. Select the Management tab and enable `System assigned managed identity`
+8. Click on the `Review` button and then the `Create` button
+
+
+
 
 Create a virtual Machine - 
 Note: this virtual machine will be used to create the Cycle Cloud Cluster from it's Web located at: UI https://IP-address/home
@@ -11,11 +38,6 @@ Note: this virtual machine will be used to create the Cycle Cloud Cluster from i
 ![Azure Create a Virtual Machine Console](../../azure_web_interface_images/Create_Virtual_Machine.png)
 
 Select a VM Size of D4s_v3
-
-![Azure Select a VM Size of D4s_v3](../../azure_web_interface_images/Select-a-VM-Size-D4s_v3.png)
-
-Screenshot of the setting selected
-![Azure Setting for VM Size of D4s_v3](../../azure_web_interface_images/Create_Virtual_Machine_with_Size_F4s_v2.png)
 
 Selects Disks for the Azure Virtual Machine
 ![Select Disks for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Select_DIsks.png)
@@ -26,11 +48,6 @@ Selects Network Interface for the Azure Virtual Machine
 Create Virtual Machine Management Identity
 ![Select Network Interface for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Management_Identity.png)
 
-Create Virtual Machine Management Identity - Screenshot 2
-![Select Network Interface for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Management_Identity_2.png)
-
-Create Virtual Machine Management Identity - Screenshot 3
-![Select Network Interface for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Management_Identity3.png)
 
 Create a Virtual Machine
 ![Create the Virtual Machine](../../azure_web_interface_images/Create_VM.png)
