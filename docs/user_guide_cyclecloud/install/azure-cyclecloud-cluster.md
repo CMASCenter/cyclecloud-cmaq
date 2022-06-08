@@ -55,9 +55,12 @@ Figure 5. Create a Virtual Machine
 ![Create the Virtual Machine](../../azure_web_interface_images/Create_VM.png)
 
 
-For the following figures, additional instructions are needed, as it is unclear where users go to add the contributor role. 
+Next, add Contributor Role to Virtual Machine
 
-1. Where do you find the Managed Identity options, is the contributor role part of managed identities??
+Click on the Identity Menu on the left side of the newly created virtual machine.
+Make sure you select the System Assigned Tab at the top of the window.
+Click on the button `Azure Role Assignments`
+For the following figures, additional instructions are needed, as it is unclear where users go to add the contributor role. 
 
 Figure 6. Add Contributor Role to Virtual Machine
 
