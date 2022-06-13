@@ -20,9 +20,7 @@ In the upper right corner, click on the icon for "Cloud Shell"
 
 A new shell will be created at the bottom of your portal.
 
-
-
-
+![Azure Cloud Shell](../../azure_web_interface_images/Azure_Portal_Cloud_Shell.png)
 
 
 `az vm list-usage --location "East US" -o table`
