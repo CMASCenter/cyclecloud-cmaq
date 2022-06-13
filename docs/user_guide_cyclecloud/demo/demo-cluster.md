@@ -14,6 +14,17 @@ With an enterprise account, the support plan is included.
 
 ## Use Azure CLI to examine your quota
 
+<a href="https://portal.azure.com/#home">Login to the Azure Portal</a>
+
+In the upper right corner, click on the icon for "Cloud Shell"
+
+A new shell will be created at the bottom of your portal.
+
+
+
+
+
+
 `az vm list-usage --location "East US" -o table`
 
 Output:
