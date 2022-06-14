@@ -204,6 +204,36 @@ Azure CycleCloud Select OS and Uncheck Name as HostName
 Figure 22.
 Azure CycleCloud Create Cluster
 
+Figure 23. Welcome to Azure CycleCloud
+
+![Welcome to Azure Cycle Cloud](../azure_web_interface_images/Azure_CycleCloud_Welcome_to.png)
+
+Figure 24. Azure Cycle Cloud Create New Slurm Cluster
+
+![Azure Cycle Cloud Create New Slurm Cluster](../azure_web_interface_images/Azure_CycleCloud_New_Slurm_Cluster.png)
+
+Figure 25. Azure Cycle Cloud Subscriptions Registering Service Providers
+![Azure Cycle Cloud Subscriptions Registering Service Providers](../azure_web_interface_images/Azure_CycleCloud_Subscriptions_Registering_Service_Providers_Status.png)
+
+Figure 26. Azure cycle Cloud Subscription Created Successsfully
+![Azure cycle Cloud Subscription Created Successsfully](../azure_web_interface_images/Azure_CycleCloud_Subscription_Created_Successfully.png)
+
+Figure 27. Azure CycleCloud Select Machine Type for HPC Node
+![Azure CycleCloud Select Machine Type for HPC Node](../azure_web_interface_images/Azure_CycleCloud_Select_Machine_Type_for_HPC_node_filter_by_44_cores.png)
+
+Figure 28. Azure Cycle Cloud Required Settings HPC VM Select HC44rs
+![Azure Cycle Cloud Required Settings HPC VM Select HC44rs](../azure_web_interface_images/AzureCycleCloud_Required_Settings_HPC_VM_Select_HC44rs.png)
+
+Figure 29. Azure cycle cloud Nodes Tab Shows Status of Scheduler
+![Azure cycle cloud Nodes Tab Shows Status of Scheduler](../azure_web_interface_images/AzureCycleCloud_Nodes_Tab_Shows_Status_of_Scheduler.png)
+
+Figure 30. Azure Cycle Cloud Network Attached Storage - Change to 1 TB
+![Azure Cycle Cloud Network Attached Storage - Change to 1 TB](../azure_web_interface_images/AzureCycleCloud_Network_Attached_Storage_NFS_Size_Changed_to_1TB.png)
+
+Figure 31. Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type
+![Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type](../azure_web_interface_images/AzureCycleCloud_Cluster_Arrays_Tab_Shows_hpc_queue_machine_type.png)
+
+
 Azure Cycle Cloud Start Cluster
 In the Nodes table, it will say 
 scheduler 1 node, 4 cores, Status Message: Staging Resources
@@ -220,7 +250,7 @@ Run a bash script for 1 minute by submitting to the hpc node using srun.
 
 You should see the hpc acquiring a single node.
 
-Figure 23. Azure CycleCloud Acquiring Compute Node after running srun command.
+Figure 32. Azure CycleCloud Acquiring Compute Node after running srun command.
 
 [Azure CycleCloud Acquiring Compute Node](../../azure_web_interface_images/Azure_CycleCloud_srun_test_acquiring_hpc_hc44rs_node.png)
 
