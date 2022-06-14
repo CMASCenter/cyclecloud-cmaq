@@ -1,6 +1,6 @@
 # cyclecloud-cmaq
 
-## Scripts and code to configure an Azure Cycle Cloud for CMAQ
+## Scripts and code to configure an Azure Virtual Machine or Cycle Cloud Cluster to run CMAQ for 2 day CONUS2 Domain
 
 ### To obtain this code use the following command.
 
