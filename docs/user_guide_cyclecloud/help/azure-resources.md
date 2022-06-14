@@ -22,3 +22,6 @@ Links to additional resources
 
 7. Git repo for Auto-scaling Slurm CycleCloud Cluster 
 <a href="https://github.com/Azure/cyclecloud-slurm">Git Repo to set up Auto-scaling Slurm CycleCloud Cluster</a>
+
+8. WRF, CMAQ & CAMx VM Image on Azure HPC available for fee on Azure Marketplace (not using Cycle Cloud)
+<a href="https://azuremarketplace.microsoft.com/sv-se/marketplace/apps/odysseuscomputationalsolutions1630242118741.wrf_cmaq_on_azure?tab=overview">WRF, CMAQ & CAMx VM Image on Azure HPC (not using Cycle Cloud)</a>
