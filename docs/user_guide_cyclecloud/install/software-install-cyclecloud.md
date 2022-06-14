@@ -52,6 +52,10 @@ logout and log back in to have it take effect
 
 `sudo chown azureuser /shared/cyclecloud-cmaq`
 
+## Install git
+
+sudo yum install git
+
 
 ### Install the cluster-cmaq git repo to the /shared directory
 
@@ -133,6 +137,20 @@ note, the primary difference is the location of the openmpi libraries on cyclecl
 
 `./gcc_cmaq_cyclecloud.csh`
 
+
 Check to see that the cmaq executable has been built
 
 `ls /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc/*.exe`
+
+If it fails due to an issue with finding mpi, you will need to edit the gcc_cmaq_cyclecloud.csh script to point to the location of the mpi library and bin directory.
+
+The following path is specified in the config_cmaq_cyclecloud.csh script, and may need to be updated.
+To find the mpi paths, use the command:
+
+`which mpirun`
+
+```
+        setenv MPI_INCL_DIR     /opt/openmpi-4.1.0/include              #> MPI Include directory path
+        setenv MPI_LIB_DIR      /opt/openmpi-4.1.0/lib             #> MPI Lib directory path
+```
+

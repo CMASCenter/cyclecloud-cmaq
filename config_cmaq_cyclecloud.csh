@@ -181,8 +181,8 @@
             setenv NETCDFF_INCL_DIR ${NFDIR}/include                   #> netCDF Fortran directory path
         endif 
 
-        setenv MPI_INCL_DIR     /opt/openmpi-4.1.0/include              #> MPI Include directory path
-        setenv MPI_LIB_DIR      /opt/openmpi-4.1.0/lib             #> MPI Lib directory path
+        setenv MPI_INCL_DIR     /opt/openmpi-4.1.1/include              #> MPI Include directory path
+        setenv MPI_LIB_DIR      /opt/openmpi-4.1.1/lib             #> MPI Lib directory path
 
         #> Compiler Aliases and Flags
         #> set the compiler flag -fopt-info-missed to generate a missed optimization report in the bldit logfile
