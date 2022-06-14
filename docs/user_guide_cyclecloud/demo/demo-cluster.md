@@ -199,7 +199,7 @@ From the Azure Portal, search for quotas, select the Quotas Service.
 Click on Compute.
 
 Use the Search Box to search for HB
-Select the HBv3 Family vCPUs in the region nearest to your location. (For North Carolina select - East US2) by clicking on the check box to the left of that selection.
+Select the HBv3 Family vCPUs in the region nearest to your location. (For North Carolina select - East US) by clicking on the check box to the left of that selection.
 
 Click on Request quota increase > Select Enter a new limit.
 In the sidebar menu on the righ hand side, enter 120 in the text box under new limit.
@@ -210,7 +210,7 @@ From the Azure Portal, search for quotas, select the Quotas Service.
 Click on Compute.
 
 Use the Search Box to search for Dv3
-Select the Standard Dv3 Family vCPUs in the region nearest to your location. (For North Carolina select - East US2) by clicking on the check box to the left of that selection.
+Select the Standard Dv3 Family vCPUs in the region nearest to your location. (For North Carolina select - East US) by clicking on the check box to the left of that selection.
 
 Click on Request quota increase > Select Enter a new limit.
 In the sidebar menu on the righ hand side, enter 4 in the text box under new limit to request an increase in the quota to 4 vcpu.
@@ -223,7 +223,7 @@ From the Azure Portal, search for quotas, select the Quotas Service.
 Click on Compute.
 
 Use the Search Box to search for 
-Select the HBv3 Family vCPUs in the region nearest to your location. (For North Carolina select - East US2) by clicking on the check box to the left of that selection.
+Select the HBv3 Family vCPUs in the region nearest to your location. (For North Carolina select - East US) by clicking on the check box to the left of that selection.
 
 
 Click on Request quota increase > Select Enter a new limit.
