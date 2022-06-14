@@ -77,7 +77,7 @@ sudo yum install git
 
 `module load mpi/openmpi-4.1.0`
 
-### Load the gcc copiler
+### Load the gcc copiler - note, this may have been automatically loaded by the openmpi module
 
 `module load gcc-9.2.0`
 

@@ -33,7 +33,11 @@ Set up your credentials for using s3 copy (you can skip this if you do not have 
 
 ## Azure Cyclecloud install input on the /shared/data directory
 
-`mkdir /shared/data`
+`sudo mkdir /shared/data`
+
+## Change ownership
+
+`sudo chown azureuser /shared/data`
 
 `ls /shared/data`
 
