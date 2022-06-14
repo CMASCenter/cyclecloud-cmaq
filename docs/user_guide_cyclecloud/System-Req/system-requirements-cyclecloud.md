@@ -104,7 +104,7 @@ Compute Node for HTC Queue - used for Post-Processing (combine, etc):
 
 Compute Node for HPC Queue - used to run CMAQ:
 
-*  HBv3-120 instance running Centos7 
+*  HBv3-120 instance running AlmaLinux 
 
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/hpc/hbv3-series-overview#software-specifications">HBv3-series Software Specification</a>
 
@@ -137,7 +137,7 @@ The setting for NPCOLxNPROW must also be a maximum of 180, ie. 18 x 10 or 10 x 1
 
 Software: 
 
-* Centos7
+* Alma Linux
 * Spot or OnDemand Pricing 
 * /shared/build volume install software from git repo
 * 1. TB Shared file system 
