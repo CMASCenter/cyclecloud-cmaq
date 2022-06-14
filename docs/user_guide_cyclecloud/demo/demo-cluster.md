@@ -178,6 +178,9 @@ With a pay-as-you-go account this request to increase a quota for virtual machin
 
 <a href="https://azure.microsoft.com/en-us/global-infrastructure/geographies/#geographies">Azure Regions</a>
 
+<a href="https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines">Review the virtual machines available from each region</a>
+
+
 ### Request a quota increase for the HTC Queue - HC Family of vCPUs for a region where they are available.
 
 
