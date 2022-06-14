@@ -201,11 +201,22 @@ Figure 21.
 Azure CycleCloud Select OS and Uncheck Name as HostName
 ![Azure CycleCloud Select OS](../../azure_web_interface_images/Azure_CycleCloud_Advanced_Settings_Choose_OS.png)
 
+Figure 22.
+Azure CycleCloud Create Cluster
+
+Azure Cycle Cloud Start Cluster
+In the Nodes table, it will say 
+scheduler 1 node, 4 cores, Status Message: Staging Resources
+
 Login to Azure Cycle Cloud and verify that the following command works.
 
-'srun -t 1:30:00  -n --pty /bin/bash'
+Click on the Scheduler node, and obtain the IP address, then login using
 
-## Instructions to upgrade the number of processors available to the Cycle Cloud Cluster
+ssh -Y lizadams@20.232.113.37
+
+'srun -t 1:30:00  -n 2  --pty /bin/bash'
+
+## Instructions to upgrade the number of processors available to the Cycle Cloud Cluster (only needed if you want to modify the number of nodes in the HPC queue)
 
 Edit the HPC config in the cyclecloud web interface to set the CPUs to 480 
 Run the following on the scheduler node the changes should get picked up:
