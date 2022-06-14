@@ -291,6 +291,8 @@ Job Id:	2
 	Resource_List.ncpus = 2
 ```
 
+Figure 33. Azure Cycle Cloud Showing usage of Scheduler Node and Compute Nodes for Srun command
+![Azure Cycle Cloud Showing usage of Scheduler Node and Compute Nodes for Srun command](../../azure_web_interface_images/AzureCycleCloud_Show_Scheduler_and_Compute_Node_Usage.png)
 
 
 ## Instructions to upgrade the number of processors available to the Cycle Cloud Cluster (only needed if you want to modify the number of nodes in the HPC queue)
