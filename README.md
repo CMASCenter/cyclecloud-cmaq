@@ -18,7 +18,7 @@ For Single VM running AlmaLinux with module load gcc-9.2.1  and module load mpi/
 ./gcc_cmaq.csh
 ```
 
-For Cycle Cloud running Centos with module load gcc-9.2.0 and module load mpi/openmpi-4.1.0 install:
+For Cycle Cloud running AlmaLinux with module load gcc-9.2.1 and module load mpi/openmpi-4.1.1 install:
 
 ```
 ./gcc_netcdf_cluster.csh
