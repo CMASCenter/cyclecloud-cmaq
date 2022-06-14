@@ -79,10 +79,6 @@ On the Azure role assignments window
 click on the + Add role assignment(Preview)
 
 
-Figure 6. Add Contributor Role to Virtual Machine
-
-![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Contributor.png)
-
 Figure 7. Add System Assigned Role Assignment - Management Identity
 
 Click on Azure role assignements
@@ -109,6 +105,18 @@ Figure 10. Review Reader Role on Virtual Machine
 ![Review Reader Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Reader_Review.png)
 
 Figure 11. Azure Create Storage Account
+
+In the search bar, enter Storage Account, the select + Create Storage Account
+
+Select the resource group associated with the CycleCloudHost that you created CycleCloudHost_group
+Select a lowercase name
+Then switch from the Basics tab to the Advanced Tab
+Uncheck the box next to Enable blob public access.
+Click Review and Create
+After the verification passed message is received
+Click Create
+
+You will see a Deployment is in progress
 
 ![Create Storage Account on Azure](../../azure_web_interface_images/Azure_Create_Storage_Account.png)
 
