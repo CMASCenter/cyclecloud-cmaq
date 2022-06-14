@@ -5,7 +5,7 @@
 ### To obtain this code use the following command.
 
 ```
-git clone -b main https://github.com/lizadams/cyclecloud-cmaq.git
+git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git
 ```
 
 Note, there are two sets of install scripts as the build path is sensitive to the mpi version!
