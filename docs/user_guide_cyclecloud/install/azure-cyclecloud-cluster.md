@@ -118,17 +118,16 @@ Click Create
 
 You will see a Deployment is in progress
 
-![Create Storage Account on Azure](../../azure_web_interface_images/Azure_Create_Storage_Account.png)
+![Create Storage Account on Azure](../../azure_web_interface_images/CycleCloudHost_storage_account.png)
 
 Figure 12. Azure Create Storage Account Details
 
-![Details of Storage Account on Azure](../../azure_web_interface_images/Azure_Create_A_Storage_Account_details.png)
+![Details of Storage Account on Azure](../../azure_web_interface_images/CreateStorage_Account_for_CycleCloud_Host.png)
 
-Figure 13. Azure Review Storate Account Details
-![Review Details of Storage Account on Azure](../../azure_web_interface_images/Azure_Create_A_Storage_Account_Review+create.png)
+Figure 13. Azure Storage Account disable Public Blob Access 
+![Disable Public Blob Access on  Storage Account](../../azure_web_interface_images/CreateStorage_Account_for_CycleCloudHost_disable_public_blob_access.png)
 
-## Click Go to Resoure after the deployment is complete.
-![Deployment Complete Click on Go to Resource](../../azure_web_interface_images/Azure_Deployment_Complete.png)
+Navigate to the CycleCloudHostApplication Virtual Machine
 
 Click on Copy next to the Public IP address to copy it.
 
@@ -140,15 +139,16 @@ In your web browser, create a new tab, and enter the IP address that you copied 
 
 `https://-IP-ADDRESS/welcome`
 
-1. Enter a Site Name - a unique name for the CycleCloud.
+If you get a warning, potential security risk ahead, click on Advanced, then accept risk and continue.
 
-CycleCloudCMAQ
+1. Enter a Site Name - a unique name for the CycleCloud. example CycleCloudHostApplicationManager
+
 
 2. Read and click that you agree to the CycleCloud Software License Agreement
 
 ![CycleCloudMarketPlace Scheduler Node](../../azure_web_interface_images/Azure_CycleCloud_Step2.png)
 
-3. Create your CycleCloud Administrator Account. Use the same username that you used for the scheduler node. 
+3. Create your CycleCloud Administrator Account. This requires a public rsa key. <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys">Instructions for creating this are available here</a>
 
 Figure 14. Web Interface to CycleCloud - connect using the ip address for the Scheduler Node above http://-IP-ADDRESS/welcome
 ![Web Interface to CycleCloud](../../azure_web_interface_images/Cyclecloud-ea_Virtual_Machine.png)
