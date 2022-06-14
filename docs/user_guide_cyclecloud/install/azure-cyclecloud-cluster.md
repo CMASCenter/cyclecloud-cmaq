@@ -54,12 +54,18 @@ Figure 4. Select System assigned Managed Identity
 ![Select Network Interface for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Management_Identity.png)
 
 
-Figure 5. Create a Virtual Machine
+Figure 5. Create a Virtual Machine - Deployment is in Progress
 
 ![Create the Virtual Machine](../../azure_web_interface_images/Create_VM.png)
 
 
-Next, add Contributor Role to Virtual Machine
+Figure 6. Your Deployment is complete - click on blue button `Go to resource`
+
+![Deployment Complete - Go to Resource](CycleCloudApplicationHost_Deployment_is_complete.png)
+
+After the CycleCloud Host Machine has been deployed click on `Go to resource`
+
+Add Contributor Role to Virtual Machine - 
 
 Click on the Identity Menu on the left side of the newly created virtual machine.
 Make sure you select the System Assigned Tab at the top of the window.
