@@ -25,8 +25,9 @@ Note, it will take about 3-5 minutes for the compute notes to start up This is r
 output:
 
 ```
+[lizadams@CMAQSlurmHC44rsAlmaLinux-scheduler scripts]$ squeue
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                 1       hpc     CMAQ     azureuser CF       0:22      1 cluster-cmaq-slurm-spot-la-hpc-pg0-[1-5]
+                 6       hpc     CMAQ lizadams CF       5:03      5 cmaqslurmhc44rsalmalinux-hpc-pg0-[1-5]
 ```
 After 5 minutes the status will change once the compute nodes have been created and the job is running
 
@@ -36,7 +37,7 @@ output:
 
 ```
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                 4       hpc     CMAQ azureuser  R       5:37      5 cluster-cmaq-slurm-spot-la-hpc-pg0-[1-5]
+                 6       hpc     CMAQ lizadams  R       0:37      5 cmaqslurmhc44rsalmalinux-hpc-pg0-[1-5]
 ```
 
 The 180 pe job should take 60 minutes to run (30 minutes per day)
