@@ -226,7 +226,7 @@ Select the HBv3 Family vCPUs in the region nearest to your location. (For North 
 Click on Request quota increase > Select Enter a new limit.
 In the sidebar menu on the righ hand side, enter 44 in the text box under new limit.
 
-### Create a virtual machine
+## Create a virtual machine
 
 Once your quota limit has been approved, then you will be able to select a virtual machine
 
@@ -274,7 +274,7 @@ Select Connect then SSH
 
 The screen will then provide instructions for you to login to the newly created virtual machine.
 
-### Login to Virtual Machine
+## Login to Virtual Machine
 
 `ssh -i ./CMAQStandardD8sv4_key.pem  azureuser@13.89.128.245`
 
@@ -284,9 +284,12 @@ The screen will then provide instructions for you to login to the newly created 
 
 In the intermediate tutorial, instructions are provided to find the disk and mount it as a /shared volume to the virtual machine.
 
-### Delete the virtual machine and all of the associated resources by deleting the resource group.
+## Delete the virtual machine and all of the associated resources by deleting the resource group.
 
+Deleting the resource group will delete the virtual machine and will also delete the associated resources that were created for the virtual machine.
 ![Click on resource group](../cyclecloud-cmaq/docs/azure_web_interface_images/Virtual_machine_click_on_resource_group.png)
+
+A pop-up window will appear on the right side of the Azure Portal to confirm that you want to delete the resource group.
 
 ![Confirm delete resource group](../cyclecloud-cmaq/docs/azure_web_interface_images/Virtual_machine_click_on_resource_group.png)
 
