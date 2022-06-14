@@ -1,6 +1,6 @@
 ## Contribute to Azure-cmaq Documentation
 
-Please take note of any issues and submit to <a href="https://github.com/lizadams/cyclecloud-cmaq/issues">Github Issue</a>
+Please take note of any issues and submit to <a href="https://github.com/CMASCenter/cyclecloud-cmaq/issues">Github Issue</a>
 
 ```{note}
 At the top of each page of the documentation, there is also an pencil icon, that you can click.

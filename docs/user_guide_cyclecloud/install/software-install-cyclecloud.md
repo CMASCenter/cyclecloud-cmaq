@@ -8,7 +8,7 @@
 
 ### Change shell to use .tcsh
 
-`sudo usermod -s /bin/tcsh lizadams`
+`sudo usermod -s /bin/tcsh azureuser`
 
 ### Log out and then log back in to activate the tcsh shell
 
@@ -20,18 +20,15 @@ Add group name to users
 
 Add the new group for each user
 
-`sudo usermod -a -G cmaq lizadams`
+`sudo usermod -a -G cmaq azureuser`
 
-`sudo usermod -a -G cmaq robz`
-
-`sudo usermod -a -G cmaq chef`
 
 Logout and log back in to reset the new group 
 
 
 Set the group to be default group for files created by the user
 
-`sudo usermod -g cmaq lizadams`
+`sudo usermod -g cmaq azureuser`
 
 logout and log back in to have it take effect
 
@@ -45,7 +42,7 @@ logout and log back in to have it take effect
 
 ## Change ownership to your username
 
-`sudo chown lizadams /shared/build`
+`sudo chown azureuser /shared/build`
 
 ## Make the /shared/cyclecloud-cmaq directory
 
@@ -53,14 +50,14 @@ logout and log back in to have it take effect
 
 ## Change ownership to your username
 
-`sudo chown lizadams /shared/cyclecloud-cmaq`
+`sudo chown azureuser /shared/cyclecloud-cmaq`
 
 
 ### Install the cluster-cmaq git repo to the /shared directory
 
 `cd /shared`
 
-`git clone -b main https://github.com/lizadams/cyclecloud-cmaq.git cyclecloud-cmaq`
+`git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git cyclecloud-cmaq`
 
 `cd cyclecloud-cmaq`
 
