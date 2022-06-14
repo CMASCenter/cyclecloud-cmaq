@@ -234,6 +234,46 @@ From the <a href="https://portal.azure.com/#home">Azure Portal Click on Create a
 
 ![Click on Create a resource](../../azure_web_interface_images/Azure_Portal_Create_a_resource.png)
 
+### The availability of Images that can be selected depends on the region.
+
+For high performance computing applications, the recommended operating system is Alma Linux 8 - Gen 2, but not all regions have Gen 2, so you may be limited to Gen 1.
+
+### Enter Name, then Select Region, Select Image and Select Size
+
+Recommend selecting a machine name that indicates what you will be using it for, the Operating System, and the Machine Size
+
+Virtual Machine Name: CMAQAlmaD8sv3
+Region: Central US
+Image: Alma Linux Gen 1  - first select see all images, then search on HPC, then select Alma Linux. If Gen 2 is available, then select that, if not, select Gen 1.
+Size: Standard_D8_v3  - first select see all sizes, then select an image that is large enough to run CMAQ CONUS Domain
+
+![Create resource options: Select Region, Image and Size](../../azure_web_interface_images/Create_virtual_machine_select_name_region_operating_system_machine_size.png)
+
+Select Next Disks
+Click on Create and attach new disk of size 1TB
+Click on Delete Disk with VM
+
+![Create new disk for /shared volume on virtual machine](../cyclecloud-cmaq/docs/Create_Virtual_Machine_Create_New_Disk.png)
+
+Click Next Networking - accept default settings
+Click Next Management -  Select the System Managed Identity
+
+![Select System Managed Identity](../cyclecloud-cmaq/docs/azure_web_interface_images/Create_virtual_machine_select_System_managed_identity.png)
+
+Click on Review and Create  - Click on Create
+
+A pop-up window titled "Generate a new key pair" will appear.
+
+Click on Download private key and create resource.
+
+![Select Download private key and create resources](../cyclecloud-cmaq/docs/azure_web_interface_imagesVirtual_Machine_Connect_with_SSH.png)
+
+Once your resource is created in the upper right corner of the new screen, there will be a menu optione titled Connect.
+
+Select Connect then SSH
+
+The screen will then provide instructions for you to login to the newly created virtual machine.
+
 
 This tutorial was developed using UNC's enterprise account.  It is unknown if Azure will grant access to these virtual machines on a credit card account.
 
