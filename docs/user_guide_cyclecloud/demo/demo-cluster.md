@@ -168,17 +168,21 @@ Gallery Image                             0               1000
 Gallery Image Version                     0               10000
 ```
 
-### Follow the instructions in the link below to increase your vCPU quota before attempting to run large-scale workloads.
+### Review list of regions and virtual machines available in each region.
 
-<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas">Azure VM Quotas</a>
+<a href="https://azure.microsoft.com/en-us/global-infrastructure/geographies/#geographies">Azure Regions
 
-### Request a quota increase for the HTC Queue - HC Family of vCPUs
+### Follow the instructions in the link below to increase your vCPU quota to allow you to create a virtual machine and run CMAQ.
+
+<a href="https://azure.microsoft.com/en-us/global-infrastructure/geographies/#geographies">Azure Regions
+
+### Request a quota increase for the HTC Queue - HC Family of vCPUs for a region where they are available.
 
 From the Azure Portal, search for quotas, select the Quotas Service.
 Click on Compute.
 
 Use the Search Box to search for HC.
-Select the HC Standard Family vCPUs in the region nearest to your location. (For North Carolina select - East US2) by clicking on the check box to the left of that selection.
+Select the HC Standard Family vCPUs in the region nearest to your location. (For North Carolina select - East US) by clicking on the check box to the left of that selection.
 
 Click on Request quota increase > Select Enter a new limit.
 In the sidebar menu on the righ hand side, enter 44 in the text box under new limit.
