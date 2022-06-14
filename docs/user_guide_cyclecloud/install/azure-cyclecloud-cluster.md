@@ -162,9 +162,30 @@ Figure 16. Azure CycleCloud Add Subscription
 Figure 17. Azure CycleCloud Add Subscription and Validate Credentials
 ![Azure CycleCloud Add Subscription and Validate Credentials](../../azure_web_interface_images/Azure_CycleCloud_Add_Subscription_Validate_Credentials.png)
 
+The Subscriptions page will show if the cluster subscription was created. You may need to pull the State window to enlarge it.
+
+When it says created, with nothing under the Failed column, then it was successful, click Back to Clusters.
+
+Figure 18. Azure CycleCloud Create a New Cluster - Select SLURM workload Manager
+
+![Azure CycleCloud - Create Slurm Cluster](../../azure_web_interface_images/AzureCycleCloud-CreateSlurmCluster.png)
+
+Figure 19. Azure CycleCloud New Slurm Cluster - add a Cluster Name
+
+Example name: CMAQSlurmHC44rsAlmaLinux
+
 Figure 18. 
 Azure CycleCloud HPC Queue Select Machine
+In the Min Cores box, input 44
+In the Compute Type, select High Performance Compute
+Select HC44rs, then select Apply
 ![Azure CycleCloud HPC Queue Select Machine](../../azure_web_interface_images/Azure_CycleCloud_Select_A_Machine_Type_HC44rs.png)
+
+Figure 19.
+Select Auto-Scaling Max HPC Cores to be a multiple of the number of cpus available on the compute node.  For HC44rs for a maximum of 5 nodes, it would be 44 x 5 = 220 Max HPC Cores
+Choose the Networking SubnetID that was created for the CycleCloud.
+
+
 
 Figure 19. 
 Azure CycleCloud HPC VM Type Confirmed
@@ -172,7 +193,9 @@ Azure CycleCloud HPC VM Type Confirmed
 
 Figure 20.
 Azure CycleCloud Network Attached Storage
+Change the size from 100 GB of network attached storage to 1000 GB of network attached storage for the /shared directory, where CMAQ and the input data will be installed.
 ![Azure CycleCloud Network Attached Storage](../../azure_web_interface_images/Azure_CycleCloud_Network_Attached_Storage.png)
+
 
 Figure 21.
 Azure CycleCloud Select OS and Uncheck Name as HostName
