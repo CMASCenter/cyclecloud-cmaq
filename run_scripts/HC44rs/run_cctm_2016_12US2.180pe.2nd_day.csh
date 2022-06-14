@@ -1,6 +1,7 @@
 #!/bin/csh -f
 ## For HB44rs (44 cpu/node)
 ## data on /shared directory
+### Example script for how to restart the run, it depends on running the first day successfully using the run_cctm_2016_12US2.180pe.csh script
 #SBATCH --nodes=5
 #SBATCH --ntasks-per-node=36
 #SBATCH --exclusive
