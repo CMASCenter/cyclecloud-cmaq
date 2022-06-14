@@ -67,16 +67,27 @@ After the CycleCloud Host Machine has been deployed click on `Go to resource`
 
 Add Contributor Role to Virtual Machine - 
 
+Figure 7. Click on Identity Icon on left side of CycleCloudHost Application Virtual Machine
+
+![Click on Identity Icon](../../azure_web_interface_images/CycleCloudHostApplication_Identity_Add_Role_Assignment.png)
+
 Click on the Identity Menu on the left side of the newly created virtual machine.
 Make sure you select the System Assigned Tab at the top of the window.
 Click on the button `Azure Role Assignments`
-For the following figures, additional instructions are needed, as it is unclear where users go to add the contributor role. 
+
+On the Azure role assignments window
+click on the + Add role assignment(Preview)
+
 
 Figure 6. Add Contributor Role to Virtual Machine
 
 ![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Contributor.png)
 
-Figure 7. Add Role Assignment - Management Identity
+Figure 7. Add System Assigned Role Assignment - Management Identity
+
+Click on Azure role assignements
+Search for Managed Identity Operator
+
 ![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Members_Managed_Identity.png)
 
 Figure 8. Add Role Assignment
