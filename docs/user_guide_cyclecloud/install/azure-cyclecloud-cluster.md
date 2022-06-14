@@ -18,7 +18,7 @@ Use the Create pulldown menu to select `Azure CycleCloud 8.2`
 ## Customize your Host Virtual Machine for the CycleCloud Application
 
 1. Choose your Subscription
-2. Select or create a new Resource Group that your CycleCloud instance will run in
+2. Select or create a new Resource Group that your CycleCloud instance will run in: note, leave this blank initially, as it will be named after the instance name below by appending _group to the instance name
 3. Name your CycleCloud instance using Virtual Machine name : example name: CycleCloudHost
 4. Select Region: example name:  US East
 5. Verify Image is Azure CycleCloud 8.2 - Gen 1
@@ -32,8 +32,9 @@ Use the Create pulldown menu to select `Azure CycleCloud 8.2`
 
 When a pop-up menu is displayed: click on option to Download private key and create resource.
 
-
-
+You will see a message ` ... Deployment is in progress`
+ 
+Wait until the resource has been deployed before proceeding to the next step.
 
 Figure 1. Create a virtual Machine - Customize Host Virtual Machine
 Note: this virtual machine will be used to host the CycleCloud Application that is used to create the Cycle Cloud Cluster from it's Web located at: UI https://IP-address/home
