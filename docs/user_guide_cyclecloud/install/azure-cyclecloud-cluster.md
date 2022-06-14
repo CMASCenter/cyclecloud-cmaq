@@ -3,7 +3,7 @@
 Documentation for Azure
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/?view=cyclecloud-8">CycleCloud Documentation</a>
 
-## Configure the Cycle Cloud Cluster using the Azure Portal
+## Configure the Cycle Cloud Application Host using the Azure Portal
 
 Log into the [Azure Portal](https://ms.portal.azure.com/)
 
@@ -15,7 +15,7 @@ Click on the heart in the Azure CycleCloud box to add this as a favorite resourc
 
 Use the Create pulldown menu to select `Azure CycleCloud 8.2` 
 
-## Customize Host Virtual Machine for CycleCloud
+## Customize your Host Virtual Machine for the CycleCloud Application
 
 1. Choose your Subscription
 2. Select or create a new Resource Group that your CycleCloud instance will run in
@@ -33,9 +33,9 @@ Use the Create pulldown menu to select `Azure CycleCloud 8.2`
 
 
 Figure 1. Create a virtual Machine - Customize Host Virtual Machine
-Note: this virtual machine will be used to create the Cycle Cloud Cluster from it's Web located at: UI https://IP-address/home
+Note: this virtual machine will be used to host the CycleCloud Application that is used to create the Cycle Cloud Cluster from it's Web located at: UI https://IP-address/home
 
-![Azure Create a Virtual Machine Console](../../azure_web_interface_images/Create_Virtual_Machine.png)
+![Azure Create a Virtual Machine Console](../../azure_web_interface_images/Create_Virtual_Machine_CycleCloud_Application_Host.png)
 
 Figure 2. Select Disks for the Azure Virtual Machine - use default options
 
