@@ -170,13 +170,13 @@ Gallery Image Version                     0               10000
 
 ### Review list of regions and virtual machines available in each region.
 
-<a href="https://azure.microsoft.com/en-us/global-infrastructure/geographies/#geographies">Azure Regions
+<a href="https://azure.microsoft.com/en-us/global-infrastructure/geographies/#geographies">Azure Regions</a>
 
 ### Follow the instructions in the link below to increase your vCPU quota to allow you to create a virtual machine and run CMAQ.
 
 With a pay-as-you-go account this request to increase a quota for virtual machines may take 3-5 business days.
 
-<a href="https://azure.microsoft.com/en-us/global-infrastructure/geographies/#geographies">Azure Regions
+<a href="https://azure.microsoft.com/en-us/global-infrastructure/geographies/#geographies">Azure Regions</a>
 
 ### Request a quota increase for the HTC Queue - HC Family of vCPUs for a region where they are available.
 
@@ -273,6 +273,27 @@ Once your resource is created in the upper right corner of the new screen, there
 Select Connect then SSH
 
 The screen will then provide instructions for you to login to the newly created virtual machine.
+
+### Login to Virtual Machine
+
+`ssh -i ./CMAQStandardD8sv4_key.pem  azureuser@13.89.128.245`
+
+### Verify that the 1024 GiB size disk is not listed  as being available
+
+`df -h`
+
+In the intermediate tutorial, instructions are provided to find the disk and mount it as a /shared volume to the virtual machine.
+
+### Delete the virtual machine and all of the associated resources by deleting the resource group.
+
+![Click on resource group](../cyclecloud-cmaq/docs/azure_web_interface_images/Virtual_machine_click_on_resource_group.png)
+
+![Confirm delete resource group](../cyclecloud-cmaq/docs/azure_web_interface_images/Virtual_machine_click_on_resource_group.png)
+
+
+
+
+
 
 
 This tutorial was developed using UNC's enterprise account.  It is unknown if Azure will grant access to these virtual machines on a credit card account.
