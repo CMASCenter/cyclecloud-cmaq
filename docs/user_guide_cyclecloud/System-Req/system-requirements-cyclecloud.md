@@ -1,20 +1,24 @@
-## System Requirements for Cycle Cloud
+## System Requirements for a Single Virtual Machine or Cycle Cloud Cluster
 
 ### Please set up a alarm on Azure 
 Set alarm to receive an email alert if you exceed $100 per month (or what ever monthly spending limit you need).
 It may be possible to set up daily or weekly spending alarms as well.
 
-## Software Requirements for CMAQ on CycleCloud
+
+## Software Requirements for CMAQ on Single VM or CycleCloud Cluster
 
 The software requirements to run CMAQ on Azure are split into three tiers. The first tier includes the software that is provided with the operating system, the second tier includes the libraries required by CMAQ, the third tier includes the CMAQ code and associated pre and post processors, and the third tier includes the R software and packages requried by the analysis scripts for verifying output or doing a quality assurance of CMAQ.
 
-Tier 1: Native Operating System (OS) and associated system libraries, compilers
+Tier 1: Native Operating System (OS) and associated system libraries, compilers for both Single VM or Cycle Cloud Cluster
 
 * Tcsh shell
-* Centos7  (tried ubuntu but the module command did not provide updated compilers and openmpi)
+* Alma Linux Gen. 2
 * Git
 * Compilers (C, C++, and Fortran) - GNU compilers version ≥ gcc (GCC) 9.2.0 (need to use module load gcc-9.2.0)
 * MPI (Message Passing Interface) -  OpenMPI ≥ 4.1.0  (need to use module load mpi/openmpi-4.1.0)
+
+Tier 1: For the Cycle Cloud Cluster
+
 * Slurm Scheduler
 
 Tier 2: additional libraries required for installing CMAQ
@@ -37,6 +41,12 @@ Tier 4: R packages and Scripts
 
 The size of hardware depends on the domain size and resolution for  your CMAQ case, and how quickly your turn-around requirements are.
 Larger hardware and memory configurations are also required for instrumented versions of CMAQ incuding CMAQ-ISAM and CMAQ-DDM3D.
+
+### Azure Single Virtual Machine
+
+Azure offers generalized, compute, and high performance machines of various sizes.
+The amount of memory and the number of cpus required to run CMAQ depends on the domain size and resolution of the case that is being run.
+For this tutorial that uses a two day run of the CONUS2 domain, a minimum size recommended is a HC44rs compute node, to allow CMAQ to be run on up to 44 cpus.
 
 
 ### Azure CycleCloud
