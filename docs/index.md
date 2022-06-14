@@ -23,7 +23,7 @@ The ability to use resources available in the Microsoft Azure Cloud is limited b
 
 ## Why might I need to use Azure Virtual Machine or CycleCloud?
 
-An Azure Virtual Machine may be configured to run code compile with Message Passing Interface (MPI) on a single high performance compute node. The intermediate tutorial demonstrates how to run CMAQ interactively on a single virtual machine running CMAQ with OpenMPI across multiple cpus on the same compute node/virtual machine.
+An Azure Virtual Machine may be configured to run code compiled with Message Passing Interface (MPI) on a single high performance compute node. The intermediate tutorial demonstrates how to run CMAQ interactively on a single virtual machine running CMAQ with OpenMPI across multiple cpus on the same compute node/virtual machine.
 
 The Azure CycleCloud may be configured to be the equivalent of a High Performance Computing (HPC) environment, including using job schedulers such as Slurm, running on multiple nodes/virtual machines using code compiled with Message Passing Interface (MPI), and reading and writing output to a high performance, low latency shared disk.  The advantage of using the slurm scheduler is that the number of compute nodes that will be provisioned can be adjusted to meet requirements of a given simulation. In addition, the user can reduce costs by using Spot instances rather than On-Demand for the compute nodes. CycleCloud also supports submitting multiple jobs to the job submission queue.
 
