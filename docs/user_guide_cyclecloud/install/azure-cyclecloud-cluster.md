@@ -214,7 +214,52 @@ Click on the Scheduler node, and obtain the IP address, then login using
 
 ssh -Y lizadams@20.232.113.37
 
-'srun -t 1:30:00  -n 2  --pty /bin/bash'
+`srun -t 1:30:00  -n 2  --pty /bin/bash`
+
+You should see the hpc acquiring a single node.
+
+Figure 23. Azure CycleCloud Acquiring Compute Node after running srun command.
+
+[Azure CycleCloud Acquiring Compute Node](../../azure_web_interface_images/Azure_CycleCloud_srun_test_acquiring_hpc_hc44rs_node.png)
+
+After the compute node is created and the srun command is completed, the compute node will be shut down automatically, after it has been idle for a period of time.
+
+You can use the slurm commands to monitor the status of the compute nodes.
+
+`qstat`
+
+```
+Job id              Name             Username        Time Use S Queue          
+------------------- ---------------- --------------- -------- - ---------------
+2                   bash             lizadams        00:00:05 R hpc            
+```
+
+for additional detail:
+
+`qstat -f`
+
+Output:
+
+```
+Job Id:	2
+	Job_Name = bash
+	Job_Owner = lizadams@CMAQSlurmHC44rsAlmaLinux-scheduler
+	interactive = True
+	job_state = R
+	queue = hpc
+	qtime = Tue Jun 14 18:56:17 2022
+	mtime = Tue Jun 14 19:04:13 2022
+	ctime = Tue Jun 14 20:34:13 2022
+	exec_host = cmaqslurmhc44rsalmalinux-hpc-pg0-1/2
+	Priority = 4294901759
+	euser = lizadams(20001)
+	egroup = lizadams(20001)
+	Resource_List.walltime = 01:30:00
+	Resource_List.nodect = 1
+	Resource_List.ncpus = 2
+```
+
+
 
 ## Instructions to upgrade the number of processors available to the Cycle Cloud Cluster (only needed if you want to modify the number of nodes in the HPC queue)
 
