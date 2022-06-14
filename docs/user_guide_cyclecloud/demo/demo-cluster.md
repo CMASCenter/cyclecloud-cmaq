@@ -174,9 +174,12 @@ Gallery Image Version                     0               10000
 
 ### Follow the instructions in the link below to increase your vCPU quota to allow you to create a virtual machine and run CMAQ.
 
+With a pay-as-you-go account this request to increase a quota for virtual machines may take 3-5 business days.
+
 <a href="https://azure.microsoft.com/en-us/global-infrastructure/geographies/#geographies">Azure Regions
 
 ### Request a quota increase for the HTC Queue - HC Family of vCPUs for a region where they are available.
+
 
 From the Azure Portal, search for quotas, select the Quotas Service.
 Click on Compute.
@@ -223,6 +226,16 @@ Select the HBv3 Family vCPUs in the region nearest to your location. (For North 
 Click on Request quota increase > Select Enter a new limit.
 In the sidebar menu on the righ hand side, enter 44 in the text box under new limit.
 
+### Create a virtual machine
+
+Once your quota limit has been approved, then you will be able to select a virtual machine
+
+From the <a href="https://portal.azure.com/#home">Azure Portal Click on Create a resource</a>
+
+![Click on Create a resource](../../azure_web_interface_images/Azure_Portal_Create_a_resource.png)
+
 
 This tutorial was developed using UNC's enterprise account.  It is unknown if Azure will grant access to these virtual machines on a credit card account.
+
+
 
