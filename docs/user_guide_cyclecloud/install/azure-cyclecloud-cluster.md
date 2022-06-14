@@ -214,7 +214,9 @@ Click on the Scheduler node, and obtain the IP address, then login using
 
 ssh -Y lizadams@20.232.113.37
 
-`srun -t 1:30:00  -n 2  --pty /bin/bash`
+Run a bash script for 1 minute by submitting to the hpc node using srun.
+
+`srun -t 1:00  -n 2  --pty /bin/bash`
 
 You should see the hpc acquiring a single node.
 
