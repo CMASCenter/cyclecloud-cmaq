@@ -4,6 +4,14 @@
 Set alarm to receive an email alert if you exceed $100 per month (or what ever monthly spending limit you need).
 It may be possible to set up daily or weekly spending alarms as well.
 
+### Azure Documentation on selecting the right VM for your workloads
+
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/sizes">Description of Azure Virtual Machines</a>
+
+For CMAQ, it is recommended that the user select a High Performance Compute Virtual Machine.
+
+![Virtual Machine Sizes Available on Azure](../../azure_web_interface_images/Azure_Virtual_Machines_Available.png)
+
 
 ## Software Requirements for CMAQ on Single VM or CycleCloud Cluster
 
@@ -46,10 +54,10 @@ Larger hardware and memory configurations are also required for instrumented ver
 
 Azure offers generalized, compute, and high performance machines of various sizes.
 The amount of memory and the number of cpus required to run CMAQ depends on the domain size and resolution of the case that is being run.
-For this tutorial that uses a two day run of the CONUS2 domain, a minimum size recommended is a HC44rs compute node, to allow CMAQ to be run on up to 44 cpus.
+For this tutorial that uses a two day run of the CONUS2 domain, a minimum size recommended is a HC44rs (44 cpus)  or HBv120 (120 cpus) compute node, to allow CMAQ to be run on up to 44 or 120 cpus.
 
 
-### Azure CycleCloud
+### Azure CycleCloud Cluster
 
 Azure CycleCloud Provides the simplest way to manage HPC workloads using any scheduler (like Slurm, Grid Engine, HPC Pack, HTCondor, LSF, PBS Pro, or Symphony).
 
