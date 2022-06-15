@@ -94,7 +94,7 @@ sdb     0:0:0:1      480G
 sdc     1:0:0:0        1T 
 ```
 
-In the above case, the IT disk was added as sdc
+In the above case, the 1 Terrabyte (1T)  disk was added as sdc
 
 ### Format the disk
 
