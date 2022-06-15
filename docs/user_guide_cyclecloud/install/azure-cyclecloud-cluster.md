@@ -106,7 +106,7 @@ Figure 11. Add Reader Role to Virtual Machine
 ![Add Reader Role to Virtual Machine](../../azure_web_interface_images/Azure_Role_Assignments_Add_Role_Reader.png)
 
 
-Figure 12. Azure Create Storage Account
+### Create Storage Account 
 
 In the search bar, enter Storage Account, the select + Create Storage Account
 
@@ -118,19 +118,19 @@ Click Review and Create
 After the verification passed message is received
 Click Create
 
-Figure 13. Azure Create Storage Account Details
+Figure 12. Azure Create Storage Account Details
 
 ![Details of Storage Account on Azure](../../azure_web_interface_images/CreateStorage_Account_for_CycleCloud_Host.png)
 
 For Redundancy choose Local Redundant Storage instead of Geo-Redundant Storage to reduce costs.
 
-Figure 14. Azure Storage Account disable Public Blob Access 
+Figure 13. Azure Storage Account disable Public Blob Access 
 
 Disable the Public Blob Access by unclicking the box next to `Enable blob public access`
 
 ![Disable Public Blob Access on  Storage Account](../../azure_web_interface_images/CreateStorage_Account_for_CycleCloudHost_disable_public_blob_access.png)
 
-Figure 15. Storage Account Deployment is complete
+Figure 14. Storage Account Deployment is complete
 
 ![Create Storage Account on Azure](../../azure_web_interface_images/CycleCloudHost_storage_account.png)
 
@@ -139,7 +139,7 @@ Click on Home to return to the Azure Portal and then Click on the CycleCloudHost
 
 Click on Copy next to the Public IP address to copy it.
 
-Figure 16. Azure Cycle Cloud Host Machine IP address
+Figure 15. Azure Cycle Cloud Host Machine IP address
 
 ![CycleCloudMarketPlace Scheduler Node](../../azure_web_interface_images/Azure_CycleCloud_Virtual_Machine.png)
 
@@ -159,80 +159,80 @@ If you get a warning, potential security risk ahead, click on Advanced, then acc
 
 3. Create your CycleCloud Administrator Account. This requires a public rsa key. <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys">Instructions for creating this are available here</a>
 
-Figure 17. Web Interface to CycleCloud - connect using the ip address for the Scheduler Node above http://-IP-ADDRESS/welcome
+Figure 16. Web Interface to CycleCloud - connect using the ip address for the Scheduler Node above http://-IP-ADDRESS/welcome
 
 ![Azure CycleCloud Web Login](../../azure_web_interface_images/Azure_CycleCloud_Web_Login.png)
 
-Figure 18. Azure CycleCloud Add Subscription ID
+Figure 17. Azure CycleCloud Add Subscription ID
 ![Azure CycleCloud Add Subscription](../../azure_web_interface_images/Azure_CycleCloud_Add_Subscription.png)
 
 The Subscriptions page will show if the cluster subscription was created. You may need to pull the State window to enlarge it.
 
 When it says created, with nothing under the Failed column, then it was successful, click Back to Clusters.
 
-Figure 19. Check Cluster Creation Status in Subsriptions Table
+Figure 18. Check Cluster Creation Status in Subsriptions Table
 
 ![Check Cluster Creation Status in Subsriptions Table](../../azure_web_interface_images/Azure_CycleCloud_Subscription_Created_Successfully)
 
-Figure 20. Azure CycleCloud Create a New Cluster - Select SLURM workload Manager
+Figure 19. Azure CycleCloud Create a New Cluster - Select SLURM workload Manager
 
 ![Azure CycleCloud Create Slurm Cluster](../../azure_web_interface_images/AzureCycleCloud-CreateSlurmCluster.png)
 
-Figure 21. Azure CycleCloud New Slurm Cluster - add a Cluster Name
+Figure 20. Azure CycleCloud New Slurm Cluster - add a Cluster Name
 
 Example name: CMAQSlurmHC44rsAlmaLinux
 
-Figure 22.  Azure CycleCloud HPC Queue Select Machine
+Figure 21.  Azure CycleCloud HPC Queue Select Machine
 
 In the Min Cores box, input 44
 In the Compute Type, select High Performance Compute
 Select HC44rs, then select Apply
 ![Azure CycleCloud HPC Queue Select Machine](../../azure_web_interface_images/Azure_CycleCloud_Select_A_Machine_Type_HC44rs.png)
 
-Figure 23. Select Max HPC Cores
+Figure 22. Select Max HPC Cores
 
 Select Auto-Scaling Max HPC Cores to be a multiple of the number of cpus available on the compute node.  For HC44rs for a maximum of 5 nodes, it would be 44 x 5 = 220 Max HPC Cores
 Choose the Networking SubnetID that was created for the CycleCloud.
 
 ![Azure CycleCloud HPC VM Type Confirmed](../../azure_web_interface_images/Azure_CycleCloud_HPC_VM_TYPE_HC44rs.png)
 
-Figure 25.  Azure CycleCloud Network Attached Storage
+Figure 23.  Azure CycleCloud Network Attached Storage
 
 Change the size from 100 GB of network attached storage to 1000 GB of network attached storage for the /shared directory, where CMAQ and the input data will be installed.
 
 ![Azure CycleCloud Network Attached Storage](../../azure_web_interface_images/Azure_CycleCloud_Network_Attached_Storage.png)
 
 
-Figure 26.  Azure CycleCloud Select OS and Uncheck Name as HostName
+Figure 24.  Azure CycleCloud Select OS and Uncheck Name as HostName
 
 ![Azure CycleCloud Select OS](../../azure_web_interface_images/CycleCloud_Application_Advanced_Settings.png)
 
 
-Figure 27. Azure CycleCloud Select Machine Type for HPC Node
+Figure 25. Azure CycleCloud Select Machine Type for HPC Node
 
 ![Azure CycleCloud Select Machine Type for HPC Node](../../azure_web_interface_images/Azure_CycleCloud_Select_Machine_Type_for_HPC_node_filter_by_44_cores.png)
 
-Figure 28. Azure Cycle Cloud Required Settings HPC VM Select HC44rs
+Figure 26. Azure Cycle Cloud Required Settings HPC VM Select HC44rs
 
 ![Azure Cycle Cloud Required Settings HPC VM Select HC44rs](../../azure_web_interface_images/AzureCycleCloud_Required_Settings_HPC_VM_Select_HC44rs.png)
 
 Note: the maximum number of CPUs specified for the HPC Compute node can be changed after the cluster has been created. See section 4.1.4 for the command line commands.
 
-Figure 29. Azure Cycle Cloud Subscriptions Registering Service Providers
+Figure 27. Azure Cycle Cloud Subscriptions Registering Service Providers
 
 ![Azure Cycle Cloud Subscriptions Registering Service Providers](../../azure_web_interface_images/Azure_CycleCloud_Subscriptions_Registering_Service_Providers_Status.png)
 
-Figure 30. Azure cycle Cloud Subscription Created Successsfully
+Figure 28. Azure cycle Cloud Subscription Created Successsfully
 
 ![Azure cycle Cloud Subscription Created Successsfully](../../azure_web_interface_images/Azure_CycleCloud_Subscription_Created_Successfully.png)
 
 
-Figure 31. Azure cycle cloud Nodes Tab Shows Status of Scheduler
+Figure 29. Azure cycle cloud Nodes Tab Shows Status of Scheduler
 
 ![Azure cycle cloud Nodes Tab Shows Status of Scheduler](../../azure_web_interface_images/AzureCycleCloud_Nodes_Tab_Shows_Status_of_Scheduler.png)
 
 
-Figure 32. Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type
+Figure 30. Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type
 
 ![Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type](../../azure_web_interface_images/AzureCycleCloud_Cluster_Arrays_Tab_Shows_hpc_queue_machine_type.png)
 
@@ -253,7 +253,7 @@ Run a bash script for 1 minute by submitting to the hpc node using srun.
 
 You should see the hpc acquiring a single node.
 
-Figure 33. Azure CycleCloud Acquiring Compute Node after running srun command.
+Figure 31. Azure CycleCloud Acquiring Compute Node after running srun command.
 
 ![Azure CycleCloud Acquiring Compute Node](../../azure_web_interface_images/Azure_CycleCloud_srun_test_acquiring_hpc_hc44rs_node.png)
 
@@ -294,7 +294,7 @@ Job Id:	2
 	Resource_List.ncpus = 2
 ```
 
-Figure 35. Azure Cycle Cloud Showing usage of Scheduler Node and Compute Nodes for Srun command
+Figure 32. Azure Cycle Cloud Showing usage of Scheduler Node and Compute Nodes for Srun command
 
 ![Azure Cycle Cloud Showing usage of Scheduler Node and Compute Nodes for Srun command](../../azure_web_interface_images/AzureCycleCloud_Show_Scheduler_and_Compute_Node_Usage.png)
 
