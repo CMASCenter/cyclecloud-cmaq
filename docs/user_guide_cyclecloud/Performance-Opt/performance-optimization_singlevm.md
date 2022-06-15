@@ -67,3 +67,7 @@ Figure 2. Plot of Cost versus CPUs for Single HBv120 Virtual Machine
 Figure 3. Plot of Time and Cost versus CPUs for Single HBv120 Virtual Machine
 
 ![Plot of Time and Cost versus CPUs for Single HBv120 Virtual Machine](../../qa_plots/scaling_plots/HBv120_Time_Cost_CPUs_singlevm.png)
+
+Figure 4. Plot of Time versus CPU GGplot
+
+[Plot of Total Time and On Demand Cost versus CPUs for HBv120 using ggplot](../../qa_plots/scaling_plots/hbv120_Time_CPUs_SingleVM_ggplot.png)
