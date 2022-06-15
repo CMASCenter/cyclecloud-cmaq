@@ -1,0 +1,8 @@
+had difficulty installing r on almalinux
+
+had to install by source for version R-3.5.1
+used these websites when I ran into roadblocks 
+https://serverfault.com/questions/1049330/error-conflicting-requests-in-centos-8-package-installation
+https://davetang.org/muse/2018/02/06/compiling-r-gnu-readline/
+
+https://docs.rstudio.com/resources/install-r-source/
