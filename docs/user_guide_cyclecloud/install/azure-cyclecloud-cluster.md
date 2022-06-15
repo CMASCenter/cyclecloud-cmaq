@@ -168,7 +168,7 @@ When it says created, with nothing under the Failed column, then it was successf
 
 Figure 18. Azure CycleCloud Create a New Cluster - Select SLURM workload Manager
 
-![Azure CycleCloud - Create Slurm Cluster](../../azure_web_interface_images/AzureCycleCloud-CreateSlurmCluster.png)
+![Azure CycleCloud Create Slurm Cluster](../../azure_web_interface_images/AzureCycleCloud-CreateSlurmCluster.png)
 
 Figure 19. Azure CycleCloud New Slurm Cluster - add a Cluster Name
 
@@ -199,7 +199,7 @@ Change the size from 100 GB of network attached storage to 1000 GB of network at
 
 Figure 21.
 Azure CycleCloud Select OS and Uncheck Name as HostName
-![Azure CycleCloud Select OS](../../azure_web_interface_images/Azure_CycleCloud_Advanced_Settings_Choose_OS.png)
+![Azure CycleCloud Select OS](../../azure_web_interface_images/CycleCloud_Application_Advanced_Settings.png)
 
 Figure 22.
 Azure CycleCloud Create Cluster
