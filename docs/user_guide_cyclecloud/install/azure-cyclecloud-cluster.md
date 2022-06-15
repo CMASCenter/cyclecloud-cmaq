@@ -43,7 +43,7 @@ Note: this virtual machine will be used to host the CycleCloud Application that 
 
 Figure 2. Select Disks for the Azure Virtual Machine - use default options
 
-![Select Disks for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Select_DIsks.png)
+![Select Disks for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Select_Disks_update.png)
 
 Figure 3. Select Network Interface for the Azure Virtual Machine - use default options
 
