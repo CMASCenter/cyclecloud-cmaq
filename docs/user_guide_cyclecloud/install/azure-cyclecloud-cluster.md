@@ -134,7 +134,7 @@ Figure 15. Storage Account Deployment is complete
 ![Create Storage Account on Azure](../../azure_web_interface_images/CycleCloudHost_storage_account.png)
 
 
-Navigate to the CycleCloudHostApplication Virtual Machine
+Click on Home to return to the Azure Portal and then Click on the CycleCloudHostApplication Virtual Machine
 
 Click on Copy next to the Public IP address to copy it.
 
