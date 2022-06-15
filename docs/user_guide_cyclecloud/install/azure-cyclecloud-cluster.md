@@ -47,7 +47,7 @@ Figure 2. Select Disks for the Azure Virtual Machine - use default options
 
 Figure 3. Select Network Interface for the Azure Virtual Machine - use default options
 
-![Select Network Interface for the Azure Virutal Machine](../../azure_web_interface_images/Create_VM_Select_Network_Interface.png)
+![Select Network Interface for the Azure Virutal Machine](../../azure_web_interface_images/AzureCycleCloud_Show_Scheduler_and_Compute_Node_Usage.png)
 
 Figure 4. Select System assigned Managed Identity
 
