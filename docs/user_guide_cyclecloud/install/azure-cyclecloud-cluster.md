@@ -77,7 +77,7 @@ Click on the button `Azure Role Assignments`
 
 Figure 8. Make sure you select the System Assigned Tab at the top of the window.
 
-~[Make sure you select the System Assigned Tab at the top of the window](Identity_Choose_System_Assigned_Tab.png)
+![Make sure you select the System Assigned Tab at the top of the window](../../azure_web_interface_images/Identity_Choose_System_Assigned_Tab.png)
 
 On the Azure role assignments window
 click on the + Add role assignment(Preview)
