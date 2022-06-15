@@ -17,7 +17,7 @@ cd /shared/build/openmpi_gcc/CMAQ_v533/POST/combine/scripts
 ./bldit_combine.csh gcc |& tee ./bldit_combine.gcc.log
 ```
 
-Copy the bldit script from the repo.
+Copy the bldit script from the repo, as it was corrected to use CMAQv533 rather than CMAQv532.
 
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v533/POST/calc_tmetric/scripts
