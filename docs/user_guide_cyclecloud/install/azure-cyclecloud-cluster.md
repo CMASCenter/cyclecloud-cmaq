@@ -90,7 +90,6 @@ Search for Managed Identity Operator
 
 ![Add Managed Identity Operator](../../azure_web_interface_images/Azure_role_Assignment_select_Managed_Identity_Operator.png)
 
-![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/CycleCloudHostApplication_Identity_Add_Role_Assignment.png)
 
 Figure 10. Add Role Assignment
 
