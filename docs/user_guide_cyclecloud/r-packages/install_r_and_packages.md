@@ -49,8 +49,8 @@ Load the gcc and openmpi module before building the hdf5 enabled netcdf librarie
 
 ```
 module avail
-module load gcc-9.2.0 
-module load mpi/openmpi-4.1.0
+module load mpi/openmpi-4.1.1
+module load gcc-9.2.1
 ```
 
 ```
