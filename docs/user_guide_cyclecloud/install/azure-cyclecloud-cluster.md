@@ -83,32 +83,31 @@ On the Azure role assignments window
 click on the + Add role assignment(Preview)
 
 
-Figure 7. Add System Assigned Role Assignment - Management Identity
+Figure 9. Add System Assigned Role Assignment - Management Identity
 
 Click on Azure role assignements
 Search for Managed Identity Operator
 
+![Add Managed Identity Operator](../../azure_web_interface_images/Azure_role_Assignment_select_Managed_Identity_Operator.png)
+
 ![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/CycleCloudHostApplication_Identity_Add_Role_Assignment.png)
 
-Figure 8. Add Role Assignment
+Figure 10. Add Role Assignment
 
 1. Click Identity Icon under Settings on the left side menu 
 2. Click Azure role assignments
 3. Click Add role assignment  
+4. Search for Contributor
 
-Note, many of the screen shots below don't show how to get to that menu. When I tried to reproduce these steps, I was getting permission issues.
+![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/CycleCloudHostApplication_Identity_Add_Role_Assignment.png)
 
-![Add Role Assignment](../../azure_web_interface_images/Azure_Add_Role_Assignments_Contributor.png)
 
-Figure 9. Add Reader Role to Virtual Machine
+Figure 11. Add Reader Role to Virtual Machine
 
 ![Add Reader Role to Virtual Machine](../../azure_web_interface_images/Azure_Role_Assignments_Add_Role_Reader.png)
 
-Figure 10. Review Reader Role on Virtual Machine
 
-![Review Reader Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Reader_Review.png)
-
-Figure 11. Azure Create Storage Account
+Figure 12. Azure Create Storage Account
 
 In the search bar, enter Storage Account, the select + Create Storage Account
 
@@ -124,11 +123,11 @@ You will see a Deployment is in progress
 
 ![Create Storage Account on Azure](../../azure_web_interface_images/CycleCloudHost_storage_account.png)
 
-Figure 12. Azure Create Storage Account Details
+Figure 13. Azure Create Storage Account Details
 
 ![Details of Storage Account on Azure](../../azure_web_interface_images/CreateStorage_Account_for_CycleCloud_Host.png)
 
-Figure 13. Azure Storage Account disable Public Blob Access 
+Figure 14. Azure Storage Account disable Public Blob Access 
 
 Disable the Public Blob Access by unclicking the box next to `Enable blob public access`
 
@@ -137,6 +136,8 @@ Disable the Public Blob Access by unclicking the box next to `Enable blob public
 Navigate to the CycleCloudHostApplication Virtual Machine
 
 Click on Copy next to the Public IP address to copy it.
+
+Figure 15. Azure Cycle Cloud Host Machine IP address
 
 ![CycleCloudMarketPlace Scheduler Node](../../azure_web_interface_images/Azure_CycleCloud_Virtual_Machine.png)
 
