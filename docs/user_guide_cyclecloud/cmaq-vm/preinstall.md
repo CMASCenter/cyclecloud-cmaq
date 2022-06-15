@@ -382,6 +382,9 @@ Num  Day        Wall Time
       Avg. Time = 2331.71
 ```
 
+If runs are submitted immediately after a successful completion of a run, then you may skey the scaling results.
+It would be ideal to wait 30 minutes before running a second job. 
+
 ### Run second job interactively using the following command:
 
 `./run_cctm_2016_12US2.90pe.csh | & tee ./run_cctm_2016_12US2.90pe.log`
