@@ -231,11 +231,8 @@ Figure 31. Azure cycle cloud Nodes Tab Shows Status of Scheduler
 
 ![Azure cycle cloud Nodes Tab Shows Status of Scheduler](../../azure_web_interface_images/AzureCycleCloud_Nodes_Tab_Shows_Status_of_Scheduler.png)
 
-Figure 32. Azure Cycle Cloud Network Attached Storage - Change to 1 TB
 
-![Azure Cycle Cloud Network Attached Storage - Change to 1 TB](../../azure_web_interface_images/AzureCycleCloud_Network_Attached_Storage_NFS_Size_Changed_to_1TB.png)
-
-Figure 33. Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type
+Figure 32. Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type
 
 ![Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type](../../azure_web_interface_images/AzureCycleCloud_Cluster_Arrays_Tab_Shows_hpc_queue_machine_type.png)
 
@@ -256,7 +253,7 @@ Run a bash script for 1 minute by submitting to the hpc node using srun.
 
 You should see the hpc acquiring a single node.
 
-Figure 34. Azure CycleCloud Acquiring Compute Node after running srun command.
+Figure 33. Azure CycleCloud Acquiring Compute Node after running srun command.
 
 ![Azure CycleCloud Acquiring Compute Node](../../azure_web_interface_images/Azure_CycleCloud_srun_test_acquiring_hpc_hc44rs_node.png)
 
