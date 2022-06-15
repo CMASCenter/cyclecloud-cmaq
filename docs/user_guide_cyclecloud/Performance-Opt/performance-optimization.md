@@ -149,15 +149,15 @@ BogoMIPS:              5387.52
 
 Figure 1. Plot of Total Time versus CPUs for Single HBv120 Virtual Machine
 
-![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/HBv120_Time_CPUs.png)
+![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/HBv120_Time_CPUs_singlevm.png)
 
 Figure 2. Plot of Cost versus CPUs for Single HBv120 Virtual Machine
 
-![Plot of Demand Cost versus CPUs for Single HBv120 Virtual Machine](../../qa_plots/scaling_plots/HBv120_Time_CPUs.png)
+![Plot of Demand Cost versus CPUs for Single HBv120 Virtual Machine](../../qa_plots/scaling_plots/HBv120_Time_CPUs_singlevm.png)
 
 Figure 3. Plot of Time and Cost versus CPUs for Single HBv120 Virtual Machine
 
-![Plot of Time and Cost versus CPUs for Single HBv120 Virtual Machine](../../qa_plots/scaling_plots/HBv120_Time_Cost_CPUs.png)
+![Plot of Time and Cost versus CPUs for Single HBv120 Virtual Machine](../../qa_plots/scaling_plots/HBv120_Time_Cost_CPUs_singlevm.png)
 
 
 
