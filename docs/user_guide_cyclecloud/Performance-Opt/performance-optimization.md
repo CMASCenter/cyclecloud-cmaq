@@ -145,34 +145,50 @@ BogoMIPS:              5387.52
 | 216 |  6  |  6x36     | 18x12            |  1908.15   | 1722.07    | 3630.22    |  .504 | no   |  $.3168/hr * 6 nodes * 1.01 = | $1.92 |  3.168/hr * 6 nodes * 1.01 = | 19.16 | with -march=native compiler flag  | /shared |
 | 288 |  8  |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no |   $.3168/hr * 8 nodes * .928 = | $2.35 | 3.168/hr * 8 nodes * .928 = | 39.54   | with -march=native compiler flag | /shared | 
 
-# Benchmark Scaling Plots
+# Benchmark Scaling Plots using Single Virtual Machine HBv120
+
+Figure 1. Plot of Total Time versus CPUs for Single HBv120 Virtual Machine
+
+![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/HBv120_Time_CPUs.png)
+
+Figure 2. Plot of Cost versus CPUs for Single HBv120 Virtual Machine
+
+![Plot of Demand Cost versus CPUs for Single HBv120 Virtual Machine](../../qa_plots/scaling_plots/HBv120_Time_CPUs.png)
+
+Figure 3. Plot of Time and Cost versus CPUs for Single HBv120 Virtual Machine
+
+![Plot of Time and Cost versus CPUs for Single HBv120 Virtual Machine](../../qa_plots/scaling_plots/HBv120_Time_Cost_CPUs.png)
+
+
+
+# Benchmark Scaling Plots using CycleCloud
 
 ## Benchmark Scaling Plot for HC44rs
 
-Figure 1. Scaling per Node on HC44rs Compute Nodes (44 cpu/node)
+Figure 4. Scaling per Node on HC44rs Compute Nodes (44 cpu/node)
 
 ![Scaling per Node for HC44rs Compute Nodes (44cpu/node)](../../qa_plots/scaling_plots/hc44rs_Scaling_Node.png)
 
-Figure 2. Scaling per CPU on HC44rs Compute Nodes (44 cpu/node)
+Figure 5. Scaling per CPU on HC44rs Compute Nodes (44 cpu/node)
 
 ![Scaling per CPU for HC44rs Comput Nodes (44cpu/node)](../../qa_plots/scaling_plots/hc44rs_Scaling_CPUs.png)
 
-Figure 3.  Scaling per Node on HBv120 Compute Nodes (120 cpu/node)
+Figure 6.  Scaling per Node on HBv120 Compute Nodes (120 cpu/node)
 
 ![Scaling per Node for HBv120 Compute Nodes (120cpu/node](../../qa_plots/scaling_plots/hbv120_Scaling_Node.png)
 
-Figure 4. Scaling per CPU on HBv120 Compute Node (120 cpu/node)
+Figure 7. Scaling per CPU on HBv120 Compute Node (120 cpu/node)
 
 ![Scaling per CPU for HBv120 Compute Nodes (120cpu/node](../../qa_plots/scaling_plots/hbv120_Scaling_CPUs.png)
 
-Figure 5 shows the scaling per-node, as the configurations that were run were multiples of the number of cpus per node.  CMAQ was not run on a single cpu, as this would have been costly and inefficient.
+Figure 8 shows the scaling per-node, as the configurations that were run were multiples of the number of cpus per node.  CMAQ was not run on a single cpu, as this would have been costly and inefficient.
 
 
-Figure 5. Plot of Total Time and On Demand Cost versus CPUs for HBv120
+Figure 9. Plot of Total Time and On Demand Cost versus CPUs for HBv120
 
 ![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/hbv120_Time_CPUs.png)
 
-Figure 6. Plot of Total Time and On Demand Cost versus CPUs for both HC44rs and HBv120 
+Figure 10. Plot of Total Time and On Demand Cost versus CPUs for both HC44rs and HBv120 
 
 ![Plot of Total Time and On Demand Cost versus CPUs for HC44rs and HBv120](../../qa_plots/scaling_plots/HC44rs_HBv120_Time_CPUs.png)
 
@@ -184,7 +200,7 @@ HC44RS ONDEMAND pricing $3.168
 
 Savings is ~ 90% for spot versus ondemand pricing for HC44RS compute nodes.
 
-Figure 7. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
+Figure 11. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
 
 ![Scaling Plot Comparison of Parallel Cluster and Cycle Cloud](../../qa_plots/scaling_plots/Scaling_Parallel_Cluster_vs_Cycle_Cloud.png)
 
@@ -192,7 +208,7 @@ Note CMAQ scales well up to ~ 200 processors for the CONUS domain.  As more proc
 The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
 cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster for the 2-Day 12US2 CONUS Benchmark.
 
-Figure 8. Plot of Total Time and On Demand Cost versus CPUs for HC44RS.
+Figure 12. Plot of Total Time and On Demand Cost versus CPUs for HC44RS.
 
 ![Plot of Total Time and On Demand Cost versus CPUs for HC44RS](../../qa_plots/scaling_plots/HC44rs_Time_Cost_CPUs.png)
 
@@ -203,11 +219,11 @@ Fost by Instance Type - update for Azure
 ![Azure Cost Management Console - Cost by Instance Type](../../qa_plots/cost_plots/Azure_Bench_Cost.png)
 
 
-Figure 9. Cost by Usage Type - Azure Console
+Figure 13. Cost by Usage Type - Azure Console
 
 ![Azure Cost Management Console - Cost by Usage Type](../../qa_plots/cost_plots/Azure_Bench_Usage_Type_Cost.png)
 
-Figure 10. Cost by Service Type - Azure Console
+Figure 14. Cost by Service Type - Azure Console
 
 ![Azure Cost Management Console - Cost by Service Type](../../qa_plots/cost_plots/Azure_Bench_Service_Type_Cost.png)
 
