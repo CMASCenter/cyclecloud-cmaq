@@ -5,6 +5,7 @@
 Timing information and scaling plots to assist users in optimizing the performance of their Cycle Cloud HPC Cluster.
 
 ```{toctree}
+performance-optimization_singlevm.md
 performance-optimization.md
 ```
 

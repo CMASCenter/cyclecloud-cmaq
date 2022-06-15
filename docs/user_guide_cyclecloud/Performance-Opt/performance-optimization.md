@@ -145,25 +145,10 @@ BogoMIPS:              5387.52
 | 216 |  6  |  6x36     | 18x12            |  1908.15   | 1722.07    | 3630.22    |  .504 | no   |  $.3168/hr * 6 nodes * 1.01 = | $1.92 |  3.168/hr * 6 nodes * 1.01 = | 19.16 | with -march=native compiler flag  | /shared |
 | 288 |  8  |  8x36     | 16x18            |  1750.36   |  1593.29    |   3343.65 |  .464 | no |   $.3168/hr * 8 nodes * .928 = | $2.35 | 3.168/hr * 8 nodes * .928 = | 39.54   | with -march=native compiler flag | /shared | 
 
-# Benchmark Scaling Plots using Single Virtual Machine HBv120
-
-Figure 1. Plot of Total Time versus CPUs for Single HBv120 Virtual Machine
-
-![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/HBv120_Time_CPUs_singlevm.png)
-
-Figure 2. Plot of Cost versus CPUs for Single HBv120 Virtual Machine
-
-![Plot of Demand Cost versus CPUs for Single HBv120 Virtual Machine](../../qa_plots/scaling_plots/HBv120_Time_CPUs_singlevm.png)
-
-Figure 3. Plot of Time and Cost versus CPUs for Single HBv120 Virtual Machine
-
-![Plot of Time and Cost versus CPUs for Single HBv120 Virtual Machine](../../qa_plots/scaling_plots/HBv120_Time_Cost_CPUs_singlevm.png)
-
-
 
 # Benchmark Scaling Plots using CycleCloud
 
-## Benchmark Scaling Plot for HC44rs
+## Benchmark Scaling Plot for CycleCloud using HC44rs Compute Nodes
 
 Figure 4. Scaling per Node on HC44rs Compute Nodes (44 cpu/node)
 
