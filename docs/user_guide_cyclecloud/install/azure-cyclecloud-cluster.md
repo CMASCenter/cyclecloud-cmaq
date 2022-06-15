@@ -61,7 +61,7 @@ Figure 5. Create a Virtual Machine - Deployment is in Progress
 
 Figure 6. Your Deployment is complete - click on blue button `Go to resource`
 
-![Deployment Complete - Go to Resource](CycleCloudApplicationHost_Deployment_is_complete.png)
+![Deployment Complete Go to Resource](CycleCloudApplicationHost_Deployment_is_complete.png)
 
 After the CycleCloud Host Machine has been deployed click on `Go to resource`
 
