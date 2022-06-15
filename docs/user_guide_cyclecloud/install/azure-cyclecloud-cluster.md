@@ -172,7 +172,7 @@ When it says created, with nothing under the Failed column, then it was successf
 
 Figure 19. Check Cluster Creation Status in Subsriptions Table
 
-![Check Cluster Creation Status in Subsriptions Table](Azure_CycleCloud_Subscription_Created_Successfully)
+![Check Cluster Creation Status in Subsriptions Table](../../azure_web_interface_images/Azure_CycleCloud_Subscription_Created_Successfully)
 
 Figure 20. Azure CycleCloud Create a New Cluster - Select SLURM workload Manager
 
