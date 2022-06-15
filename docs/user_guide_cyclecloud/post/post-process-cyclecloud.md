@@ -61,7 +61,10 @@ cd /shared/build/openmpi_gcc/CMAQ_v533/POST/bldoverlay/scripts
 
 # Scripts to post-process CMAQ output
 
-### Note, the post-processing analysis should be done on the htc node
+### Note, the post-processing analysis should be done on the head node 
+
+Ideally the post-processing would be done on the HTC queue, but the R packages were installed to the head node system library and were not acccessible to the compute nodes. Future work on installing the R software and packages to the /shared volume.
+
 Verify that the compute nodes are no longer running if you have completed all of the benchmark runs
 
 `squeue`
