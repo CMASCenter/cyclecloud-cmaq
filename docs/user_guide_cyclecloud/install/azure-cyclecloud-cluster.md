@@ -248,7 +248,7 @@ You should see the hpc acquiring a single node.
 
 Figure 34. Azure CycleCloud Acquiring Compute Node after running srun command.
 
-[Azure CycleCloud Acquiring Compute Node](../../azure_web_interface_images/Azure_CycleCloud_srun_test_acquiring_hpc_hc44rs_node.png)
+![Azure CycleCloud Acquiring Compute Node](../../azure_web_interface_images/Azure_CycleCloud_srun_test_acquiring_hpc_hc44rs_node.png)
 
 After the compute node is created and the srun command is completed, the compute node will be shut down automatically, after it has been idle for a period of time.
 
