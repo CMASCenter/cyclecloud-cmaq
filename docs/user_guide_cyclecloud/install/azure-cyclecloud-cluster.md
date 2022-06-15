@@ -84,7 +84,7 @@ Figure 7. Add System Assigned Role Assignment - Management Identity
 Click on Azure role assignements
 Search for Managed Identity Operator
 
-![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Members_Managed_Identity.png)
+![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/Azure_Add_Role_Assignments.png)
 
 Figure 8. Add Role Assignment
 
