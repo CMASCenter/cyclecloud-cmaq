@@ -75,6 +75,10 @@ Click on the Identity Menu on the left side of the newly created virtual machine
 Make sure you select the System Assigned Tab at the top of the window.
 Click on the button `Azure Role Assignments`
 
+Figure 8. Make sure you select the System Assigned Tab at the top of the window.
+
+~[Make sure you select the System Assigned Tab at the top of the window](Identity_Choose_System_Assigned_Tab.png)
+
 On the Azure role assignments window
 click on the + Add role assignment(Preview)
 
@@ -84,7 +88,7 @@ Figure 7. Add System Assigned Role Assignment - Management Identity
 Click on Azure role assignements
 Search for Managed Identity Operator
 
-![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/Azure_Add_Role_Assignments.png)
+![Add Contributor Role to Virtual Machine](../../azure_web_interface_images/CycleCloudHostApplication_Identity_Add_Role_Assignment.png)
 
 Figure 8. Add Role Assignment
 
@@ -94,11 +98,11 @@ Figure 8. Add Role Assignment
 
 Note, many of the screen shots below don't show how to get to that menu. When I tried to reproduce these steps, I was getting permission issues.
 
-![Add Role Assignment](../../azure_web_interface_images/VM_Add_Role_Assignment.png)
+![Add Role Assignment](../../azure_web_interface_images/Azure_Add_Role_Assignments_Contributor.png)
 
 Figure 9. Add Reader Role to Virtual Machine
 
-![Add Reader Role to Virtual Machine](../../azure_web_interface_images/VM_Add_Role_Assignment_Reader.png)
+![Add Reader Role to Virtual Machine](../../azure_web_interface_images/Azure_Role_Assignments_Add_Role_Reader.png)
 
 Figure 10. Review Reader Role on Virtual Machine
 
