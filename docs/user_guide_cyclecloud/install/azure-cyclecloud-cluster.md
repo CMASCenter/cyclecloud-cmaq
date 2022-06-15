@@ -192,13 +192,14 @@ Figure 23. Select Max HPC Cores
 Select Auto-Scaling Max HPC Cores to be a multiple of the number of cpus available on the compute node.  For HC44rs for a maximum of 5 nodes, it would be 44 x 5 = 220 Max HPC Cores
 Choose the Networking SubnetID that was created for the CycleCloud.
 
-Figure 24. 
-Azure CycleCloud HPC VM Type Confirmed
+Figure 24.  Azure CycleCloud HPC VM Type Confirmed
+
 ![Azure CycleCloud HPC VM Type Confirmed](../../azure_web_interface_images/Azure_CycleCloud_HPC_VM_TYPE_HC44rs.png)
 
 Figure 25.  Azure CycleCloud Network Attached Storage
 
 Change the size from 100 GB of network attached storage to 1000 GB of network attached storage for the /shared directory, where CMAQ and the input data will be installed.
+
 ![Azure CycleCloud Network Attached Storage](../../azure_web_interface_images/Azure_CycleCloud_Network_Attached_Storage.png)
 
 
@@ -208,25 +209,32 @@ Figure 26.  Azure CycleCloud Select OS and Uncheck Name as HostName
 
 
 Figure 27. Azure CycleCloud Select Machine Type for HPC Node
+
 ![Azure CycleCloud Select Machine Type for HPC Node](../../azure_web_interface_images/Azure_CycleCloud_Select_Machine_Type_for_HPC_node_filter_by_44_cores.png)
 
 Figure 28. Azure Cycle Cloud Required Settings HPC VM Select HC44rs
+
 ![Azure Cycle Cloud Required Settings HPC VM Select HC44rs](../../azure_web_interface_images/AzureCycleCloud_Required_Settings_HPC_VM_Select_HC44rs.png)
 
 Figure 29. Azure Cycle Cloud Subscriptions Registering Service Providers
+
 ![Azure Cycle Cloud Subscriptions Registering Service Providers](../../azure_web_interface_images/Azure_CycleCloud_Subscriptions_Registering_Service_Providers_Status.png)
 
 Figure 30. Azure cycle Cloud Subscription Created Successsfully
+
 ![Azure cycle Cloud Subscription Created Successsfully](../../azure_web_interface_images/Azure_CycleCloud_Subscription_Created_Successfully.png)
 
 
 Figure 31. Azure cycle cloud Nodes Tab Shows Status of Scheduler
+
 ![Azure cycle cloud Nodes Tab Shows Status of Scheduler](../../azure_web_interface_images/AzureCycleCloud_Nodes_Tab_Shows_Status_of_Scheduler.png)
 
 Figure 32. Azure Cycle Cloud Network Attached Storage - Change to 1 TB
+
 ![Azure Cycle Cloud Network Attached Storage - Change to 1 TB](../../azure_web_interface_images/AzureCycleCloud_Network_Attached_Storage_NFS_Size_Changed_to_1TB.png)
 
 Figure 33. Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type
+
 ![Azure Cycle Cloud Cluster Arrays Tab Shows HPC Queue Machine Type](../../azure_web_interface_images/AzureCycleCloud_Cluster_Arrays_Tab_Shows_hpc_queue_machine_type.png)
 
 
@@ -288,6 +296,7 @@ Job Id:	2
 ```
 
 Figure 35. Azure Cycle Cloud Showing usage of Scheduler Node and Compute Nodes for Srun command
+
 ![Azure Cycle Cloud Showing usage of Scheduler Node and Compute Nodes for Srun command](../../azure_web_interface_images/AzureCycleCloud_Show_Scheduler_and_Compute_Node_Usage.png)
 
 
