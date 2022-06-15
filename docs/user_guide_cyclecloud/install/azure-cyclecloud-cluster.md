@@ -122,6 +122,8 @@ Figure 13. Azure Create Storage Account Details
 
 ![Details of Storage Account on Azure](../../azure_web_interface_images/CreateStorage_Account_for_CycleCloud_Host.png)
 
+For Redundancy choose Local Redundant Storage instead of Geo-Redundant Storage to reduce costs.
+
 Figure 14. Azure Storage Account disable Public Blob Access 
 
 Disable the Public Blob Access by unclicking the box next to `Enable blob public access`
