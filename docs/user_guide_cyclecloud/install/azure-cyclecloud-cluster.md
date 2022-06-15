@@ -194,8 +194,6 @@ Figure 23. Select Max HPC Cores
 Select Auto-Scaling Max HPC Cores to be a multiple of the number of cpus available on the compute node.  For HC44rs for a maximum of 5 nodes, it would be 44 x 5 = 220 Max HPC Cores
 Choose the Networking SubnetID that was created for the CycleCloud.
 
-Figure 24.  Azure CycleCloud HPC VM Type Confirmed
-
 ![Azure CycleCloud HPC VM Type Confirmed](../../azure_web_interface_images/Azure_CycleCloud_HPC_VM_TYPE_HC44rs.png)
 
 Figure 25.  Azure CycleCloud Network Attached Storage
@@ -217,6 +215,8 @@ Figure 27. Azure CycleCloud Select Machine Type for HPC Node
 Figure 28. Azure Cycle Cloud Required Settings HPC VM Select HC44rs
 
 ![Azure Cycle Cloud Required Settings HPC VM Select HC44rs](../../azure_web_interface_images/AzureCycleCloud_Required_Settings_HPC_VM_Select_HC44rs.png)
+
+Note: the maximum number of CPUs specified for the HPC Compute node can be changed after the cluster has been created. See section 4.1.4 for the command line commands.
 
 Figure 29. Azure Cycle Cloud Subscriptions Registering Service Providers
 
