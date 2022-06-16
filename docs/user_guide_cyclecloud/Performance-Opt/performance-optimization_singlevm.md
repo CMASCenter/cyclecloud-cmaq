@@ -6,7 +6,7 @@ Selection of the compute nodes depends on the domain size and resolution for the
 Larger hardware and memory configurations may also be required for instrumented versions of CMAQ incuding CMAQ-ISAM and CMAQ-DDM3D.
 Running on a single virtual machine requires that the user know how CMAQ scales for the domain of interest.
 
-## An explanation of why a scaling analysis is required for Multinode or Parallel MPI Codes
+## An explanation of why a scaling analysis is required for Single Node
 
 Quote from the following link.
 
