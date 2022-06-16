@@ -1,5 +1,4 @@
-# Scripts to run combine and post processing 
-
+## Scripts to run combine and post processing 
 
 ### Build the POST processing routines
 
