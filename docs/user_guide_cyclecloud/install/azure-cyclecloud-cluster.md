@@ -245,7 +245,7 @@ Login to Azure Cycle Cloud and verify that the following command works.
 
 Click on the Scheduler node, and obtain the IP address, then login using
 
-ssh -Y lizadams@20.232.113.37
+ssh -Y azureuser@IP-ADDRESS
 
 Run a bash script for 1 minute by submitting to the hpc node using srun.
 

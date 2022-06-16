@@ -1,4 +1,4 @@
-# Instructions installing input data
+# Configuring selected storage and obtaining input data
 
 ## Install AWS CLI to obtain data from AWS S3 Bucket
 
