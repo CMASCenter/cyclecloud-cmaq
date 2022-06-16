@@ -197,7 +197,7 @@ Figure 12. Plot of Total Time and On Demand Cost versus CPUs for HC44RS.
 
 ![Plot of Total Time and On Demand Cost versus CPUs for HC44RS](../../qa_plots/scaling_plots/HC44rs_Time_Cost_CPUs.png)
 
-Figures: todo - need screenshots of Azure Pricing from Rob Zelt
+Figures: todo - need screenshots of Azure Pricing
 
 Fost by Instance Type - update for Azure 
 
