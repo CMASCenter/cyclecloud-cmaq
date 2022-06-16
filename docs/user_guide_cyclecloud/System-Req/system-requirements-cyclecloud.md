@@ -56,6 +56,20 @@ Azure offers generalized, compute, and high performance machines of various size
 The amount of memory and the number of cpus required to run CMAQ depends on the domain size and resolution of the case that is being run.
 For this tutorial that uses a two day run of the CONUS2 domain, a minimum size recommended is a HC44rs (44 cpus)  or HBv120 (120 cpus) compute node, to allow CMAQ to be run on up to 44 or 120 cpus.
 
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/hpc/hc-series-overview">HC Series Virtual Machine Overview</a>
+
+Physically, an HC-series server is 2 * 24-core Intel Xeon Platinum 8168 CPUs for a total of 48 physical cores. Each CPU is a single pNUMA domain, and has unified access to six channels of DRAM. Intel Xeon Platinum CPUs feature a 4x larger L2 cache than in prior generations (256 KB/core -> 1 MB/core), while also reducing the L3 cache compared to prior Intel CPUs (2.5 MB/core -> 1.375 MB/core).
+
+The above topology carries over to the HC-series hypervisor configuration as well. To provide room for the Azure hypervisor to operate without interfering with the VM, we reserve pCores 0-1 and 24-25 (that is, the first 2 pCores on each socket). We then assign pNUMA domains all remaining cores to the VM. Thus, the VM will see:
+
+```
+(2 vNUMA domains) * (22 cores/vNUMA) = 44 cores per VM
+```
+
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/hpc/hbv3-series-overview#software-specifications">HBv3-series Software Specification</a>
+
+An HBv3-series server features 2 * 64-core EPYC 7V73X CPUs for a total of 128 physical "Zen3" cores with AMD 3D V-Cache. Simultaneous Multithreading (SMT) is disabled on HBv3.  448 GB of RAM, and no hyperthreading with 350 GB/sec of memory bandwidth, up to 32 MB of L3 cache per core, up to 7 GB/s of block device SSD performance, and clock frequencies up to 3.675 GHz.
+
 
 ### Azure CycleCloud Cluster
 
