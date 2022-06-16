@@ -11,7 +11,7 @@
 
 
 # ===================== CCTMv5.3.X Run Script ========================= 
-# Usage: run.cctm >&! cctm_2016_12US1.log &                                
+# Usage: run.cctm >&! cctm_2016_12US2.log &                                
 #
 # To report problems or request help with this script/program:
 #             http://www.epa.gov/cmaq    (EPA CMAQ Website)
