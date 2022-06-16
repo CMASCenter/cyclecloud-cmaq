@@ -16,5 +16,11 @@
 2. Learn how to use the Cost Explorer in Azure and create screenshots showing costs for the single Virtual Machine HBv120 benchmarks and also for the Azure Cycle Cloud.
 3. Document the screenshot that shows the Cycle Cloud VM that is the Application Server.  This VM has a public IP address from which you can see the Cycle Cloud and on the left column see all of the Clusters that have been created, and in the center panel, see the status of those clusters.  Note, that even if all of the clusters listed in the Cycle Cloud Application Server have been terminated, you can restart them, and have access to the input data and software.
 4. I think it is a best practice to leave the Application Server running, but terminate the Cycle-Cloud Clusters.  I don't know what happens if you "Stop" the Application Server, Can you later restart the Application Server? It would likely use a new IP address, but would it allow you to see all of the Cycle-Cloud Clusters again?
+5. Add a poll to gauge usefulness of AWS and Azure Tutorials 
+1. Does your group have an azure account, 
+2. What is your experience level with Virtual Machine on Azure
+3. What is your experience level with CycleCloud on Azure
+4. What is your experience with using the AWS Parallel Cluster Tutorial
+
 
 
