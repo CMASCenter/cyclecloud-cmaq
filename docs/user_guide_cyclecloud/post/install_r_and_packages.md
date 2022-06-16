@@ -26,7 +26,7 @@ install.packages("patchwork")
 
 Had an issue installing ncdf4
 see:
-< ahref="https://cirrus.ucsd.edu/~pierce/ncdf/">install ncdf4</a>
+<ahref="https://cirrus.ucsd.edu/~pierce/ncdf/">install ncdf4</a>
 
 ncdf4 REQUIRES the netcdf library be version 4 or above,
 AND installed with HDF-5 support (i.e., the netcdf library must be
