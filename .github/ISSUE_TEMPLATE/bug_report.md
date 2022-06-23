@@ -25,5 +25,5 @@ If this bug report is related to the scripts or code, then please report the iss
 ## Please include any error messages that you encountered in between the three backtick
 
 ```
-add log file information here
+add log file information here or upload the log file to attach it to this bug
 ```
