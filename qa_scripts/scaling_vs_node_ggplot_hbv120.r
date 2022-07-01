@@ -6,8 +6,10 @@ library(patchwork) # To display 2 charts together
 # example from http://monashbioinformaticsplatform.github.io/2015-11-30-intro-r/ggplot.html
 # 2nd example from https://r-graph-gallery.com/line-chart-dual-Y-axis-ggplot2.html
 
+curr_wd<-getwd()
+setwd(curr_wd)
 png(file = paste('hbv120','_','Scaling','_','Node','.png',sep=''), width = 1024, height = 768, bg='white')
-csv_data<- read.csv("/shared/cyclecloud-cmaq/docs/user_guide_cyclecloud/qa/scaling_HBv120.csv",sep="\t", skip =0, header = TRUE, comment.char = "",check.names = FALSE, quote="", )
+csv_data<- read.csv("../docs/user_guide_cyclecloud/qa/scaling_HBv120.csv",sep="\t", skip =0, header = TRUE, comment.char = "",check.names = FALSE, quote="", )
 print(csv_data)
 p1 <- ggplot(csv_data, aes(y=Scaling, x=Nodes, color=COLROW, size=CPUs)) +
     geom_point() + ggtitle("2 Day Benchmark Scaling versus Nodes(18cpu/node) using HBv120") + xlim(0,8) + ylim(0,55) 

@@ -1,7 +1,9 @@
 # Script author: Liz Adams
 # Affiliation: UNC CMAS Center 
 
-csv_data<-read.csv("/shared/cyclecloud-cmaq/docs/user_guide_cyclecloud/qa/scaling_HC44rs.csv",sep=",", skip =0, header = TRUE, comment.char = "",check.names = FALSE, quote="", )
+curr_wd<-getwd()
+setwd(curr_wd)
+csv_data<-read.csv("../docs/user_guide_cyclecloud/qa/scaling_HC44rs.csv","\t", skip =0, header = TRUE, comment.char = "",check.names = FALSE, quote="", )
 #print(csv_data)
 
 # ------------- Do not change below unless modifying for a different workflow ---------------------
