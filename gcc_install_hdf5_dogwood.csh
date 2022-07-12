@@ -38,6 +38,14 @@ set echo
    wget https://github.com/Unidata/netcdf-fortran/archive/refs/tags/v4.5.3.tar.gz
    tar xvf v4.5.3.tar.gz
    cd netcdf-fortran-4.5.3
+   setenv CFLAGS "-O3 -fPIC"
+   setenv FFLAGS "-O3 -fPIC"
+   setenv CXXFLAGS "-O3 -fPIC"
+   setenv FCFLAGS "-O3 -fPIC"
+   setenv NCDIR $DIR/install
+   setenv CPPFLAGS -I${NCDIR}/include
+   setenv LDFLAGS -L${NCDIR}/lib
+   setenv LIBS "-lnetcdf"
    export LIBS="-lnetcdf"
    ./configure --with-pic --enable-shared --prefix=/proj/ie/proj/CMAS/CMAQ/CMAQv5.3.3/build-hdf5/install
    make |& tee make.gcc9.log 
