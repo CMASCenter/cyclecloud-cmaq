@@ -74,6 +74,7 @@ Install additional packages as root so that all users will have access.
 ```
 sudo -i R
 install.packages("fields")
+install.packages("mapdata")
 ```
 
 M3 package requires gdal
