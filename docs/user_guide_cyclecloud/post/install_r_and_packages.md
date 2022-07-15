@@ -84,26 +84,11 @@ sudo yum install gdal
 sudo yum install gdal-devel proj-devel
 ```
 
-https://grasswiki.osgeo.org/wiki/Compile_and_Install
-
-Tried following above suggestion to install for GRASS
-
-```
-sudo yum install flex bison make zlib-devel gcc-c++ gettext \
-             sqlite-devel mesa-libGL-devel mesa-libGLU-devel \
-             libXmu-devel libX11-devel fftw-devel libtiff-devel \
-             lesstif-devel python-devel numpy wxPython wxGTK-devel \
-             proj proj-devel proj-epsg proj-nad libxml2 gdal gdal-devel geos geos-devel \
-             netcdf netcdf-devel blas-devel lapack-devel atlas-devel \
-             python-dateutil python-imaging python-matplotlib python-sphinx \
-             doxygen subversion
-```
-
 ```
 sudo -i R
 install.packages("rgdal")
-install.packages("M3")
-`sudo R CMD INSTALL M3_0.3.tar.gz`
 install.packages("ggplot2")
 ```
+
+`sudo R CMD INSTALL M3_0.3.tar.gz`
 
