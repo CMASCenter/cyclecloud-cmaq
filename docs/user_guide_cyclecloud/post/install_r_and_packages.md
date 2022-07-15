@@ -80,7 +80,6 @@ M3 package requires gdal
 
 ```
 sudo yum install gdal
-sudo yum install epel-release
 sudo yum install gdal-devel
 ```
 
@@ -103,6 +102,7 @@ sudo yum install flex bison make zlib-devel gcc-c++ gettext \
 sudo -i R
 install.packages("rgdal")
 install.packages("M3")
+`sudo R CMD INSTALL M3_0.3.tar.gz`
 install.packages("ggplot2")
 ```
 
