@@ -80,7 +80,7 @@ M3 package requires gdal
 
 ```
 sudo yum install gdal
-sudo yum install gdal-devel
+sudo yum install gdal-devel proj-devel
 ```
 
 https://grasswiki.osgeo.org/wiki/Compile_and_Install
