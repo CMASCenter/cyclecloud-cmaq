@@ -12,6 +12,7 @@ Install R
 
 ```
 sudo yum install epel-release
+sudo yum config-manager --set-enabled powertools
 sudo yum install R
 R --version
 ```
