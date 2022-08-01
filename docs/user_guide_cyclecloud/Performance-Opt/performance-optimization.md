@@ -119,13 +119,9 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 192 | 2  | 2x96     |    16x12             | 2148.09         | fail       |           |       |    |                                 |        |                             |       |                                         |     /shared |  ?        | no |  
 | 288 | 3  | 3x96     | 16x18                | 1923.52              |  fail                |             |        |     |                            |       |                           |        | with -march=native        |   /shared            |  ?    |  yes | 
 | 288 | 3  | 3x96     | 16x18                | 1967.16              |  1639.55            |  3606.71     |  1.00   | ?  | $1.4/hr * 1 nodes * 1.0 hr = | $1.4 | $3.6/hr * 1 nodes * 1.0 = | $3.6 | with march=native          |  /shared      | ?  |  yes | 
- -march=native        |   /shared            |  ?    |  yes |
-| 288 | 3  | 3x96     | 16x18                | 2206.73              |  fail                |             |        |     |                            |       |                           |        | with
- -march=native        |   /shared            |  ?    |  no |
-| 288 | 3  | 3x96     | 16x18                | 2399.31              |  fail                |             |        |     |                            |       |                           |        | with
- -march=native        |   /shared            |  ?    |  no |
-| 288 | 3  | 3x96     | 16x18                | 2317.68              |  fail                |             |        |     |                            |       |                           |        | with
- -march=native        |   /shared            |  ?    |  no |
+| 288 | 3  | 3x96     | 16x18                | 2206.73              |  fail                |             |        |     |                            |       |                           |        | with -march=native        |   /shared            |  ?    |  no |
+| 288 | 3  | 3x96     | 16x18                | 2399.31              |  fail                |             |        |     |                            |       |                           |        | with -march=native        |   /shared            |  ?    |  no |
+| 288 | 3  | 3x96     | 16x18                | 2317.68              |  fail                |             |        |     |                            |       |                           |        | with -march=native        |   /shared            |  ?    |  no |
 | 384 | 4 | 4x96      | 24x16                | 1612.54              |  fail                |             |        |     |                            |       |                           |        | with march=native         |  /shared             |  ?    | yes |
 | 960 | 8   |  8x120     | 30x32             | 1223.52              |  1126.19             |    2349.71  | .326   |  no | $1.4/hr * 8 nodes * .653 = | $7.31 | 3.6/hr * 8 nodes * .653 = | 18.8   | with -march=native compiler flag | /data  |  2445.399 | no | 
 | 960 |  8  |  8x120    | 30x32              | 1189.21              |  1065.73             |   2254.94   | .313   |  no | $1.4/hr * 8 nodes * .626 = | 7.01  | 3.6/hr * 8 nodes * .626 = | 18.0   | with -march=native compiler flag | /data | 1846.533  | no |
