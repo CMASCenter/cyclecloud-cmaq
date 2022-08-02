@@ -12,8 +12,8 @@ endif
 
 set path = ($path /shared/build/netcdf/bin /shared/build/ioapi-3.2/Linux2_x86_64gfort /opt/slurm/bin/ /usr/local/bin )
 
-module load gcc-9.2.0
-module load mpi/openmpi-4.1.0
+module load gcc-9.2.1
+module load mpi/openmpi-4.1.1
 
 alias SCR 'cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts'
 

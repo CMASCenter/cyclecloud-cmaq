@@ -16,10 +16,10 @@ set echo
    setenv DIR /shared/build
    setenv PDIR /shared/cyclecloud-cmaq
    cd $DIR
-   git clone https://github.com/cjcoats/ioapi-3.2
-   cd ioapi-3.2
-   #git checkout -b 20200828
-   setenv BASEDIR $DIR/ioapi-3.2
+   git clone https://github.com/cjcoats/ioapi-3.2 ioapi-3.2_branch_20200828
+   cd ioapi-3.2_branch_20200828
+   git checkout -b 20200828
+   setenv BASEDIR $DIR/ioapi-3.2_branch_20200828
    setenv BIN Linux2_x86_64gfort
    mkdir $BASEDIR/$BIN
    setenv CPLMODE nocpl
