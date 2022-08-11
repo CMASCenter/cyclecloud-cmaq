@@ -9,7 +9,7 @@ library(patchwork) # To display 2 charts together
 curr_wd<-getwd()
 setwd(curr_wd)
 png(file = paste('hbv120','_','Scaling','_','CPUs','.png',sep=''), width = 1024, height = 768, bg='white')
-csv_data<- read.csv("../docs/user_guide_cyclecloud/qa/scaling_HBv120.update5.csv",sep="\t", skip =0, header = TRUE, comment.char = "",check.names = FALSE, quote="", )
+csv_data<- read.csv("../docs/user_guide_cyclecloud/qa/scaling_HBv120.update6.csv",sep="\t", skip =0, header = TRUE, comment.char = "",check.names = FALSE, quote="", )
 print(csv_data)
 bad_rows <-
     is.na(csv_data$CPUs) |
