@@ -210,6 +210,9 @@ Figure 10. Plot of Total Time and On Demand Cost versus CPUs for both HC44rs and
 
 ![Plot of Total Time and On Demand Cost versus CPUs for HC44rs and HBv120](../../qa_plots/scaling_plots/HC44rs_HBv120_Time_CPUs.png)
 
+Figure 11. Plot of On Demand Cost versus Total Time for HBv120
+![Plot of On Demand Cost versus Total Time for HBv120](../../qa_plots/scaling_plots/hbv120_Cost_TotalTime.png)
+
 
 
 HC44RS SPOT Pricing $.3168
