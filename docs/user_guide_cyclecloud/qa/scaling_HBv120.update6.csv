@@ -1,0 +1,62 @@
+CPUs	Nodes	NodesxCPU	COLROW	Day1_Timing_sec	Day2_Timing_sec	TotalTime	CPU Hours/day	SBATCHexclusive	Equation using Spot Pricing	SpotCost	Equation using On Demand Pricing	OnDemandCost	compiler flag	InputData	cpuMhz	Scaling	IdealScaling	Efficiency	ComputeNode	MS_Opt_Pin
+90	1	1x90	9x10	3153.33	2758.12	5911.45	0.821	no	$1.4/hr * 1 nodes * 1.642 hr =	2.29	$3.6/hr * 1 nodes * 1.642 hr =	5.911	without -march=native compiler flag	shared	2445.402	3.40671578	5	68.13431561	HB120	no
+96	1	1x96	12x8	3118.91	2813.86	5932.77	0.823	yes	$1.4/hr * 1 nodes * 1.64 hr	2.29	$3.6/hr * 1 nodes * 1.64 hr	5.9	with -march=native compiler flag	shared	1846.525	3.394473408	5.333333333	63.6463764	HB120	yes
+96		1x96	12x8	2470.94	2845.32	5316.26	0.738369444	yes	$1.4/hr * 1 nodes * 1.476 hr	2.07	$3.6/hr * 1 nodes * 1.476 hr	5.313	with -march=native compiler flag	shared	1846.526	3.788119844	5.333333333	71.02724707	HB120	no
+120	1	1x120	10x12	2829.84	2516.07	5345.91	0.742	no	$1.4/hr * 1 nodes * 1.484 hr =	2.08	$3.6/hr * 1 nodes * 1.484 hr =	5.34	without -march=native compiler flag	shared	2445.4	3.767109809	6.666666667	56.50664714	HB120	no
+180	2	2x90	10x18	2097.37	1809.84	3907.21	0.542	no	$1.4/hr * 2 nodes * 1.08 hr =	3.03	$3.6/hr * 2 nodes * 1.08 hr =	7.81	with -march=native compiler flag	shared	2445.395	5.154222578	10	51.54222578	HB120	no
+180	2	2x90	10 x 18	1954.2	1773.86	3728.06	0.518	no	$1.4/hr * 2 nodes * 1.036 hr =	2.9	$3.6/hr * 2 nodes * 1.036 hr =	7.46	without -march=native compiler flag	shared	2445.405	5.401906085	10	54.01906085	HB120	no
+180	5	5x36	10x18	1749.8	1571.5	3321.3	0.461	no	$1.4/hr * 5 nodes * .922 hr =	6.46	$3.6/hr * 5 nodes * .922 hr =	16.596	without -march=native compiler flag	shared	1846.529	6.063478156	10	60.63478156	HB120	no
+192	2	2x95	16x12	2158.76	2024.57	4183.33	0.581018056	yes	$1.4/hr * 2 nodes * 1.162 hr =	3.25	$3.6/hr * 2 nodes * 1.162 hr =	8.3664	without -march=native compiler flag	shared	NA	4.814018975	10	60.63478156	HB120	no
+240	2	2x120	20x12	1856.5	1667.68	3524.18	0.4895	no	$1.4/hr * 2 nodes * .97 hr =	2.72	$3.6/hr * 2 nodes * .97 hr =	6.984	without -march=native compiler flag	shared	2445.409	5.714415836	13.33333333	42.85811877	HB120	no
+270	3	3x90	15x18	1703.19	1494.17	3197.36	0.444	no	$1.4/hr * 3 nodes * .888hr =	3.72	3.6/hr * 3 nodes * .888 =	9.59	with -march=native compiler flag	shared	2445.4	6.298518152	15	41.99012102	HB120	no
+288	3	3x96	16x18	1967.16	1639.55	3606.71	0.500931944	yes	$1.4/hr * 3 nodes * 1.0hr =	4.2	3.6/hr * 3 nodes * 1.0 =	10.8	with -march=native compiler flag	shared	1846.526	5.583656573	16	34.89785358	HB120	yes
+360	3	3x120	20x18	1520.29	1375.54	2895.83	0.402	no	$1.4/hr * 3 nodes * .804 =	3.38	3.6/hr * 3 nodes * .804 =	8.687	with -march=native compiler flag	shared	2445.399	6.954355055	20	34.77177528	HB120	no
+360	3	3x120	20x18	1512.33	1349.54	2861.87	0.397	no	$1.4/hr * 3 nodes * .795 =	3.34	3.6/hr * 3 nodes * .795 =	8.586	with -march=native compiler flag	shared	1846.53	7.036877985	20	35.18438993	HB120	no
+384	4	4x96	24x16	1612.54	283.36	NA	NA	yes	$1.4/hr * 4 nodes *  =	NA	3.6/hr * 4 nodes *  =	NA	with -march=native compiler flag	shared	1846.528	NA	NA	NA	HB120	yes
+18	1	1x18	3x6	10571.2	9567.43	20138.63	2.8	no	$1.4/hr * 1 nodes * 5.59 hr =	7.83	$3.6/hr * 1 nodes * 5.59 hr =	20.12	without -march=native compiler flag	/data	1846.533	1	1	100	HB120	no
+36	1	1x36	6x6	5933.48	5230.05	11163.53	1.55	no	$1.4/hr * 1 nodes * 3.1 hr =	4.34	$3.6/hr * 1 nodes * 3.1 hr =	11.2	without -march=native compiler flag	/data	1846.533	1.803966129	2	90.19830645	HB120	no
+36	1	1x36	6x6	5841.81	5153.47	10995.28	1.52	no	$1.4/hr * 1 nodes * 3.0 hr =	4.26	$3.6/hr * 1 nodes * 3.0 hr =	10.8	without -march=native compiler flag	/mnt/resource/data2/	1846.533	1.831570456	2	91.57852278	HB120	no
+120	1	1x120	10x12	2781.89	2465.87	5247.76	0.729	no	$1.4/hr * 1 nodes * 1.642 hr =	2.29	$3.6/hr * 1 nodes * 1.642 hr =	5.911	without -march=native compiler flag	/data	1846.533	3.837566886	6.666666667	57.56350329	HB120	no
+120	1	1x120	10x12	3031.81	2378.64	5410.45	0.751	no	$1.4/hr * 1 nodes * 1.484 hr =	2.08	$3.6/hr * 1 nodes * 1.484 hr =	5.34	without -march=native compiler flag	/mnt/resource/data2	1846.533	3.722172832	6.666666667	55.83259248	HB120	no
+120	1	1x120	10x20	2691.4	2380.51	5071.91	0.704	no	$1.4/hr * 1 nodes * 1.408 hr =	1.97	$3.6/hr * 1 nodes * 1.408 =	5.07	without -march=native compiler flag	i: /mnt/resource/data2 o: /data	1846.533	3.970620535	6.666666667	59.55930803	HB120	no
+960	8	8x120	30x32	1223.52	1126.19	2349.71	0.326	no	$1.4/hr * 8 nodes * .653 =	7.31	3.6/hr * 8 nodes * .653 =	18.8	with -march=native compiler flag	/data	2445.399	8.570687447	53.33333333	16.07003896	HB120	no
+960	8	8x120	30x32	1189.21	1065.73	2254.94	0.313	no	$1.4/hr * 8 nodes * .626 =	7.01	3.6/hr * 8 nodes * .626 =	18	with -march=native compiler flag	/data	1846.533	8.930893948	53.33333333	16.74542615	HB120	no
+18	1	1x18	3x6	13525.66	12107.02	25632.68	3.56	no	$.3168/hr * 1 nodes * 7.12 =	2.26	3.186/hr * 1 nodes * 7.12 =	22.68	with -march=native compiler flag	shared	2693.671	1	1	100	HC44rs	no
+36	1	1x36	6x6	7349.06	6486.37	13835.43	1.92	no	$.3168/hr * 1 nodes * 3.84 =	1.22	3.186/hr * 1 nodes * 3.84 =	12.23	with -march=native compiler flag	/shared	2693.67	1.852684015	2	92.63420074	HC44rs	no
+40	1	1x40	4x10	6685.74	5935.01	12620.75	1.75	no	$.3168/hr * 1 nodes * 3.5 =	1.11	3.168/hr * 1 nodes * 3.5 =	11	with -march=native compiler flag	/shared	2693.671	2.030994988	2.222222222	91.39477448	HC44rs	no
+72	2	2x36	8x9	4090.8	3549.6	7640.4	1.06	no	$.3168/hr * 2 nodes * 2.12 =	1.34	3.168/hr * 2 nodes * 2.12 =	13.4	with -march=native compiler flag	/shared	2693.763	3.354887179	4	83.87217947	HC44rs	no
+108	3	3x36	9x12	2912.59	2551.08	5463.67	0.758	no	$.3168/hr * 3 nodes * 1.517 =	1.44	3.168/hr * 3 nodes * 1.517 =	14.41	with -march=native compiler flag	/shared	2693.672	4.691476608	6	78.1912768	HC44rs	no
+126	7	7x18	9x14	2646.52	2374.21	5020.73	0.69	no	$.3168/hr * 7 nodes * 1.517 =	3.36	3.168/hr * 7 nodes * 1.517 =	33.64	with -march=native compiler flag	/shared	2693.761	5.10536914	7	72.93384485	HC44rs	no
+144	4	4x36	12x12	2449.39	2177.28	4626.67	0.64	no	$.3168/hr * 4 nodes * 1.285 =	1.63	3.168/hr * 4 nodes * 1.285 =	16.28	with -march=native compiler flag	/shared	2693.672	5.540200619	8	69.25250774	HC44rs	no
+180	5	5x36	10x18	2077.22	1851.77	3928.99	0.545	no	$.3168/hr * 5 nodes * 1.09 =	1.72	3.168/hr * 5 nodes * 1.09 =	17.26	with -march=native compiler flag	/shared	2693.805	6.523987081	10	65.23987081	HC44rs	no
+216	6	6x36	18x12	1908.15	1722.07	3630.22	0.504	no	$.3168/hr * 6 nodes * 1.01 =	1.92	3.168/hr * 6 nodes * 1.01 =	19.16	with -march=native compiler flag	/shared	2693.671	7.060916418	12	58.84097015	HC44rs	no
+288	8	8x36	16x18	1750.36	1593.29	3343.65	0.464	no	$.3168/hr * 8 nodes * .928 =	2.35	3.168/hr * 8 nodes * .928 =	39.54	with -march=native compiler flag	/shared	2693.783	7.66607749	16	47.91298431	HC44rs	no
+36	1	1x36	6x6	5933.48	5230.05	11163.53	1.55	no	$1.4/hr * 1 nodes * 3.1 hr =	4.34	$3.6/hr * 1 nodes * 3.1 hr =	11.2	without -march=native compiler flag	/data	1846.533	1.803966129	2	90.19830645	HB120	no
+96	1	1x96	12x8	2683.51	2374.71	5058.22	0.702	yes	$1.4/hr * 1 node * 1.405 hr =	1.97	$3.6/hr * 1 node * 1.405 hr = 5.058	5.05	with -march=native	/data NetApp	NA	3.981366963	5.333333333	74.65063056	HB120	yes
+120	1	1x120	12x10	3028.54	2741.83	5770.37	0.801	yes	$1.4/hr * 1 nodes * 1.6 hr =	2.24	$3.6/hr * 1 nodes * 1.6 hr =	5.76	without -march=native compiler flag	/shared	NA	3.490006707	6.666666667	52.3501006	HB120	no
+120	1	1x120	12x10	2594.57	2371.46	4966.03	0.698	yes	$1.4/hr * 1 nodes * 1.38 hr =	1.93	$3.6/hr * 1 nodes * 1.38 hr =	4.968	without -march=native compiler flag	/data NetApp	NA	4.055277556	6.666666667	60.82916334	HB120	no
+120	1	1x120	12x10	2405.62	2166.42	4572.04	0.635005556	yes	$1.4/hr * 1 nodes * 1.27 hr =	1.77	$3.6/hr * 1 nodes * 1.27 hr =	4.572	without -march=native compiler flag	/data NetApp	NA	4.404736179	6.666666667	66.07104269	HB120	yes
+192	2	2x96	16x12	2337.53	NA	NA	NA	NA	NA	NA	NA	NA	with -march=native	/shared	NA	NA	10.66666667	NA	HB120	yes
+192	2	2x96	16x12	2148.09	NA	NA	NA	NA	NA	NA	NA	NA	NA	/shared	NA	NA	10.66666667	NA	HB120	no
+192	2	2x96	16x12	2367.27	2276.14	4643.41	0.645	yes	$1.4/hr * 2 nodes * 1.29 hr =	3.612	$3.6/hr * 2 nodes * 1.29 hr =	9.29	without -march=native compiler flag	/data NetApp	NA	4.337034636	10.66666667	40.65969971	HB120	no
+192	2	2x96	16x12	2419.51	2243.45	4662.96	0.648	yes	$1.4/hr * 2 nodes * 1.295 hr =	3.626	$3.6/hr * 2 nodes * 1.29 hr =	9.29	without -march=native compiler flag	/data NetApp	NA	4.318851116	10.66666667	40.48922921	HB120	no
+192	2	2x96	16x12	1898.92	1748.17	3647.09	0.5065	yes	$1.4/hr * 2 nodes * 1.013 hr =	2.84	$3.6/hr * 2 nodes * 1.013 hr =	7.29	without -march=native compiler flag	/data NetApp	NA	5.521835217	10.66666667	51.76720516	HB120	yes
+240	2	2x120	16x15	2522.3	2172.21	4694.51	0.652015278	yes	$1.4/hr * 2 nodes * 1.304 hr =	3.65	$3.6/hr * 2 nodes * 1.304 hr =	9.39	without -march=native compiler flag	/data NetApp	NA	4.289825775	13.33333333	32.17369331	HB120	no
+240	2	2x120	16x15	1920.57	1767.07	3687.64	0.512172222	yes	$1.4/hr * 1 nodes * 1.024 hr =	2.868	$3.6/hr * 2 nodes * 1.024 hr =	7.37	without -march=native compiler flag	/data NetApp	NA	5.461116053	13.33333333	40.95837039	HB120	yes
+288	3	3x96	16x18	1923.52	NA	NA	NA	NA	NA	NA	NA	NA	with -march=native	/shared	NA	NA	NA	NA	HB120	yes
+288	3	3x96	16x18	2206.73	NA	NA	NA	NA	NA	NA	NA	NA	with -march=native	/shared	NA	NA	NA	NA	HB120	no
+288	3	3x96	16x18	2399.31	NA	NA	NA	NA	NA	NA	NA	NA	with -march=native	/shared	NA	NA	NA	NA	HB120	no
+288	3	3x96	16x18	2317.68	NA	NA	NA	NA	NA	NA	NA	NA	with -march=native	/shared	NA	NA	NA	NA	HB120	no
+288	3	3x96	16x18	2253.63	2183.55	4437.18	0.616	yes	$1.4/hr * 3 nodes * 1.23 hr =	5.16	$3.6/hr * 3 nodes * 1.23 =	13.28 	with -march=native	/data NetApp	NA	4.538610108	16	28.36631318	HB120	no
+288	3	3x96	16x18	1673.15	1581.15	3254.3	0.452	yes	$1.4/hr * 3 nodes * .90 hr =	3.795	$3.6/hr * 3 nodes * .90 =	9.72 	with -march=native	/data NetApp	NA	6.188313923	16	38.67696202	HB120	yes
+360	3	3x120	20x18	1966.37	300.73	NA		yes	$1.4/hr * 3 nodes * hr =	NA	$3.6/hr * 3 nodes * =	NA	with -march=native	/shared	NA	NA	NA	NA	HB120	no
+360	3	3x120	20x18	1976.24	300.73	NA		yes	$1.4/hr * 3 nodes * hr =	NA	$3.6/hr * 3 nodes * =	NA	with -march=native	/shared	NA	NA	NA	NA	HB120	no
+360	3	3x120	20x18	1950.84	294.06	NA		yes	$1.4/hr * 3 nodes * hr =	NA	$3.6/hr * 3 nodes * =	NA	with -march=native	/shared Premium SSD	NA	NA	NA	NA	HB120	no
+360	3	3x120	20x18	1722.43	1630.6	3353.03	0.466	yes	$1.4/hr * 3 nodes * .931 hr =	3.91	$3.6/hr * 3 nodes * .931 =	10.89 	with -march=native	/data NetApp	NA	6.006098961	20	30.03049481	HB120	no
+360	3	3x120	20x18	1404.04	1337.72	2741.76	0.381	yes	$1.4/hr * 3 nodes * .762 hr =	1.599	$3.6/hr * 3 nodes * .762 =	8.22 	with -march=native	/data NetApp	NA	7.345146913	20	36.72573456	HB120	yes
+384	4	4x96	24x16	1575.88	256.47	NA	NA	NA	NA	NA	NA	NA	with march=native	/shared	NA	NA	NA	NA	HB120	yes
+384	4	4x96	24x16	1808.31	4.83	NA	NA	NA	NA	NA	NA	NA	with march=native	/shared	NA	NA	NA	NA	HB120	yes
+384	4	4x96	24x16	1043.02	258.11	NA	NA	NA	NA	NA	NA	NA	with march=native	/shared	NA	NA	NA	NA	HB120	yes
+384	4	4x96	24x16	1072.87	204.27	NA	NA	NA	NA	NA	NA	NA	with march=native	/shared	NA	NA	NA	NA	HB120	yes
+384	4	4x96	24x16	1894.96	1664.72	3559.68	0.4944	yes	$1.4/hr * 4 nodes * .9889 hr =	5.54	$3.6/hr * 4 nodes * .9889 =	14.24 	with march=native	/data NetApp	NA	5.657427072	21.33333333	26.5191894	HB120	no
+384	4	4x96	24x16	1631.05	1526.87	3157.92	0.4386	yes	$1.4/hr * 4 nodes * .8772 hr =	4.91	$3.6/hr * 4 nodes * .8772 =	12.63 	with march=native	/data NetApp	NA	6.377181816	21.33333333	29.89303976	HB120	yes
