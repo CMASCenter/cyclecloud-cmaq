@@ -188,7 +188,7 @@ To view the script, install imagemagick
 
 
 ```
-sudo yum groupinstall " Development Tools" -y
+sudo yum groupinstall "Development Tools" -y
 sudo yum install ImageMagick
 sudo yum install ImageMagick-devel
 ```
