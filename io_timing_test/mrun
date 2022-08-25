@@ -1,0 +1,57 @@
+#!/bin/csh
+
+set npcol_list = ( 12 12 15 15 )
+set nprow_list = ( 12 16 16 20 )
+
+set nitems = `echo $npcol_list | wc -w`
+
+set domain_name_list = (conus)
+
+set code_path = "\/data\/build\/liz"
+
+set count = 0
+set n = 2
+while ($n < 3)   # this is for the number of repetitions
+  @ n++
+
+  set nn = 0
+  while ($nn < $nitems)
+    @ count++
+    @ nn++
+    set npcol = $npcol_list[$nn]
+    set nprow = $nprow_list[$nn]
+    foreach domain_name ($domain_name_list)
+
+      set config = "${npcol}x${nprow}"
+
+      @ NPROCS = $npcol * $nprow
+
+      echo ' ==d== process ' $n $domain_name $config
+      cat trun                                       | \
+          sed "s/DOMAIN/$domain_name/"               | \
+          sed "s/CONFIG/$config/"                    | \
+          sed "s/NPCOL/$npcol/"                      | \
+          sed "s/NPROW/$nprow/"                      | \
+          sed "s/NPROCS/$NPROCS/"                    | \
+          sed "s/LOGN/$n/"                           | \
+          sed "s/CODE_PATH/$code_path/"                \
+          > run-${domain_name}-${config}-$n.csh
+
+      sbatch run-${domain_name}-${config}-$n.csh
+
+      set done = 0
+      while (! $done)
+        set check = `/home/wdx/bin/mqs | grep wdx | grep test | wc -l`
+        if ($check == 0) then
+           set done = 1
+        else
+           echo ' ==d== sleep '
+           sleep 300
+        endif 
+      end 
+
+#      rm -f run-${domain_name}-${config}-$n.csh
+    end
+  end
+end
+
