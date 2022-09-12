@@ -5,8 +5,8 @@
 #SBATCH --ntasks-per-node=96
 #SBATCH --exclusive
 #SBATCH -J CMAQ
-#SBATCH -o /shared/build/hpcx_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.16x18pe.2day.cyclecloud.hpcx.pin.new.sleep120.log
-#SBATCH -e /shared/build/hpcx_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.16x18pe.2day.cyclecloud.hpcx.pin.new.sleep120.log
+#SBATCH -o /shared/build-hdf5/hpcx_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.16x18pe.2day.cyclecloud.hpcx.pin.new.sleep120.log
+#SBATCH -e /shared/build-hdf5/hpcx_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.16x18pe.2day.cyclecloud.hpcx.pin.new.sleep120.log
 
 
 # ===================== CCTMv5.3.X Run Script ========================= 
