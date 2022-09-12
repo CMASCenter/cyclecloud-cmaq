@@ -18,9 +18,9 @@ setenv CLUSTER /shared/cyclecloud-cmaq
 #./bldit_project_v533_cyclecloud.csh
 module load openmpi
 cd $BUILD/openmpi_gcc/CMAQ_v533/CCTM/scripts/
-cp $CLUSTER/config_cmaq_cyclecloud.csh ../../config_cmaq.csh
+cp $CLUSTER/config_cmaq_cyclecloud_hdf5.csh ../../config_cmaq.csh
 ./bldit_cctm.csh gcc |& tee ./bldit_cctm.log
-cp $CLUSTER/run_scripts/cmaq533/run*cyclecloud.csh $BUILD/openmpi_gcc/CMAQ_v533/CCTM/scripts/
+cp $CLUSTER/run_scripts/HB120v3/run*cyclecloud.csh $BUILD/openmpi_gcc/CMAQ_v533/CCTM/scripts/
 cd $BUILD/openmpi_gcc/CMAQ_v533/CCTM/scripts/
 
 # submit job to the queue using 

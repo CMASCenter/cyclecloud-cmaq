@@ -2,16 +2,16 @@
 # Affiliation: US EPA Office of Research and Development
 # This script assumes that the log files are located in ./CCTM/scripts as output by the CMAQ run script 
 # These are the single output files, not the CTM_LOG files found in the $OUTDIR/LOGS directory
-sens.dir  <- '/proj/ie/proj/CMAS/CMAQ/CMAQv5.3.3/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
-base.dir  <- '/proj/ie/proj/CMAS/CMAQ/CMAQv5.3.3/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
-files     <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12SE1.8x8.log' )
-b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12SE1.8x8.test.log')
+sens.dir  <- '/proj/ie/proj/CMAS/CMAQ/cyclecloud-cmaq/run_scripts/HB120v3_pin_testing/data.build.hpcx_gcc/'
+base.dir  <- '/proj/ie/proj/CMAS/CMAQ/cyclecloud-cmaq/run_scripts/HB120v3_pin_testing/data.build.hpcx_gcc/'
+files     <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.240.16x15pe.2day.cyclecloud.hpcx.close3.synch3.shared.log' )
+b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.240.16x15pe.2day.cyclecloud.hpcx.close3.synch3.data.log')
 #Compilers <- c('intel','gcc','pgi')
 Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
 # The project directory name is used for the sensitivity case. 
-base.name <- '8x8pe'
-sens.name <- '8x8pe' 
+base.name <- '16x15pe_data'
+sens.name <- '16x15pe_shared' 
 # ------------- Do not change below unless modifying for a different workflow ---------------------
 # compilers being considered
 #Compilers <- c('intel','gcc','pgi')
