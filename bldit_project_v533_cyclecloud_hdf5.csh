@@ -17,7 +17,7 @@
 #> directory.
 
 
- set CMAQ_HOME = /shared/build/hpcx_gcc/CMAQ_v533
+ set CMAQ_HOME = /shared/build-hdf5/hpcx-gcc/CMAQ_v533
 
 #> This section allows users to choose explicitly which tools
 #> to make available from the repo. For each selected tool,
