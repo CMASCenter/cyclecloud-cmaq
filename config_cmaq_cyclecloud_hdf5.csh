@@ -159,14 +159,14 @@
  #> I/O API, netCDF, and MPI library locations
         setenv IOAPI_INCL_DIR   $BUILD/ioapi-3.2_branch_20200828/ioapi/fixed_src   #> I/O API include header files
         setenv IOAPI_LIB_DIR    $BUILD/ioapi-3.2_branch_20200828/Linux2_x86_64gfortmpi   #> I/O API libraries
-        setenv NETCDF_LIB_DIR   $BUILD/netcdf/lib  #> netCDF C directory path
-        setenv NETCDF_INCL_DIR  $BUILD/netcdf/include  #> netCDF C directory path
-        setenv NETCDFF_LIB_DIR  $BUILD/netcdf/lib #> netCDF Fortran directory path
-        setenv NETCDFF_INCL_DIR $BUILD/netcdf/include #> netCDF Fortran directory path
+        setenv NETCDF_LIB_DIR   $BUILD/install/lib  #> netCDF C directory path
+        setenv NETCDF_INCL_DIR  $BUILD/install/include  #> netCDF C directory path
+        setenv NETCDFF_LIB_DIR  $BUILD/install/lib #> netCDF Fortran directory path
+        setenv NETCDFF_INCL_DIR $BUILD/install/include #> netCDF Fortran directory path
 
         #> I/O API and netCDF for WRF-CMAQ 
-        setenv NCDIR $BUILD/netcdf                  # C netCDF install path
-        setenv NFDIR $BUILD/netcdf           # Fortran netCDF install path for CMAQ
+        setenv NCDIR $BUILD/install                  # C netCDF install path
+        setenv NFDIR $BUILD/install                  # Fortran netCDF install path for CMAQ
 	setenv NETCDF netcdf_combined_directory_path # Note only for  WRF-CMAQ as it requires combining the netcdf C and netcdf F into a single directory. CMAQ users - don't change this setting
         setenv IOAPI $BUILD/ioapi-3.2_branch_20200828/                    # I/O API 
         setenv WRF_ARCH 34                              # [1-75] Optional, ONLY for WRF-CMAQ  
@@ -181,8 +181,8 @@
             setenv NETCDFF_INCL_DIR ${NFDIR}/include                   #> netCDF Fortran directory path
         endif 
 
-        setenv MPI_INCL_DIR     /opt/openmpi-4.1.1/include              #> MPI Include directory path
-        setenv MPI_LIB_DIR      /opt/openmpi-4.1.1/lib             #> MPI Lib directory path
+        setenv MPI_INCL_DIR     /opt/hpcx-v2.9.0-gcc-MLNX_OFED_LINUX-5.4-1.0.3.0-redhat8.4-x86_64/ompi/include              #> MPI Include directory path
+        setenv MPI_LIB_DIR      /opt/hpcx-v2.9.0-gcc-MLNX_OFED_LINUX-5.4-1.0.3.0-redhat8.4-x86_64/ompi/lib             #> MPI Lib directory path
 
         #> Compiler Aliases and Flags
         #> set the compiler flag -fopt-info-missed to generate a missed optimization report in the bldit logfile
