@@ -17,6 +17,7 @@ set echo
    setenv PDIR /shared/cyclecloud-cmaq
    cd $DIR
    git clone https://github.com/cjcoats/ioapi-3.2 ioapi-3.2_branch_20200828
+   ln -s ioapi-3.2_branch_20200828 ioapi-3.2
    cd ioapi-3.2_branch_20200828
    git checkout -b 20200828
    setenv BASEDIR $DIR/ioapi-3.2_branch_20200828
@@ -30,5 +31,5 @@ set echo
    cp $PDIR/Makeinclude.Linux2_x86_64gfortmpi $BASEDIR/ioapi/
    make HOME=$DIR |& tee make.log
    cd $BASEDIR/m3tools
-   cp $PDIR/Makefile.fix_ioapi_lib_path Makefile
+   cp $PDIR/Makefile.fix_ioapi_lib_path_hdf5 Makefile
    make HOME=$DIR

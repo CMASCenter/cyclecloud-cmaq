@@ -1,11 +1,12 @@
 #!/bin/csh -f
+# requires running in .csh shell
 set echo
 
 #  -----------------------
 #  Download and build HDF5
 #  -----------------------
-   mkdir /data/build-hdf5
-   cd /data/build-hdf5
+   mkdir /shared/build-hdf5
+   cd /shared/build-hdf5
    wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz
    tar xvf hdf5-1.10.5.tar.gz
    rm -f hdf5-1.10.5.tar.gz
@@ -14,15 +15,15 @@ set echo
    setenv FFLAGS "-O3"
    setenv CXXFLAGS "-O3"
    setenv FCFLAGS "-O3"
-   ./configure --prefix=/data/build-hdf5/install --enable-fortran --enable-cxx --enable-shared --with-pic
+   ./configure --prefix=/shared/build-hdf5/install --enable-fortran --enable-cxx --enable-shared --with-pic
    make |& tee make.gcc9.log 
 ##  make check > make.gcc9.check
    make install
 #  ---------------------------
 #  Download and build netCDF-C
 #  ---------------------------
-   setenv DIR /data/build-hdf5
-   mkdir -p /data/build-hdf5/install/bin
+   setenv DIR /shared/build-hdf5
+   mkdir -p /shared/build-hdf5/install/bin
    cd $DIR
    #wget https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-c-4.7.1.tar.gz
    #wget https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.8.1.tar.gz
@@ -38,13 +39,13 @@ set echo
    setenv LDFLAGS -L${NCDIR}/lib
 
    cd netcdf-c-4.9.0
-   ./configure --with-pic --enable-netcdf-4 --enable-shared --prefix=/data/build-hdf5/install
+   ./configure --with-pic --enable-netcdf-4 --enable-shared --prefix=/shared/build-hdf5/install
    make |& tee  make.gcc9.log
    make install
 #  ---------------------------------
 #  Download and build netCDF-Fortran
 #  ---------------------------------
-   cd /data/build-hdf5
+   cd /shared/build-hdf5
    #wget https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-fortran-4.5.2.tar.gz
 #   wget https://github.com/Unidata/netcdf-fortran/archive/refs/tags/v4.5.3.tar.gz
     wget https://github.com/Unidata/netcdf-fortran/archive/refs/tags/v4.5.4.tar.gz
@@ -57,19 +58,19 @@ set echo
    setenv CPPFLAGS -I${NCDIR}/include
    setenv LDFLAGS -L${NCDIR}/lib
    cd netcdf-fortran-4.5.4
-   ./configure --with-pic --enable-shared --prefix=/data/build-hdf5/install
+   ./configure --with-pic --enable-shared --prefix=/shared/build-hdf5/install
    make |& tee make.gcc9.log 
    make install
 #  -----------------------------
 #  Download and build netCDF-CXX
 #  -----------------------------
-#   cd /data/build-hdf5
+#   cd /shared/build-hdf5
 #   #wget https://www.unidata.ucar.edu/downloads/netcdf/ftp/netcdf-cxx4-4.3.1.tar.gz
     wget https://github.com/Unidata/netcdf-cxx4/archive/refs/tags/v4.3.1.tar.gz
 #   tar xvf v4.3.1.tar.gz
 #   #rm -f netcdf-cxx4-4.3.1.tar.gz
 #   cd netcdf-cxx4-4.3.1
-#   ./configure --with-pic --enable-shared --prefix=/data/build-hdf5/install
+#   ./configure --with-pic --enable-shared --prefix=/shared/build-hdf5/install
 #   make |& tee  make.gcc9.log
 #   make install
 #  --------------------------
@@ -84,14 +85,14 @@ set echo
 #   export FFLAGS="-O3"
 #   export CXXFLAGS="-O3"
 #   export FCFLAGS="-O3"
-#   ./configure --prefix=/data/build-hdf5/install --enable-mpi-cxx
+#   ./configure --prefix=/shared/build-hdf5/install --enable-mpi-cxx
 #   make |& tee make.gcc9.log
 ##  make check > make.gcc9.check
 #   make install
 #  ----------------------------------
 #  Download and build Parallel netCDF
 #  ----------------------------------
-   setenv DIR /data/build-hdf5
+   setenv DIR /shared/build-hdf5
    cd $DIR
    wget https://parallel-netcdf.github.io/Release/pnetcdf-1.12.1.tar.gz
    tar xvf pnetcdf-1.12.1.tar.gz
@@ -105,7 +106,7 @@ set echo
    setenv CPPFLAGS -I${NCDIR}/include
    setenv LDFLAGS -L${NCDIR}/lib
    setenv LIBS "-lnetcdf"
-   ./configure --prefix=/data/build-hdf5/install MPIF77=mpif90 MPIF90=mpif90 MPICC=mpicc MPICXX=mpicxx --with-mpi=/opt/hpcx-v2.9.0-gcc-MLNX_OFED_LINUX-5.4-1.0.3.0-redhat8.4-x86_64/ompi
+   ./configure --prefix=/shared/build-hdf5/install MPIF77=mpif90 MPIF90=mpif90 MPICC=mpicc MPICXX=mpicxx --with-mpi=/opt/hpcx-v2.9.0-gcc-MLNX_OFED_LINUX-5.4-1.0.3.0-redhat8.4-x86_64/ompi
    make |& tee make.gcc9.log
    make install
 #  ----------------------------------------
@@ -133,8 +134,8 @@ set echo
 #   ln -s vim vi
 
 # install test
-   cd /data/build-hdf5/install/bin
+   cd /shared/build-hdf5/install/bin
    whereis h5diff
-   nc-config --version
-   nf-config --version
-   ncxx4-config --version
+   ./nc-config --version
+   ./nf-config --version
+   #./ncxx4-config --version
