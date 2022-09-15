@@ -19,7 +19,7 @@ cp $CLUSTER/bldit_project_v533_cyclecloud.csh /shared/build/CMAQ_REPO_v533
 ./bldit_project_v533_cyclecloud.csh
 module load mpi/hpcx-v2.9.0 
 cd $BUILD/hpcx_gcc/CMAQ_v533/CCTM/scripts/
-cp $CLUSTER/config_cmaq_cyclecloud.csh ../../config_cmaq.csh
+cp $CLUSTER/config_cmaq_cyclecloud_hpcx.csh ../../config_cmaq.csh
 ./bldit_cctm.csh gcc |& tee ./bldit_cctm.log
 cp $CLUSTER/run_scripts/HB120v3_pin_testing/data.build.hpcx_gcc/*shared.csh $BUILD/hpcx_gcc/CMAQ_v533/CCTM/scripts/
 cd $BUILD/hpcx_gcc/CMAQ_v533/CCTM/scripts/
