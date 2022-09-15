@@ -34,8 +34,8 @@ E132 = -ffixed-line-length-132
 
 MFLAGS    = -ffast-math -funroll-loops -m64  #  -Wall -Wsurprising -march=native -mtune=native
 
-#OMPFLAGS  = -fopenmp
-#OMPLIBS   = -fopenmp
+#OMPFLAGS  = 
+#OMPLIBS   = 
 COPTFLAGS = -O3 ${MFLAGS}
 FOPTFLAGS = -O3 ${MFLAGS}
 FPPFLAGS  = -DF90=1 -DIOAPI_PNCF=1
