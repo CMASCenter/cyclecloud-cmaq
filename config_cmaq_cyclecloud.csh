@@ -108,7 +108,7 @@
         setenv myCC icc       
         setenv myFSTD "-O3 -fno-alias -mp1 -fp-model source -ftz -simd -align all -xHost -vec-guard-write -unroll-aggressive"
         setenv myDBG  "-O0 -g -check bounds -check uninit -fpe0 -fno-alias -ftrapuv -traceback"
-        setenv myLINK_FLAG     -qopenmp # openMP may be required if I/O API was built using this link flag.
+        setenv myLINK_FLAG   #  -qopenmp # openMP may be required if I/O API was built using this link flag.
         setenv myFFLAGS "-fixed -132"
         setenv myFRFLAGS "-free"
         setenv myCFLAGS "-O2"
@@ -193,7 +193,7 @@
         setenv myFFLAGS "-ffixed-form -ffixed-line-length-132 -funroll-loops -finit-character=32"
         setenv myFRFLAGS "-ffree-form -ffree-line-length-none -funroll-loops -finit-character=32"
         setenv myCFLAGS "-O2"
-        setenv myLINK_FLAG  "-fopenmp"  # openMP may be required if I/O API was built using this link flag. 
+        setenv myLINK_FLAG # "-fopenmp"  # openMP may be required if I/O API was built using this link flag. 
         setenv extra_lib ""
     
         breaksw
