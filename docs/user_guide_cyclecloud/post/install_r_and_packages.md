@@ -68,6 +68,10 @@ Run command to install ncdf4 package
 
 `sudo R CMD INSTALL ncdf4_1.13.tar.gz --configure-args="--with-nc-config=/shared/build-hdf5/install/bin/nc-config"`
 
+or to install to local directory
+
+`R CMD INSTALL ncdf4_1.13.tar.gz --configure-args="--with-nc-config=/shared/build-hdf5/install/bin/nc-config" -l "/shared/build/R_libs"`
+
 
 Install additional packages as root so that all users will have access.
 
