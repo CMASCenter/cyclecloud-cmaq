@@ -59,9 +59,9 @@ for( comp in Compilers) {
    #my.colors <- terrain.colors(length(n.proc))
    my.colors <- brewer.pal(11, "Paired")
    xmax <- dim(bar.data)[2]*1.5
-   png(file = paste(comp,'_288_',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
+   png(file = paste('288_',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing on 288pes, 96x3, 16x18',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax),ylim = c(0.,5300.))
+   barplot(bar.data, main = 'Process Timing on 288pes, 96x3, 16x18',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax),ylim = c(0.,5600.))
    box()
    dev.off()
    totals <- apply(bar.data,c(2),sum) 

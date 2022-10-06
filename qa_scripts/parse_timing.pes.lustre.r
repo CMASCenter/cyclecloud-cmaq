@@ -63,7 +63,7 @@ for( comp in Compilers) {
    xmax <- dim(bar.data)[2]*1.5
    png(file = paste(comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing on /lustre using 96 cpus/node on HBv3 120',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax),ylim = c(0.,5300.))
+   barplot(bar.data, main = 'Process Timing on /lustre using 96 cpus/node on HBv3 120',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax),ylim = c(0.,5600.))
    box()
    dev.off()
    totals <- apply(bar.data,c(2),sum) 
