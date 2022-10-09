@@ -283,14 +283,17 @@ Scheduler node D12v2 compute cost = entire time that the CycleCloud HPC Cluster 
 
 Using 360 cpus on the Cycle Cloud Cluster, it would take ~6.11 days to run a full year, using 3 HBv3-120 compute nodes.
 
-Table 5. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
+Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation based on 2 day CONUS2 benchmark
 
-| Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation                 |  
-| -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    |
-| 2 day CONUS    |  360          |  HBv3-120  |        3       |    SPOT    |    1.4/hour |     2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $1.4 = $617.4 |
-| 2 day CONUS    |  360          |  HBv3-120  |        3       |  ONDEMAND  |    3.6/hour   | 2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $3.6 = $1,587.6 |
-| 2 day CONUS    |  180          |  HC44RS    |        5       |    SPOT    |    .3168/hour |     3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $.3168  = $301 |
-| 2 day CONUS    |  180          |  HC44RS    |        5       |  ONDEMAND  |    3.168/hour   | 3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $3.168 = $3,009 |
+| Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pinning | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation  | Days to Complete Annual Simulation |  
+| -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    | ---- |
+| 2 day CONUS    |  360          |  HBv3-120  |        3       |    SPOT    |  No |   1.4/hour |     2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $1.4 = $617.4 | 6.12 |
+| 2 day CONUS    |  360          |  HBv3-120  |        3       |  ONDEMAND  | No |    3.6/hour   | 2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $3.6 = $1,587.6 | 6.12 | 
+| 2 day CONUS    |  192          |  HBv3-120  |        2       |    SPOT    | Yes |    1.4/hour   | 2326.28/3600 = .646   |    .646/2 * 365 = 117.0 hours/node * 2 nodes = 235.8 * $1.4 = $330.12 | 4.87 |
+| 2 day CONUS    |  192          |  HBv3-120  |        2       |  ONDEMAND  | Yes |    3.6/hour   | 2326.28/3600 = .646   |    .646/2 * 365 = 117.0 hours/node * 2 nodes = 235.8 * $3.6 = $848.8 | 4.87 | 
+| 2 day CONUS    |  180          |  HC44RS    |        5       |    SPOT    | No |   .3168/hour |     3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $.3168  = $301 | 
+| 2 day CONUS    |  180          |  HC44RS    |        5       |  ONDEMAND  | No |   3.168/hour   | 3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $3.168 = $3,009 |
+
 
 (note, this assumes using 3 nodes versus 8 nodes)
 
@@ -299,7 +302,7 @@ Table 5. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation bas
 <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Azure SSD Disk Pricing</a>
 
 
-Table 6. Shared SSD File System Pricing
+Table 7. Shared SSD File System Pricing
 
 | Storage Type | Storage options   | 	Max IOPS (Max IOPS w/ bursting)	| Pricing (monthly)  |  Pricing | Price per mount per month (Shared Disk) |
 | --------     | ----------------  |   ------------------------------------    | -----------------  |  ---------------  | ------  |
@@ -307,7 +310,7 @@ Table 6. Shared SSD File System Pricing
 
 
 
-Table 7. Extrapolated Cost of File system for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
+Table 8. Extrapolated Cost of File system for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
 
 
 Need to create table
