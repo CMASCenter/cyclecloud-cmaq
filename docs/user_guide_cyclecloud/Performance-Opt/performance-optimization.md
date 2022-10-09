@@ -285,19 +285,17 @@ Using 360 cpus on the Cycle Cloud Cluster, it would take ~6.11 days to run a ful
 
 Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation based on 2 day CONUS2 benchmark
 
-| Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pinning | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation  | Days to Complete Annual Simulation |  
-| -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    | ---- | --- |
-| 2 day CONUS    |  360          |  HBv3-120  |        3       |    SPOT    |  No |   1.4/hour |     2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $1.4 = $617.4 | 18.4 |
-| 2 day CONUS    |  360          |  HBv3-120  |        3       |  ONDEMAND  | No |    3.6/hour   | 2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $3.6 = $1,587.6 | 18.4 | 
-| 2 day CONUS    |   96          |  HBv3-120  |        1       |  ONDEMAND  | Yes |    1.4/hour   | 5221.58/3600 = 1.45   |    1.45/2 * 365 = 264.7 hours/node * 1 node = 264.7 * $1.4 = $370.6 | 11.03 |
-| 2 day CONUS    |   96          |  HBv3-120  |        1       |  ONDEMAND  | Yes |    3.6/hour   | 5221.58/3600 = 1.45   |    1.45/2 * 365 = 264.7 hours/node * 1 node = 264.7 * $3.6 = $952.9 | 11.03 | 
-| 2 day CONUS    |  192          |  HBv3-120  |        2       |    SPOT    | Yes |    1.4/hour   | 2831.23/3600 = .786   |    .786/2 * 365 = 143.5 hours/node * 2 nodes = 287.1 * $1.4 = $401.9 | 4.87 |
-| 2 day CONUS    |  192          |  HBv3-120  |        2       |  ONDEMAND  | Yes |    3.6/hour   | 2831.23/3600 = .786   |    .786/2 * 365 = 143.5 hours/node * 2 nodes = 287.1 * $3.6 = $1033.3 | 4.87 | 
-| 2 day CONUS    |  180          |  HC44RS    |        5       |    SPOT    | No |   .3168/hour |     3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $.3168  = $301 | 39.5 |
-| 2 day CONUS    |  180          |  HC44RS    |        5       |  ONDEMAND  | No |   3.168/hour   | 3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $3.168 = $3,009 | 39.5 |
+| Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pinning | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation  | Annual Cost | Days to Complete Annual Simulation |  
+| -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    | --- | ---- | --- |
+| 2 day CONUS    |  360          |  HBv3-120  |        3       |    SPOT    |  No |   1.4/hour |     2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $1.4 = | $617.4 | 18.4 |
+| 2 day CONUS    |  360          |  HBv3-120  |        3       |  ONDEMAND  | No |    3.6/hour   | 2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $3.6 =   | $1,587.6 | 18.4 | 
+| 2 day CONUS    |   96          |  HBv3-120  |        1       |    SPOT    | Yes |    1.4/hour   | 5221.58/3600 = 1.45   |    1.45/2 * 365 = 264.7 hours/node * 1 node = 264.7 * $1.4 = | $370.6 | 11.03 |
+| 2 day CONUS    |   96          |  HBv3-120  |        1       |  ONDEMAND  | Yes |    3.6/hour   | 5221.58/3600 = 1.45   |    1.45/2 * 365 = 264.7 hours/node * 1 node = 264.7 * $3.6 = | $952.9 | 11.03 | 
+| 2 day CONUS    |  192          |  HBv3-120  |        2       |    SPOT    | Yes |    1.4/hour   | 2831.23/3600 = .786   |    .786/2 * 365 = 143.5 hours/node * 2 nodes = 287.1 * $1.4 = |  $401.9 | 4.87 |
+| 2 day CONUS    |  192          |  HBv3-120  |        2       |  ONDEMAND  | Yes |    3.6/hour   | 2831.23/3600 = .786   |    .786/2 * 365 = 143.5 hours/node * 2 nodes = 287.1 * $3.6 = |  $1033.3 | 4.87 | 
+| 2 day CONUS    |  180          |  HC44RS    |        5       |    SPOT    | No |   .3168/hour |     3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $.3168  = |  $301 | 39.5 |
+| 2 day CONUS    |  180          |  HC44RS    |        5       |  ONDEMAND  | No |   3.168/hour   | 3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $3.168 = | $3,009 | 39.5 |
 
-
-(note, this assumes using 3 nodes versus 8 nodes)
 
 
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared">Azure SSD Disk Pricing</a>
