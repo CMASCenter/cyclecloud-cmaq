@@ -153,7 +153,7 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 Table 4. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /lustre 
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
-| ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- |
+| ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
 | 96  | 1   |   1x96   |    12x8        | 3053.34       | 2753.47  |   5806.81  | 1.61  |  no  |     $.8065/hr * 1 nodes * $? = | $? | .8065/hr * 1 nodes * 3.6 = | 2.90   | no | shared | yes |
 | 96  | 1   |   1x96   |    12x8        | 2637.54       | 2282.20  |   4919.74  | 1.36  |  no  |     $.683/hr * 1 nodes * $? = | $? | .883/hr * 1 nodes * 3.6 = | 2.46   | no | data | yes |
 | 96  | 1   |   1x96   |    12x8        | 2507.99       | 2713.59  |   5221.58  | 1.45  |  no  |     $.725/hr * 1 nodes * $? = | $? | .725/hr * 1 nodes * 3.6 = | 2.61   | no | lustre | yes |
