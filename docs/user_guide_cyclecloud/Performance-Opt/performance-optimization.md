@@ -286,7 +286,7 @@ Using 360 cpus on the Cycle Cloud Cluster, it would take ~6.11 days to run a ful
 Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation based on 2 day CONUS2 benchmark
 
 | Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pinning | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation  | Days to Complete Annual Simulation |  
-| -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    | ---- |
+| -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    | ---- | --- |
 | 2 day CONUS    |  360          |  HBv3-120  |        3       |    SPOT    |  No |   1.4/hour |     2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $1.4 = $617.4 | 18.4 |
 | 2 day CONUS    |  360          |  HBv3-120  |        3       |  ONDEMAND  | No |    3.6/hour   | 2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $3.6 = $1,587.6 | 18.4 | 
 | 2 day CONUS    |   96          |  HBv3-120  |        1       |  ONDEMAND  | Yes |    1.4/hour   | 5221.58/3600 = 1.45   |    1.45/2 * 365 = 264.7 hours/node * 1 node = 264.7 * $1.4 = $370.6 | 11.03 |
