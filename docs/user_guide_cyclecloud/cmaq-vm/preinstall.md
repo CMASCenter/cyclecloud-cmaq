@@ -176,6 +176,24 @@ mkdir data
 mkdir cyclecloud-cmaq
 ```
 
+## Alternatively, you can create an nvme stripped disk that has faster performance.
+
+```
+mkdir -p /mnt/nvme
+
+mdadm --create /dev/md10 --level 0 --raid-devices 2 /dev/nvme0n1 /dev/nvme1n1
+
+mkfs.xfs /dev/md10
+
+mount /dev/md10 /mnt/nvme
+
+chmod 1777 /mnt/nvme
+
+```
+
+That should create a file system with about 1.8TiB
+
+
 
 ## Obtain the Cyclecloud-cmaq code from github
 
