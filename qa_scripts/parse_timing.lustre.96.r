@@ -5,16 +5,16 @@
 library(RColorBrewer)
 sens.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
 base.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
-files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.lustre.codemod.nopin.redo.log')
+files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.lustre.epacode.nopin.log')
 #b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.shared.codemod.nopin.redo.log')
-b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.lustre.codemod.pin.ccc.log')
+b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.lustre.epacode.pin.log')
 #Compilers <- c('intel','gcc','pgi')
 Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
 # The project directory name is used for the sensitivity case. 
 #base.name <- c('data_pin','lustre_pin','shared_pin')
-base.name <- c('lustre_pin')
-sens.name <- c('lustre_nopin')
+base.name <- c('96_lustre_pin')
+sens.name <- c('96_lustre_nopin')
 # ------------- Do not change below unless modifying for a different workflow ---------------------
 # compilers being considered
 #Compilers <- c('intel','gcc','pgi')

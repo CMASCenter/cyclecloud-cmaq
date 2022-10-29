@@ -3,18 +3,20 @@
 # This script assumes that the log files are located in ./CCTM/scripts as output by the CMAQ run script 
 # These are the single output files, not the CTM_LOG files found in the $OUTDIR/LOGS directory
 library(RColorBrewer)
+#sens.dir  <- '/shared/cyclecloud-cmaq/run_scripts/HB120v3_singleVM/'
 sens.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
 base.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
-files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.lustre.codemod.nopin.redo.log')
-#b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.shared.codemod.nopin.redo.log')
-b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.lustre.codemod.pin.ccc.log')
+#files   <- dir(sens.dir, pattern ='run_cctm_2016_12US2.96pe.1x96.cyclecloud.nvme.pin.log')
+files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.shared.codemod.pin.log')
+#b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.shared.codemod.nopin.redo.log')
+b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.data.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.lustre.codemod.pin.log','run_cctm_2016_12US2.96pe.1x96.cyclecloud.nvme.pin.log')
 #Compilers <- c('intel','gcc','pgi')
 Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
 # The project directory name is used for the sensitivity case. 
 #base.name <- c('data_pin','lustre_pin','shared_pin')
-base.name <- c('lustre_pin')
-sens.name <- c('lustre_nopin')
+base.name <- c('data_pin','lustre_pin','nvme_pin')
+sens.name <- c('shared_pin')
 # ------------- Do not change below unless modifying for a different workflow ---------------------
 # compilers being considered
 #Compilers <- c('intel','gcc','pgi')
@@ -59,9 +61,9 @@ for( comp in Compilers) {
    my.colors <- brewer.pal(11, "Paired")
    #my.colors <- terrain.colors(length(n.proc))
    xmax <- dim(bar.data)[2]*1.5
-   png(file = paste(comp,'_',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-  # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax))
+   png(file = paste('96_',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
+  # png(file = paste(comp,'_96_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
+   barplot(bar.data, main = 'Process Timing on 96pes, 96x1, 12x8',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax),ylim = c(0.,5600.))
    box()
    dev.off()
    totals <- apply(bar.data,c(2),sum) 
