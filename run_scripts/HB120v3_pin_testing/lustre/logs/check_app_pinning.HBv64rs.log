@@ -1,0 +1,171 @@
+Start Model Run At  Thu Oct 6 16:33:15 UTC 2022
+information about processor including whether using hyperthreading
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              64
+On-line CPU(s) list: 0-63
+Thread(s) per core:  1
+Core(s) per socket:  32
+Socket(s):           2
+NUMA node(s):        4
+Vendor ID:           AuthenticAMD
+CPU family:          25
+Model:               1
+Model name:          AMD EPYC 7V73X 64-Core Processor
+Stepping:            2
+CPU MHz:             1846.556
+BogoMIPS:            3693.11
+Hypervisor vendor:   Microsoft
+Virtualization type: full
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            512K
+L3 cache:            98304K
+NUMA node0 CPU(s):   0-15
+NUMA node1 CPU(s):   16-31
+NUMA node2 CPU(s):   32-47
+NUMA node3 CPU(s):   48-63
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr arat umip vaes vpclmulqdq rdpid
+information about cluster
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+hpc*         up   infinite      7  idle# cyclecloudlizadams-hpc-pg0-[4-10]
+hpc*         up   infinite      7  idle~ cyclecloudlizadams-hpc-pg0-[1-2],cyclecloudlizadams-hpc-pg1-[1-5]
+hpc*         up   infinite      1  alloc cyclecloudlizadams-hpc-pg0-3
+htc          up   infinite      5  idle~ cyclecloudlizadams-htc-[1-5]
+information about filesystem
+Filesystem                        Size  Used Avail Use% Mounted on
+devtmpfs                          221G     0  221G   0% /dev
+tmpfs                             221G     0  221G   0% /dev/shm
+tmpfs                             221G   17M  221G   1% /run
+tmpfs                             221G     0  221G   0% /sys/fs/cgroup
+/dev/sda2                          30G   12G   18G  39% /
+/dev/sda1                         495M  196M  299M  40% /boot
+/dev/sda15                        495M  5.8M  489M   2% /boot/efi
+/dev/sdb1                         472G   73M  448G   1% /mnt
+10.2.0.8@tcp:/lustrefs             93T  687G   88T   1% /lustre
+10.2.0.101:/cmasstorage/cmaqdata  1.0T  682G  343G  67% /data
+10.2.0.5:/sched                    30G  247M   30G   1% /sched
+10.2.0.5:/shared                 1000G  481G  520G  49% /shared
+list the mounted volumes
+clnt_create: RPC: Program not registered
+Last metadata expiration check: 0:16:24 ago on Thu 06 Oct 2022 04:16:51 PM UTC.
+Package python36-3.6.8-38.module_el8.5.0+2569+5c5719bc.x86_64 is already installed.
+Package hwloc-2.2.0-3.el8.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+
+
+
+
+Virtual Machine (Standard_HB120-64rs_v3, cyclecloudlizadams-hpc-pg0-3) Numa topology
+
+NumaNode id  Core ids              GPU ids   
+============ ==================== ==========
+0            ['0-15']             []        
+1            ['16-31']            []        
+2            ['32-47']            []        
+3            ['48-63']            []        
+
+L3Cache id   Core ids            
+============ ====================
+0            ['0-3']             
+1            ['4-7']             
+2            ['8-11']            
+3            ['12-15']           
+4            ['16-19']           
+5            ['20-23']           
+6            ['24-27']           
+7            ['28-31']           
+8            ['32-35']           
+9            ['36-39']           
+10           ['40-43']           
+11           ['44-47']           
+12           ['48-51']           
+13           ['52-55']           
+14           ['56-59']           
+15           ['60-63']           
+
+
+Process/thread openmpi MPI mapping/pinning syntax for total 64 processes ( 64 processes per VM and 1 threads per process)
+
+-np 64 --bind-to cpulist:ordered --cpu-list 0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,2,6,10,14,18,22,26,30,34,38,42,46,50,54,58,62,3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63
+
+
+
+
+
+
+Virtual Machine (Standard_HB120-64rs_v3, cyclecloudlizadams-hpc-pg0-3) Numa topology
+
+NumaNode id  Core ids              GPU ids   
+============ ==================== ==========
+0            ['0-15']             []        
+1            ['16-31']            []        
+2            ['32-47']            []        
+3            ['48-63']            []        
+
+L3Cache id   Core ids            
+============ ====================
+0            ['0-3']             
+1            ['4-7']             
+2            ['8-11']            
+3            ['12-15']           
+4            ['16-19']           
+5            ['20-23']           
+6            ['24-27']           
+7            ['28-31']           
+8            ['32-35']           
+9            ['36-39']           
+10           ['40-43']           
+11           ['44-47']           
+12           ['48-51']           
+13           ['52-55']           
+14           ['56-59']           
+15           ['60-63']           
+
+
+Process/thread openmpi MPI mapping/pinning syntax for total 32 processes ( 32 processes per VM and 1 threads per process)
+
+-np 32 --bind-to l3cache --map-by ppr:8:numa
+
+
+
+
+
+
+Virtual Machine (Standard_HB120-64rs_v3, cyclecloudlizadams-hpc-pg0-3) Numa topology
+
+NumaNode id  Core ids              GPU ids   
+============ ==================== ==========
+0            ['0-15']             []        
+1            ['16-31']            []        
+2            ['32-47']            []        
+3            ['48-63']            []        
+
+L3Cache id   Core ids            
+============ ====================
+0            ['0-3']             
+1            ['4-7']             
+2            ['8-11']            
+3            ['12-15']           
+4            ['16-19']           
+5            ['20-23']           
+6            ['24-27']           
+7            ['28-31']           
+8            ['32-35']           
+9            ['36-39']           
+10           ['40-43']           
+11           ['44-47']           
+12           ['48-51']           
+13           ['52-55']           
+14           ['56-59']           
+15           ['60-63']           
+
+
+Process/thread openmpi MPI mapping/pinning syntax for total 16 processes ( 16 processes per VM and 1 threads per process)
+
+-np 16 --bind-to l3cache --map-by ppr:4:numa
+
+

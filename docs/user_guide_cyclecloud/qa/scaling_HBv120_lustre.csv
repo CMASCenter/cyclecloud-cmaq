@@ -1,0 +1,19 @@
+CPUs	Nodes	Nodes_CPU	COLROW	Day1 Timing (sec)	Day2 Timing (sec)	TotalTime	CPU Hours/day	SBATCHexclusive	Equation using Spot Pricing	SpotCost	Equation using On Demand Pricing	OnDemandCost	compiler flag	InputData	Pinning
+96	1	1x96	12x8	3053.34	2753.47	5806.81	1.61	no	$.8065/hr * 1 nodes * $? =	$?	.8065/hr * 1 nodes * 3.6 =	2.9	no	shared	yes
+96	1	1x96	12x8	2637.54	2282.2	4919.74	1.36	no	$.683/hr * 1 nodes * $? =	$?	.883/hr * 1 nodes * 3.6 =	2.46	no	data	yes
+96	1	1x96	12x8	2507.99	2713.59	5221.58	1.45	no	$.725/hr * 1 nodes * $? =	$?	.725/hr * 1 nodes * 3.6 =	2.61	no	lustre	yes
+192	2	2x96	16x12	2066.07	1938.85	4004.92	1.11	no	$.556/hr * 2 nodes * $?	$?	.556/hr * 2 nodes * 3.6 =	4	no	shared	yes
+192	2	2x96	16x12	1608.48	1451.76	3060.24	0.85	no	$.425/hr * 2 nodes * $?	$?	.425/hr * 2 nodes * 3.6 =	3.06	no	data	yes
+192	2	2x96	16x12	1481.03	1350.2	2831.23	0.786	no	$.393/hr * 2 nodes * $?	$?	.393/hr * 2 nodes * 3.6 =	2.83	no	lustre	yes
+288	3	3x96	16x18	1861.91	1783.59	3645.5	1.01	no	$.506/hr * 3 nodes * $? =	$?	.506/hr * 3 nodes * 3.6 =	5.46	no	shared	yes
+288	3	3x96	16x18	1295.17	1182.85	2478.02	0.688	no	$.344/hr * 3 nodes * $? =	$?	.344/hr * 3 nodes * 3.6 =	3.78	no	data	yes
+288	3	3x96	16x18	1239.03	1127.45	2366.48	0.657	no	$.328/hr * 3 nodes * $? =	$?	.328/hr * 3 nodes * 3.6 =	3.61	no	lustre	yes
+384	4	4x96	24x16	1670.79	1595.9	3266.69	0.907	no	$.454/hr * 4 nodes * $? =	$?	.453/hr * 4 nodes * 3.6 =	6.53	no	shared	yes
+384	4	4x96	24x16	1095.16	1012.95	2108.11	0.586	no	$.292/hr * 4 nodes * $? =	$?	.292/hr * 4 nodes * 3.6 =	4.21	no	data	yes
+384	4	4x96	24x16	962.67	877.46	1840.13	0.511	no	$.256/hr * 4 nodes * $? =	$?	.256/hr * 4 nodes * 3.6 =	3.68	no	lustre	yes
+480	5	5x96	24x20	1611.79	1526.82	3138.61	0.872	no	$.436/hr * 5 nodes * $? =	$?	.436/hr * 5 nodes * 3.6 =	7.85	no	shared	yes
+480	5	5x96	24x20	1012.48	928.06	1940.54	0.539	no	$.269/hr * 5 nodes * $? =	$?	.269/hr * 5 nodes * 3.6 =	4.85	no	data	yes
+480	5	5x96	24x20	982.11	885.5	1867.61	0.519	no	$.259/hr * 5 nodes * $? =	$?	.259/hr * 5 nodes * 3.6 =	4.67	no	lustre	yes
+576	6	6x96	24x24	1508.85	1444.12	2952.97	0.82	no	$.41/hr * 6 nodes * $? =	$?	.41/hr * 6 nodes * 3.6 =	8.86	no	shared	yes
+576	6	6x96	24x24	1034.74	944.49	1979.23	0.549	no	$.274/hr * 6 nodes * $? =	$?	.274/hr * 6 nodes * 3.6 =	5.94	no	data	yes
+576	6	6x96	24x24	950.89	863.18	1814.07	0.504	no	$.252/hr * 6 nodes * $? =	$?	.252/hr * 6 nodes * 3.6 =	5.44	no	lustre	yes

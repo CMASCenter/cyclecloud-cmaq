@@ -150,7 +150,36 @@ Table 3. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v
 | 960 |  8  |  8x120    | 30x32              | 1189.21              |  1065.73             |   2254.94   | .313   |  no | $1.4/hr * 8 nodes * .626 = | 7.01  | 3.6/hr * 8 nodes * .626 = | 18.0   | with -march=native compiler flag | /data | 1846.533  | no |
 
 
-Table 4. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
+Table 4. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /lustre 
+
+| CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
+| ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
+| 96  | 1   |   1x96   |    12x8        | 3053.34       | 2753.47  |   5806.81  | 1.61  |  no  |     $.8065/hr * 1 nodes * $? = | $? | .8065/hr * 1 nodes * 3.6 = | 2.90   | no | shared | yes |
+| 96  | 1   |   1x96   |    12x8        | 2637.54       | 2282.20  |   4919.74  | 1.36  |  no  |     $.683/hr * 1 nodes * $? = | $? | .883/hr * 1 nodes * 3.6 = | 2.46   | no | data | yes |
+| 96  | 1   |   1x96   |    12x8        | 2507.99       | 2713.59  |   5221.58  | 1.45  |  no  |     $.725/hr * 1 nodes * $? = | $? | .725/hr * 1 nodes * 3.6 = | 2.61   | no | lustre | yes |
+| 192 | 2   |   2x96   |    16x12       | 2066.07       | 1938.85  | 4004.92    | 1.11  | no   |     $.556/hr * 2 nodes * $?   | $? | .556/hr * 2 nodes * 3.6 = | 4.00   | no | shared | yes |
+| 192 | 2   |   2x96   |    16x12       | 1608.48       | 1451.76  | 3060.24    | .850  | no   |     $.425/hr * 2 nodes * $?   | $? | .425/hr * 2 nodes * 3.6 = | 3.06   | no | data | yes |
+| 192 | 2   |   2x96   |    16x12       | 1481.03       | 1350.2  | 2831.23    | 0.786  | no   |     $.393/hr * 2 nodes * $?   | $? | .393/hr * 2 nodes * 3.6 = | 2.83   | no | lustre | yes |
+| 288 | 3   |   3x96   |    16x18       | 1861.91       | 1783.59  | 3645.50    | 1.01  | no   |     $.506/hr * 3 nodes * $? = | $? | .506/hr * 3 nodes * 3.6 = | 5.46   | no | shared | yes |
+| 288 | 3   |   3x96   |    16x18       | 1295.17       | 1182.85  | 2478.02    | .688  | no   |     $.344/hr * 3 nodes * $? = | $? | .344/hr * 3 nodes * 3.6 = | 3.78   | no | data | yes |
+| 288 | 3   |   3x96   |    16x18       | 1239.03       | 1127.45  | 2366.48    | .657  | no   |     $.328/hr * 3 nodes * $? = | $? | .328/hr * 3 nodes * 3.6 = | 3.61   | no | data | yes |
+| 384 | 4   |   4x96   |    24x16       | 1670.79       | 1595.90  | 3266.69    | .907  | no   |     $.454/hr * 4 nodes * $? = | $? | .453/hr * 4 nodes * 3.6 = | 6.53   | no | shared | yes |
+| 384 | 4   |   4x96   |    24x16       | 1095.16       | 1012.95  | 2108.11    | .586  | no   |     $.292/hr * 4 nodes * $? = | $? | .292/hr * 4 nodes * 3.6 = | 4.21   | no | data | yes |
+| 384 | 4   |   4x96   |    24x16       | 962.67       | 877.46  | 1840.13    | .511  | no   |     $.256/hr * 4 nodes * $? = | $? | .256/hr * 4 nodes * 3.6 = | 3.68   | no | lustre | yes |
+| 480 | 5   |   5x96   |    24x20       | 1611.79      | 1526.82 | 3138.61    | .872  | no     |   $.436/hr * 5 nodes * $? = | $? | .436/hr * 5 nodes * 3.6 = | 7.85   | no | shared | yes |
+| 480 | 5   |   5x96   |    24x20       | 1012.48      | 928.06 | 1940.54    | .539  | no     |   $.269/hr * 5 nodes * $? = | $? | .269/hr * 5 nodes * 3.6 = | 4.85   | no | data | yes |
+| 480 | 5   |   5x96   |    24x20       | 982.11      | 885.50 | 1867.61    | .519  | no     |   $.259/hr * 5 nodes * $? = | $? | .259/hr * 5 nodes * 3.6 = | 4.67  | no | lustre | yes |
+| 576 | 6   |   6x96   |    24x24       | 1508.85     | 1444.12 | 2952.97   | .820  | no     |   $.41/hr * 6 nodes * $? =  | $? | .41/hr * 6 nodes * 3.6 = | 8.86   | no | shared | yes |
+| 576 | 6   |   6x96   |    24x24       | 1034.74     | 944.49 | 1979.23   | .549  | no     |   $.274/hr * 6 nodes * $? =  | $? | .274/hr * 6 nodes * 3.6 = | 5.94   | no | data | yes |
+| 576 | 6   |   6x96   |    24x24       | 950.89     | 863.18 | 1814.07   | .504  | no     |   $.252/hr * 6 nodes * $? =  | $? | .252/hr * 6 nodes * 3.6 = | 5.44   | no | lustre | yes |
+
+
+
+
+
+
+
+Table 5. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedular node and HC44RS Compute Nodes (44 cpus per node)
 
 Note, the CPU Mhz values are reported in the table below.
 
@@ -254,23 +283,26 @@ Scheduler node D12v2 compute cost = entire time that the CycleCloud HPC Cluster 
 
 Using 360 cpus on the Cycle Cloud Cluster, it would take ~6.11 days to run a full year, using 3 HBv3-120 compute nodes.
 
-Table 5. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
+Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.3.3 Annual Simulation based on 2 day CONUS2 benchmark
 
-| Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation                 |  
-| -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    |
-| 2 day CONUS    |  360          |  HBv3-120  |        3       |    SPOT    |    1.4/hour |     2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $1.4 = $617.4 |
-| 2 day CONUS    |  360          |  HBv3-120  |        3       |  ONDEMAND  |    3.6/hour   | 2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $3.6 = $1,587.6 |
-| 2 day CONUS    |  180          |  HC44RS    |        5       |    SPOT    |    .3168/hour |     3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $.3168  = $301 |
-| 2 day CONUS    |  180          |  HC44RS    |        5       |  ONDEMAND  |    3.168/hour   | 3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $3.168 = $3,009 |
+| Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pinning | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation  | Annual Cost | Days to Complete Annual Simulation |  
+| -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    | --- | ---- | --- |
+| 2 day CONUS    |  360          |  HBv3-120  |        3       |    SPOT    |  No |   1.4/hour |     2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $1.4 = | $617.4 | 18.4 |
+| 2 day CONUS    |  360          |  HBv3-120  |        3       |  ONDEMAND  | No |    3.6/hour   | 2895.83/3600 = .8044  |    .8044/2 * 365 = 147 hours/node * 3 nodes = 441 * $3.6 =   | $1,587.6 | 18.4 | 
+| 2 day CONUS    |   96          |  HBv3-120  |        1       |    SPOT    | Yes |    1.4/hour   | 5221.58/3600 = 1.45   |    1.45/2 * 365 = 264.7 hours/node * 1 node = 264.7 * $1.4 = | $370.6 | 11.03 |
+| 2 day CONUS    |   96          |  HBv3-120  |        1       |  ONDEMAND  | Yes |    3.6/hour   | 5221.58/3600 = 1.45   |    1.45/2 * 365 = 264.7 hours/node * 1 node = 264.7 * $3.6 = | $952.9 | 11.03 | 
+| 2 day CONUS    |  192          |  HBv3-120  |        2       |    SPOT    | Yes |    1.4/hour   | 2831.23/3600 = .786   |    .786/2 * 365 = 143.5 hours/node * 2 nodes = 287.1 * $1.4 = |  $401.9 | 4.87 |
+| 2 day CONUS    |  192          |  HBv3-120  |        2       |  ONDEMAND  | Yes |    3.6/hour   | 2831.23/3600 = .786   |    .786/2 * 365 = 143.5 hours/node * 2 nodes = 287.1 * $3.6 = |  $1033.3 | 4.87 | 
+| 2 day CONUS    |  180          |  HC44RS    |        5       |    SPOT    | No |   .3168/hour |     3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $.3168  = |  $301 | 39.5 |
+| 2 day CONUS    |  180          |  HC44RS    |        5       |  ONDEMAND  | No |   3.168/hour   | 3928.99/3600 = 1.09  |    1.09/2 * 365 = 190 hours/node * 5 nodes = 950 * $3.168 = | $3,009 | 39.5 |
 
-(note, this assumes using 3 nodes versus 8 nodes)
 
 
 <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared">Azure SSD Disk Pricing</a>
 <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Azure SSD Disk Pricing</a>
 
 
-Table 6. Shared SSD File System Pricing
+Table 7. Shared SSD File System Pricing
 
 | Storage Type | Storage options   | 	Max IOPS (Max IOPS w/ bursting)	| Pricing (monthly)  |  Pricing | Price per mount per month (Shared Disk) |
 | --------     | ----------------  |   ------------------------------------    | -----------------  |  ---------------  | ------  |
@@ -278,7 +310,7 @@ Table 6. Shared SSD File System Pricing
 
 
 
-Table 7. Extrapolated Cost of File system for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
+Table 8. Extrapolated Cost of File system for CMAQv5.3.3 Annual Simulation based on 2 day CONUS benchmark
 
 
 Need to create table
