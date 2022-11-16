@@ -15,11 +15,11 @@ git clone -b main https://github.com/USEPA/CMAQ.git CMAQ_REPO_v54
 
 echo "downloaded CMAQ"
 cd CMAQ_REPO_v54
-cp $CLOUD/bldit_project_v54_local.csh $DIR/CMAQ_REPO_v54
+cp $CLOUD/install_scripts/bldit_project_v54_local.csh $DIR/CMAQ_REPO_v54
 ./bldit_project_v54_local.csh
 #module load openmpi
 cd $DIR/openmpi_gcc/CMAQ_v54/CCTM/scripts/
-cp $CLOUD/config_cmaq_local.csh ../../config_cmaq.csh
+cp $CLOUD/install_scripts/config_cmaq_local.csh ../../config_cmaq.csh
 ./bldit_cctm.csh gcc |& tee ./bldit_cctm.log
 #cp ./run_scripts/run* $DIR/openmpi_gcc/CMAQ_v54/CCTM/scripts/
 cd $DIR/openmpi_gcc/CMAQ_v54/CCTM/scripts/

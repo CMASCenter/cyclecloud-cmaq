@@ -85,4 +85,4 @@ cd $LDIR/netcdf/bin
 #endif
 
 # Add the paths to the libraries in your .cshrc (note, will need to review example below and update)
-#cp $CLOUD/dot.cshrc.vm.mnt ~/.cshrc
+#cp $CLOUD/install_scripts/dot.cshrc.vm.mnt ~/.cshrc
