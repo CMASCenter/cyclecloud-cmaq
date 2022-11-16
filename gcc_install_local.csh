@@ -35,10 +35,10 @@
 #  Download and build netCDF-C
 #  ---------------------------
    # Set local install directory
-   setenv LDIR /mnt/build
-   # Set Cloud Tutorial directory
-   setenv CLOUD /mnt/cyclecloud-cmaq
+   setenv LDIR /21dayscratch/scr/l/i/lizadams/build
    mkdir $LDIR
+   # Set Cloud Tutorial directory
+   setenv CLOUD /proj/ie/proj/CMAS/CMAQ/cyclecloud-cmaq
    cd $LDIR
    wget https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.8.1.tar.gz 
    tar xvf v4.8.1.tar.gz
@@ -73,7 +73,7 @@
    make install
 
 # Test install
-cd $DIR/netcdf/bin
+cd $LDIR/netcdf/bin
    ./nc-config --version
    ./nf-config --version
 
@@ -84,4 +84,5 @@ cd $DIR/netcdf/bin
 #    setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/shared/build/netcdf/lib
 #endif
 
-cp $CLOUD/dot.cshrc.vm.mnt ~/.cshrc
+# Add the paths to the libraries in your .cshrc (note, will need to review example below and update)
+#cp $CLOUD/dot.cshrc.vm.mnt ~/.cshrc

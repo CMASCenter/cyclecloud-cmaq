@@ -2,15 +2,19 @@
 
 umask 002
 
+# set local install directory for libraries
+ setenv LDIR /mnt/build
+
 if ( ! $?LD_LIBRARY_PATH ) then
-    setenv LD_LIBRARY_PATH /mnt/build/netcdf/lib
+    setenv LD_LIBRARY_PATH $LDIR/netcdf/lib
 else
-    setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:/mnt/build/netcdf/lib
+    setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$LDIR/netcdf/lib
 endif
 
-set path = ($path /mnt/build/netcdf/bin /mnt/build/ioapi-3.2/Linux2_x86_64gfort /opt/slurm/bin/ /usr/local/bin )
+
+set path = ($path $LDIR/netcdf/bin $LDIR/ioapi-3.2/Linux2_x86_64gfort /opt/slurm/bin/ /usr/local/bin )
 
 #module load mpi/openmpi-4.1.1
 
-alias SCR 'cd /mnt/build/openmpi_gcc/CMAQ_v533/CCTM/scripts'
+alias SCR 'cd $LDIR/openmpi_gcc/CMAQ_v533/CCTM/scripts'
 
