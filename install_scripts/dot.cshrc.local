@@ -1,0 +1,20 @@
+# start .cshrc
+
+umask 002
+
+# set local install directory for libraries
+ setenv LDIR /mnt/build
+
+if ( ! $?LD_LIBRARY_PATH ) then
+    setenv LD_LIBRARY_PATH $LDIR/netcdf/lib
+else
+    setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$LDIR/netcdf/lib
+endif
+
+
+set path = ($path $LDIR/netcdf/bin $LDIR/ioapi-3.2/Linux2_x86_64gfort /opt/slurm/bin/ /usr/local/bin )
+
+#module load mpi/openmpi-4.1.1
+
+alias SCR 'cd $LDIR/openmpi_gcc/CMAQ_v533/CCTM/scripts'
+
