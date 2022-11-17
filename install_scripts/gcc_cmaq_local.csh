@@ -4,26 +4,25 @@
 #  Download and build CMAQ
 #  -----------------------
 # Set installation directory
-setenv DIR /mnt/build
+setenv DIR /21dayscratch/scr/l/i/lizadams/build
 # Set local directory for cyclecloud-cmaq
-setenv CLOUD /mnt/cyclecloud-cmaq
+setenv CLOUD /proj/ie/proj/CMAS/CMAQ/cyclecloud-cmaq
 setenv IOAPI_DIR $DIR/ioapi-3.2/Linux2_x86_64gfort
 setenv NETCDF_DIR $DIR/netcdf/lib
 setenv NETCDFF_DIR $DIR/netcdf/lib
 cd $DIR
-#git clone -b 5.3.2_singularity https://github.com/lizadams/CMAQ.git CMAQ_REPO
-git clone -b main https://github.com/USEPA/CMAQ.git CMAQ_REPO_v533
+git clone -b main https://github.com/USEPA/CMAQ.git CMAQ_REPO_v54
 
 echo "downloaded CMAQ"
-cd CMAQ_REPO_v533
-cp $CLOUD/bldit_project_v533_mnt.csh $DIR/CMAQ_REPO_v533
-./bldit_project_v533_mnt.csh
+cd CMAQ_REPO_v54
+cp $CLOUD/install_scripts/bldit_project_v54_local.csh $DIR/CMAQ_REPO_v54
+./bldit_project_v54_local.csh
 #module load openmpi
-cd $DIR/openmpi_gcc/CMAQ_v533/CCTM/scripts/
-cp $CLOUD/config_cmaq_mnt.csh ../../config_cmaq.csh
+cd $DIR/openmpi_gcc/CMAQ_v54/CCTM/scripts/
+cp $CLOUD/install_scripts/config_cmaq_local.csh ../../config_cmaq.csh
 ./bldit_cctm.csh gcc |& tee ./bldit_cctm.log
-cp ./run_scripts/run* $DIR/openmpi_gcc/CMAQ_v533/CCTM/scripts/
-cd $DIR/openmpi_gcc/CMAQ_v533/CCTM/scripts/
+#cp ./run_scripts/run* $DIR/openmpi_gcc/CMAQ_v54/CCTM/scripts/
+cd $DIR/openmpi_gcc/CMAQ_v54/CCTM/scripts/
 
 # submit job to the queue using 
 # sbatch run_cctm_2016_12US2.256pe.csh
