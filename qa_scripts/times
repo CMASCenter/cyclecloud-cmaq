@@ -1,0 +1,44 @@
+[1] "Run time for lustre2_150 : 1542.8 seconds"   1690.38
+[1] "Run time for lustre_200 : 1719.2 seconds" 1873.93
+[1] "Run time for lustre3_250 : 1687 seconds" 1910.30
+
+
+Read 12679 items
+Read 12679 items
+[1] "Run time for lustre2_150 : 1542.8 seconds":
+
+Read 12679 items
+Read 12679 items
+[1] "Run time for lustre_200 : 1719.2 seconds"
+
+
+[1] "Run time for lustre3_250 : 1687 seconds"
+
+[1] "Run time for lustre3_250 : 1687 seconds"
+[1] "Run time for lustre3_250 : 1687 seconds"
+[1] "Run time for lustre2_150 : 1542.8 seconds"
+[1] "Run time for lustre1_200 : 1719.2 seconds"
+
+[1] "Run time for lustre3_250 : 1687 seconds"
+[1] "Run time for lustre2_150 : 1542.8 seconds"
+[1] "Run time for lustre1_200 : 1719.2 seconds"
+
+"Run time for lustre3_250 : 1542.8 seconds"
+[1] "Run time for lustre2_150 : 1719.2 seconds"
+[1] "Run time for lustre1_200 : NA seconds":
+
+[1] "lustre3_250" "lustre3_250" "lustre2_150"
+[1] "Run time for lustre2_150 : 1542.8 seconds"
+[1] "Run time for lustre1_200 : 1719.2 seconds"
+[1] "Run time for NA : NA seconds"
+
+[1] "Run time for lustre3_250 : 1687 seconds"
+[1] "Run time for lustre2_150 : 1542.8 seconds"
+[1] "Run time for lustre1_200 : 1719.2 seconds"
+
+
+[1] "lustre3_250" "lustre2_150" "lustre1_200"
+[1] "Run time for  :  seconds"
+[1] "Run time for lustre2_150 : 1687 seconds"
+[1] "Run time for lustre1_200 : 1542.8 seconds"
+:q

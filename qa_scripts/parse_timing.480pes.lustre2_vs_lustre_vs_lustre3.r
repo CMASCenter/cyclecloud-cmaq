@@ -5,17 +5,15 @@
 library(RColorBrewer)
 sens.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
 base.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
-files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.lustre.codemod.pin.log')
-#b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.data.codemod.nopin.redo.log')
-#b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.*.2day.cyclecloud.data.codemod.pin.log')
-b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.2x96.192.16x12pe.2day.cyclecloud.lustre.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.288.16x18pe.2day.cyclecloud.lustre.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.384.24x16pe.2day.cyclecloud.lustre.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.lustre.codemod.pin.log')
-#Compilers <- c('intel','gcc','pgi')
+files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.lustre3.codemod.pin.log')
+#b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.lustre3.codemod.pin.log')
+b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.lustre2.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.lustre.codemod.pin.log')
 Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
 # The project directory name is used for the sensitivity case. 
-base.name <- c('192','288','384','480')
+base.name <- c('lustre2_150','lustre1_200')
 #base.name <- c('data_pin')
-sens.name <- c('96')
+sens.name <- c('lustre3_250')
 
 # ------------- Do not change below unless modifying for a different workflow ---------------------
 # compilers being considered
@@ -46,14 +44,17 @@ for( comp in Compilers) {
 # get timing info
          Timing <-  as.numeric(substr(data.in[grep('completed...',data.in)],36,42))
          Process <- substr(data.in[grep('completed...',data.in)],12,22)
+	 #print(Process)
          n.proc <- unique(Process)
          n.proc <- n.proc[grep('Proc',n.proc,invert=T)]
+	 print(n.proc)
 # Aggrigate data
          tmp.data <- NULL
          for(i in n.proc){
            valid <- which(i==Process)
            tmp.data <- append(tmp.data,sum(Timing[valid]))
          }
+	 print(b.names)
          bar.data <- cbind(bar.data,tmp.data)
    #   }
    }
@@ -61,14 +62,14 @@ for( comp in Compilers) {
    my.colors <- brewer.pal(11, "Paired")
    #my.colors <- terrain.colors(length(n.proc))
    xmax <- dim(bar.data)[2]*1.5
-   png(file = paste('lustre_', comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
+   png(file = paste('480_pin_lustre2_vs_lustre_vs_lustre3',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing on /lustre using 96-480 cpus/node on HBv3 120',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax),ylim = c(0.,5600.))
+   barplot(bar.data, main = 'Process Timing on /lustre using 480 cpus/node on HBv3 120 with pinning',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax),ylim = c(0.,3000.))
    box()
    dev.off()
-   totals <- apply(bar.data,c(2),sum) 
+   totals <- apply(bar.data,c(2),sum)
 # print total runtime data to the screen
-   for(i in 1:length(base.name)){
-     print(paste('Run time for', base.name[i], ':',totals[i],'seconds'))
+   for(i in 1:length(b.names)){
+     print(paste('Run time for', b.names[i], ':',totals[i],'seconds'))
    }
 }

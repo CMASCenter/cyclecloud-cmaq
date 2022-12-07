@@ -298,7 +298,7 @@ ALMALINUX_MANTISBT_PROJECT="AlmaLinux-8"
 ALMALINUX_MANTISBT_PROJECT_VERSION="8.5"
 ```
 
-Change shell to use tcsh
+## Change shell to use tcsh
 
 `sudo usermod -s /bin/tcsh azureuser`
 
@@ -310,6 +310,81 @@ Copy a file to set paths
 `cd /shared/cyclecloud-cmaq`
 
 `cp dot.cshrc.vm ~/.cshrc`
+
+## Create Environment Module for Libraries
+
+There are two steps required to create your own custome module:
+
+1. write a module file
+
+2. add a line to your ~/.cshrc to update the MODULEPATH
+
+Create a new custom module that will be loaded with:
+
+```
+module load ioapi-3.2_20200828/gcc-9.2.1-netcdf
+```
+
+Step 1: Create the module file.
+
+First, create a path to store the module file. The path must contain /Modules/modulefiles/ and should have the general form
+/<path to>/Modules/modulefiles/<module-name>/<version> where <version> is typically numerical and is the actual module file.  
+
+```
+mkdir /shared/build/Modules/modulefiles/ioapi-3.2_20200828
+```
+
+Next, crate the module file and save it in the directory above.
+
+```
+cd /shared/build/Modules/modulefiles/ioapi-3.2_20200828
+vim gcc-9.2.1-netcdf
+```
+
+Contents of gcc-9.2.1-netcdf:
+
+```
+#%Module
+  
+proc ModulesHelp { } {
+   puts stderr "This module adds ioapi-3.2_20200828/gcc-9.2.1 to your path"
+}
+
+module-whatis "This module adds ioapi-3.2_20200828/gcc-9.2.1 to your path\n"
+
+set basedir "/shared/build/ioapi-3.2_branch_20200828/"
+prepend-path PATH "${basedir}/Linux2_x86_64gfort"
+prepend-path LD_LIBRARY_PATH "${basedir}/ioapi/fixed_src"
+module load mpi/openmpi-4.1.1
+module load gcc-9.2.1
+```
+
+The example module file above sets two evironment variables and loads two system modules.
+
+The modules update the PATH and LD_LIBRARY_PATH. 
+
+Step 2: Add the module path to MODULEPATH.
+
+Now that the odule file has been created, add the following line to your ~/.cshrc file so that it can be found:
+
+```
+module use --append /shared/build/Modules/modulefiles/ioapi-3.2_20200828/gcc-9.2.1-netcdf
+```
+
+Step 3: View the modules available after creation of the new module
+
+The module avail command shows the paths to the module files on a given cluster.
+
+```
+module avail
+```
+
+Step 4: Load the new module
+
+```
+module load ioapi-3.2_20200828/gcc-9.2.1-netcdf
+```
+
 
 ## Install and Build CMAQ
 
