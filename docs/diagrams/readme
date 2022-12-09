@@ -6,7 +6,8 @@ install python3 and also install packages for python using pip3
 
 ```
 # using pip (pip3)
- pip install diagrams
+# pip install diagrams
+sudo pip3 install diagrams
 ```
 
 if you use pip rather than pip3 then the packages will not be visible to python3.
