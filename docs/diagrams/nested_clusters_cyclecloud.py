@@ -27,7 +27,7 @@ with Diagram("Microsoft Azure Cycle Cloud", show=False):
              sched = [
                      EC2("Scheduler Node"), 
                      Disks("Shared - 1.0TB")]
-        with Cluster("Data"):
+        with Cluster("Data - Azure Files, Serverless File Shares"):
              volume1 = [
                      Disks("data-1.0TB")]
         with Cluster("Lustre"):
