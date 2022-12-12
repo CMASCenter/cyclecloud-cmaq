@@ -99,6 +99,20 @@ GRIDDESC
 ![CMAQ Domain](../../qa_plots/tileplots/CMAQ_ACONC_12US2_Benchmark_Tileplot.png)
 
 
+## Storage Options
+
+CMAQ requires low-latency storage, especially if you are running CMAQ on a large domain and using more than 200 processors.
+
+Azure File Storage account for premium file shares is required. 
+
+Quote from following link: "Provisioned file shares can be dynamically scaled up or down depending on your storage and IO performance characteristics.
+The provisioned size of the file share can be increased at any time but can be decreased only after 24 hours since the last increase. 
+After waiting for 24 hours without a quota increase, you can decrease the share quota as many times as you like, until you increase it again. 
+IOPS/throughput scale changes will be effective within a few minutes after the provisioned size change."
+
+<a href="https://learn.microsoft.com/en-us/azure/storage/files/understanding-billing#provisioned-model">Azure Premium File Shares</a>
+
+ 
 ## Recommended Cycle Cloud Configuration for CONUS Domain 12US2
 
 Note, first create a VM using the image: CycleCloud 8.2, and from that VM, the Cycle Cloud is built.
