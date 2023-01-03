@@ -1,0 +1,158 @@
+Start Model Run At  Thu Dec 1 17:25:11 UTC 2022
+Compiler is set to gcc
+
+Working Directory is /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts
+Output Root Directory is /lustre/data/output
+Executable Name is wrf.exe
+
+Set up input and output files for Day 2018-07-01.
+
+Existing Logs and Output Files for Day 2018-07-01 Will Be Deleted
+/bin/rm: No match.
+
+CMAQ Processing of Day 20180701 Began at Thu Dec  1 17:25:11 UTC 2022
+
+lrwxrwxrwx. 1 lizadams 11102 87 Dec  1 17:25 /lustre/data/output/WRFCMAQ-output-sw_feedback/wrf.exe -> /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/BLD_WRFv4.4_CCTM_v54+_gcc/main/wrf.exe
+Thu Dec  1 17:25:11 UTC 2022
+ starting wrf task           73  of           96
+ starting wrf task            2  of           96
+ starting wrf task            6  of           96
+ starting wrf task            9  of           96
+ starting wrf task           85  of           96
+ starting wrf task           17  of           96
+ starting wrf task           77  of           96
+ starting wrf task           65  of           96
+ starting wrf task            5  of           96
+ starting wrf task           25  of           96
+ starting wrf task            7  of           96
+ starting wrf task           29  of           96
+ starting wrf task            1  of           96
+ starting wrf task            3  of           96
+ starting wrf task           67  of           96
+ starting wrf task           91  of           96
+ starting wrf task           83  of           96
+ starting wrf task           58  of           96
+ starting wrf task           23  of           96
+ starting wrf task           50  of           96
+ starting wrf task           87  of           96
+ starting wrf task           28  of           96
+ starting wrf task            8  of           96
+ starting wrf task           20  of           96
+ starting wrf task           92  of           96
+ starting wrf task           12  of           96
+ starting wrf task           62  of           96
+ starting wrf task           16  of           96
+ starting wrf task           95  of           96
+ starting wrf task           54  of           96
+ starting wrf task           88  of           96
+ starting wrf task           93  of           96
+ starting wrf task           80  of           96
+ starting wrf task           30  of           96
+ starting wrf task           42  of           96
+ starting wrf task           15  of           96
+ starting wrf task           79  of           96
+ starting wrf task           72  of           96
+ starting wrf task           64  of           96
+ starting wrf task           84  of           96
+ starting wrf task           46  of           96
+ starting wrf task           33  of           96
+ starting wrf task            4  of           96
+ starting wrf task           68  of           96
+ starting wrf task           11  of           96
+ starting wrf task           10  of           96
+ starting wrf task           21  of           96
+ starting wrf task           59  of           96
+ starting wrf task           63  of           96
+ starting wrf task           60  of           96
+ starting wrf task           14  of           96
+ starting wrf task           76  of           96
+ starting wrf task           34  of           96
+ starting wrf task           52  of           96
+ starting wrf task           31  of           96
+ starting wrf task           19  of           96
+ starting wrf task           51  of           96
+ starting wrf task           32  of           96
+ starting wrf task           41  of           96
+ starting wrf task           61  of           96
+ starting wrf task           57  of           96
+ starting wrf task           70  of           96
+ starting wrf task           56  of           96
+ starting wrf task           26  of           96
+ starting wrf task           44  of           96
+ starting wrf task           22  of           96
+ starting wrf task           35  of           96
+ starting wrf task           43  of           96
+ starting wrf task           94  of           96
+ starting wrf task           37  of           96
+ starting wrf task           53  of           96
+ starting wrf task           82  of           96
+ starting wrf task           71  of           96
+ starting wrf task           49  of           96
+ starting wrf task           69  of           96
+ starting wrf task           38  of           96
+ starting wrf task           55  of           96
+ starting wrf task           90  of           96
+ starting wrf task           75  of           96
+ starting wrf task           18  of           96
+ starting wrf task           39  of           96
+ starting wrf task           47  of           96
+ starting wrf task           81  of           96
+ starting wrf task           13  of           96
+ starting wrf task           27  of           96
+ starting wrf task            0  of           96
+ starting wrf task           78  of           96
+ starting wrf task           24  of           96
+ starting wrf task           74  of           96
+ starting wrf task           86  of           96
+ starting wrf task           48  of           96
+ starting wrf task           40  of           96
+ starting wrf task           36  of           96
+ starting wrf task           66  of           96
+ starting wrf task           45  of           96
+ starting wrf task           89  of           96
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 32 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[cyclecloudlizadams-hpc-pg0-6:13086] [[52889,0],0] ORTE_ERROR_LOG: Out of resource in file util/show_help.c at line 501
+[cyclecloudlizadams-hpc-pg0-6:13086] 94 more processes have sent help message help-mpi-api.txt / mpi-abort
+[cyclecloudlizadams-hpc-pg0-6:13086] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[warn] Epoll MOD(1) on fd 164 failed.  Old events were 6; read change was 0 (none); write change was 2 (del): Bad file descriptor
+[warn] Epoll MOD(4) on fd 164 failed.  Old events were 6; read change was 2 (del); write change was 0 (none): Bad file descriptor
+[warn] Epoll MOD(1) on fd 166 failed.  Old events were 6; read change was 0 (none); write change was 2 (del): Bad file descriptor
+[warn] Epoll MOD(4) on fd 166 failed.  Old events were 6; read change was 2 (del); write change was 0 (none): Bad file descriptor
+[warn] Epoll MOD(1) on fd 197 failed.  Old events were 6; read change was 0 (none); write change was 2 (del): Bad file descriptor
+[warn] Epoll MOD(4) on fd 197 failed.  Old events were 6; read change was 2 (del); write change was 0 (none): Bad file descriptor
+[warn] Epoll MOD(1) on fd 187 failed.  Old events were 6; read change was 0 (none); write change was 2 (del): Bad file descriptor
+[warn] Epoll MOD(4) on fd 187 failed.  Old events were 6; read change was 2 (del); write change was 0 (none): Bad file descriptor
+0.066u 0.241s 0:01.77 16.9%	0+0k 0+17144io 7pf+0w
+Thu Dec  1 17:25:13 UTC 2022
+
+**************************************************************
+** Runscript Detected an Error: CGRID file was not written. **
+**   This indicates that CMAQ was interrupted or an issue   **
+**   exists with writing output. The runscript will now     **
+**   abort rather than proceeding to subsequent days.       **
+**************************************************************
+(standard_in) 2: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2018-07-01
+End Day:   2018-07-02
+Number of Simulation Days: 1
+Domain Name:               2018_12NE3
+Number of Processes:       96
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2018-07-01   
+     Total Time = 
+      Avg. Time = 

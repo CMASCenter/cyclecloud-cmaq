@@ -1,0 +1,60 @@
+Start Model Run At  Mon Dec 5 19:14:37 UTC 2022
+Compiler is set to gcc
+
+Working Directory is /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts
+Build Directory is /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/BLD_CCTM_v54_gcc
+Output Directory is /shared/data/output/output_CCTM_v54_gcc_Bench_2018_12NE3_v54+
+Log Directory is /shared/data/output/output_CCTM_v54_gcc_Bench_2018_12NE3_v54+/LOGS
+Executable Name is CCTM_v54.exe
+
+---CMAQ EXECUTION ID: CMAQ_CCTMv54_sha=d8a9fe66eb_lizadams_20221205_191437_204788395 ---
+
+Set up input and output files for Day 2018-07-01.
+
+Existing Logs and Output Files for Day 2018-07-01 Will Be Deleted
+/bin/rm: No match.
+
+CMAQ Processing of Day 20180701 Began at Mon Dec  5 19:14:37 UTC 2022
+
+QMutex: destroying locked mutex
+56.58user 2.54system 20:18.14elapsed 4%CPU (0avgtext+0avgdata 435160maxresident)k
+468880inputs+10760outputs (364major+206816minor)pagefaults 0swaps
+
+CMAQ Processing of Day 20180701 Finished at Mon Dec  5 19:34:55 UTC 2022
+
+\\\\\=====\\\\\=====\\\\\=====\\\\\=====/////=====/////=====/////=====/////
+
+
+Set up input and output files for Day 2018-07-02.
+
+Existing Logs and Output Files for Day 2018-07-02 Will Be Deleted
+/bin/rm: No match.
+
+CMAQ Processing of Day 20180702 Began at Mon Dec  5 19:34:56 UTC 2022
+
+QMutex: destroying locked mutex
+56.58user 2.30system 16:11.91elapsed 6%CPU (0avgtext+0avgdata 435348maxresident)k
+2592inputs+11272outputs (0major+150813minor)pagefaults 0swaps
+
+CMAQ Processing of Day 20180702 Finished at Mon Dec  5 19:51:08 UTC 2022
+
+\\\\\=====\\\\\=====\\\\\=====\\\\\=====/////=====/////=====/////=====/////
+
+
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2018-07-01
+End Day:   2018-07-02
+Number of Simulation Days: 2
+Domain Name:               2018_12NE3
+Number of Grid Cells:      367500  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       96
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2018-07-01   56.58
+02   2018-07-02   56.58
+     Total Time = 113.16
+      Avg. Time = 56.58

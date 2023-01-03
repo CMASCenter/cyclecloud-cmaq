@@ -1,0 +1,202 @@
+Start Model Run At  Thu Dec 1 17:41:40 UTC 2022
+Compiler is set to gcc
+
+Working Directory is /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts
+Output Root Directory is /lustre/data/output
+Executable Name is wrf.exe
+
+Set up input and output files for Day 2018-07-01.
+
+Existing Logs and Output Files for Day 2018-07-01 Will Be Deleted
+/bin/rm: No match.
+ln: failed to create symbolic link 'landFilenames': File exists
+ln: failed to create symbolic link 'RRTMG_SW_DATA': File exists
+ln: failed to create symbolic link 'RRTMG_LW_DATA': File exists
+ln: failed to create symbolic link 'ozone_plev.formatted': File exists
+ln: failed to create symbolic link 'ozone_lat.formatted': File exists
+ln: failed to create symbolic link 'ozone.formatted': File exists
+ln: failed to create symbolic link 'CAMtr_volume_mixing_ratio': File exists
+
+CMAQ Processing of Day 20180701 Began at Thu Dec  1 17:41:41 UTC 2022
+
+lrwxrwxrwx. 1 lizadams 11102 87 Dec  1 17:41 /lustre/data/output/WRFCMAQ-output-sw_feedback/wrf.exe -> /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/BLD_WRFv4.4_CCTM_v54+_gcc/main/wrf.exe
+Thu Dec  1 17:41:41 UTC 2022
+ starting wrf task           24  of           64
+ starting wrf task           51  of           64
+ starting wrf task           63  of           64
+ starting wrf task           59  of           64
+ starting wrf task            7  of           64
+ starting wrf task           36  of           64
+ starting wrf task           48  of           64
+ starting wrf task           60  of           64
+ starting wrf task           55  of           64
+ starting wrf task           40  of           64
+ starting wrf task           53  of           64
+ starting wrf task           37  of           64
+ starting wrf task           56  of           64
+ starting wrf task           38  of           64
+ starting wrf task            1  of           64
+ starting wrf task           21  of           64
+ starting wrf task           41  of           64
+ starting wrf task           30  of           64
+ starting wrf task           26  of           64
+ starting wrf task           32  of           64
+ starting wrf task           15  of           64
+ starting wrf task           42  of           64
+ starting wrf task           20  of           64
+ starting wrf task           18  of           64
+ starting wrf task            9  of           64
+ starting wrf task           34  of           64
+ starting wrf task           47  of           64
+ starting wrf task           39  of           64
+ starting wrf task           49  of           64
+ starting wrf task           57  of           64
+ starting wrf task           54  of           64
+ starting wrf task           10  of           64
+ starting wrf task           22  of           64
+ starting wrf task           33  of           64
+ starting wrf task           46  of           64
+ starting wrf task           31  of           64
+ starting wrf task            4  of           64
+ starting wrf task           44  of           64
+ starting wrf task           52  of           64
+ starting wrf task            8  of           64
+ starting wrf task           11  of           64
+ starting wrf task           17  of           64
+ starting wrf task            2  of           64
+ starting wrf task           23  of           64
+ starting wrf task            0  of           64
+ starting wrf task           29  of           64
+ starting wrf task           62  of           64
+ starting wrf task            6  of           64
+ starting wrf task           25  of           64
+ starting wrf task           28  of           64
+ starting wrf task            3  of           64
+ starting wrf task           14  of           64
+ starting wrf task           13  of           64
+ starting wrf task           61  of           64
+ starting wrf task           45  of           64
+ starting wrf task           19  of           64
+ starting wrf task           12  of           64
+ starting wrf task           50  of           64
+ starting wrf task            5  of           64
+ starting wrf task           58  of           64
+ starting wrf task           43  of           64
+ starting wrf task           27  of           64
+ starting wrf task           16  of           64
+ starting wrf task           35  of           64
+70842.065u 783.622s 19:05.04 6255.2%	0+0k 31821152+10875608io 1952pf+0w
+Thu Dec  1 18:00:46 UTC 2022
+
+CMAQ Processing of Day 20180701 Finished at Thu Dec  1 18:00:46 UTC 2022
+
+\\\\\=====\\\\\=====\\\\\=====\\\\\=====/////=====/////=====/////=====/////
+
+
+Set up input and output files for Day 2018-07-02.
+
+Existing Logs and Output Files for Day 2018-07-02 Will Be Deleted
+/bin/rm: No match.
+ln: failed to create symbolic link 'landFilenames': File exists
+ln: failed to create symbolic link 'RRTMG_SW_DATA': File exists
+ln: failed to create symbolic link 'RRTMG_LW_DATA': File exists
+ln: failed to create symbolic link 'ozone_plev.formatted': File exists
+ln: failed to create symbolic link 'ozone_lat.formatted': File exists
+ln: failed to create symbolic link 'ozone.formatted': File exists
+ln: failed to create symbolic link 'CAMtr_volume_mixing_ratio': File exists
+
+CMAQ Processing of Day 20180702 Began at Thu Dec  1 18:00:47 UTC 2022
+
+lrwxrwxrwx. 1 lizadams 11102 87 Dec  1 18:00 /lustre/data/output/WRFCMAQ-output-sw_feedback/wrf.exe -> /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/BLD_WRFv4.4_CCTM_v54+_gcc/main/wrf.exe
+Thu Dec  1 18:00:47 UTC 2022
+ starting wrf task           28  of           64
+ starting wrf task           24  of           64
+ starting wrf task            0  of           64
+ starting wrf task           12  of           64
+ starting wrf task            4  of           64
+ starting wrf task           18  of           64
+ starting wrf task            2  of           64
+ starting wrf task           22  of           64
+ starting wrf task           10  of           64
+ starting wrf task           14  of           64
+ starting wrf task            6  of           64
+ starting wrf task           16  of           64
+ starting wrf task            8  of           64
+ starting wrf task           20  of           64
+ starting wrf task           26  of           64
+ starting wrf task           30  of           64
+ starting wrf task           58  of           64
+ starting wrf task           50  of           64
+ starting wrf task           52  of           64
+ starting wrf task           54  of           64
+ starting wrf task           34  of           64
+ starting wrf task           60  of           64
+ starting wrf task           48  of           64
+ starting wrf task           32  of           64
+ starting wrf task           29  of           64
+ starting wrf task           62  of           64
+ starting wrf task           44  of           64
+ starting wrf task           42  of           64
+ starting wrf task           11  of           64
+ starting wrf task           23  of           64
+ starting wrf task            7  of           64
+ starting wrf task           47  of           64
+ starting wrf task            3  of           64
+ starting wrf task            1  of           64
+ starting wrf task           17  of           64
+ starting wrf task            5  of           64
+ starting wrf task           21  of           64
+ starting wrf task           51  of           64
+ starting wrf task            9  of           64
+ starting wrf task           55  of           64
+ starting wrf task           39  of           64
+ starting wrf task           27  of           64
+ starting wrf task           63  of           64
+ starting wrf task           35  of           64
+ starting wrf task           59  of           64
+ starting wrf task           53  of           64
+ starting wrf task           49  of           64
+ starting wrf task           37  of           64
+ starting wrf task           13  of           64
+ starting wrf task           61  of           64
+ starting wrf task           57  of           64
+ starting wrf task           45  of           64
+ starting wrf task           41  of           64
+ starting wrf task           38  of           64
+ starting wrf task           46  of           64
+ starting wrf task           43  of           64
+ starting wrf task           19  of           64
+ starting wrf task           56  of           64
+ starting wrf task           36  of           64
+ starting wrf task           33  of           64
+ starting wrf task           40  of           64
+ starting wrf task           25  of           64
+ starting wrf task           15  of           64
+ starting wrf task           31  of           64
+72229.527u 761.546s 19:21.11 6286.3%	0+0k 29765200+10876544io 7pf+0w
+Thu Dec  1 18:20:08 UTC 2022
+
+CMAQ Processing of Day 20180702 Finished at Thu Dec  1 18:20:08 UTC 2022
+
+\\\\\=====\\\\\=====\\\\\=====\\\\\=====/////=====/////=====/////=====/////
+
+(standard_in) 2: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2018-07-01
+End Day:   2018-07-02
+Number of Simulation Days: 2
+Domain Name:               2018_12NE3
+Number of Processes:       64
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2018-07-01   
+02   2018-07-02   
+     Total Time = 
+      Avg. Time = 
