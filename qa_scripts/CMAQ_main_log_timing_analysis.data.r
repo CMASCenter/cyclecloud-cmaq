@@ -10,7 +10,7 @@ sens.dir  <- '/shared/cyclecloud-cmaq/run_scripts/HB120v3_pin_testing/lustre/log
 base.dir  <- '/shared/cyclecloud-cmaq/run_scripts/HB120v3_pin_testing/lustre/logs/'
 #files   <- dir(sens.dir, pattern ='CTM_LOG_000.v533_gcc_2016_CONUS_480_24x20pe_lustre3_codemod_pin_precision_20151222')
 files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.data.codemod.pin.log')
-b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.192.16x12pe.2day.cyclecloud.data.codemod.pin.log', 'run_cctmv5.3.3_Bench_2016_12US2.288.16x18pe.2day.cyclecloud.data.codemod.pin.log', 'run_cctmv5.3.3_Bench_2016_12US2.384.24x16pe.2day.cyclecloud.data.codemod.pin.log', 'run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.data.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.data.codemod.pin.log')
+b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.192.16x12pe.2day.cyclecloud.data.codemod.pin.log', 'run_cctmv5.3.3_Bench_2016_12US2.288.16x18pe.2day.cyclecloud.data.codemod.pin.log', 'run_cctmv5.3.3_Bench_2016_12US2.384.24x16pe.2day.cyclecloud.data.codemod.pin.log', 'run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.data.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.data.codemod.pin.ccc.log')
 #b.files <- c('CTM_LOG_000.v533_gcc_2016_CONUS_480_24x20pe_lustre3_codemod_pin_precision_20151222')
 Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
