@@ -11,12 +11,12 @@ base.dir  <- '/shared/cyclecloud-cmaq/run_scripts/CycleCloud_HB120v3_lustre150/'
 #files   <- dir(sens.dir, pattern ='CTM_LOG_000.v533_gcc_2016_CONUS_480_24x20pe_lustre3_codemod_pin_precision_20151222')
 files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.lustre2.codemod.pin.ccc.log')
 #b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.lustre3.codemod.pin.log')
-b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.2x96.192.16x12pe.2day.cyclecloud.lustre2.codemod.pin.ccc.log', 'run_cctmv5.3.3_Bench_2016_12US2.288.16x18pe.2day.cyclecloud.lustre2.codemod.pin.ccc.log', 'run_cctmv5.3.3_Bench_2016_12US2.384.24x16pe.2day.cyclecloud.lustre2.codemod.pin.ccc.redo.log', 'run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.lustre2.codemod.pin.ccc.log')
+b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.2x96.192.16x12pe.2day.cyclecloud.lustre2.codemod.pin.ccc.log', 'run_cctmv5.3.3_Bench_2016_12US2.288.16x18pe.2day.cyclecloud.lustre2.codemod.pin.ccc.log', 'run_cctmv5.3.3_Bench_2016_12US2.384.24x16pe.2day.cyclecloud.lustre2.codemod.pin.ccc.redo.log', 'run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.lustre2.codemod.pin.ccc.log','run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.lustre2.codemod.pin.log')
 #b.files <- c('CTM_LOG_000.v533_gcc_2016_CONUS_480_24x20pe_lustre3_codemod_pin_precision_20151222')
 Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
 # The project directory name is used for the sensitivity case. 
-base.name <- c('192pe','288pe','384pe','480pe')
+base.name <- c('192pe','288pe','384pe','480pe','576pe')
 #base.name <- c('data_pin')
 sens.name <- c('96pe')
 
@@ -90,9 +90,9 @@ for( comp in Compilers) {
    my.colors <- brewer.pal(12, "Paired")
    #my.colors <- terrain.colors(length(n.proc))
    xmax <- dim(bar.data)[2]*1.5
-   png(file = paste('lustre2_1-5nodes',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
+   png(file = paste('lustre2_1-6nodes',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing on /lustre 150 using 1-5 nodes with 96 cpus/node on HB120v3 with pinning',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
+   barplot(bar.data, main = 'Process Timing on /lustre 150 using 1-6 nodes with 96 cpus/node on HB120v3 with pinning',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
    box()
    dev.off()
  
