@@ -4,12 +4,12 @@
 # These are the single output files, not the CTM_LOG files found in the $OUTDIR/LOGS directory
 library(RColorBrewer)
 #sens.dir  <- '/shared/cyclecloud-cmaq/run_scripts/HB120v3_singleVM/'
-sens.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
-base.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
+sens.dir  <- '/shared/cyclecloud-cmaq/run_scripts/storage_logs/'
+base.dir  <- '/shared/cyclecloud-cmaq/run_scripts/storage_logs/'
 #files   <- dir(sens.dir, pattern ='run_cctm_2016_12US2.96pe.1x96.cyclecloud.nvme.pin.log')
 files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.shared.codemod.pin.log')
 #b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.shared.codemod.nopin.redo.log')
-b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.data.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.lustre.codemod.pin.log','run_cctm_2016_12US2.96pe.1x96.cyclecloud.nvme.pin.log')
+b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.data.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.lustre3.codemod.pin.log','run_cctm_2016_12US2.96pe.1x96.cyclecloud.nvme.pin.log')
 #Compilers <- c('intel','gcc','pgi')
 Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
@@ -63,7 +63,7 @@ for( comp in Compilers) {
    xmax <- dim(bar.data)[2]*1.5
    png(file = paste('96_',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_96_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing on 96pes, 96x1, 12x8',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax),ylim = c(0.,5600.))
+   barplot(bar.data, main = 'Process Timing on all filesystems using 1 node, 96pes on HB120v3 with pinning',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc, xlim = c(0.,xmax),ylim = c(0.,5600.))
    box()
    dev.off()
    totals <- apply(bar.data,c(2),sum) 
