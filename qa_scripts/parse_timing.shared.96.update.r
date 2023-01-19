@@ -93,7 +93,7 @@ for( comp in Compilers) {
    xmax <- dim(bar.data)[2]*1.5
    png(file = paste('hb120v3_1nodes_96pe_all_filesystem_',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing on /lustre using 6 nodes with 96 cpus/node on HB120v3 without and with pinning',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
+   barplot(bar.data, main = 'Process Timing on all filesystems with 1 node, 96 cpus/node on HB120v3 with pinning',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
    box()
    dev.off()
  
