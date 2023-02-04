@@ -110,6 +110,8 @@ The provisioned size of the file share can be increased at any time but can be d
 After waiting for 24 hours without a quota increase, you can decrease the share quota as many times as you like, until you increase it again. 
 IOPS/throughput scale changes will be effective within a few minutes after the provisioned size change."
 
+Lustre Managed Server will be available to the public in March 2023. Files can be stored on blob storage and linked to the Lustre server and re-hydrated when needed as input for CMAQ.
+
 <a href="https://learn.microsoft.com/en-us/azure/storage/files/understanding-billing#provisioned-model">Azure Premium File Shares</a>
 
  
