@@ -215,6 +215,13 @@ If you do not see git available as a module, you may need to install it as follo
 module load mpi/openmpi-4.1.1 
 ```
 
+Output:
+
+```
+Loading ioapi-3.2_20200828/gcc-9.2.1-netcdf
+  Loading requirement: gcc-9.2.1 mpi/openmpi-4.1.1 netcdf-4.8.1/gcc-9.2.1
+```
+
 ### Install Cycle Cloud Repo
 
 `git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git`
@@ -319,7 +326,7 @@ There are two steps required to create your own custome module:
 
 2. add a line to your ~/.cshrc to update the MODULEPATH
 
-Create a new custom module that will be loaded with:
+Create a new custom module that will be loaded including any dependencies using the following command:
 
 ```
 module load ioapi-3.2_20200828/gcc-9.2.1-netcdf
@@ -357,6 +364,7 @@ prepend-path PATH "${basedir}/Linux2_x86_64gfort"
 prepend-path LD_LIBRARY_PATH "${basedir}/ioapi/fixed_src"
 module load mpi/openmpi-4.1.1
 module load gcc-9.2.1
+module load netcdf-4.8.1/gcc-9.2.1
 ```
 
 The example module file above sets two evironment variables and loads two system modules.
