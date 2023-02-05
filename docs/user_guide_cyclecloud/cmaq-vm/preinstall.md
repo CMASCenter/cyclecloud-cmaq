@@ -370,7 +370,7 @@ Step 2: Add the module path to MODULEPATH.
 Now that the odule file has been created, add the following line to your ~/.cshrc file so that it can be found:
 
 ```
-module use --append /shared/build/Modules/modulefiles/ioapi-3.2_20200828/gcc-9.2.1-netcdf
+module use --append /shared/build/Modules/modulefiles
 ```
 
 Step 3: View the modules available after creation of the new module
@@ -392,6 +392,30 @@ Output:
 ```
 Loading ioapi-3.2_20200828/gcc-9.2.1-netcdf
   Loading requirement: gcc-9.2.1 mpi/openmpi-4.1.1 netcdf-4.8.1/gcc-9.2.1
+```
+
+Verify that the libraries required for netCDF and I/O API have been added to the $LD_LIBRARY_PATH  environment variable
+
+```
+echo $LD_LIBRARY_PATH
+```
+
+Output:
+
+```
+/shared/build/netcdf/lib:/opt/openmpi-4.1.1/lib:/opt/rh/gcc-toolset-9/root/lib64:/shared/build/ioapi-3.2_branch_20200828//ioapi/fixed_src::
+```
+
+Verify that the I/O API bin directory and netCDF bin directory that you specified in the custom module has been added to the $PATH environment variable 
+
+```
+ echo $PATH
+```
+
+Output
+
+```
+/shared/build/netcdf/bin:/opt/openmpi-4.1.1/bin:/opt/rh/gcc-toolset-9/root/bin:/shared/build/ioapi-3.2_branch_20200828//Linux2_x86_64gfort:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/slurm/bin/:/usr/local/bin:/opt/slurm/bin/:/usr/local/bin
 ```
 
 
