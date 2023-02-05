@@ -215,12 +215,6 @@ If you do not see git available as a module, you may need to install it as follo
 module load mpi/openmpi-4.1.1 
 ```
 
-Output:
-
-```
-Loading ioapi-3.2_20200828/gcc-9.2.1-netcdf
-  Loading requirement: gcc-9.2.1 mpi/openmpi-4.1.1 netcdf-4.8.1/gcc-9.2.1
-```
 
 ### Install Cycle Cloud Repo
 
@@ -392,6 +386,14 @@ Step 4: Load the new module
 ```
 module load ioapi-3.2_20200828/gcc-9.2.1-netcdf
 ```
+
+Output:
+
+```
+Loading ioapi-3.2_20200828/gcc-9.2.1-netcdf
+  Loading requirement: gcc-9.2.1 mpi/openmpi-4.1.1 netcdf-4.8.1/gcc-9.2.1
+```
+
 
 
 ## Install and Build CMAQ
