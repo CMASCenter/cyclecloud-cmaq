@@ -418,6 +418,7 @@ Output
 /shared/build/netcdf/bin:/opt/openmpi-4.1.1/bin:/opt/rh/gcc-toolset-9/root/bin:/shared/build/ioapi-3.2_branch_20200828//Linux2_x86_64gfort:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/slurm/bin/:/usr/local/bin:/opt/slurm/bin/:/usr/local/bin
 ```
 
+see <a href="https://researchcomputing.princeton.edu/support/knowledge-base/custom-modules">Custom-Modules from Princeton Research Computing</a>
 
 
 ## Install and Build CMAQ
