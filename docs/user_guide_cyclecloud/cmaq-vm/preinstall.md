@@ -335,7 +335,7 @@ First, create a path to store the module file. The path must contain /Modules/mo
 mkdir /shared/build/Modules/modulefiles/ioapi-3.2_20200828
 ```
 
-Next, crate the module file and save it in the directory above.
+Next, create the module file and save it in the directory above.
 
 ```
 cd /shared/build/Modules/modulefiles/ioapi-3.2_20200828
@@ -361,13 +361,39 @@ module load gcc-9.2.1
 module load netcdf-4.8.1/gcc-9.2.1
 ```
 
-The example module file above sets two evironment variables and loads two system modules.
+The example module file above sets two evironment variables and loads two system modules and a custom module (that we also need to define).
 
 The modules update the PATH and LD_LIBRARY_PATH. 
 
+Now create the custom module to define the netCDF libraries that were used to build I/O API.
+
+```
+mkdir /shared/build/Modules/modulefiles/netcdf-4.8.1
+vim gcc-9.2.1
+```
+
+Contents of gcc-9.2.1
+
+```
+#%Module
+  
+proc ModulesHelp { } {
+   puts stderr "This module adds netcdf-4.8.1/gcc-9.2.1 to your path"
+}
+
+module-whatis "This module adds netcdf-4.8.1/gcc-9.2.1 to your path\n"
+
+set basedir "/shared/build/netcdf"
+prepend-path PATH "${basedir}/bin"
+prepend-path LD_LIBRARY_PATH "${basedir}/lib"
+module load mpi/openmpi-4.1.1
+module load gcc-9.2.1
+```
+
+
 Step 2: Add the module path to MODULEPATH.
 
-Now that the odule file has been created, add the following line to your ~/.cshrc file so that it can be found:
+Now that the two custom module files have been created, add the following line to your ~/.cshrc file so that they can be found:
 
 ```
 module use --append /shared/build/Modules/modulefiles
