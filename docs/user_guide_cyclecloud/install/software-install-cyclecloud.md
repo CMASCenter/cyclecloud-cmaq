@@ -1,4 +1,4 @@
-# Install CMAQ and pre-requisite libraries on linux
+# Install CMAQv533 and pre-requisite libraries on linux
 
 ### Login to updated cluster
 (note, replace the centos.pem with your Key Pair)
@@ -61,7 +61,7 @@ sudo yum install git
 
 `cd /shared`
 
-`git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git cyclecloud-cmaq`
+`git clone -b 5.3.3 https://github.com/CMASCenter/cyclecloud-cmaq.git cyclecloud-cmaq`
 
 `cd cyclecloud-cmaq`
 
