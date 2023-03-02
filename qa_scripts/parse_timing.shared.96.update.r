@@ -19,8 +19,8 @@ Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
 # The project directory name is used for the sensitivity case.
 #base.name <- c('data_pin','lustre_pin','shared_pin')
-base.name <- c('data_pin','lustre_pin','nvme_pin')
-sens.name <- c('shared_pin')
+base.name <- c('data','lustre','nvme')
+sens.name <- c('shared')
 
 
 
