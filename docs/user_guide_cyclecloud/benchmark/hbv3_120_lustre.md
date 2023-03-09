@@ -268,54 +268,6 @@ Output:
 ```
 
 Once the job has completed running the two day benchmark check the log file for the timings.
-
-`tail -n 5 run_cctmv5.3.3_Bench_2016_12US2.hpc6a.48xlarge.576.6x96.24x24pe.2day.pcluster.fsx.pin.codemod.2.log`
-
-Output:
-
-```
-Num  Day        Wall Time
-01   2015-12-22   1028.33
-02   2015-12-23   916.31
-     Total Time = 1944.64
-      Avg. Time = 972.32
-```
-
-## Submit a run script to run on the shared volume
-
-To run on the shared volume, you need to copy the input data from the s3 bucket to the /shared volume.
-You don't want to copy directly from the /lustre volume, as this will copy more files than you need. The s3 copy script below copies only two days worth of data from the s3 bucket.
-If you copy from /lustre directory, you would be copying all of the files on the s3 bucket.
-
-```
-cd /shared/pcluster-cmaq/s3_scripts
-./s3_copy_nosign_conus_cmas_opendata_to_shared.csh
-```
-
-### Submit a 576 pe job 6 nodes x 96 cpus on the EBS volume /shared
-
-`sbatch run_cctm_2016_12US2.576pe.6x96.24x24.pcluster.hpc6a.48xlarge.shared.pin.csh`
-
-`grep -i 'Processing completed.' CTM_LOG_036.v533_gcc_2016_CONUS_6x12pe_20151223`
-
-Output:
-
-```
-            Processing completed... 61.078 seconds
-            Processing completed...  1.972 seconds
-            Processing completed...  1.977 seconds
-            Processing completed...  1.981 seconds
-            Processing completed...  1.976 seconds
-            Processing completed...  1.964 seconds
-            Processing completed...  1.957 seconds
-            Processing completed...  1.942 seconds
-            Processing completed...  1.958 seconds
-            Processing completed...  1.947 seconds
-            Processing completed...  1.936 seconds
-
-```
-
-
 `tail -n 18 run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.lustre3.codemod.pin.precision.log`
 
 Output:
@@ -338,6 +290,45 @@ Num  Day        Wall Time
 02   2015-12-23   825.48
      Total Time = 1849.40
       Avg. Time = 924.70
+```
+
+## Submit a run script to run on the shared volume
+
+To run on the shared volume, you need to copy the input data from the s3 bucket to the /shared volume.
+You don't want to copy directly from the /lustre volume, as this will copy more files than you need. The s3 copy script below copies only two days worth of data from the s3 bucket.
+If you copy from /lustre directory, you would be copying all of the files on the s3 bucket.
+
+```
+cd /lustre/cyclecloud-cmaq/s3_scripts
+./s3_copy_nosign_conus_cmas_opendata_to_shared.csh
+```
+
+### Submit a 576 pe job 6 nodes x 96 cpus on the EBS volume /shared
+
+```
+cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts
+sbatch  run_cctm_2016_12US2.576.6x96.cyclecloud.hpcx.codemod_liz.shared.pin.csh
+
+`grep -i 'Processing completed.' CTM_LOG_000*`
+
+Output:
+
+```
+            Processing completed...    2.9 seconds
+            Processing completed...    1.9 seconds
+            Processing completed...    1.9 seconds
+            Processing completed...    1.9 seconds
+            Processing completed...    1.9 seconds
+            Processing completed...    1.9 seconds
+            Processing completed...    1.9 seconds
+```
+
+`tail -n 18 run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.shared.codemod_liz.pin.2nd.log`
+
+Output:
+
+```
+
 
 ```
 
