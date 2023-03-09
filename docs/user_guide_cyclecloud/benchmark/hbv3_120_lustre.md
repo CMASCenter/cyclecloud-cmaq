@@ -12,7 +12,7 @@ Information about how to share a snapshot of a Blob Storage account:
 <a href="https://learn.microsoft.com/en-us/azure/data-share/how-to-share-from-storage">Share from Blob Storage Account"</a>
 ```
 
-You will need to copy the snapshot and create a new blob storage, and then use your Blob Storage as the backup to your Lustre Filesystem.`
+You will need to copy the snapshot and create a new blob storage, and then use your Blob Storage as the backup to your Lustre Filesystem.
 
 #### Use a configuration file from the github by cloning the repo to your local machine 
 
@@ -26,12 +26,14 @@ git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq
 
 `cd cyclecloud-cmaq`
 
+
+### Lustre -  Request Public Preview
+
 ```{note} Information about the Public Preview for Azure Managed Lustre see:
 <a href="https://azure.microsoft.com/en-ca/blog/azure-managed-lustre-parallel-file-system-for-hpc-and-ai-workloads/">Azure Managed Lustre</a>
 <a href="https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-managed-lustre-benchmarking-our-new-azure-storage-solution/ba-p/3743889">Benchmarking Lustre</a>
 ```
 
-### Request Public Preview
 
 See information on how to join: <a href="https://learn.microsoft.com/en-us/azure/azure-managed-lustre/amlfs-overview">Azure Managed Lustre - Registration form link</a>
 
