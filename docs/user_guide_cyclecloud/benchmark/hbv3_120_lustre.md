@@ -308,8 +308,10 @@ cd /lustre/cyclecloud-cmaq/s3_scripts
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts
 sbatch  run_cctm_2016_12US2.576.6x96.cyclecloud.hpcx.codemod_liz.shared.pin.csh
+```
 
 `grep -i 'Processing completed.' CTM_LOG_000*`
+
 
 Output:
 
@@ -328,6 +330,24 @@ Output:
 Output:
 
 ```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2015-12-22
+End Day:   2015-12-23
+Number of Simulation Days: 2
+Domain Name:               12US2
+Number of Grid Cells:      3409560  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       576
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2015-12-22   1597.27
+02   2015-12-23   1516.56
+     Total Time = 3113.83
+      Avg. Time = 1556.91
+
 
 
 ```
