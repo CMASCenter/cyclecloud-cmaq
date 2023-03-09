@@ -253,12 +253,18 @@ Check on the log file status
 
 Output:
 
+
 ```
-            Processing completed...    6.5 seconds
-            Processing completed...    6.5 seconds
-            Processing completed...    6.5 seconds
-            Processing completed...    6.5 seconds
-            Processing completed...    6.4 seconds
+            Processing completed...  1.936 seconds
+            Processing completed...  1.939 seconds
+            Processing completed...  1.935 seconds
+            Processing completed...  1.942 seconds
+            Processing completed...  1.942 seconds
+            Processing completed...  1.936 seconds
+            Processing completed...  1.943 seconds
+            Processing completed...  1.939 seconds
+            Processing completed...  2.859 seconds
+
 ```
 
 Once the job has completed running the two day benchmark check the log file for the timings.
