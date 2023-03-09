@@ -7,11 +7,12 @@ Step by step instructions for running the CMAQ 12US2 Benchmark for 2 days on a C
 
 ## This method relies on obtaining the code and data from blob storage.
 
-```{note} Information about how to share a snapshot of a Blob Storage account:
-https://learn.microsoft.com/en-us/azure/data-share/how-to-share-from-storage
-``
+```{note} 
+Information about how to share a snapshot of a Blob Storage account:
+<a href="https://learn.microsoft.com/en-us/azure/data-share/how-to-share-from-storage">Share from Blob Storage Account"</a>
+```
 
-You will need to copy the snapshot and create a new blob storeage, and then use that Blob Storage for your Lustre Filesystem.`
+You will need to copy the snapshot and create a new blob storage, and then use your Blob Storage as the backup to your Lustre Filesystem.`
 
 #### Use a configuration file from the github by cloning the repo to your local machine 
 
