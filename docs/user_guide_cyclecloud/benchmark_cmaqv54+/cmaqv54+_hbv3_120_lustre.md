@@ -535,11 +535,32 @@ Modify the run script to change the .nc4 extension to .nc and submit job
 
 ```
 sbatch run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.2x96.ncclassic.csh
-```:
+```
 
+This ran succesfully to completion without getting a memory leak error.
 
+Output
 
+```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2017-12-22
+End Day:   2017-12-23
+Number of Simulation Days: 2
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       192
+   All times are in seconds.
 
+Num  Day        Wall Time
+01   2017-12-22   1767.5
+02   2017-12-23   1991.3
+     Total Time = 3758.80
+      Avg. Time = 1879.40
+
+```
 
 
 
