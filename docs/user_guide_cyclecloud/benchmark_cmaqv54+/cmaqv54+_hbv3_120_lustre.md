@@ -402,6 +402,149 @@ Num  Day        Wall Time
 
 Going to test running on 96 cpu/node
 
+`sbatch run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.2x96.csh`
+
+getting an error
+
+```
+     Processing Day/Time [YYYYDDD:HHMMSS]: 2017356:095500
+       Which is Equivalent to (UTC): 9:55:00  Friday,  Dec. 22, 2017
+       Time-Step Length (HHMMSS): 000500
+                 VDIFF completed...       2.5918 seconds
+                COUPLE completed...       0.1093 seconds
+                  HADV completed...       1.7682 seconds
+                  ZADV completed...       0.1838 seconds
+                 HDIFF completed...       0.1922 seconds
+              DECOUPLE completed...       0.0270 seconds
+                  PHOT completed...       0.1236 seconds
+               CLDPROC completed...       1.2388 seconds
+                  CHEM completed...       0.6030 seconds
+                  AERO completed...       0.7680 seconds
+            Master Time Step
+            Processing completed...       7.6066 seconds
+
+      =--> Data Output completed...       1.9993 seconds
+
+     Processing Day/Time [YYYYDDD:HHMMSS]: 2017356:100000
+       Which is Equivalent to (UTC): 10:00:00 Friday,  Dec. 22, 2017
+       Time-Step Length (HHMMSS): 000500
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 7 with PID 0 on node cyclecloudlizadams-hpc-pg0-1 exited on signal 9 (Killed).
+--------------------------------------------------------------------------
+30348.546u 996.456s 12:12.83 4277.2%	0+0k 9708555+14629912io 1223pf+0w
+
+**************************************************************
+** Runscript Detected an Error: CGRID file was not written. **
+**   This indicates that CMAQ was interrupted or an issue   **
+**   exists with writing output. The runscript will now     **
+**   abort rather than proceeding to subsequent days.       **
+**************************************************************
+
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2017-12-22
+End Day:   2017-12-23
+Number of Simulation Days: 1
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       192
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2017-12-22   7
+     Total Time = 7.00
+      Avg. Time = 7.00
+slurmstepd: error: Detected 2 oom-kill event(s) in StepId=47.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
+
+```
+
+Trying a run after converting the nc4 files to nc classic compressed files to see if the out-of-memory is due to a memory leak in the nc4 compressed libraries.
+
+steps: 
+
+1. rebuild the CMAQv5.4+ code with uncompressed libraries <br>
+
+```
+module load ioapi-3.2_20200828/gcc-9.2.1-netcdf 
+```
+
+2. create a new project directory to compile the code
+
+```
+cd /shared/build/CMAQ_REPO_v54+
+git pull
+```
+
+edit bldit_project.csh to use
+
+```
+ set CMAQ_HOME =  /shared/build/openmpi_gcc/CMAQ_v54+_classic
+```
+
+Run bldit_project.csh
+
+```
+./bldit_project.csh
+```
+
+Change directories to the new build location.
+
+```
+cd /shared/build/openmpi_gcc/CMAQ_v54+_classic
+```
+
+Copy the config_cmaq.csh script from the  v533 version, as that has the paths specified for the netCDF classic and I/O API libraries
+
+```
+cp /shared/build/openmpi_gcc/CMAQ_v533/config_cmaq.csh .
+```
+
+Edit to specify repo.
+
+```
+ setenv CMAQ_REPO $BUILD/CMAQ_REPO_v54+
+```
+
+Run the bldit_cctm.csh script
+
+```
+cd /shared/build/openmpi_gcc/CMAQ_v54+_classic/CCTM/scripts
+./bldit_cctm.csh gcc |& tee bldit_cctm.log
+```
+
+Verify that the executable was created
+
+```
+ls -rlt */*.exe
+```
+
+Output:
+
+```
+-rwxrwxr-x. 1 lizadams lizadams 152894280 Mar 10 20:12 BLD_CCTM_v54+_gcc/CCTM_v54+.exe
+```
+
+
+Modify the run script to change the .nc4 extension to .nc and submit job
+
+```
+sbatch run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.2x96.ncclassic.csh
+```:
+
+
+
+
+
+
+
+
+
 ## Submit a minimum of 2 benchmark runs
 
 Ideally, two CMAQ runs should be submitted to the slurm queue, using two different NPCOLxNPROW configurations, to create output needed for the QA and Post Processing Sections in Chapter 6.
