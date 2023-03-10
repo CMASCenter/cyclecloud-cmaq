@@ -381,24 +381,26 @@ Output:
 ==================================
   ***** CMAQ TIMING REPORT *****
 ==================================
-Start Day: 2015-12-22
-End Day:   2015-12-23
+Start Day: 2017-12-22
+End Day:   2017-12-23
 Number of Simulation Days: 2
-Domain Name:               12US2
-Number of Grid Cells:      3409560  (ROW x COL x LAY)
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
 Number of Layers:          35
-Number of Processes:       576
+Number of Processes:       256
    All times are in seconds.
 
 Num  Day        Wall Time
-01   2015-12-22   1597.27
-02   2015-12-23   1516.56
-     Total Time = 3113.83
-      Avg. Time = 1556.91
+01   2017-12-22   1533.1
+02   2017-12-23   1640.4
+     Total Time = 3173.50
+      Avg. Time = 1586.75
 
 
 
 ```
+
+Going to test running on 96 cpu/node
 
 ## Submit a minimum of 2 benchmark runs
 
