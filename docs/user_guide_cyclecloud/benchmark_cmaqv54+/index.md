@@ -1,4 +1,4 @@
-# Benchmark on HBv3_120 compute nodes and Lustre
+# CMAQv5.4+ Benchmark on HBv3_120 compute nodes and Lustre
 
 Run CMAQv5.4+ on a using pre-loaded software and input data on Lustre using HBv3_120 Cycle Cloud.
 
