@@ -106,6 +106,7 @@ Do a git pull to obtain the latest scripts in the cyclecloud-cmaq repo.
 ```
 cd /shared/cyclecloud-cmaq/s3_scripts
 ./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_lustre_20171222_cb6r3.csh
+```
 
 ## Verify Input Data
 
