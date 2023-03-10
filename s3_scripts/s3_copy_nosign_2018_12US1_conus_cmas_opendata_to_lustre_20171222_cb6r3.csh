@@ -8,8 +8,8 @@
 # Assumes you have a /lustre directory to copy the files to /lustre/data.
 
 setenv AWS_REGION "us-east-1"
-mkdir -p /lustre/data_lim
-setenv DISK lustre/data_lim
+mkdir -p /lustre/data
+setenv DISK lustre/data
 aws --no-sign-request s3 cp --recursive --exclude "*" --include "*20171222*" --include "*20171223*" s3://cmas-cmaq-modeling-platform-2018/2018_12US1/met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed /$DISK/CMAQ_Modeling_Platform_2018/2018_12US1/met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed
 aws --no-sign-request s3 cp --recursive --exclude "*" --include "*20171222*" --include "*20171223*" --include "*20181208*" --include "*20181209*" --include "smk_merge_dates_201712_for2018spinup.txt" s3://cmas-cmaq-modeling-platform-2018/2018_12US1/emis/cb6r3_ae6_20200131_MYR /$DISK/CMAQ_Modeling_Platform_2018/2018_12US1/emis/cb6r3_ae6_20200131_MYR
 aws --no-sign-request s3 cp --recursive --exclude "*" --include "*stack_groups*20171222*" --include "*stack_groups*20171223*" --include "*stack_groups_ptegu*" --include "*stack_groups_cmv*" --include "*stack_groups_othpt*" --include "*stack_groups_pt_oilgas*" --include "*stack_groups_ptnonipm*" s3://cmas-cmaq-modeling-platform-2018/2018_12US1/emis/cb6r3_ae6_20200131_MYR /$DISK/CMAQ_Modeling_Platform_2018/2018_12US1/emis/cb6r3_ae6_20200131_MYR
