@@ -4,7 +4,7 @@
 #https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-linux-install
 #Total storage required is 44 G
 # test using --dryrun option, example aws --no-sign-request s3 cp --dryrun ...
-# Assumes you have a /fsx directory to copy the files to /fsx/data.
+# Assumes you have a /shared directory to copy the files to /shared/data.
 
 setenv AWS_REGION "us-east-1"
 mkdir -p /shared/data
