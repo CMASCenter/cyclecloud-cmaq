@@ -256,7 +256,7 @@ Select Next Disks
 Click on Create and attach new disk of size 1TB
 Click on Delete Disk with VM
 
-![Create new disk for /shared volume on virtual machine](../cyclecloud-cmaq/docs/Create_Virtual_Machine_Create_New_Disk.png)
+![Create new disk for /shared volume on virtual machine](../cyclecloud-cmaq/docs/azure_web_interface_images/Create_Virtual_Machine_Create_New_Disk.png)
 
 Click Next Networking - accept default settings
 Click Next Management -  Select the System Managed Identity
@@ -269,7 +269,7 @@ A pop-up window titled "Generate a new key pair" will appear.
 
 Click on Download private key and create resource.
 
-![Select Download private key and create resources](../cyclecloud-cmaq/docs/azure_web_interface_imagesVirtual_Machine_Connect_with_SSH.png)
+![Select Download private key and create resources](../cyclecloud-cmaq/docs/azure_web_interface_images/Virtual_Machine_Connect_with_SSH.png)
 
 Once your resource is created in the upper right corner of the new screen, there will be a menu optione titled Connect.
 
