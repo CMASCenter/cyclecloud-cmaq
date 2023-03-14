@@ -53,7 +53,7 @@ don't change anything
 
 Click on Next > Review and create
 
-![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HCv120/Azure_Create_Virtual_Machine_Review_and_create.png)
+!!!![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HCv120/Azure_Create_Virtual_Machine_Review_and_create.png)
 
 Click on download private key and provision resource
 
