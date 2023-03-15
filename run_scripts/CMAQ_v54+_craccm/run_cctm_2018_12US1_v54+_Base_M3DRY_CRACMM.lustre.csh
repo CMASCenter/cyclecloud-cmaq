@@ -5,8 +5,8 @@
 #SBATCH --ntasks-per-node=96
 #SBATCH --exclusive
 #SBATCH -J CMAQ
-#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_CRACMM.192.16x12pe.2day.cyclecloud.lustre.lim_craccm.log
-#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_CRACMM.192.16x12pe.2day.cyclecloud.lustre.lim_craccm.log
+#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_CRACMM.192.16x12pe.2day.cyclecloud.lustre.lim_craccm.test.wbdust.log
+#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_CRACMM.192.16x12pe.2day.cyclecloud.lustre.lim_craccm.test.wbdust.log
 
 
 # ===================== CCTMv5.4.X Run Script ========================= 
@@ -64,7 +64,7 @@ echo 'Start Model Run At ' `date`
  set PROC      = mpi               #> serial or mpi
  set MECH      = cracmm1_aq        #> Mechanism ID
  set EMIS      = WR705_2018gc2     #> Emission Inventory Details
- set APPL      = 2018_12US1        #> Application Name (e.g. Gridname)
+ set APPL      = 2018_12US1_wbdust        #> Application Name (e.g. Gridname)
  set APPL_2017 = 2017_12US1
  set compilerString = gcc
 # set compilerString = intel18.0
@@ -189,7 +189,7 @@ setenv CTM_ADV_CFL 0.95      #> max CFL [ default: 0.75]
 
 #> Science Options
 setenv CTM_OCEAN_CHEM Y      #> Flag for ocean halogen chemistry and sea spray aerosol emissions [ default: Y ]
-setenv CTM_WB_DUST N         #> use inline windblown dust emissions  (only for use with PX) [ default: N ]
+setenv CTM_WB_DUST Y         #> use inline windblown dust emissions  (only for use with PX) [ default: N ]
 setenv CTM_WBDUST_BELD BELD3 #> landuse database for identifying dust source regions
                              #>    [ default: BELD3 ]; ignore if CTM_WB_DUST = N
 setenv CTM_LTNG_NO N         #> turn on lightning NOx [ default: N ]
@@ -273,17 +273,6 @@ setenv B3GTS_DIAG Y          #> BEIS mass emissions diagnostic file [ default: N
 setenv CTM_WVEL Y            #> save derived vertical velocity component to conc
                              #>    file [ default: Y ]
 
-#> MPI Optimization Flags
-setenv MPI_SM_POOL 16000     #> increase shared memory pool in case many MPI_SEND headers
-setenv MP_EAGER_LIMIT 65536  #> set MPI message passing buffer size to max
-setenv MP_SINGLE_THREAD yes  #> optimize for single threaded applications [ default: no ]
-setenv MP_STDOUTMODE ordered #> order output by the processor ID
-setenv MP_LABELIO yes        #> label output by processor ID [ default: no ]
-setenv MP_SHARED_MEMORY yes  #> force use of shared memory for tasks on same node [ default: no ]
-setenv MP_ADAPTER_USE shared #> share the MP adapter with other jobs
-setenv MP_CPU_USE multiple   #> share the node with multiple users/jobs
-setenv MP_CSS_INTERRUPT yes  #> specify whether arriving packets generate interrupts [ default: no ]
-
 # =====================================================================
 #> Input Directories and Filenames
 # =====================================================================
@@ -298,7 +287,6 @@ set METpath   = $INPDIR/met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed        #> meteor
 #set METpath	= $INPDIR/met/mcip_v51_wrf_v411_noltng
 #set JVALpath  = $INPDIR/jproc            #> offline photolysis rate table directory
 set OMIpath   = $BLD                      #> ozone column data for the photolysis model
-set LUpath    = $INPDIR/surface           #> BELD landuse data for windblown dust model
 set SZpath    = $INPDIR/surface           #> surf zone file for in-line seaspray emissions
 
 # =====================================================================
@@ -555,13 +543,6 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
                              #> Biogenic NO soil input file; ignore if INITIAL_RUN = Y
   endif
 
-  #> Windblown dust emissions configuration
-  if ( $CTM_WB_DUST == 'Y' ) then
-     # Input variables for BELD3 Landuse option
-     setenv DUST_LU_1 $LUpath/beld3_12US1_459X299_output_a.ncf
-     setenv DUST_LU_2 $LUpath/beld4_12US1_459X299_output_tot.ncf
-  endif
-  
   #> In-line sea spray emissions configuration
   setenv OCEAN_1 $SZpath/OCEAN_${MM}_L3m_MC_CHL_chlor_a_12US1.nc
 
@@ -661,10 +642,6 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
     set S_ICfile = CCTM_SENGRID_${RUNID}_${YESTERDAY}.nc
  endif
 
- setenv DDM3D_BCS F      # use sensitivity bc file for nested runs [ T | Y | F | N ] (default is N/F)
- set S_BCpath = /asm/MOD3DATA/CMAQv53_TS/2018_12US1/icbc/CMAQv53_TS_108NHEMI_SHAKEOUT
- set S_BCfile = BCON_CONC_12US1_CMAQv53_TS_regrid_${YYYYMM}.nc
-
  setenv CTM_NPMAX       $NPMAX
  setenv CTM_SENS_1      "$OUTDIR/CCTM_SENGRID_${CTM_APPL}.nc -v"
  setenv A_SENS_1        "$OUTDIR/CCTM_ASENS_${CTM_APPL}.nc -v"
@@ -672,7 +649,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
  setenv CTM_SDRYDEP_1   "$OUTDIR/CCTM_SENDDEP_${CTM_APPL}.nc -v"
  setenv CTM_NPMAX       $NPMAX
  setenv INIT_SENS_1     $S_ICpath/$S_ICfile
- setenv BNDY_SENS_1     $S_BCpath/$S_BCfile
+# setenv BNDY_SENS_1     $S_BCpath/$S_BCfile
  
 # =====================================================================
 #> Output Files
