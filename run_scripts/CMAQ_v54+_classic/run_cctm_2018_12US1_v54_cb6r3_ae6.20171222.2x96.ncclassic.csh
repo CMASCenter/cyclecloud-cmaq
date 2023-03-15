@@ -7,8 +7,8 @@
 #SBATCH --ntasks-per-node=96
 #SBATCH --exclusive
 #SBATCH -J CMAQ
-#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54+_classic/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r3_ae6_20200131_MYR.256.16x12pe.2day.20171222start.2x96.log
-#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54+_classic/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r3_ae6_20200131_MYR.256.16x12pe.2day.20171222start.2x96.log
+#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54+_classic/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r3_ae6_20200131_MYR.192.16x12pe.2day.20171222start.2x96.log
+#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54+_classic/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r3_ae6_20200131_MYR.192.16x12pe.2day.20171222start.2x96.log
 
 
 # ===================== CCTMv5.4.X Run Script ========================= 
