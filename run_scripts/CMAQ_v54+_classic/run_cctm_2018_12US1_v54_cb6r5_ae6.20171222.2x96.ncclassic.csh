@@ -125,7 +125,7 @@ echo "---CMAQ EXECUTION ID: $EXECUTION_ID ---"
 set CLOBBER_DATA = TRUE
 
 #> Logfile Options
-#> Master Log File Name; uncomment to write standard output to a log, otherwise write to screen
+#> Main Log File Name; uncomment to write standard output to a log, otherwise write to screen
 #setenv LOGFILE $CMAQ_HOME/$RUNID.log  
 if (! -e $LOGDIR ) then
   mkdir -p $LOGDIR
@@ -343,11 +343,11 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   #> made when creating the emission files defined below and the desired representation of organic aerosols.
   #> For further information, please see:
   #> + AERO7 Release Notes section on 'Required emission updates':
-  #>   https://github.com/USEPA/CMAQ/blob/master/DOCS/Release_Notes/aero7_overview.md
+  #>   https://github.com/USEPA/CMAQ/blob/5.3.3/DOCS/Release_Notes/CMAQv5.3_aero7_overview.md
   #> + CMAQ User's Guide section 6.9.3 on 'Emission Compatability':
-  #>   https://github.com/USEPA/CMAQ/blob/master/DOCS/Users_Guide/CMAQ_UG_ch06_model_configuration_options.md#6.9.3_Emission_Compatability
+  #>   https://github.com/USEPA/CMAQ/blob/main/DOCS/Users_Guide/CMAQ_UG_ch06_model_configuration_options.md#6.9.3_Emission_Compatability
   #> + Emission Control (DESID) Documentation in the CMAQ User's Guide:
-  #>   https://github.com/USEPA/CMAQ/blob/master/DOCS/Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.md
+  #>   https://github.com/USEPA/CMAQ/blob/main/DOCS/Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.md
   #>
   setenv DESID_CTRL_NML ${BLD}/CMAQ_Control_DESID.nml
   setenv DESID_CHEM_CTRL_NML ${BLD}/CMAQ_Control_DESID_${MECH}.nml
