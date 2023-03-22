@@ -390,7 +390,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   #> + Emission Control (DESID) Documentation in the CMAQ User's Guide:
   #>   https://github.com/USEPA/CMAQ/blob/main/DOCS/Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.md
   #>
-  setenv DESID_CTRL_NML ${BLD}/CMAQ_Control_DESID_DESID_2018_12US1_CRACMM_Platform.nml
+  setenv DESID_CTRL_NML ${BLD}/CMAQ_Control_DESID_2018_12US1_CRACMM_Platform.nml
   setenv DESID_CHEM_CTRL_NML ${BLD}/CMAQ_Control_DESID_${MECH}_2018_12US1_CRACMM_Platform.nml
 
   #> The following namelist configures aggregated output (via the Explicit and Lumped
