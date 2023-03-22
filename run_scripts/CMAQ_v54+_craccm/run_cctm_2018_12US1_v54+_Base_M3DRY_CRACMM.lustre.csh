@@ -5,8 +5,8 @@
 #SBATCH --ntasks-per-node=96
 #SBATCH --exclusive
 #SBATCH -J CMAQ
-#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_CRACMM.192.16x12pe.2day.cyclecloud.lustre.lim_craccm.test.wbdust.log
-#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_CRACMM.192.16x12pe.2day.cyclecloud.lustre.lim_craccm.test.wbdust.log
+#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_CRACMM.192.16x12pe.2day.cyclecloud.lustre.log
+#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_CRACMM.192.16x12pe.2day.cyclecloud.lustre.log
 
 
 # ===================== CCTMv5.4.X Run Script ========================= 
@@ -147,7 +147,7 @@ echo "---CMAQ EXECUTION ID: $EXECUTION_ID ---"
 set CLOBBER_DATA = TRUE
 
 #> Logfile Options
-#> Master Log File Name; uncomment to write standard output to a log, otherwise write to screen
+#> Main Log File Name; uncomment to write standard output to a log, otherwise write to screen
 #setenv LOGFILE $CMAQ_HOME/$RUNID.log  
 if (! -e $LOGDIR ) then
   mkdir -p $LOGDIR
@@ -384,14 +384,14 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   #> made when creating the emission files defined below and the desired representation of organic aerosols.
   #> For further information, please see:
   #> + AERO7 Release Notes section on 'Required emission updates':
-  #>   https://github.com/USEPA/CMAQ/blob/master/DOCS/Release_Notes/aero7_overview.md
+  #> https://github.com/USEPA/CMAQ/blob/5.3.3/DOCS/Release_Notes/CMAQv5.3_aero7_overview.md
   #> + CMAQ User's Guide section 6.9.3 on 'Emission Compatability':
-  #>   https://github.com/USEPA/CMAQ/blob/master/DOCS/Users_Guide/CMAQ_UG_ch06_model_configuration_options.md#6.9.3_Emission_Compatability
+  #>   https://github.com/USEPA/CMAQ/blob/main/DOCS/Users_Guide/CMAQ_UG_ch06_model_configuration_options.md#6.9.3_Emission_Compatability
   #> + Emission Control (DESID) Documentation in the CMAQ User's Guide:
-  #>   https://github.com/USEPA/CMAQ/blob/master/DOCS/Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.md
+  #>   https://github.com/USEPA/CMAQ/blob/main/DOCS/Users_Guide/Appendix/CMAQ_UG_appendixB_emissions_control.md
   #>
-  setenv DESID_CTRL_NML ${BLD}/CMAQ_Control_DESID.nml
-  setenv DESID_CHEM_CTRL_NML ${BLD}/CMAQ_Control_DESID_${MECH}.nml
+  setenv DESID_CTRL_NML ${BLD}/CMAQ_Control_DESID_DESID_2018_12US1_CRACMM_Platform.nml
+  setenv DESID_CHEM_CTRL_NML ${BLD}/CMAQ_Control_DESID_${MECH}_2018_12US1_CRACMM_Platform.nml
 
   #> The following namelist configures aggregated output (via the Explicit and Lumped
   #> Air Quality Model Output (ELMO) Module), domain-wide budget output, and chemical
