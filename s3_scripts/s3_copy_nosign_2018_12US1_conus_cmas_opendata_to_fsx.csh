@@ -1,5 +1,5 @@
 #!/bin/csh -f
-#Script to download enough data to run START_DATE 201522 and END_DATE 201523 for CONUS Domain
+#Script to download enough data to run START_DATE 201822 and END_DATE 201823 for CONUS Domain
 #Requires installing aws command line interface
 #https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-linux-install
 #Total storage required is 44 G
