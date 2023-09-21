@@ -34,8 +34,9 @@ extensions = ["myst_parser",
               "sphinx.ext.duration",
               "sphinx.ext.autosectionlabel",
               "sphinx.ext.autodoc",
-              "nbsphinx", "edit_on_github",
-              "sphinx_last_updated_by_git" #MyST-NB
+              "sphinx_last_updated_by_git",
+              "nbsphinx", "edit_on_github" #MyST-NB
+ 
 ]
 
 edit_on_github_project = 'lizadams/cyclecloud-cmaq'
