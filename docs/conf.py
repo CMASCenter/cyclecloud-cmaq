@@ -34,7 +34,6 @@ extensions = ["myst_parser",
               "sphinx.ext.duration",
               "sphinx.ext.autosectionlabel",
               "sphinx.ext.autodoc",
-              "sphinx_last_updated_by_git",
               "nbsphinx", "edit_on_github" #MyST-NB
  
 ]
