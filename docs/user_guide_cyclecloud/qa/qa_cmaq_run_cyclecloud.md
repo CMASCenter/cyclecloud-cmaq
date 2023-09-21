@@ -283,4 +283,4 @@ OH
 ![O3_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg ](../../qa_plots/spatial_plots/O3_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg)
 
 SO2
-![SO2_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../../qa_plots/spatial_plots/16x8_vs_8x16/SO2_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg)
+![SO2_MAPS_CMAQv5.3.3wGCC16x8pe_vs_CMAQv5.3.3wGCC8x16pe.jpg ](../../qa_plots/spatial_plots/SO2_MAPS_GCC10x18PE_vs_GCC12x20PE-1.jpg)

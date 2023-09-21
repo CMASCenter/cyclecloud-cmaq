@@ -1,0 +1,15 @@
+#%Module
+
+proc ModulesHelp { } {
+   puts stderr "This module adds hdf5-1.10.5/gcc-9.2.1 to your path"
+}
+ 
+module-whatis "This module adds hdf5-1.10.5/gcc-9.2.1 to your path\n"
+
+set basedir "/shared/build-hdf5/netcdf"
+prepend-path PATH "${basedir}/bin"
+prepend-path LD_LIBRARY_PATH "${basedir}/lib"
+module load ioapi-3.2_20200828/gcc-9.2.1-hdf5 
+module load mpi/openmpi-4.1.1
+module load gcc-9.2.1
+

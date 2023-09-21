@@ -1,0 +1,14 @@
+#%Module
+
+proc ModulesHelp { } {
+   puts stderr "This module adds ioapi-3.2_20200828/gcc-9.2.1 to your path"
+}
+ 
+module-whatis "This module adds ioapi-3.2_20200828/gcc-9.2.1 to your path\n"
+
+set basedir "/shared/build/ioapi-3.2_branch_20200828/"
+prepend-path PATH "${basedir}/Linux2_x86_64gfort"
+prepend-path LD_LIBRARY_PATH "${basedir}/ioapi/fixed_src"
+module load mpi/openmpi-4.1.1
+module load gcc-9.2.1
+module load netcdf-4.8.1/gcc-9.2.1  

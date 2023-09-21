@@ -53,7 +53,7 @@ don't change anything
 
 Click on Next > Review and create
 
-![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HCv120/Azure_Create_Virtual_Machine_Review_and_create.png)
+!!!![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HCv120/Azure_Create_Virtual_Machine_Review_and_create.png)
 
 Click on download private key and provision resource
 
@@ -215,6 +215,7 @@ If you do not see git available as a module, you may need to install it as follo
 module load mpi/openmpi-4.1.1 
 ```
 
+
 ### Install Cycle Cloud Repo
 
 `git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git`
@@ -319,7 +320,7 @@ There are two steps required to create your own custome module:
 
 2. add a line to your ~/.cshrc to update the MODULEPATH
 
-Create a new custom module that will be loaded with:
+Create a new custom module that will be loaded including any dependencies using the following command:
 
 ```
 module load ioapi-3.2_20200828/gcc-9.2.1-netcdf
@@ -334,7 +335,7 @@ First, create a path to store the module file. The path must contain /Modules/mo
 mkdir /shared/build/Modules/modulefiles/ioapi-3.2_20200828
 ```
 
-Next, crate the module file and save it in the directory above.
+Next, create the module file and save it in the directory above.
 
 ```
 cd /shared/build/Modules/modulefiles/ioapi-3.2_20200828
@@ -357,18 +358,45 @@ prepend-path PATH "${basedir}/Linux2_x86_64gfort"
 prepend-path LD_LIBRARY_PATH "${basedir}/ioapi/fixed_src"
 module load mpi/openmpi-4.1.1
 module load gcc-9.2.1
+module load netcdf-4.8.1/gcc-9.2.1
 ```
 
-The example module file above sets two evironment variables and loads two system modules.
+The example module file above sets two evironment variables and loads two system modules and a custom module (that we also need to define).
 
 The modules update the PATH and LD_LIBRARY_PATH. 
 
-Step 2: Add the module path to MODULEPATH.
-
-Now that the odule file has been created, add the following line to your ~/.cshrc file so that it can be found:
+Now create the custom module to define the netCDF libraries that were used to build I/O API.
 
 ```
-module use --append /shared/build/Modules/modulefiles/ioapi-3.2_20200828/gcc-9.2.1-netcdf
+mkdir /shared/build/Modules/modulefiles/netcdf-4.8.1
+vim gcc-9.2.1
+```
+
+Contents of gcc-9.2.1
+
+```
+#%Module
+  
+proc ModulesHelp { } {
+   puts stderr "This module adds netcdf-4.8.1/gcc-9.2.1 to your path"
+}
+
+module-whatis "This module adds netcdf-4.8.1/gcc-9.2.1 to your path\n"
+
+set basedir "/shared/build/netcdf"
+prepend-path PATH "${basedir}/bin"
+prepend-path LD_LIBRARY_PATH "${basedir}/lib"
+module load mpi/openmpi-4.1.1
+module load gcc-9.2.1
+```
+
+
+Step 2: Add the module path to MODULEPATH.
+
+Now that the two custom module files have been created, add the following line to your ~/.cshrc file so that they can be found:
+
+```
+module use --append /shared/build/Modules/modulefiles
 ```
 
 Step 3: View the modules available after creation of the new module
@@ -384,6 +412,39 @@ Step 4: Load the new module
 ```
 module load ioapi-3.2_20200828/gcc-9.2.1-netcdf
 ```
+
+Output:
+
+```
+Loading ioapi-3.2_20200828/gcc-9.2.1-netcdf
+  Loading requirement: gcc-9.2.1 mpi/openmpi-4.1.1 netcdf-4.8.1/gcc-9.2.1
+```
+
+Verify that the libraries required for netCDF and I/O API have been added to the $LD_LIBRARY_PATH  environment variable
+
+```
+echo $LD_LIBRARY_PATH
+```
+
+Output:
+
+```
+/shared/build/netcdf/lib:/opt/openmpi-4.1.1/lib:/opt/rh/gcc-toolset-9/root/lib64:/shared/build/ioapi-3.2_branch_20200828//ioapi/fixed_src::
+```
+
+Verify that the I/O API bin directory and netCDF bin directory that you specified in the custom module has been added to the $PATH environment variable 
+
+```
+ echo $PATH
+```
+
+Output
+
+```
+/shared/build/netcdf/bin:/opt/openmpi-4.1.1/bin:/opt/rh/gcc-toolset-9/root/bin:/shared/build/ioapi-3.2_branch_20200828//Linux2_x86_64gfort:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/slurm/bin/:/usr/local/bin:/opt/slurm/bin/:/usr/local/bin
+```
+
+see <a href="https://researchcomputing.princeton.edu/support/knowledge-base/custom-modules">Custom-Modules from Princeton Research Computing</a>
 
 
 ## Install and Build CMAQ
