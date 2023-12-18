@@ -4,4 +4,5 @@ Run CMAQ on a single Virtual Machine (VM) using HBv120 and AlmaLinux 8.5 HPC - G
 
 ```{toctree}
 preinstall.md
+preinstall_v54.md
 ```
