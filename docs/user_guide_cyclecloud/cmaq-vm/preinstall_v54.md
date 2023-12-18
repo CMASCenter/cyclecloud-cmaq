@@ -215,11 +215,7 @@ If you do not see git available as a module, you may need to install it as follo
 ### Load the openmpi module
 
 ```
-<<<<<<< HEAD
-module load mpi/openmpi-4.1.1 
-=======
 module load mpi/openmpi-4.1.5
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 
@@ -290,15 +286,6 @@ Output
 
 ```
 NAME="AlmaLinux"
-<<<<<<< HEAD
-VERSION="8.5 (Arctic Sphynx)"
-ID="almalinux"
-ID_LIKE="rhel centos fedora"
-VERSION_ID="8.5"
-PLATFORM_ID="platform:el8"
-PRETTY_NAME="AlmaLinux 8.5 (Arctic Sphynx)"
-ANSI_COLOR="0;34"
-=======
 VERSION="8.7 (Stone Smilodon)"
 ID="almalinux"
 ID_LIKE="rhel centos fedora"
@@ -307,21 +294,16 @@ PLATFORM_ID="platform:el8"
 PRETTY_NAME="AlmaLinux 8.7 (Stone Smilodon)"
 ANSI_COLOR="0;34"
 LOGO="fedora-logo-icon"
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 CPE_NAME="cpe:/o:almalinux:almalinux:8::baseos"
 HOME_URL="https://almalinux.org/"
 DOCUMENTATION_URL="https://wiki.almalinux.org/"
 BUG_REPORT_URL="https://bugs.almalinux.org/"
 
 ALMALINUX_MANTISBT_PROJECT="AlmaLinux-8"
-<<<<<<< HEAD
-ALMALINUX_MANTISBT_PROJECT_VERSION="8.5"
-=======
 ALMALINUX_MANTISBT_PROJECT_VERSION="8.7"
 REDHAT_SUPPORT_PRODUCT="AlmaLinux"
 REDHAT_SUPPORT_PRODUCT_VERSION="8.7"
 
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 ## Change shell to use tcsh
@@ -348,11 +330,7 @@ There are two steps required to create your own custome module:
 Create a new custom module that will be loaded including any dependencies using the following command:
 
 ```
-<<<<<<< HEAD
-module load ioapi-3.2_20200828/gcc-9.2.1-netcdf
-=======
 module load ioapi-3.2_20200828/gcc-9.2.0-netcdf
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 Step 1: Create the module file.
@@ -368,46 +346,29 @@ Next, create the module file and save it in the directory above.
 
 ```
 cd /shared/build/Modules/modulefiles/ioapi-3.2_20200828
-<<<<<<< HEAD
-vim gcc-9.2.1-netcdf
 ```
 
-Contents of gcc-9.2.1-netcdf:
-=======
+```
 vim gcc-9.2.0-netcdf
 ```
 
 Contents of gcc-9.2.0-netcdf:
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 
 ```
 #%Module
   
 proc ModulesHelp { } {
-<<<<<<< HEAD
-   puts stderr "This module adds ioapi-3.2_20200828/gcc-9.2.1 to your path"
-}
-
-module-whatis "This module adds ioapi-3.2_20200828/gcc-9.2.1 to your path\n"
-=======
    puts stderr "This module adds ioapi-3.2_20200828/gcc-9.2.0 to your path"
 }
 
 module-whatis "This module adds ioapi-3.2_20200828/gcc-9.2.0 to your path\n"
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 
 set basedir "/shared/build/ioapi-3.2_branch_20200828/"
 prepend-path PATH "${basedir}/Linux2_x86_64gfort"
 prepend-path LD_LIBRARY_PATH "${basedir}/ioapi/fixed_src"
-<<<<<<< HEAD
-module load mpi/openmpi-4.1.1
-module load gcc-9.2.1
-module load netcdf-4.8.1/gcc-9.2.1
-=======
 module load mpi/openmpi-4.1.5
 module load gcc-9.2.0
 module load netcdf-4.8.1/gcc-9.2.0
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 The example module file above sets two evironment variables and loads two system modules and a custom module (that we also need to define).
@@ -418,44 +379,25 @@ Now create the custom module to define the netCDF libraries that were used to bu
 
 ```
 mkdir /shared/build/Modules/modulefiles/netcdf-4.8.1
-<<<<<<< HEAD
-vim gcc-9.2.1
-```
-
-Contents of gcc-9.2.1
-=======
 vim gcc-9.2.0
 ```
 
 Contents of gcc-9.2.0
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 
 ```
 #%Module
   
 proc ModulesHelp { } {
-<<<<<<< HEAD
-   puts stderr "This module adds netcdf-4.8.1/gcc-9.2.1 to your path"
-}
-
-module-whatis "This module adds netcdf-4.8.1/gcc-9.2.1 to your path\n"
-=======
    puts stderr "This module adds netcdf-4.8.1/gcc-9.2.0 to your path"
 }
 
 module-whatis "This module adds netcdf-4.8.1/gcc-9.2.0 to your path\n"
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 
 set basedir "/shared/build/netcdf"
 prepend-path PATH "${basedir}/bin"
 prepend-path LD_LIBRARY_PATH "${basedir}/lib"
-<<<<<<< HEAD
-module load mpi/openmpi-4.1.1
-module load gcc-9.2.1
-=======
 module load mpi/openmpi-4.1.5
 module load gcc-9.2.0
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 
@@ -478,23 +420,14 @@ module avail
 Step 4: Load the new module
 
 ```
-<<<<<<< HEAD
-module load ioapi-3.2_20200828/gcc-9.2.1-netcdf
-=======
 module load ioapi-3.2_20200828/gcc-9.2.0-netcdf
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 Output:
 
 ```
-<<<<<<< HEAD
-Loading ioapi-3.2_20200828/gcc-9.2.1-netcdf
-  Loading requirement: gcc-9.2.1 mpi/openmpi-4.1.1 netcdf-4.8.1/gcc-9.2.1
-=======
 Loading ioapi-3.2_20200828/gcc-9.2.0-netcdf
   Loading requirement: gcc-9.2.1 mpi/openmpi-4.1.1 netcdf-4.8.1/gcc-9.2.0
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 Verify that the libraries required for netCDF and I/O API have been added to the $LD_LIBRARY_PATH  environment variable
@@ -506,11 +439,7 @@ echo $LD_LIBRARY_PATH
 Output:
 
 ```
-<<<<<<< HEAD
-/shared/build/netcdf/lib:/opt/openmpi-4.1.1/lib:/opt/rh/gcc-toolset-9/root/lib64:/shared/build/ioapi-3.2_branch_20200828//ioapi/fixed_src::
-=======
 /shared/build/ioapi-3.2_branch_20200828//ioapi/fixed_src:/opt/openmpi-4.1.5/lib:/opt/gcc-9.2.0/lib64:/shared/build/netcdf/lib
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 Verify that the I/O API bin directory and netCDF bin directory that you specified in the custom module has been added to the $PATH environment variable 
@@ -522,11 +451,7 @@ Verify that the I/O API bin directory and netCDF bin directory that you specifie
 Output
 
 ```
-<<<<<<< HEAD
-/shared/build/netcdf/bin:/opt/openmpi-4.1.1/bin:/opt/rh/gcc-toolset-9/root/bin:/shared/build/ioapi-3.2_branch_20200828//Linux2_x86_64gfort:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/slurm/bin/:/usr/local/bin:/opt/slurm/bin/:/usr/local/bin
-=======
 /shared/build/ioapi-3.2_branch_20200828//Linux2_x86_64gfort:/opt/openmpi-4.1.5/bin:/opt/gcc-9.2.0/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/shared/build/netcdf/bin:/shared/build/ioapi-3.2/Linux2_x86_64gfort:/opt/slurm/bin/:/usr/local/bin
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 see <a href="https://researchcomputing.princeton.edu/support/knowledge-base/custom-modules">Custom-Modules from Princeton Research Computing</a>
@@ -534,55 +459,26 @@ see <a href="https://researchcomputing.princeton.edu/support/knowledge-base/cust
 
 ## Install and Build CMAQ
 
-<<<<<<< HEAD
-`./gcc_cmaq.csh`
-
-Verfify that the executable was successfully built.
-
-`ls /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc/*.exe`
-=======
-`./gcc_cmaqv54.csh
+```
+./gcc_cmaqv54.csh
+```
 
 Verfify that the executable was successfully built.
 
 `ls /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc/*.exe`
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 
 Output
 
 ```
-<<<<<<< HEAD
-/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc/CCTM_v533.exe
-=======
 /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc/CCTM_v54.exe
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 ```
 
 ## Copy the run scripts from the repo to the run directory
 
-<<<<<<< HEAD
-`cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts`
-
-`cp /shared/cyclecloud-cmaq/run_scripts/HB120v3/*pe.csh .`
-
-List the scripts available
-
-`ls -rlt *pe.csh*`
-
-Output
-
-```
-run_cctm_2016_12US2.90pe.csh
-run_cctm_2016_12US2.36pe.csh
-run_cctm_2016_12US2.16pe.csh
-run_cctm_2016_12US2.120pe.csh
-```
-=======
 `cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts`
 
 `cp /shared/cyclecloud-cmaq/run_scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.csh .`
 
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 
 ## Download the Input data from the S3 Bucket 
 
@@ -600,33 +496,16 @@ see <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 `sudo ./aws/install`
 
 
-<<<<<<< HEAD
-### Install the input data using the s3 script
-
-`cd /shared/cyclecloud-cmaq/s3_scripts/`
-
-`./s3_copy_nosign_conus_cmas_opendata_to_shared.csh`
-=======
 ### Install the uncompressed 2018_12US1 input data using the s3 script
 
 `cd /shared/cyclecloud-cmaq/s3_scripts/`
 
 `./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_shared_20171222_cb6r5_uncompressed.csh`
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 
 Note, this Virtual Machine does not have Slurm installed or configured.
 
 ## Run CMAQ interactively using the following command:
 
-<<<<<<< HEAD
-`cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts`
-
-`./run_cctm_2016_12US2.120pe.csh |& tee ./run_cctm_2016_12US2.120pe.log`
-
-When the run has completed, record the timing of the two day benchmark.
-
-`tail -n 30  run_cctm_2016_12US2.120pe.log`
-=======
 `cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts`
 
 `./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.csh |& tee ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.log`
@@ -634,7 +513,6 @@ When the run has completed, record the timing of the two day benchmark.
 When the run has completed, record the timing of the two day benchmark.
 
 `tail -n 30  run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.log`
->>>>>>> c4b3e7a567ddf4f35960626ce606f8bc69c95b7e
 
 Output:
 
