@@ -1,4 +1,4 @@
-Intermediate Tutorial: Run CMAQ from HBv120 Compute Node
+Intermediate Tutorial: Run CMAQv533 from HBv120 Compute Node
 
 Instructions are provided to build and install CMAQ on HBv120 compute node installed from HPC AlmaLinux 8.5 HPC-Gen2 Image that contains modules for git, openmpi and gcc.
 The compute node does not have a SLURM scheduler on it, so jobs are run interactively from the command line. 
