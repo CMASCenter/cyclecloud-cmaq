@@ -59,7 +59,7 @@ Click on download private key and provision resource
 
 ![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HCv120/Azure_Generate_new_key_pair_and_create_resource.png)
 
-Click on Go to Resource once the deployment is completed.
+Click on Go to Resource once the deployment is completed to get the IP address.
 
 ![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HCv120/Azure_Virtual_Machine_Go_to_resource.png)
 
