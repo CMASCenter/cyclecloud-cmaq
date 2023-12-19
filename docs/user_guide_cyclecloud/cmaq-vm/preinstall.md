@@ -218,7 +218,7 @@ module load mpi/openmpi-4.1.1
 
 ### Install Cycle Cloud Repo
 
-`git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git`
+`git clone -b 5.3.3 https://github.com/CMASCenter/cyclecloud-cmaq.git`
 
 ### Install and build netcdf C, netcdf Fortran, I/O API, and CMAQ
 
