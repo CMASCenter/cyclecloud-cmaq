@@ -4,7 +4,7 @@
 %   contain the root `toctree` directive.
 
 ```{warning}
-This documentation is under continuous development
+This documentation is under continuous development. The most recent version is available here: <a href="https://cyclecloud-cmaq.readthedocs.io/en/latest/index.html">CMAQv5.4 on Azure</a>
 ```
 
 ## Overview
