@@ -36,8 +36,8 @@ Tier 2: additional libraries required for installing CMAQ
 
 Tier 3: Software distributed thru the CMAS Center
 
-* CMAQv533
-* CMAQv533 Post Processors
+* CMAQv5.4+
+* CMAQv5.4+ Post Processors
 
 Tier 4: R packages and Scripts
 
@@ -88,15 +88,15 @@ CycleCloud allows you to:
 <a href="https://docs.microsoft.com/en-us/azure/cyclecloud/?view=cyclecloud-8">Azure CycleCloud</a>
 
 
-#### 12US2 Benchmark Domain Description
+#### 12US1 Benchmark Domain Description
 
 ```
 GRIDDESC
-'12US2'
-'12CONUS'     -2412000.0 -1620000.0 12000.0 12000.0 396 246 1
+'12US1'
+'LAM_40N97W'  -2556000.   -1728000.   12000.  12000.  459  299    1
 ```
 
-![CMAQ Domain](../../qa_plots/tileplots/CMAQ_ACONC_12US2_Benchmark_Tileplot.png)
+![CMAQ Domain](../../qa_plots/tileplots/CMAQ_ACONC_12US1_Benchmark_Tileplot.png)
 
 
 ## Storage Options
@@ -115,7 +115,7 @@ Lustre Managed Server will be available to the public in March 2023. Files can b
 <a href="https://learn.microsoft.com/en-us/azure/storage/files/understanding-billing#provisioned-model">Azure Premium File Shares</a>
 
  
-## Recommended Cycle Cloud Configuration for CONUS Domain 12US2
+## Recommended Cycle Cloud Configuration for CONUS Domain 12US1
 
 Note, first create a VM using the image: CycleCloud 8.2, and from that VM, the Cycle Cloud is built.
 VM:
