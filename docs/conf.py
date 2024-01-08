@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.abspath('_ext'))
 project = 'azure-cmaq'
 copyright = '2022, CMAS Center'
 author = 'Liz Adams'
-html_logo = 'CMAQLogo.jpg'
+html_logo = 'CMAQLogo.png'
 github_url = 'https://github.com/lizadams/cyclecloud-cmaq'
 
 
@@ -34,7 +34,9 @@ extensions = ["myst_parser",
               "sphinx.ext.duration",
               "sphinx.ext.autosectionlabel",
               "sphinx.ext.autodoc",
+              "sphinx_copybutton",
               "nbsphinx", "edit_on_github" #MyST-NB
+ 
 ]
 
 edit_on_github_project = 'lizadams/cyclecloud-cmaq'
@@ -55,6 +57,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'furo'
+html_last_updated_fmt = '%Y-%m-%d %H:%M:%S %z'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
