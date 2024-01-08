@@ -18,6 +18,10 @@ With an enterprise account, the support plan is included.
 
 In the upper right corner, click on the icon for "Cloud Shell"
 
+You will be asked to create a storage account.  According to the command `az help`, Cloud Shell requires an attached Azure file share in order to persist file changes in your $HOME directory across sessions.
+
+<a href="https://azure.microsoft.com/en-us/get-started/azure-portal/cloud-shell">Azure Cloud Shell prompts you to create attached cloud storage</a>
+
 A new shell will be created at the bottom of your portal.
 
 ![Azure Cloud Shell](../../azure_web_interface_images/Azure_Portal_Cloud_Shell.png)
