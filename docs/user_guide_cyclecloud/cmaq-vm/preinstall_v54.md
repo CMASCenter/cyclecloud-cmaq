@@ -198,20 +198,6 @@ That should create a file system with about 1.8TiB
 
 
 
-## Obtain the Cyclecloud-cmaq code from github
-
-Load the git module
-
-```
-module load module-git
-```
-
-If you do not see git available as a module, you may need to install it as follows:
-
-
-`sudo yum install git`
-
-
 ### Load the openmpi module
 
 ```
@@ -520,20 +506,23 @@ Output:
 ==================================
   ***** CMAQ TIMING REPORT *****
 ==================================
-Start Day: 2015-12-22
-End Day:   2015-12-23
+Start Day: 2017-12-22
+End Day:   2017-12-23
 Number of Simulation Days: 2
-Domain Name:               12US2
-Number of Grid Cells:      3409560  (ROW x COL x LAY)
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
 Number of Layers:          35
-Number of Processes:       120
+Number of Processes:       96
    All times are in seconds.
 
 Num  Day        Wall Time
-01   2015-12-22   2458.35
-02   2015-12-23   2205.08
-     Total Time = 4663.43
-      Avg. Time = 2331.71
+01   2017-12-22   3175.9
+02   2017-12-23   3484.4
+     Total Time = 6660.30
+      Avg. Time = 3330.15
+
+
+
 ```
 
 If runs are submitted immediately after a successful completion of a run, then you may skey the scaling results.
@@ -541,27 +530,11 @@ It would be ideal to wait 30 minutes before running a second job.
 
 ### Run second job interactively using the following command:
 
-`./run_cctm_2016_12US2.90pe.csh | & tee ./run_cctm_2016_12US2.90pe.log`
+`./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.120.ncclassic.csh | & tee ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.120.ncclassic.log`
 
 Output
 
 ```
-==================================
-  ***** CMAQ TIMING REPORT *****
-==================================
-Start Day: 2015-12-22
-End Day:   2015-12-23
-Number of Simulation Days: 2
-Domain Name:               12US2
-Number of Grid Cells:      3409560  (ROW x COL x LAY)
-Number of Layers:          35
-Number of Processes:       90
-   All times are in seconds.
 
-Num  Day        Wall Time
-01   2015-12-22   2786.21
-02   2015-12-23   2417.74
-     Total Time = 5203.95
-      Avg. Time = 2601.97
 ```
 
