@@ -294,16 +294,19 @@ REDHAT_SUPPORT_PRODUCT_VERSION="8.7"
 
 ## Change shell to use tcsh
 
-`sudo usermod -s /bin/tcsh azureuser`
+```
+sudo usermod -s /bin/tcsh azureuser
+```
 
 
 Log out and then log back in to have the shell take effect.
 
 Copy a file to set paths 
 
-`cd /shared/cyclecloud-cmaq`
-
-`cp dot.cshrc.vm ~/.cshrc`
+```
+cd /shared/cyclecloud-cmaq
+cp dot.cshrc.vm ~/.cshrc
+```
 
 ## Create Environment Module for Libraries
 
@@ -451,7 +454,9 @@ see <a href="https://researchcomputing.princeton.edu/support/knowledge-base/cust
 
 Verfify that the executable was successfully built.
 
-`ls /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc/*.exe`
+```
+ls /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc/*.exe
+```
 
 Output
 
@@ -461,10 +466,10 @@ Output
 
 ## Copy the run scripts from the repo to the run directory
 
-`cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts`
-
-`cp /shared/cyclecloud-cmaq/run_scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.csh .`
-
+```
+cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
+cp /shared/cyclecloud-cmaq/run_scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.csh .
+```  
 
 ## Download the Input data from the S3 Bucket 
 
@@ -472,33 +477,35 @@ Output
 
 see <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Install AWS CLI</a>
 
-
-`cd /shared/build`
-
-`curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"`
-
-`unzip awscliv2.zip`
-
-`sudo ./aws/install`
+```
+cd /shared/build
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
 
 
 ### Install the uncompressed 2018_12US1 input data using the s3 script
 
-`cd /shared/cyclecloud-cmaq/s3_scripts/`
-
-`./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_shared_20171222_cb6r5_uncompressed.csh`
+```
+cd /shared/cyclecloud-cmaq/s3_scripts/
+./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_shared_20171222_cb6r5_uncompressed.csh
+```
 
 Note, this Virtual Machine does not have Slurm installed or configured.
 
 ## Run CMAQ interactively using the following command:
 
-`cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts`
-
-`./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.csh |& tee ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.log`
+```
+cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
+./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.csh |& tee ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.log
+```
 
 When the run has completed, record the timing of the two day benchmark.
 
-`tail -n 30  run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.log`
+```
+tail -n 30  run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.log
+```
 
 Output:
 
@@ -520,9 +527,6 @@ Num  Day        Wall Time
 02   2017-12-23   3484.4
      Total Time = 6660.30
       Avg. Time = 3330.15
-
-
-
 ```
 
 If runs are submitted immediately after a successful completion of a run, then you may skey the scaling results.
@@ -530,7 +534,9 @@ It would be ideal to wait 30 minutes before running a second job.
 
 ### Run second job interactively using the following command:
 
-`./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.120.ncclassic.csh | & tee ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.120.ncclassic.log`
+```
+./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.120.ncclassic.csh | & tee ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.120.ncclassic.log
+```
 
 Output
 
