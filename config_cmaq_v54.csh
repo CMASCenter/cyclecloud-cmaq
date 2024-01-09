@@ -25,7 +25,7 @@
  # the user will pull from to create exectuables. If the user is building
  # CMAQ inside the repository then it will be equal to CMAQ_HOME. If not,
  # the user must supply an alternative folder locaiton.
- setenv CMAQ_REPO $CMAQ_HOME
+ setenv CMAQ_REPO /shared/build/CMAQ_REPO_v54
 
  # CMAQ_DATA - this may be where the input data are located. It may be a 
  # symbolic link to another location on the system, but it should be
