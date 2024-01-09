@@ -198,7 +198,7 @@ squeue
 
 ```
 
-### Once the job is successfully running 
+### Timings 2x176
 
 Check on the log file status
 
@@ -269,7 +269,7 @@ cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
 sbatch  run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x176.ncclassic.csh
 ```
 
-### The per-processor log files are being sent to the output directory
+### Timings 1x176
 
 ```
 cd /shared/data/output/output_v54+_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_1x176
