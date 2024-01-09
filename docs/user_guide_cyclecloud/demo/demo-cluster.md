@@ -28,7 +28,9 @@ A new shell will be created at the bottom of your portal.
 
 Enter the following at the command prompt to check your quota for the East US Region:
 
-`az vm list-usage --location "East US" -o table`
+```
+az vm list-usage --location "East US" -o table
+```
 
 Output:
 
@@ -283,11 +285,15 @@ The screen will then provide instructions for you to login to the newly created 
 
 ## Login to Virtual Machine
 
-`ssh -i ./CMAQStandardD8sv4_key.pem  azureuser@13.89.128.245`
+```
+ssh -i ./CMAQStandardD8sv4_key.pem  azureuser@13.89.128.245
+```
 
 ### Verify that the 1024 GiB size disk is not listed  as being available
 
-`df -h`
+```
+df -h
+```
 
 In the intermediate tutorial, instructions are provided to find the disk and mount it as a /shared volume to the virtual machine.
 
