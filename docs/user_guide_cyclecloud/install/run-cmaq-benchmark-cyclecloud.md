@@ -14,14 +14,14 @@ cp *.csh /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/`
 ```
 
 
-### Run the CONUS Domain on 180 pes
+### Run the CONUS Domain on 176 pes
 
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
 ```
 
 ```
-sbatch run_cctm_2018_12US1_v54_Base_M3DRY.1x96.shared.csh 
+sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x176.ncclassic.csh
 ```
 
 Note, it will take about 3-5 minutes for the compute notes to start up This is reflected in the Status (ST) of PD (pending), with the NODELIST reason being that it is configuring the partitions for the cluster
@@ -51,59 +51,44 @@ output:
                  6       hpc     CMAQ lizadams  R       0:37      5 cmaqslurmhc44rsalmalinux-hpc-pg0-[1-5]
 ```
 
-The 180 pe job should take 60 minutes to run (30 minutes per day)
+The 176 pe job should take 85 minutes to run (42 minutes per day)
 
 Note, if the job does not get scheduled, examine the slurm logs
 
-`sudo vi /var/log/slurmctld/slurmctld.log`
-
-`sudo vi //var/log/slurmctld/resume.log` 
+```
+sudo vi /var/log/slurmctld/slurmctld.log
+sudo vi //var/log/slurmctld/resume.log
+```
 
 
 ### check the timings while the job is still running using the following command
 
-`grep 'Processing completed' CTM_LOG_001*`
+```
+grep 'Processing completed' CTM_LOG_001*
+```
 
 output:
 
 ```
-   Processing completed...    4.6 seconds
-            Processing completed...    4.8 seconds
-            Processing completed...    4.8 seconds
-            Processing completed...    5.2 seconds
-            Processing completed...    4.4 seconds
-            Processing completed...    5.0 seconds
-            Processing completed...    4.6 seconds
-            Processing completed...    4.7 seconds
-            Processing completed...    4.7 seconds
-            Processing completed...    5.1 seconds
+            Processing completed...      29.9047 seconds
+            Processing completed...       4.7678 seconds
+            Processing completed...       4.8123 seconds
+            Processing completed...       4.7888 seconds
+            Processing completed...       4.7633 seconds
+            Processing completed...       4.8243 seconds
+
 
 ```
 
 ### When the job has completed, use tail to view the timing from the log file.
 
-`tail /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/run_cctmv5.3.3_Bench_2016_12US2.2x90.10x18pe.2day.log `
+```
+tail -n 30 /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.176.16x11pe.2day.20171222start.1x176.log
+```
 
 output:
 
 ```
-==================================
-  ***** CMAQ TIMING REPORT *****
-==================================
-Start Day: 2015-12-22
-End Day:   2015-12-23
-Number of Simulation Days: 2
-Domain Name:               12US2
-Number of Grid Cells:      3409560  (ROW x COL x LAY)
-Number of Layers:          35
-Number of Processes:       180
-   All times are in seconds.
-
-Num  Day        Wall Time
-01   2015-12-22   2097.37
-02   2015-12-23   1809.84
-     Total Time = 3907.21
-      Avg. Time = 1953.60
 
 ```
 

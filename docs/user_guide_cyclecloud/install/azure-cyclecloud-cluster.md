@@ -108,6 +108,8 @@ Figure 11. Add Reader Role to Virtual Machine
 
 ### Create Storage Account 
 
+Question: Do I need to create a new storage account for each CycleCloud Virtual Machine Host?
+
 In the search bar, enter Storage Account, the select + Create Storage Account
 
 Select the resource group associated with the CycleCloudHost that you created CycleCloudHost_group
