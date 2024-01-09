@@ -43,6 +43,7 @@ mkdir /shared/data/CMAQ_Modeling_Platform_2018
 cd /shared/data/CMAQ_Modeling_Platform_2018
 ln -s ../2018_12US1 .
 cd /shared/data/CMAQ_Modeling_Platform_2018/2018_12US1`
+```
 
 
 `du -h`
