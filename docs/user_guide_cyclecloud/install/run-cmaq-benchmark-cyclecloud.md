@@ -3,31 +3,42 @@ Note, the run scripts are tailored to the Compute Node. This assumes the cluster
 
 Change directories to where the run scripts are available from the git repo.
 
-`cd /shared/cyclecloud-cmaq/run_scripts/HC44rs`
+```
+cd /shared/cyclecloud-cmaq/run_scripts/HB120v3_12US1_CMAQv54plus
+```
 
 Copy the run scripts to the run directory
 
-`cp * /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/`
+```
+cp *.csh /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/`
+```
 
 
 ### Run the CONUS Domain on 180 pes
 
-`cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/`
+```
+cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
+```
 
-`sbatch run_cctm_2016_12US2.180pe.csh`
+```
+sbatch run_cctm_2018_12US1_v54_Base_M3DRY.1x96.shared.csh 
+```
 
 Note, it will take about 3-5 minutes for the compute notes to start up This is reflected in the Status (ST) of PD (pending), with the NODELIST reason being that it is configuring the partitions for the cluster
 
 ### Check the status in the queue
 
-`squeue `
+```
+squeue 
+```
 
 output:
 
 ```
 [lizadams@CMAQSlurmHC44rsAlmaLinux-scheduler scripts]$ squeue
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                 6       hpc     CMAQ lizadams CF       5:03      5 cmaqslurmhc44rsalmalinux-hpc-pg0-[1-5]
+                 2       hpc     CMAQ lizadams CF       0:02      1 CycleCloud8-5-hpc-1
+
 ```
 After 5 minutes the status will change once the compute nodes have been created and the job is running
 
@@ -99,15 +110,19 @@ Num  Day        Wall Time
 
 ### Check whether the scheduler thinks there are cpus or vcpus
 
-`sinfo -lN`
+```
+sinfo -lN
+```
 
 output:
 
 ```
-Thu Feb 17 14:53:19 2022
+Tue Jan 09 19:11:04 2024
 NODELIST             NODES PARTITION       STATE CPUS    S:C:T MEMORY TMP_DISK WEIGHT AVAIL_FE REASON              
-cmaq-hbv3-hpc-pg0-1      1      hpc*       idle% 120   120:1:1 435814        0      1    cloud none                
-cmaq-hbv3-hpc-pg0-2      1      hpc*       idle% 120   120:1:1 435814        0      1    cloud none                
-cmaq-hbv3-hpc-pg0-3      1      hpc*       idle% 120   120:1:1 435814        0      1    cloud none                
-cmaq-hbv3-htc-1          1       htc       idle~ 1       1:1:2   3072        0      1    cloud none           
+CycleCloud8-5-hpc-1      1      hpc*  allocated# 176   176:1:1 747110        0      1    cloud none                
+CycleCloud8-5-hpc-2      1      hpc*       idle~ 176   176:1:1 747110        0      1    cloud none                
+CycleCloud8-5-hpc-3      1      hpc*       idle~ 176   176:1:1 747110        0      1    cloud none                
+CycleCloud8-5-hpc-4      1      hpc*       idle~ 176   176:1:1 747110        0      1    cloud none                
+CycleCloud8-5-htc-1      1       htc       idle~ 2       2:1:1   3072        0      1    cloud none                
+CycleCloud8-5-htc-2      1       htc       idle~ 2       2:1:1   3072        0      1    cloud none     
 ```
