@@ -106,7 +106,7 @@ module avail
 ### Load the openmpi module
 
 ```
-module load mpi/openmpi-4.1.0
+module load mpi/openmpi-4.1.5 
 ```
 
 ### Load the gcc copiler - note, this may have been automatically loaded by the openmpi module
@@ -170,7 +170,7 @@ echo $LD_LIBRARY_PATH
 output:
 
 ```
-/opt/openmpi-4.1.0/lib:/opt/gcc-9.2.0/lib64
+/opt/openmpi-4.1.5/lib:/opt/gcc-9.2.0/lib64
 ```
 
 ### Build I/O API library
