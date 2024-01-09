@@ -276,7 +276,6 @@ cd /shared/data/output/output_v54+_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_1x176
 grep -i 'Processing completed.' CTM_LOG_000*
 ```
 
-
 Output:
 
 ```
@@ -294,7 +293,7 @@ CTM_LOG_000.v54+_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_1x176_20171223:          
 
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
-tail -n 18 
+tail -n 18 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.176.16x11pe.2day.20171222start.1x176.log
 ```
 
 Output:
