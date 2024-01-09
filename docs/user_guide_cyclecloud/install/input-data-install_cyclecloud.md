@@ -33,39 +33,47 @@ Set up your credentials for using s3 copy (you can skip this if you do not have 
 
 ## Azure Cyclecloud install input on the /shared/data directory
 
-`sudo mkdir /shared/data`
+```
+sudo mkdir /shared/data
+```
 
 ## Change ownership
 
-`sudo chown azureuser /shared/data`
+```
+sudo chown azureuser /shared/data
+```
 
-`ls /shared/data`
-
-`df -h`
+```
+ls /shared/data`
+df -h
+```
 
 Output:
 
 `/dev/mapper/vg_cyclecloud_builtinshared-lv0 1000G   66G  935G   7% /shared `
 
 
-## Use the S3 script to copy the CONUS input data from the CMAS s3 bucket
+## Use the following aws cp command to copy the CONUS input data from the CMAS s3 bucket
 Modify the script if you want to change where the data is saved to.  Script currently uses /shared/data 
 
-`/shared/cyclecloud-cmaq/s3_scripts/s3_copy_nosign_conus_cmas_opendata_to_shared.csh`
-
+```
+cd /shared/data
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input .
+```
 
 check that the resulting directory structure matches the run script
 
-Note, this input data requires 44 GB of disk space  (if you use the yaml file to import the data to the lustre file system rather than copying the data you save this space)
+Note, this input data requires 85 GB of disk space
 
-`cd /shared/data/CMAQ_Modeling_Platform_2016/CONUS/12US2`
-
-`du -sh`
+```
+cd /shared/data/2018_12US1
+du -sh
+```
 
 output:
 
 ```
-44G     .
+85G     .
 ```
 
 CMAQ Cycle Cloud is configured to have 1 Terrabytes of space on the /shared filesystem, to allow multiple output runs to be stored.
