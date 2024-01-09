@@ -180,17 +180,24 @@ output:
 ```
 
 ### Build CMAQ
-note, the primary difference is the location of the openmpi libraries on cyclecloud, /opt/openmpi-4.1.0/lib and include, /opt/openmpi-4.1.0/include
+note, the primary difference is the location of the openmpi libraries on cyclecloud, /opt/openmpi-4.1.5/lib and include, /opt/openmpi-4.1.5/include
 
 ```
-./gcc_cmaq_cyclecloud.csh
+./gcc_cmaqv54+.csh
 ```
+
+Note, I had an issue with the CMAQ_REPO setting in config_cmaq.csh that needs to be fixed.
 
 
 Check to see that the cmaq executable has been built
 
 ```
-ls /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/BLD_CCTM_v533_gcc/*.exe
+ls -lrt /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc/*.ex
+```
+
+Output
+```
+-rwxr-xr-x. 1 lizadams cmaq 152920040 Jan  9 18:49 /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc/CCTM_v54.exe
 ```
 
 If it fails due to an issue with finding mpi, you will need to edit the gcc_cmaq_cyclecloud.csh script to point to the location of the mpi library and bin directory.
@@ -203,7 +210,7 @@ which mpirun
 ```
 
 ```
-        setenv MPI_INCL_DIR     /opt/openmpi-4.1.0/include              #> MPI Include directory path
-        setenv MPI_LIB_DIR      /opt/openmpi-4.1.0/lib             #> MPI Lib directory path
+        setenv MPI_INCL_DIR     /opt/openmpi-4.1.5/include              #> MPI Include directory path
+        setenv MPI_LIB_DIR      /opt/openmpi-4.1.5/lib             #> MPI Lib directory path
 ```
 
