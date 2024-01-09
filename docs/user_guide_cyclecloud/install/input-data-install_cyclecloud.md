@@ -4,17 +4,18 @@
 
 see https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
-`cd /shared/build`
-
-`curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"`
-
-`unzip awscliv2.zip`
-
-`sudo ./aws/install`
+```
+cd /shared/build
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
 
 ## edit .cshrc file to add /usr/local/bin to path
 
-`vi ~/.cshrc`
+```
+vi ~/.cshrc`
+```
 
 add /usr/local/bin to the set path line
 
@@ -22,13 +23,17 @@ Run csh at the command line
 
 ### Verify you can run the aws command
 
-` aws --help`
+```
+aws --help
+```
 
 If not, you may need to logout and back in.
 
 Set up your credentials for using s3 copy (you can skip this if you do not have credentials)
 
-`aws configure`
+```
+aws configure
+```
 
 
 ## Azure Cyclecloud install input on the /shared/data directory
