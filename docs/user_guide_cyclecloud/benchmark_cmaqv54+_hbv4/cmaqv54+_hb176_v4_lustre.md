@@ -205,6 +205,7 @@ Check on the log file status
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
 grep -i 'Processing completed.' run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.352.16x22pe.2day.20171222start.2x176.log`
+```
 
 Output:
 
