@@ -294,8 +294,10 @@ CTM_LOG_000.v54+_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_1x176_20171223:          
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
 tail -n 18 
+```
 
 Output:
+
 
 ```
 ==================================
