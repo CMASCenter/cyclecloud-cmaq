@@ -146,7 +146,9 @@ In this run script, slurm or SBATCH requests 1 node, each node with 176 pes
 Verify that the NPCOL and NPROW settings in the script are configured to match what is being requested in the SBATCH commands that tell slurm how many compute nodes to  provision. 
 In this case, to run CMAQ using on 176 cpus (SBATCH --nodes=1 and --ntasks-per-node=176), use NPCOL=16 and NPROW=11.
 
-`grep NPCOL run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.csh`
+```
+grep NPCOL run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.csh
+```
 
 Output:
 
@@ -162,14 +164,17 @@ Output:
 
 ## Submit Job to Slurm Queue to run CMAQ on 2 nodes
 
-`cd /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts`
-
-`sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x176.ncclassic.csh`
+```
+cd /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts
+sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x176.ncclassic.csh
+```
 
 
 ### Check status of run
 
-`squeue `
+```
+squeue 
+```
 
 Output:
 
@@ -183,7 +188,9 @@ It takes about 5-8 minutes for the compute nodes to spin up, after the nodes are
 
 ### Successfully started run
 
-`squeue`
+```
+squeue
+```
 
 ```
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
@@ -223,7 +230,10 @@ Output:
 ```
 
 Once the job has completed running the two day benchmark check the log file for the timings.
-`tail -n 18 run_cctm5.4+_Bench_2018_12US1_M3DRY_cb6r3_ae6_20200131_MYR.256.16x16pe.2day.20171222start.log`
+
+```
+tail -n 18 run_cctm5.4+_Bench_2018_12US1_M3DRY_cb6r3_ae6_20200131_MYR.256.16x16pe.2day.20171222start.log`
+```
 
 Output:
 
@@ -258,7 +268,7 @@ cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
 sbatch  run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x176.ncclassic.csh
 ```
 
-### The per-processor log files are beind sent to the output directory
+### The per-processor log files are being sent to the output directory
 
 ```
 cd /shared/data/output/output_v54+_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_1x176
