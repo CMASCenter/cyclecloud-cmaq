@@ -473,7 +473,7 @@ see <a href="https://researchcomputing.princeton.edu/support/knowledge-base/cust
 ## Install and Build CMAQ
 
 ```
-./gcc_cmaqv54.csh
+./gcc_cmaqv54+.csh
 ```
 
 Verfify that the executable was successfully built.

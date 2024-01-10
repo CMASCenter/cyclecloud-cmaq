@@ -8,7 +8,7 @@ setenv NETCDF_DIR /shared/build/netcdf/lib
 setenv NETCDFF_DIR /shared/build/netcdf/lib
 cd /shared/build/
 #git clone -b 5.3.2_singularity https://github.com/lizadams/CMAQ.git CMAQ_REPO
-git clone -b main https://github.com/USEPA/CMAQ.git CMAQ_REPO_v54
+git clone -b 5.4+ https://github.com/USEPA/CMAQ.git CMAQ_REPO_v54
 
 echo "downloaded CMAQ"
 cd CMAQ_REPO_v54
