@@ -275,7 +275,7 @@ Verify that the executable has been created
 
 `cd /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts`
 
-`sbatch run_cctm_2016_12US2.576.6x96.cyclecloud.hpcx.codemod.lustre3.precision.csh`
+`sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.retest.csh`
 
 
 ### Check status of run
@@ -285,8 +285,6 @@ Verify that the executable has been created
 Output:
 
 ```
-       JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                42       hpc     CMAQ lizadams CF       0:08      4 cyclecloudlizadams-hpc-pg0-[1-4]
 
 ```
 
@@ -298,8 +296,6 @@ It takes about 5-8 minutes for the compute nodes to spin up, after the nodes are
 `squeue`
 
 ```
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                42       hpc     CMAQ lizadams  R       0:01      4 cyclecloudlizadams-hpc-pg0-[1-4]
 
 ```
 
@@ -313,23 +309,20 @@ Output:
 
 
 ```
-            Processing completed...       5.0603 seconds
-            Processing completed...       3.5109 seconds
-            Processing completed...       3.5089 seconds
-            Processing completed...       3.4871 seconds
-            Processing completed...       3.5024 seconds
-            Processing completed...       3.4826 seconds
-            Processing completed...       3.5128 seconds
-            Processing completed...       3.4915 seconds
 
 ```
 
 Once the job has completed running the two day benchmark check the log file for the timings.
-`tail -n 18 run_cctm5.4+_Bench_2018_12US1_M3DRY_cb6r3_ae6_20200131_MYR.256.16x16pe.2day.20171222start.log`
+
+```
+tail -n 18 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2day.20171222start.2x96.log
+```
 
 Output:
 
 ```
+          OUTDIR  |  /lustre/data_lim/output/output_v54+_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_2x96_classic
+
 ==================================
   ***** CMAQ TIMING REPORT *****
 ==================================
@@ -339,14 +332,15 @@ Number of Simulation Days: 2
 Domain Name:               12US1
 Number of Grid Cells:      4803435  (ROW x COL x LAY)
 Number of Layers:          35
-Number of Processes:       256
+Number of Processes:       192
    All times are in seconds.
 
 Num  Day        Wall Time
-01   2017-12-22   1253.8
-02   2017-12-23   1401.1
-     Total Time = 2654.90
-      Avg. Time = 1327.45
+01   2017-12-22   1813.3
+02   2017-12-23   2077.7
+     Total Time = 3891.00
+      Avg. Time = 1945.50
+
 
 ```
 
@@ -357,23 +351,22 @@ You don't want to copy directly from the /lustre volume, as this will copy more 
 If you copy from /lustre directory, you would be copying all of the files on the s3 bucket.
 
 ```
-cd /lustre/cyclecloud-cmaq/s3_scripts
-./s3_copy_nosign_conus_cmas_opendata_to_shared.csh
+cd /shared/data
+aws s3 --no-sign-request --region=us-east-1 cp --recursive s3://cmas-cmaq/CMAQv5.4_2018_12US1_Benchmark_2Day_Input .
 ```
 
-### Submit a 576 pe job 6 nodes x 96 cpus on the EBS volume /shared
+### Submit a 96 pe job 1 nodes x 96 cpus on the EBS volume /shared
 
 ```
-cd /shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts
-sbatch  run_cctm_2016_12US2.576.6x96.cyclecloud.hpcx.codemod_liz.shared.pin.csh
+cd /shared/build/openmpi_gcc/CMAQ_v54+_classic/CCTM/scripts
+sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x96.ncclassic.retest.shared.csh 
 ```
 
 ### The per-processor log files are beind sent to the output directory
 
-`cd /shared/data/output/output_v54+_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_shared_20171222start`
-
-
-`grep -i 'Processing completed.' CTM_LOG_000*`
+```
+cd /shared/data/output/output_v54+_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_1x96_classic_retest
+grep -i 'Processing completed.' CTM_LOG_000*
 
 
 Output:
