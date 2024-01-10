@@ -559,12 +559,70 @@ It would be ideal to wait 30 minutes before running a second job.
 ### Run second job interactively using the following command:
 
 ```
-./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.120.ncclassic.csh | & tee ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.120.ncclassic.log
+./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x120.ncclassic.csh |& tee ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x120.ncclassic.log
 ```
 
 Output
 
 ```
+tail -n 18 ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x120.ncclassic.log
+```
 
+
+```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2017-12-22
+End Day:   2017-12-23
+Number of Simulation Days: 2
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       96
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2017-12-22   3075.2
+02   2017-12-23   3477.9
+     Total Time = 6553.10
+      Avg. Time = 3276.55
+
+
+```
+
+## Created another single VM and ran again
+
+```
+cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
+./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x96.ncclassic.csh |& tee ./run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x96.ncclassic.log
+```
+
+When it finished, examined the log file:
+
+```
+tail -n 18 run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x96.ncclassic.log
+```
+
+Output:
+
+```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2017-12-22
+End Day:   2017-12-23
+Number of Simulation Days: 2
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       96
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2017-12-22   3069.9
+02   2017-12-23   3445.2
+     Total Time = 6515.10
+      Avg. Time = 3257.55
 ```
 
