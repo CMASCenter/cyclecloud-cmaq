@@ -52,17 +52,24 @@ See information on how to join: <a href="https://learn.microsoft.com/en-us/azure
 Use your username and credentials to login
 ```
 
-`ssh -Y username@IP-address``
+```
+ssh -Y username@IP-address
+```
 
 ## Verify Software
 
 The software is pre-loaded on the /lustre volume of the CycleCloud.  
 
-`ls /lustre/build`
+```
+ls /lustre/build
+```
+
 
 Load the modules
 
-`module avail`
+```
+module avail
+```
 
 Output:
 
@@ -77,7 +84,9 @@ hdf5-1.10.5/gcc-9.2.1  ioapi-3.2_20200828/gcc-9.2.1-hdf5  ioapi-3.2_20200828/gcc
 
 Load the modules for the netCDF-4 compressed libraries.
 
-`module load ioapi-3.2_20200828/gcc-9.2.1-hdf5`
+```
+module load ioapi-3.2_20200828/gcc-9.2.1-hdf5
+```
 
 output:
 ```
@@ -86,22 +95,26 @@ output:
 
 Change the group and ownership permissions on the /lustre/data directory
 
-`sudo chown ubuntu /lustre/data`
-
-`sudo chgrp ubuntu /lustre/data`
+```
+sudo chown ubuntu /lustre/data
+sudo chgrp ubuntu /lustre/data
+```
 
 Create the output directory
 
-`mkdir -p /lustre/data/output`
+```
+mkdir -p /lustre/data/output
+```
 
 
 ## Download the input data from the AWS Open Data CMAS Data Warehouse.
 
 Do a git pull to obtain the latest scripts in the cyclecloud-cmaq repo.
 
-`cd /lustre/cyclecloud-cmaq`
-
-`git pull`
+```
+cd /lustre/cyclecloud-cmaq
+git pull
+```
 
 ```
 cd /shared/cyclecloud-cmaq/s3_scripts
@@ -110,11 +123,10 @@ cd /shared/cyclecloud-cmaq/s3_scripts
 
 ## Verify Input Data
 
-
-`cd /lustre/data_lim/CMAQ_Modeling_Platform_2018/2018_12US1`
-
-
-`du -h`
+```
+cd /lustre/data_lim/CMAQ_Modeling_Platform_2018/2018_12US1
+du -h
+```
 
 Output
 
@@ -157,7 +169,9 @@ Another copy is available in the cyclecloud-cmaq repo.
 Copy the run scripts from the repo.
 Note, there are different run scripts depending on what compute node is used. This tutorial assumes hpc6a-48xlarge is the compute node.
 
-`cp   /shared/cyclecloud-cmaq/run_scripts/2018_12US1_CMAQv54plus/run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.csh /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/`
+```
+cp   /shared/cyclecloud-cmaq/run_scripts/2018_12US1_CMAQv54plus/run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.csh /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/
+```
 
 ```{note}
 The time that it takes the 2 day CONUS benchmark to run will vary based on the number of CPUs used, and the compute node that is being used, and what disks are used for the I/O (shared or lustre).
@@ -166,7 +180,9 @@ The Benchmark Scaling Plot for hbv3_120 on lustre and shared (include here).
 
 Examine how the run script is configured
 
-`head -n 30 /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.csh`
+```
+head -n 30 /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.csh
+```
 
 ```
 #!/bin/csh -f

@@ -70,11 +70,15 @@ Click on Go to resource to get the IP address.
 
 Change the permissions on the public key using command
 
-`chmod 400  HPC-CMAQ-AlmaLinux-HB120_key.pem`
+```
+chmod 400  HPC-CMAQ-AlmaLinux-HB120_key.pem
+```
 
 Login to the Virtual Machine using ssh to the IP address using the public key.
 
-`ssh -Y -i ./xxxxxxx_key.pem username@xx.xx.xx.xx`
+```
+ssh -Y -i ./xxxxxxx_key.pem username@xx.xx.xx.xx
+```
 
 ## Mount the disk on the server as /shared using the instructions on the following link:
 
@@ -82,7 +86,9 @@ Login to the Virtual Machine using ssh to the IP address using the public key.
 
 ### Find the disk
 
-`lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"`
+```
+lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"
+```
 
 Output:
 
@@ -109,15 +115,21 @@ sudo partprobe /dev/sdc1
 
 ### Mount the disk
 
-`sudo mkdir /shared`
+```
+sudo mkdir /shared
+```
 
 ### Use mount to mount the filesystem
 
-`sudo mount /dev/sdc1 /shared`
+```
+sudo mount /dev/sdc1 /shared
+```
 
 ### Persist the mount
 
-`sudo blkid`
+```
+sudo blkid
+```
 
 Output
 
@@ -134,7 +146,9 @@ Output
 
 Next, open the /etc/fstab file in a text editor as follows:
 
-`sudo nano /etc/fstab`
+```
+sudo nano /etc/fstab
+```
 
 In this example, use the UUID value for the /dev/sdc1 device that was created in the previous steps, and the mountpoint of /shared. Add the following line to the end of the /etc/fstab file:
 
@@ -144,9 +158,10 @@ In this example, use the UUID value for the /dev/sdc1 device that was created in
 
 Change directories and verify that you see the /shared directory with Size of 1T 
 
-`cd /shared`
-
-`df -h`
+```
+cd /shared
+df -h
+```
 
 Output
 
@@ -183,15 +198,10 @@ mkdir cyclecloud-cmaq
 
 ```
 mkdir -p /mnt/nvme
-
 mdadm --create /dev/md10 --level 0 --raid-devices 2 /dev/nvme0n1 /dev/nvme1n1
-
 mkfs.xfs /dev/md10
-
 mount /dev/md10 /mnt/nvme
-
 chmod 1777 /mnt/nvme
-
 ```
 
 That should create a file system with about 1.8TiB
@@ -207,15 +217,21 @@ module load mpi/openmpi-4.1.5
 
 ### Install Cycle Cloud Repo
 
-`git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git`
+```
+git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git
+```
 
 ### Install and build netcdf C, netcdf Fortran, I/O API, and CMAQ
 
-`cd /shared/cyclecloud-cmaq`
+```
+cd /shared/cyclecloud-cmaq
+```
 
 Install netcdf-C and netcdf-Fortran
 
-`./gcc_install.csh`
+```
+./gcc_install.csh
+```
 
 If successful, you will see the following output, that at the bottom shows what versions of the netCDF library were installed.
 
@@ -260,13 +276,17 @@ netCDF-Fortran 4.5.4
 
 Install I/O API
 
-`./gcc_ioapi.csh`
+```
+./gcc_ioapi.csh
+```
 
 
 
 Find what operating system is on the system:
 
-` cat /etc/os-release`
+```
+cat /etc/os-release
+```
 
 Output
 
