@@ -18,7 +18,7 @@ This is different than the Azure Cycle-Cloud, where if CMAQ is not running in th
 1. Login to Azure Portal
 2. Select Create a Virtual Machine
 3. Click on See all images next to Image and use the search bar to search for HPC. Look for the AlmaLinux 8.7 HPC.
-Select either the Gen 1 or Gen 2, and click. That option should now pre-populate the form.
+Select either Gen 2, and click. That option should now pre-populate the form.
 4. Select Size - Standard_HB1120rs_v2 - 120 vcpus, 456 GiB memory ($2,628.0/monthly)
 5. Enter a Virtual Machine Name in the text box
 6. Use your username or azureuser
@@ -35,6 +35,10 @@ Click on Next > Disks
 ![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HBv120_CMAQv54/Azure_Create_Virtual_Machine_Create_new_disk.png)
 
 (note, this will create the disk, but you will need to login and mount the disk as the shared volume following the instructions below.)
+
+3. Create new Disk
+
+![Azure Create a New Disk](../../azure_web_interface_images/create_virtual_machine_HBv120_CMAQv54/Create_a_new_disk.png)
 
 Click on Next > Management
 
