@@ -372,22 +372,26 @@ grep -i 'Processing completed.' CTM_LOG_000*
 Output:
 
 ```
-           Processing completed...       3.4807 seconds
-            Processing completed...       3.5021 seconds
-            Processing completed...       3.5022 seconds
-            Processing completed...       3.4999 seconds
-            Processing completed...       4.5920 seconds
-            Processing completed...       8.4824 seconds
-            Processing completed...       3.5537 seconds
-            Processing completed...       3.5272 seconds
-
+            Processing completed...      11.1089 seconds
+            Processing completed...       8.5691 seconds
+            Processing completed...       8.5596 seconds
+            Processing completed...       8.5419 seconds
+            Processing completed...       8.4918 seconds
+            Processing completed...       8.4257 seconds
+            Processing completed...       8.3264 seconds
+            Processing completed...       8.2567 seconds
+            Processing completed...       8.3922 seconds
+            Processing completed...       8.0141 seconds
+            Processing completed...       8.2161 seconds
+            Processing completed...      10.3496 seconds
 ```
 
-`tail -n 18 run_cctmv5.3.3_Bench_2016_12US2.576.24x24pe.2day.cyclecloud.shared.codemod_liz.pin.2nd.log`
+tail -n 18 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.96.8x12pe.2day.20171222start.1x96.shared.log
 
 Output:
 
 ```
+
 ==================================
   ***** CMAQ TIMING REPORT *****
 ==================================
@@ -397,16 +401,14 @@ Number of Simulation Days: 2
 Domain Name:               12US1
 Number of Grid Cells:      4803435  (ROW x COL x LAY)
 Number of Layers:          35
-Number of Processes:       256
+Number of Processes:       96
    All times are in seconds.
 
 Num  Day        Wall Time
-01   2017-12-22   1533.1
-02   2017-12-23   1640.4
-     Total Time = 3173.50
-      Avg. Time = 1586.75
-
-
+01   2017-12-22   3744.5
+02   2017-12-23   4184.8
+     Total Time = 7929.30
+      Avg. Time = 3964.65
 
 ```
 
