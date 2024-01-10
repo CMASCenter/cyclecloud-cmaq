@@ -7,5 +7,6 @@ azure-cyclecloud-cluster.md
 modify-cyclecloud-cluster.md
 software-install-cyclecloud.md
 input-data-install_cyclecloud.md
+run-cmaq-benchmark-cyclecloud-hbv120.md
 run-cmaq-benchmark-cyclecloud.md
 ```
