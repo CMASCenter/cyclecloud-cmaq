@@ -25,7 +25,7 @@ Select either Gen 2, and click. That option should now pre-populate the form.
 7. Select Authentication type - SSH public key
 8. Select SSH public key source - Generate new key pair
 
-![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HBv120_CMAQv54//Azure_Create_Virtual_Machine.png)
+![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HBv120_CMAQv54/Azure_Create_Virtual_Machine.png)
 
 Click on Next > Disks
 
