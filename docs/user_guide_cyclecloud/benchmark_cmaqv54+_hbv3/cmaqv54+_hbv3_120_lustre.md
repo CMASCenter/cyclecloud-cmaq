@@ -369,6 +369,7 @@ sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x96.ncclassic.retest.shared.c
 ```
 cd /shared/data/output/output_v54+_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_1x96_classic_retest
 grep -i 'Processing completed.' CTM_LOG_000*
+```
 
 
 Output:
@@ -388,7 +389,9 @@ Output:
             Processing completed...      10.3496 seconds
 ```
 
+```
 tail -n 18 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.96.8x12pe.2day.20171222start.1x96.shared.log
+```
 
 Output:
 
@@ -416,7 +419,9 @@ Num  Day        Wall Time
 
 Going to test running on 96 cpu/node
 
-`sbatch run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.2x96.csh`
+```
+sbatch run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.2x96.csh
+```
 
 getting an error
 
