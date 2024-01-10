@@ -21,7 +21,7 @@ Use the Create pulldown menu to select `Azure CycleCloud 8.2`
 2. Select or create a new Resource Group that your CycleCloud instance will run in: note, leave this blank initially, as it will be named after the instance name below by appending _group to the instance name
 3. Name your CycleCloud instance using Virtual Machine name : example name: CycleCloudHost
 4. Select Region: example name:  US East
-5. Verify Image is Azure CycleCloud 8.2 - Gen 1
+5. Verify Image is AlmaLinux OS 8.7 HPC (x86_64) - x64 Gen 2
 6. Select Size, click on see all sizes, enter D4s into the search button and select Standard_D4s_v3- 4cpus, 16GiB memory ($140.16/month)
 7. Select Authentication Type `SSH public key`
 5. Create the Username that you will use to log into the instance: example name: azureuser
