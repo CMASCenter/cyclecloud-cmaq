@@ -1,5 +1,5 @@
 ### Copy the run scripts from the CycleCloud repo
-Note, the run scripts are tailored to the Compute Node. This assumes the cluster was built with HC44rs compute nodes.
+Note, the run scripts are tailored to the Compute Node. 
 
 Change directories to where the run scripts are available from the git repo.
 
