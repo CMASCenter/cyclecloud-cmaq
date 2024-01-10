@@ -138,3 +138,37 @@ cyclecloudlizadams-htc-3          1       htc       idle~ 2       2:1:1   3072  
 cyclecloudlizadams-htc-4          1       htc       idle~ 2       2:1:1   3072        0      1    cloud none                
 cyclecloudlizadams-htc-5          1       htc       idle~ 2       2:1:1   3072        0      1    cloud none    
 ```
+
+### Edit the run script to run on 96 pes
+
+```
+sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x96.ncclassic.retest.shared.csh
+```
+
+### Check the timing after run completed
+
+```
+tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.96.8x12pe.2day.20171222start.1x96.shared.log
+```
+
+Output
+
+```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2017-12-22
+End Day:   2017-12-23
+Number of Simulation Days: 2
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       96
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2017-12-22   3744.5
+02   2017-12-23   4184.8
+     Total Time = 7929.30
+      Avg. Time = 3964.65
+```
