@@ -131,31 +131,33 @@ du -h
 Output
 
 ```
-3.5G	./misc
-16G	./met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed
-16G	./met
+40K	./CMAQ_v54+_cb6r5_scripts
+44K	./CMAQ_v54+_cracmm_scripts
+1.6G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/cmv_c1c2_12
+2.4G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/cmv_c3_12
+5.1G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/merged_nobeis_norwc
+1.4G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/othpt
+1.3G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/pt_oilgas
+6.7M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptagfire
+255M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptegu
+19M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire
+2.9M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire_grass
+3.0M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire_othna
+5.9G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptnonipm
+18G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready
+3.5G	./emis/cb6r3_ae6_20200131_MYR/premerged/rwc
+3.5G	./emis/cb6r3_ae6_20200131_MYR/premerged
+22G	./emis/cb6r3_ae6_20200131_MYR
+60K	./emis/emis_dates
+22G	./emis
+2.3G	./epic
 13G	./icbc/CMAQv54_2018_108NHEMI_M3DRY
 17G	./icbc
-60K	./emis/emis_dates
-581M	./emis/cb6r3_ae6_20200131_MYR/premerged/rwc
-581M	./emis/cb6r3_ae6_20200131_MYR/premerged
-2.0M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire_othna
-1.3G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptnonipm
-98M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/cmv_c3_12
-1.9M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire_grass
-1.8G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/merged_nobeis_norwc
-272M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/pt_oilgas
-2.3M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptagfire
-510M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/othpt
-5.4M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire
-86M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/cmv_c1c2_12
-50M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptegu
-4.0G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready
-4.6G	./emis/cb6r3_ae6_20200131_MYR
-4.6G	./emis
-694M	./surface
-73M	./epic
-41G	.
+41G	./met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed
+41G	./met
+4.0G	./misc
+697M	./surface
+85G	.
 
 ```
 
@@ -579,5 +581,33 @@ Num  Day        Wall Time
 
 
 ## Submit a minimum of 2 benchmark runs
+
+NOTE, trying to reproduce this run on HBv120 Cluster am getting slower times.
+
+```
+tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2day.20171222start.2x96.shared.log
+```
+
+Output
+
+```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2017-12-22
+End Day:   2017-12-23
+Number of Simulation Days: 2
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       192
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2017-12-22   2549.7
+02   2017-12-23   2752.4
+     Total Time = 5302.10
+      Avg. Time = 2651.05
+```
 
 Ideally, two CMAQ runs should be submitted to the slurm queue, using two different NPCOLxNPROW configurations, to create output needed for the QA and Post Processing Sections in Chapter 6.
