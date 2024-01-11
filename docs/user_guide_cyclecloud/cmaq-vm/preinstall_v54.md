@@ -350,7 +350,7 @@ First, create a path to store the module file. The path must contain /Modules/mo
 /<path to>/Modules/modulefiles/<module-name>/<version> where <version> is typically numerical and is the actual module file.  
 
 ```
-mkdir /shared/build/Modules/modulefiles/ioapi-3.2_20200828
+mkdir -p /shared/build/Modules/modulefiles/ioapi-3.2_20200828
 ```
 
 Next, create the module file and save it in the directory above.
