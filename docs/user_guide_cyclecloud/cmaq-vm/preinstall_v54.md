@@ -542,7 +542,7 @@ cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
 cp /shared/cyclecloud-cmaq/run_scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.csh .
 ```  
 
-Note, this Virtual Machine does not have Slurm installed or configured.
+Note, this Virtual Machine does not have Slurm installed or configured. Also note, the first few timings reported here were using the HB120_v2, instead of HB120_v3. See the last timing report for the HB120_v3, which is much faster.
 
 ## Run CMAQ interactively using the following command:
 
