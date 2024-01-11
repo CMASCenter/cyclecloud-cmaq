@@ -628,7 +628,7 @@ Num  Day        Wall Time
 ## Verify that the correct number of cpus are installed using lscups
 
 ```
-lscpus
+lscpu
 ```
 
 
