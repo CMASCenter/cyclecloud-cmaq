@@ -667,3 +667,20 @@ has context menu
 ```
 
 
+## Review performance metrics in the Azure portal
+
+https//portal.azure.coom
+
+Click on Virtual Machines
+
+Select the Virtual Machine that you created
+
+Under Essentials, click on Monitoring, and then pin the CPU Average and Disk bytes total to a shared dashboard.
+
+Then under the Azure Portal search for shared dashboards
+
+Follow that link to Go to Dashboard.
+
+You can click in the upper right of each dashboard on the ... and select Configure Dashboard to specify the time period (ie. past hour, or past 4 hours.  In this example, the past hour time period was used.
+
+![Azure Shared Dashboard Saved Image](../../azure_web_interface_images/Performance_metrics_cpu_disk.png)
