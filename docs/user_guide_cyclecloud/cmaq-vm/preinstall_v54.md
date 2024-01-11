@@ -687,4 +687,4 @@ You can click in the upper right of each dashboard on the ... and select Configu
 
 Second image saved after the inital s3 copy data transfer had been completed, giving a scale that allows you to see the transfer rate.
 
-![Azure Shared Dashboard Saved Image after s3 copy]((../../azure_web_interface_images/Performance_metrics_cpu_disk_after_initial_s3_copy.png)
+![Azure Shared Dashboard Saved Image after s3 copy](../../azure_web_interface_images/Performance_metrics_cpu_disk_after_initial_s3_copy.png)
