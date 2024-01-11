@@ -208,6 +208,30 @@ chmod 1777 /mnt/nvme
 
 That should create a file system with about 1.8TiB
 
+## Download the Input data from the S3 Bucket
+
+### Install aws command line
+
+see <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Install AWS CLI</a>
+
+```
+cd /shared/build
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+
+### Install the uncompressed 2018_12US1 input data using the s3 script
+
+```
+cd /shared/cyclecloud-cmaq/s3_scripts/
+./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_shared_20171222_cb6r5_uncompressed.csh
+```
+
+Note, you should be getting fast transfer speeds in the 200 MiB/s range, so downloading the files should take 10 minutes.
+
+
 
 
 ### Load the openmpi module
@@ -490,29 +514,6 @@ Output
 cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
 cp /shared/cyclecloud-cmaq/run_scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.96.ncclassic.csh .
 ```  
-
-## Download the Input data from the S3 Bucket 
-
-### Install aws command line
-
-see <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Install AWS CLI</a>
-
-```
-cd /shared/build
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-```
-
-
-### Install the uncompressed 2018_12US1 input data using the s3 script
-
-```
-cd /shared/cyclecloud-cmaq/s3_scripts/
-./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_shared_20171222_cb6r5_uncompressed.csh
-```
-
-Note, you should be getting fast transfer speeds in the 200 MiB/s range, so downloading the files should take 10 minutes.
 
 Note, this Virtual Machine does not have Slurm installed or configured.
 
