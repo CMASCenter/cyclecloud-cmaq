@@ -684,3 +684,7 @@ Follow that link to Go to Dashboard.
 You can click in the upper right of each dashboard on the ... and select Configure Dashboard to specify the time period (ie. past hour, or past 4 hours.  In this example, the past hour time period was used.
 
 ![Azure Shared Dashboard Saved Image](../../azure_web_interface_images/Performance_metrics_cpu_disk.png)
+
+Second image saved after the inital s3 copy data transfer had been completed, giving a scale that allows you to see the transfer rate.
+
+![Azure Shared Dashboard Saved Image after s3 copy]((../../azure_web_interface_images/Performance_metrics_cpu_disk_after_initial_s3_copy.png)
