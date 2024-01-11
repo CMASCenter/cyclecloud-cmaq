@@ -97,14 +97,15 @@ lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"
 Output:
 
 ```
-sda     0:0:0:0       30G 
-├─sda1               500M /boot
-├─sda2                29G /
-├─sda14                4M 
-└─sda15              495M /boot/efi
-sdb     0:0:0:1      480G 
-└─sdb1               480G /mnt
-sdc     1:0:0:0        1T 
+sda     1:0:0:0        1T 
+sdb     0:0:0:0       60G 
+├─sdb1              1000M /boot
+├─sdb2              58.5G /
+├─sdb14                4M 
+└─sdb15              495M /boot/efi
+sdc     0:0:0:1      480G 
+└─sdc1               480G /mnt
+
 ```
 
 In the above case, the 1 Terrabyte (1T)  disk was added as sdc
@@ -112,9 +113,9 @@ In the above case, the 1 Terrabyte (1T)  disk was added as sdc
 ### Format the disk
 
 ```
-sudo parted /dev/sdc --script mklabel gpt mkpart xfspart xfs 0% 100%
-sudo mkfs.xfs /dev/sdc1
-sudo partprobe /dev/sdc1
+sudo parted /dev/sda --script mklabel gpt mkpart xfspart xfs 0% 100%
+sudo mkfs.xfs /dev/sda1
+sudo partprobe /dev/sda1
 ```
 
 ### Mount the disk
@@ -126,7 +127,7 @@ sudo mkdir /shared
 ### Use mount to mount the filesystem
 
 ```
-sudo mount /dev/sdc1 /shared
+sudo mount /dev/sda1 /shared
 ```
 
 ### Persist the mount
