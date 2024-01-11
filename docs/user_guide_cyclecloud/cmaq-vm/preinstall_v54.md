@@ -1,5 +1,7 @@
 Intermediate Tutorial: Run CMAQ from HBv120 Compute Node for CMAQv5.4
 
+Estimated workflow time:  2-3 hours for the complete install input data, build, and run.
+
 Instructions are provided to build and install CMAQ on HBv120 compute node installed from HPC AlmaLinux 8.7 HPC-Gen2 Image that contains modules for git, openmpi and gcc.
 
 The compute node does not have a SLURM scheduler on it, so jobs are run interactively from the command line. 
@@ -742,4 +744,10 @@ Second image saved after the inital s3 copy data transfer had been completed, gi
 
 ![Azure Shared Dashboard Saved Image after s3 copy](../../azure_web_interface_images/Performance_metrics_cpu_disk_after_initial_s3_copy.png)
 
+Full time to install input data, build code, and run CMAQv5.4+ for the 12US1 domain on HB120rs_v3 using 96 of 120 cpus.
+
+![Azure Full install and run within 2-3 hours](../../azure_web_interface_images/Full_build_and_run_withing_2_hrs.png)
+
 ## IF your performance is much slower than this, then we recommend that you terminate the resource group and re-build the VM
+
+
