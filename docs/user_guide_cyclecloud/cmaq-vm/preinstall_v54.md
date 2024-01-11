@@ -132,19 +132,16 @@ sudo mount /dev/sda1 /shared
 
 ### Persist the mount
 
+grep sda1 UID using the command:
+
 ```
-sudo blkid
+sudo blkid | grep -i sda1
 ```
 
 Output
 
 ```
-/dev/sdb1: UUID="109f262f-36bb-431d-b1c0-9a9dad39b894" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="111c5d20-01"
-/dev/sda1: UUID="9643d043-09b2-4bfa-9842-079b985d4d15" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="cd39399b-65c3-4a21-89d1-129b241d7e4d"
-/dev/sda2: UUID="943e4d7b-9391-47b5-916c-f51afcdc512f" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="0a95f633-83e4-41bf-b6b1-da9ebc5bf5d7"
-/dev/sda15: SEC_TYPE="msdos" UUID="3DB8-F6B8" BLOCK_SIZE="512" TYPE="vfat" PARTLABEL="EFI System Partition" PARTUUID="75d05630-884d-4f11-abb5-6ce3331c7528"
-/dev/sdc1: UUID="09e461c7-2ac6-4e07-b3c8-6e7f593dfba2" BLOCK_SIZE="4096" TYPE="xfs" PARTLABEL="xfspart" PARTUUID="649e7f66-057a-4460-ab92-661542ae9196"
-/dev/sda14: PARTUUID="14abf57d-419d-4263-8078-aa7a849c1d58"
+/dev/sda1: UUID="97ac20d7-b884-4671-9619-7248b529975c" BLOCK_SIZE="4096" TYPE="xfs" PARTLABEL="xfspart" PARTUUID="a25cfda9-3d62-42cf-86c2-5fba2f6fa440"
 ```
 
 ### Edit fstab 
