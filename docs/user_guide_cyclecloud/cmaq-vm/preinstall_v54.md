@@ -625,3 +625,45 @@ Num  Day        Wall Time
       Avg. Time = 3257.55
 ```
 
+## Verify that the correct number of cpus are installed using lscups
+
+```
+lscpus
+```
+
+
+Output:
+
+```
+[azureuser@hb120v3manish output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_2x64_classic]$ lscpu
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              120
+On-line CPU(s) list: 0-119
+Thread(s) per core:  1
+Core(s) per socket:  60
+Socket(s):           2
+NUMA node(s):        4
+Vendor ID:           AuthenticAMD
+CPU family:          25
+Model:               1
+Model name:          AMD EPYC 7V73X 64-Core Processor
+Stepping:            2
+CPU MHz:             3094.426
+BogoMIPS:            3693.10
+Hypervisor vendor:   Microsoft
+Virtualization type: full
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            512K
+L3 cache:            98304K
+NUMA node0 CPU(s):   0-29
+NUMA node1 CPU(s):   30-59
+NUMA node2 CPU(s):   60-89
+NUMA node3 CPU(s):   90-119
+
+has context menu
+```
+
+
