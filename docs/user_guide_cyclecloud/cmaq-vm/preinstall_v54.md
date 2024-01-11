@@ -340,9 +340,7 @@ There are two steps required to create your own custome module:
 
 Create a new custom module that will be loaded including any dependencies using the following command:
 
-```
-module load ioapi-3.2_20200828/gcc-9.2.0-netcdf
-```
+`module load ioapi-3.2/netcdf  **example only`
 
 Step 1: Create the module file.
 
@@ -513,6 +511,8 @@ sudo ./aws/install
 cd /shared/cyclecloud-cmaq/s3_scripts/
 ./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_shared_20171222_cb6r5_uncompressed.csh
 ```
+
+Note, you should be getting fast transfer speeds in the 200 MiB/s range, so downloading the files should take 10 minutes.
 
 Note, this Virtual Machine does not have Slurm installed or configured.
 
