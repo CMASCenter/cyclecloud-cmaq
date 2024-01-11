@@ -19,13 +19,25 @@ This is different than the Azure Cycle-Cloud, where if CMAQ is not running in th
 2. Select Create a Virtual Machine
 3. Click on See all images next to Image and use the search bar to search for HPC. Look for the AlmaLinux 8.7 HPC.
 Select Gen 2, and click. That option should now pre-populate the form.
-4. Select Size - Standard_HB1120rs_v2 - 120 vcpus, 456 GiB memory ($2,628.0/monthly)
+4. Select Size - Standard_HB120rs_v3 - 120 vcpus, 456 GiB memory ($2,628.0/monthly)
 5. Enter a Virtual Machine Name in the text box
 6. Use your username or azureuser
 7. Select Authentication type - SSH public key
 8. Select SSH public key source - Generate new key pair
 
+
 ![Azure Create a Virtual Machine Console](../../azure_web_interface_images/create_virtual_machine_HBv120_CMAQv54/Azure_Create_Virtual_Machine.png)
+
+To find the HB120rs_v3 size, click on "see all sizes"
+Then search for hb120
+The select "Other Sizes"
+And then select HB120rs_v3
+
+For some reason, the instance isn't available under the "H series" on ly the HB120rs_v2 is available there.
+
+![Azure Select Size](../../azure_web_interface_images/create_virtual_machine_HBv120_CMAQv54/Azure_Select_Size.png)
+
+
 
 Click on Next > Disks
 
@@ -605,7 +617,7 @@ Num  Day        Wall Time
 
 ```
 
-## Created another single VM and ran again
+## Created another single VM using HBv120_v2 and ran again
 
 ```
 cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
@@ -639,6 +651,8 @@ Num  Day        Wall Time
      Total Time = 6515.10
       Avg. Time = 3257.55
 ```
+
+## Created another VM using the HB120v3 cpus
 
 ## Verify that the correct number of cpus are installed using lscpu
 
@@ -681,6 +695,30 @@ NUMA node3 CPU(s):   90-119
 has context menu
 ```
 
+## Timing information
+
+```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2017-12-22
+End Day:   2017-12-23
+Number of Simulation Days: 2
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       96
+   All times are in seconds.
+ 
+Num  Day        Wall Time
+01   2017-12-22   2818.3
+02   2017-12-23   3205.8
+     Total Time = 6024.10
+      Avg. Time = 3012.05
+
+```
+
+The HB120_v3 has much faster performance than the HB120_v2.
 
 ## Review performance metrics in the Azure portal
 
