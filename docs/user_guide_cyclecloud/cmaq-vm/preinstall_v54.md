@@ -412,6 +412,7 @@ Now create the custom module to define the netCDF libraries that were used to bu
 
 ```
 mkdir /shared/build/Modules/modulefiles/netcdf-4.8.1
+cd /shared/build/Modules/modulefiles/netcdf-4.8.1
 vim gcc-9.2.0
 ```
 
