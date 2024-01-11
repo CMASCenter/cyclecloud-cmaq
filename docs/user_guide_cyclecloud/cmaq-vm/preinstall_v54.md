@@ -364,7 +364,9 @@ There are two steps required to create your own custome module:
 
 Create a new custom module that will be loaded including any dependencies using the following command:
 
-`module load ioapi-3.2/netcdf  **example only`
+```
+module load ioapi-3.2/netcdf  **example only
+```
 
 Step 1: Create the module file.
 
@@ -440,7 +442,19 @@ Step 2: Add the module path to MODULEPATH.
 Now that the two custom module files have been created, add the following line to your ~/.cshrc file so that they can be found:
 
 ```
+vi ~/.cshrc
+```
+
+Add the following line to your .cshrc
+
+```
 module use --append /shared/build/Modules/modulefiles
+```
+
+Source the .cshrc file
+
+```
+source ~/.cshrc
 ```
 
 Step 3: View the modules available after creation of the new module
