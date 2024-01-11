@@ -625,7 +625,7 @@ Num  Day        Wall Time
       Avg. Time = 3257.55
 ```
 
-## Verify that the correct number of cpus are installed using lscups
+## Verify that the correct number of cpus are installed using lscpu
 
 ```
 lscpu
