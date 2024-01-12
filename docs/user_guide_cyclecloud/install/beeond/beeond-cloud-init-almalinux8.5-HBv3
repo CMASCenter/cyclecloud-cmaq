@@ -1,0 +1,18 @@
+#cloud-config:
+output: { all: "| tee -a /var/log/cloud-init-output.log" }
+runcmd:
+- wget -O /etc/yum.repos.d/beegfs_alma8.repo https://www.beegfs.io/release/beegfs_7.2.4/dists/beegfs-alma8.repo
+- yum install -y epel-release
+- yum install -y pdsh beeond libbeegfs-ib
+- sed -i 's/^buildArgs=.*/buildArgs=-j8 BEEGFS_OPENTK_IBVERBS=1 OFED_INCLUDE_PATH=\/usr\/src\/ofa_kernel\/default\/include\//' /etc/beegfs/beegfs-client-autobuild.conf
+- /etc/init.d/beegfs-client rebuild &
+- mkdir -p /mnt/nvme
+- mdadm --create /dev/md10 --level 0 --raid-devices 2 /dev/nvme0n1 /dev/nvme1n1
+- mkfs.xfs /dev/md10
+- mount /dev/md10 /mnt/nvme
+- chmod 1777 /mnt/nvme
+- mkdir -p /mnt/resource
+- chmod 1777 /mnt/resource
+- mkdir -p /mnt/beeond
+- chmod 1777 /mnt/beeond
+- wget -O /opt/beegfs/sbin/beeond https://raw.githubusercontent.com/Azure/cyclecloud-beegfs/master/specs/default/chef/site-cookbooks/beegfs/files/default/beeond

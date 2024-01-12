@@ -49,7 +49,7 @@ sudo chown azureuser /shared/data
 ```
 
 ```
-ls /shared/data`
+ls /shared/data
 df -h
 ```
 

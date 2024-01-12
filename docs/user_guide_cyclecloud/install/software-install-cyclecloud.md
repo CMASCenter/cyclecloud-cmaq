@@ -189,7 +189,7 @@ note, the primary difference is the location of the openmpi libraries on cyclecl
 Check to see that the cmaq executable has been built
 
 ```
-ls -lrt /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc/*.ex
+ls -lrt /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc/*.exe
 ```
 
 Output
