@@ -186,9 +186,6 @@ note, the primary difference is the location of the openmpi libraries on cyclecl
 ./gcc_cmaqv54+.csh
 ```
 
-Note, I had an issue with the CMAQ_REPO setting in config_cmaq.csh that needs to be fixed.
-
-
 Check to see that the cmaq executable has been built
 
 ```
