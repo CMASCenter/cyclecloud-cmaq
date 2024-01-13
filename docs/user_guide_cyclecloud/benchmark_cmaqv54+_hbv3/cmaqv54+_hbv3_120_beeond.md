@@ -331,6 +331,82 @@ Num  Day        Wall Time
 
 ```
 
+## submit job to run on 1 node x 96 processors
+
+```
+sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x96.ncclassic.csh
+```
+
+Check result after job has finished
+
+```
+
+tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.96.8x12pe.2day.20171222start.1x96.log
+```
+
+Output
+
+```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2017-12-22
+End Day:   2017-12-23
+Number of Simulation Days: 2
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       96
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2017-12-22   3124.4
+02   2017-12-23   3629.7
+     Total Time = 6754.10
+      Avg. Time = 3377.05
+
+```
+
+
+## Submit job to run on 3 nodes 
+
+```
+sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.3x96.ncclassic.csh
+```
+
+Login to each node and copy the data from /shared/data to /mnt/beeond
+
+## Check how quickly the processing is being completed
+
+```
+grep -i 'Processing completed' run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.288.16x24pe.2day.20171222start.3x96.log
+```
+
+Output
+
+```
+            Processing completed...       7.4152 seconds
+            Processing completed...       5.7284 seconds
+            Processing completed...       5.6439 seconds
+            Processing completed...       5.5742 seconds
+            Processing completed...       5.6011 seconds
+            Processing completed...       5.5687 seconds
+            Processing completed...       5.5505 seconds
+            Processing completed...       5.5686 seconds
+            Processing completed...       5.5193 seconds
+            Processing completed...       5.5192 seconds
+            Processing completed...       5.4985 seconds
+            Processing completed...       6.7259 seconds
+            Processing completed...       6.3606 seconds
+            Processing completed...       5.5312 seconds
+
+```
+
+## Check results when job has completed successfully
+
+
+
+
 I am getting this error
 
 sbatch beeond-test.sbatch
