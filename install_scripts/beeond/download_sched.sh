@@ -4,6 +4,9 @@ sudo wget -O /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/slurm_epil
 
 # Make the scripts executable
 sudo chmod +x /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/slurm_*.sh
+# Change ownership of the scripts to slurm
+sudo chown slurm /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/slurm-prolog-beeond.sh
+sudo chown slurm /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/slurm-epilog-beeond.sh
 
 # Add the logs directory if it doesn't exist
 [ -d /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/log ] || sudo mkdir /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/log
