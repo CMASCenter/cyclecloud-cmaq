@@ -4,13 +4,14 @@
 #SBATCH -n 100
 #SBATCH -p hpc
 
-logdir="/sched/beyondtest/log"
+logdir="/sched/$(sudo -i jetpack config cyclecloud.cluster.name)/log"
 logfile=$logdir/slurm_beeond.log
 
-echo "$DATE creating Slurm Job $SLURM_JOB_ID nodefile and starting Beeond" >> $logfile 2>&1
-scontrol show hostnames $SLURM_JOB_NODELIST > nodefile-$SLURM_JOB_ID
-beeond start -n /shared/home/$SLURM_JOB_USER/nodefile-$SLURM_JOB_ID -d /mnt/nvme -c /mnt/beeond -P >> $logfile 2>&1
+#echo "$DATE creating Slurm Job $SLURM_JOB_ID nodefile and starting Beeond" >> $logfile 2>&1
 
+#scontrol show hostnames $SLURM_JOB_NODELIST > nodefile-$SLURM_JOB_ID
+
+#beeond start -n /shared/home/$SLURM_JOB_USER/nodefile-$SLURM_JOB_ID -d /mnt/nvme -c /mnt/beeond -P >> $logfile 2>&1
 echo "#####################################################################################"
 echo "df -h:   "
 df -h
@@ -34,4 +35,5 @@ echo "##########################################################################
 echo ""
 echo "beegfs-net:   "
 beegfs-net
-beeond stop -n /shared/home/$SLURM_JOB_USER/nodefile-$SLURM_JOB_ID -L -d -P -c >> $logfile 2>&1
+#beeond stop -n /shared/home/$SLURM_JOB_USER/nodefile-$SLURM_JOB_ID -L -d -P -c >> $logfile 2>&1
+
