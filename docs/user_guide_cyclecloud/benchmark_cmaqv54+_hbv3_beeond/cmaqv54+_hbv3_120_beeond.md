@@ -8,20 +8,8 @@ Input files are *.nc (uncompressed netCDF)
 
 ### Install software and input data
 
-See instructions in the Advanced section
+See instructions in the Advanced Tutorial.
 
-
-#### Use a configuration file from the github by cloning the repo to your local machine 
-
-```
-cd /shared
-sudo mkdir cyclecloud-cmaq
-sudo chown username cyclecloud-cmaq
-git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq
-```
-```
-cd cyclecloud-cmaq
-```
 
 ### Use the files under the following directory to set up the CycleCloud Cluster to use beeond.
 
