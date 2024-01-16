@@ -13,9 +13,9 @@ See instructions in the Advanced Tutorial.
 
 ### Use the files under the following directory to set up the CycleCloud Cluster to use beeond.
 
-Using a modified version of the instructions available on this ![blog](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automate-beeond-filesystem-on-azure-cyclecloud-slurm-cluster/ba-p/3625544), updated for the new CycleCloud version 8.5 and slurm 22.05.10.
+Using a modified version of the instructions available on this <a href="https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automate-beeond-filesystem-on-azure-cyclecloud-slurm-cluster/ba-p/3625544">Blog Post</a>, updated for the new CycleCloud version 8.5 and slurm 22.05.10.
 
-Full Beeond: BeeGFS on Demand ![User Manual](https://doc.beegfs.io/latest/advanced_topics/beeond.html)
+Full Beeond: BeeGFS on Demand <a href="https://doc.beegfs.io/latest/advanced_topics/beeond.html">User Manual</a>
 
 ```
 cd install_scripts/beeond
