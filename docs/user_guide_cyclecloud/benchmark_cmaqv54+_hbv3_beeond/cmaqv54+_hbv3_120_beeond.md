@@ -15,9 +15,13 @@ See instructions in the Advanced Tutorial.
 
 Using a modified version of the instructions available on this ![blog](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automate-beeond-filesystem-on-azure-cyclecloud-slurm-cluster/ba-p/3625544), updated for the new CycleCloud version 8.5 and slurm 22.05.10.
 
-cd install_scripts/beeond
+Full Beeond: BeeGFS on Demand ![User Manual](https://doc.beegfs.io/latest/advanced_topics/beeond.html)
 
-Edit the cluster and use the Cloud-init option to install the code in the file: beeond-cloud-init-almalinux8.5-HBv3
+```
+cd install_scripts/beeond
+```
+
+Edit the cluster and use the Cloud-init option for your CycleCloud to install the code in the file: beeond-cloud-init-almalinux8.5-HBv3
 
 Use the Apply to all option, so that the code is installed on both the scheduler and the compute nodes.
 
