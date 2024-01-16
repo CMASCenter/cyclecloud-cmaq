@@ -403,23 +403,7 @@ tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.288.16x24pe.2day
 Output
 
 ```
-==================================
-  ***** CMAQ TIMING REPORT *****
-==================================
-Start Day: 2017-12-22
-End Day:   2017-12-23
-Number of Simulation Days: 2
-Domain Name:               12US1
-Number of Grid Cells:      4803435  (ROW x COL x LAY)
-Number of Layers:          35
-Number of Processes:       192
-   All times are in seconds.
 
-Num  Day        Wall Time
-01   2017-12-22   1966.4
-02   2017-12-23   2176.8
-     Total Time = 4143.20
-      Avg. Time = 2071.60
 ```
 
 
