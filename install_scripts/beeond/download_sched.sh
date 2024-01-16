@@ -3,7 +3,7 @@ sudo wget -O /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/slurm_prol
 sudo wget -O /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/slurm_epilog.sh https://raw.githubusercontent.com/themorey/cyclecloud-scripts/main/slurm-beeond/slurm-epilog-beeond.sh
 
 # Make the scripts executable
-sudo chmod +x /sched/slurm_*.sh
+sudo chmod +x /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/slurm_*.sh
 
 # Add the logs directory if it doesn't exist
 [ -d /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/log ] || sudo mkdir /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/log
