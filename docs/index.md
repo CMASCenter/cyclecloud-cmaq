@@ -48,6 +48,7 @@ user_guide_cyclecloud/System-Req/index.md
 user_guide_cyclecloud/cmaq-vm/index.md
 user_guide_cyclecloud/install/index.md
 user_guide_cyclecloud/benchmark_cmaqv54+_hbv3/index.md
+user_guide_cyclecloud/benchmark_cmaqv54+_hbv3_beeond/index.md
 user_guide_cyclecloud/benchmark_cmaqv54+_hbv4/index.md
 user_guide_cyclecloud/post/index.md
 user_guide_cyclecloud/qa/index.md
