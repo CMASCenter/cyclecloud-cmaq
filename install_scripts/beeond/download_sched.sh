@@ -16,3 +16,27 @@ EOF
 
 # force cluster nodes to re-read the slurm.conf
 sudo scontrol reconfig
+
+
+Note, I was getting an error
+./download_sched.sh: line 12: /sched/$(sudo -i jetpack config cyclecloud.cluster.name)/slurm.conf: Permission denied
+scontrol: error: Parse error in file /etc/slurm/slurm.conf line 53: " -i jetpack config cyclecloud.cluster.name)/slurm_prolog.sh"
+scontrol: error: Parse error in file /etc/slurm/slurm.conf line 54: " -i jetpack config cyclecloud.cluster.name)/slurm_epilog.sh"
+
+
+So, I hardcoded the clustername in the /sched/beyondtest/slurm.conf
+
+tail /sched/beyondtest/slurm.conf
+# If slurm.accounting.enabled=true this will setup slurmdbd
+# otherwise it will just define accounting_storage/none as the plugin
+Include accounting.conf
+# SuspendExcNodes is managed in /etc/slurm/keep_alive.conf
+# see azslurm keep_alive for more information.
+# you can also remove this import to remove support for azslurm keep_alive
+Include keep_alive.conf
+Prolog=/sched/slurmtest/slurm_prolog.sh
+Epilog=/sched/slurmtest/slurm_epilog.sh
+SlurmCtldHost=beyondtest-scheduler
+
+
+
