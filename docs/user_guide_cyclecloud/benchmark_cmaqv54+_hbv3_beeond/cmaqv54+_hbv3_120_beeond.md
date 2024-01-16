@@ -490,6 +490,7 @@ No active BeeGFS mounts found.
 
 But when I login to the ssh lizadams@10.10.0.5 or compute node, I see this:
 
+```
 df -h
 Filesystem          Size  Used Avail Use% Mounted on
 devtmpfs            225G     0  225G   0% /dev
@@ -513,5 +514,6 @@ total 4
 drwxrwxr-x. 5 lizadams lizadams 4096 Jan 12 23:30 CMAQ_Modeling_Platform_2018
 [lizadams@cyclecloud8-5beond-hpc-5 ~]$ du -sh /mnt/beeond
 76G	/mnt/beeond
+```
 
 Note the above is the result obtained when running on 1 compute node.
