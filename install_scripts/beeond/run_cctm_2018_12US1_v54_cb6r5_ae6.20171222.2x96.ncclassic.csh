@@ -13,27 +13,19 @@
 ##SBATCH --constraint=BEEOND
 ###SBATCH --beeond
 
+## load modules
+module load mpi/openmpi-4.1.5 
+
 ## Copy files to /mnt/beeond, note, it may take 5 minutes to prepare the /mnt/beeond filesystem and to copy the data
 
-#sudo mkdir /mnt/beeond/data
-#sudo chown lizadams /mnt/beeond/data
-#sudo mkdir /mnt/beeond/data/output
-#sudo chown lizadams /mnt/beeond/data/output
-#sudo mkdir /shared/data/output
-#sudo chown lizadams /mnt/beeond/data/output
-#sudo chgrp lizadams /mnt/beeond/data/output
-#chmod -R 777 /mnt/beeond/data/output
 
 beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/2018_12US1 -l /mnt/beeond/data/2018_12US1
+
+# need to make the output directory prior to the beeond-cp
+mkdir -p /shared/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_2x96/LOGS
+
 beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output -l /mnt/beeond/data/output
 
-#sudo mkdir /mnt/beeond/data
-#sudo chown lizadams /mnt/beeond/data
-#sudo mkdir /mnt/beeond/data/output
-#sudo chown lizadams /mnt/beeond/data/output
-#sudo mkdir /shared/data/output
-#sudo chown lizadams /mnt/beeond/data/output
-#sudo chgrp lizadams /mnt/beeond/data/output
 chmod -R 777 /mnt/beeond
 
 
@@ -94,7 +86,7 @@ echo 'Start Model Run At ' `date`
 
 #> Set Working, Input, and Output Directories
  setenv WORKDIR ${CMAQ_HOME}/CCTM/scripts         #> Working Directory. Where the runscript is.
- setenv DISK /mnt/beoond
+ setenv DISK /mnt/beeond
  setenv OUTDIR  $DISK/data/output/output_${RUNID} #> Output Directory
  setenv OUTDIR_2017 $DISK/data/output_2017_${RUNID}
  setenv INPDIR  $DISK/data/2018_12US1  #Input Directory
