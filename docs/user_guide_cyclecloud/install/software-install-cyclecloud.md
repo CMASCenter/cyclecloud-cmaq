@@ -58,7 +58,7 @@ sudo mkdir /shared/build
 ## Change ownership to your username
 
 ```
-sudo chown azureuser /shared/build
+sudo chown $USER /shared/build
 ```
 
 ## Make the /shared/cyclecloud-cmaq directory
@@ -70,7 +70,7 @@ sudo mkdir /shared/cyclecloud-cmaq
 ## Change ownership to your username
 
 ```
-sudo chown azureuser /shared/cyclecloud-cmaq
+sudo chown $USER /shared/cyclecloud-cmaq
 ```
 
 ## Install git
@@ -106,13 +106,7 @@ module avail
 ### Load the openmpi module
 
 ```
-module load mpi/openmpi-4.1.5 
-```
-
-### Load the gcc copiler - note, this may have been automatically loaded by the openmpi module
-
-```
-module load gcc-9.2.0
+module load mpi/openmpi
 ```
 
 ### Verify the gcc compiler version is greater than 8.0
