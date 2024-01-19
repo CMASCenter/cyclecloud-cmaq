@@ -10,7 +10,7 @@
 module load mpi/openmpi-4.1.5
 
 cd ~
-echo "test contents to transfer" > ~/test
+echo 'test contents to transfer' > ~/test
 beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g ~/test -l /mnt/beeond/
 
 mpicc mpitest.c -o mpitest
