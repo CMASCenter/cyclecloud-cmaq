@@ -9,7 +9,9 @@
  
 module load mpi/openmpi-4.1.5
 
-beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/12LISTOS_Training -l /mnt/beeond/data/12LISTOS_Training
+cd ~
+echo "test contents to transfer" > ~/test
+beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g ~/test -l /mnt/beeond/
 
 mpicc mpitest.c -o mpitest
 
