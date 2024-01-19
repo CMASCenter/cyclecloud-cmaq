@@ -6,7 +6,7 @@ int main(int argc, char** argv) {
 
     DIR *d;
         struct dirent *dir;
-        d = opendir("/mnt/beeond/2018_12US1");
+        d = opendir("/mnt/beeond/");
         if (d)
         {
             while ((dir = readdir(d)) != NULL)
