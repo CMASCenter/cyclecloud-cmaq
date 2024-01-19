@@ -1,4 +1,4 @@
-# Install CMAQ and pre-requisite libraries on linux on Alinux
+# Install CMAQ and pre-requisite libraries on linux on SUSE Linux
 
 ### Login to updated cluster
 (note, replace the centos.pem with your Key Pair)
@@ -76,7 +76,7 @@ sudo chown $USER /shared/cyclecloud-cmaq
 ## Install git
 
 ```
-sudo yum install git
+sudo zypper install git
 ```
 
 
@@ -103,10 +103,29 @@ sudo chgrp -R cmaq /shared/build
 module avail
 ```
 
-### Load the openmpi module
+Output
 
 ```
-module load mpi/openmpi
+   gnu/7    gnu/11 (L,D)
+```
+
+### Install openmpi 
+
+```
+sudo zypper install openmpi openmpi-devel
+module load mpi/openmpi-4.1.5 
+```
+
+### Install gnu-compilers
+
+```
+sudo zypper in gnu-compilers-hpc
+```
+
+### Load the gcc copiler - note, this may have been automatically loaded by the openmpi module
+
+```
+module load gcc-9.2.0
 ```
 
 ### Verify the gcc compiler version is greater than 8.0
