@@ -16,4 +16,6 @@ beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g ~/test_dir -l /mnt/beeond/
 mpicc mpitest.c -o mpitest
 
 echo 'Start mpirun at ' `date`
-mpirun ./mpitest
+mpirun -nolocal -vv  --mca oob_tcp_base_verbose 100 -np 240 ./mpitest
+
+

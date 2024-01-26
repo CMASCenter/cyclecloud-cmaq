@@ -1,0 +1,208 @@
+INFO: BeeOND copy...
+INFO: Concurrency: 2
+INFO: Nodes for parallel copy: 10.10.0.11,10.10.0.6; Concurrency: 2
+INFO: Path to scan: /shared/home/lizadams/test_dir
+INFO: Scanning sources...
+INFO: Generating target directory structure...
+mkdir: created directory '/mnt/beeond//test_dir'
+mkdir: created directory '/mnt/beeond//test_dir/.\'
+INFO: Copying files...
+'/shared/home/lizadams/test_dir/./test.txt' -> '/mnt/beeond//test_dir/./test.txt\'
+Liz cat /sched/beeondtest2/log/slurm_prolog.log
+++ /opt/cycle/jetpack/bin/jetpack config slurm.hpc
++ '[' True == True ']'
++ echo ''
+
++ echo -------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+++ date
++ echo 'Fri Jan 26 22:01:20 UTC 2024...creating Slurm Job 4 nodefile and starting Beeond'
+Fri Jan 26 22:01:20 UTC 2024...creating Slurm Job 4 nodefile and starting Beeond
++ scontrol show hostnames
++ echo '...create the nodefile of IP addresses'
+...create the nodefile of IP addresses
++ IFS=
++ read -r line
++ grep -oE '\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b'
++ scontrol show node beeondtest2-hpc-1
++ IFS=
++ read -r line
++ grep -oE '\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b'
++ scontrol show node beeondtest2-hpc-4
++ IFS=
++ read -r line
++ uniq /shared/home/lizadams/nodefile-4-tmp /shared/home/lizadams/nodefile-4
++ rm /shared/home/lizadams/nodefile-4-tmp /shared/home/lizadams/tmp-nodefile-4
++ cat /shared/home/lizadams/nodefile-4
+10.10.0.11
+10.10.0.6
++ chown lizadams /shared/home/lizadams/nodefile-4
++ chmod 775 /shared/home/lizadams/nodefile-4
++ sudo -u lizadams beeond stop -n /shared/home/lizadams/nodefile-4 -L -d
+INFO: Using status information file: /tmp/beeond.tmp
+INFO: Checking reachability of host 10.10.0.11
+INFO: Checking reachability of host 10.10.0.6
+INFO: Unmounting file system on host: 10.10.0.11
+sudo: do_stoplocal: command not found
+INFO: Unmounting file system on host: 10.10.0.6
+sudo: do_stoplocal: command not found
+INFO: Stopping remaining processes on host: 10.10.0.11
+INFO: Stopping remaining processes on host: 10.10.0.6
+INFO: Deleting status file on host: 10.10.0.11
+INFO: Deleting status file on host: 10.10.0.6
++ ((  2 > 1  ))
++ sudo -u lizadams beeond start -P -m 2 -n /shared/home/lizadams/nodefile-4 -d /mnt/nvme -c /mnt/beeond -f /etc/beegfs
+INFO: Using status information file: /tmp/beeond.tmp
+INFO: Checking PDSH availability on the following hosts: 10.10.0.11,10.10.0.6
+No such rcmd module "ssh"
+INFO: pdsh does not seem to work on all nodes. Disabling pdsh and using ssh instead
+INFO: Checking reachability of host 10.10.0.11
+INFO: Checking reachability of host 10.10.0.6
+INFO: Number of storage servers automatically set to 2
+INFO: Starting beegfs-mgmtd processes
+INFO: Management daemon log: /mnt/resource/beeond_logs/beegfs/beegfs-mgmtd_20240126-220137.log
+INFO: Starting beegfs-mgmtd on host: 10.10.0.11
+
+INFO: Starting beegfs-storage processes
+INFO: Storage server log: /mnt/resource/beeond_logs/beegfs/beegfs-storage_20240126-220137.log
+INFO: Starting beegfs-storage on host: 10.10.0.11
+INFO: Starting beegfs-storage on host: 10.10.0.6
+
+INFO: Starting beegfs-meta processes
+INFO: Metadata server log: /mnt/resource/beeond_logs/beegfs/beegfs-meta_20240126-220137.log
+INFO: Starting beegfs-meta on host: 10.10.0.11
+Liz sudo cat /var/log/slurmd/slurmd.log
+[2024-01-26T22:00:44.330] debug:  Log file re-opened
+[2024-01-26T22:00:44.373] debug:  CPUs:120 Boards:1 Sockets:2 CoresPerSocket:60 ThreadsPerCore:1
+[2024-01-26T22:00:44.373] Node reconfigured socket/core boundaries SocketsPerBoard=120:2(hw) CoresPerSocket=1:60(hw)
+[2024-01-26T22:00:44.373] debug:  cgroup/v1: init: Cgroup v1 plugin loaded
+[2024-01-26T22:00:44.374] debug:  CPUs:120 Boards:1 Sockets:2 CoresPerSocket:60 ThreadsPerCore:1
+[2024-01-26T22:00:44.377] debug:  gres/gpu: init: loaded
+[2024-01-26T22:00:44.377] debug:  gpu/generic: init: init: GPU Generic plugin loaded
+[2024-01-26T22:00:44.377] topology/none: init: topology NONE plugin loaded
+[2024-01-26T22:00:44.377] route/default: init: route default plugin loaded
+[2024-01-26T22:00:44.377] CPU frequency setting not configured for this node
+[2024-01-26T22:00:44.377] debug:  Resource spec: No specialized cores configured by default on this node
+[2024-01-26T22:00:44.377] debug:  Resource spec: Reserved system memory limit not configured for this node
+[2024-01-26T22:00:44.380] task/affinity: init: task affinity plugin loaded with CPU mask 0xffffffffffffffffffffffffffffff
+[2024-01-26T22:00:44.380] debug:  task/cgroup: init: Tasks containment cgroup plugin loaded
+[2024-01-26T22:00:44.380] debug:  auth/munge: init: Munge authentication plugin loaded
+[2024-01-26T22:00:44.380] debug:  spank: opening plugin stack /etc/slurm/plugstack.conf
+[2024-01-26T22:00:44.380] cred/munge: init: Munge credential signature plugin loaded
+[2024-01-26T22:00:44.380] slurmd version 22.05.10 started
+[2024-01-26T22:00:44.381] debug:  jobacct_gather/none: init: Job accounting gather NOT_INVOKED plugin loaded
+[2024-01-26T22:00:44.381] debug:  job_container/none: init: job_container none plugin loaded
+[2024-01-26T22:00:44.381] debug:  switch/none: init: switch NONE plugin loaded
+[2024-01-26T22:00:44.381] debug:  switch Cray/Aries plugin loaded.
+[2024-01-26T22:00:44.381] debug:  MPI: Loading all types
+[2024-01-26T22:00:44.381] error:  mpi/pmix_v4: init: (null) [0]: mpi_pmix.c:195: pmi/pmix: can not load PMIx library
+[2024-01-26T22:00:44.381] error: Couldn't load specified plugin name for mpi/pmix_v4: Plugin init() callback failed
+[2024-01-26T22:00:44.381] error: MPI: Cannot create context for mpi/pmix_v4
+[2024-01-26T22:00:44.381] error:  mpi/pmix_v4: init: (null) [0]: mpi_pmix.c:195: pmi/pmix: can not load PMIx library
+[2024-01-26T22:00:44.381] error: Couldn't load specified plugin name for mpi/pmix: Plugin init() callback failed
+[2024-01-26T22:00:44.381] error: MPI: Cannot create context for mpi/pmix
+[2024-01-26T22:00:44.382] slurmd started on Fri, 26 Jan 2024 22:00:44 +0000
+[2024-01-26T22:00:44.382] CPUs=120 Boards=1 Sockets=2 Cores=60 Threads=1 Memory=459512 TmpDisk=59924 Uptime=0 CPUSpecList=(null) FeaturesAvail=(null) FeaturesActive=(null)
+[2024-01-26T22:00:44.382] debug:  acct_gather_energy/none: init: AcctGatherEnergy NONE plugin loaded
+[2024-01-26T22:00:44.382] debug:  acct_gather_profile/none: init: AcctGatherProfile NONE plugin loaded
+[2024-01-26T22:00:44.382] debug:  acct_gather_interconnect/none: init: AcctGatherInterconnect NONE plugin loaded
+[2024-01-26T22:00:44.383] debug:  acct_gather_filesystem/none: init: AcctGatherFilesystem NONE plugin loaded
+[2024-01-26T22:00:44.384] debug:  hash/k12: init: init: KangarooTwelve hash plugin loaded
+[2024-01-26T22:00:44.386] debug:  _handle_node_reg_resp: slurmctld sent back 8 TRES.
+[2024-01-26T22:01:05.284] task/affinity: task_p_slurmd_batch_request: task_p_slurmd_batch_request: 4
+[2024-01-26T22:01:05.284] task/affinity: batch_bind: job 4 CPU input mask for node: 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+[2024-01-26T22:01:05.284] task/affinity: batch_bind: job 4 CPU final HW mask for node: 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+[2024-01-26T22:01:16.901] Warning: Note very large processing time from prep_g_prolog: usec=11616134 began=22:01:05.284
+[2024-01-26T22:01:16.901] prolog for job 4 ran for 11 seconds
+[2024-01-26T22:01:16.901] Launching batch job 4 for UID 20001
+[2024-01-26T22:01:16.905] debug:  acct_gather_energy/none: init: AcctGatherEnergy NONE plugin loaded
+[2024-01-26T22:01:16.905] debug:  acct_gather_profile/none: init: AcctGatherProfile NONE plugin loaded
+[2024-01-26T22:01:16.905] debug:  acct_gather_interconnect/none: init: AcctGatherInterconnect NONE plugin loaded
+[2024-01-26T22:01:16.905] debug:  acct_gather_filesystem/none: init: AcctGatherFilesystem NONE plugin loaded
+[2024-01-26T22:01:16.905] debug:  gres/gpu: init: loaded
+[2024-01-26T22:01:16.905] [4.batch] debug:  jobacct_gather/none: init: Job accounting gather NOT_INVOKED plugin loaded
+[2024-01-26T22:01:16.905] [4.batch] debug:  laying out the 240 tasks on 2 hosts beeondtest2-hpc-[1,4] dist 2
+[2024-01-26T22:01:16.906] [4.batch] debug:  Message thread started pid = 52925
+[2024-01-26T22:01:16.906] [4.batch] debug:  Setting slurmstepd(52925) oom_score_adj to -1000
+[2024-01-26T22:01:16.906] [4.batch] debug:  switch/none: init: switch NONE plugin loaded
+[2024-01-26T22:01:16.907] [4.batch] debug:  CPUs:120 Boards:1 Sockets:2 CoresPerSocket:60 ThreadsPerCore:1
+[2024-01-26T22:01:16.907] [4.batch] debug:  cgroup/v1: init: Cgroup v1 plugin loaded
+[2024-01-26T22:01:16.911] [4.batch] task/affinity: init: task affinity plugin loaded with CPU mask 0xffffffffffffffffffffffffffffff
+[2024-01-26T22:01:16.980] [4.batch] debug:  task/cgroup: init: core enforcement enabled
+[2024-01-26T22:01:16.983] [4.batch] debug:  task/cgroup: task_cgroup_memory_init: task/cgroup/memory: total:459512M allowed:100%(enforced), swap:0%(permissive), max:100%(459512M) max+swap:100%(919024M) min:30M kmem:100%(459512M permissive) min:30M 
+[2024-01-26T22:01:16.983] [4.batch] debug:  task/cgroup: init: memory enforcement enabled
+[2024-01-26T22:01:16.985] [4.batch] debug:  task/cgroup: init: device enforcement enabled
+[2024-01-26T22:01:16.985] [4.batch] debug:  task/cgroup: init: Tasks containment cgroup plugin loaded
+[2024-01-26T22:01:16.985] [4.batch] cred/munge: init: Munge credential signature plugin loaded
+[2024-01-26T22:01:16.985] [4.batch] debug:  job_container/none: init: job_container none plugin loaded
+[2024-01-26T22:01:16.985] [4.batch] debug:  spank: opening plugin stack /etc/slurm/plugstack.conf
+[2024-01-26T22:01:16.986] [4.batch] debug:  task/cgroup: task_cgroup_cpuset_create: job abstract cores are '0-119'
+[2024-01-26T22:01:16.986] [4.batch] debug:  task/cgroup: task_cgroup_cpuset_create: step abstract cores are '0-119'
+[2024-01-26T22:01:16.986] [4.batch] debug:  task/cgroup: task_cgroup_cpuset_create: job physical CPUs are '0-119'
+[2024-01-26T22:01:16.986] [4.batch] debug:  task/cgroup: task_cgroup_cpuset_create: step physical CPUs are '0-119'
+[2024-01-26T22:01:16.989] [4.batch] task/cgroup: _memcg_initialize: job: alloc=443520MB mem.limit=443520MB memsw.limit=unlimited
+[2024-01-26T22:01:16.989] [4.batch] task/cgroup: _memcg_initialize: step: alloc=443520MB mem.limit=443520MB memsw.limit=unlimited
+[2024-01-26T22:01:17.046] [4.batch] debug levels are stderr='error', logfile='debug', syslog='quiet'
+[2024-01-26T22:01:17.046] [4.batch] starting 1 tasks
+[2024-01-26T22:01:17.046] [4.batch] task 0 (52929) started 2024-01-26T22:01:17
+[2024-01-26T22:01:17.060] [4.batch] debug:  task/affinity: task_p_pre_launch: affinity StepId=4.batch, task:0 bind:mask_cpu
+[2024-01-26T22:01:17.060] [4.batch] _set_limit: RLIMIT_NOFILE : reducing req:524288 to max:131072
+[2024-01-26T22:01:20.461] debug:  Checking credential with 1040 bytes of sig data
+[2024-01-26T22:01:20.462] launch task StepId=4.0 request from UID:20001 GID:20001 HOST:10.10.0.11 PORT:35066
+[2024-01-26T22:01:20.462] task/affinity: lllp_distribution: JobId=4 manual binding: none,one_thread
+[2024-01-26T22:01:20.462] debug:  Waiting for job 4's prolog to complete
+[2024-01-26T22:01:20.462] debug:  Finished wait for job 4's prolog to complete
+[2024-01-26T22:01:20.466] debug:  acct_gather_energy/none: init: AcctGatherEnergy NONE plugin loaded
+[2024-01-26T22:01:20.466] debug:  acct_gather_profile/none: init: AcctGatherProfile NONE plugin loaded
+[2024-01-26T22:01:20.466] debug:  acct_gather_interconnect/none: init: AcctGatherInterconnect NONE plugin loaded
+[2024-01-26T22:01:20.466] debug:  acct_gather_filesystem/none: init: AcctGatherFilesystem NONE plugin loaded
+[2024-01-26T22:01:20.466] debug:  switch/none: init: switch NONE plugin loaded
+[2024-01-26T22:01:20.466] debug:  switch Cray/Aries plugin loaded.
+[2024-01-26T22:01:20.466] debug:  gres/gpu: init: loaded
+[2024-01-26T22:01:20.466] debug:  MPI: Type: none
+[2024-01-26T22:01:20.467] [4.0] debug:  jobacct_gather/none: init: Job accounting gather NOT_INVOKED plugin loaded
+[2024-01-26T22:01:20.467] [4.0] debug:  Message thread started pid = 53444
+[2024-01-26T22:01:20.467] [4.0] debug:  Setting slurmstepd(53444) oom_score_adj to -1000
+[2024-01-26T22:01:20.468] [4.0] debug:  CPUs:120 Boards:1 Sockets:2 CoresPerSocket:60 ThreadsPerCore:1
+[2024-01-26T22:01:20.468] [4.0] debug:  cgroup/v1: init: Cgroup v1 plugin loaded
+[2024-01-26T22:01:20.473] [4.0] task/affinity: init: task affinity plugin loaded with CPU mask 0xffffffffffffffffffffffffffffff
+[2024-01-26T22:01:20.477] [4.0] debug:  task/cgroup: init: core enforcement enabled
+[2024-01-26T22:01:20.479] [4.0] debug:  task/cgroup: task_cgroup_memory_init: task/cgroup/memory: total:459512M allowed:100%(enforced), swap:0%(permissive), max:100%(459512M) max+swap:100%(919024M) min:30M kmem:100%(459512M permissive) min:30M 
+[2024-01-26T22:01:20.479] [4.0] debug:  task/cgroup: init: memory enforcement enabled
+[2024-01-26T22:01:20.481] [4.0] debug:  task/cgroup: init: device enforcement enabled
+[2024-01-26T22:01:20.481] [4.0] debug:  task/cgroup: init: Tasks containment cgroup plugin loaded
+[2024-01-26T22:01:20.481] [4.0] cred/munge: init: Munge credential signature plugin loaded
+[2024-01-26T22:01:20.482] [4.0] debug:  job_container/none: init: job_container none plugin loaded
+[2024-01-26T22:01:20.482] [4.0] debug:  spank: opening plugin stack /etc/slurm/plugstack.conf
+[2024-01-26T22:01:20.482] [4.0] debug:  mpi/none: mpi_p_slurmstepd_prefork: mpi/none: slurmstepd prefork
+[2024-01-26T22:01:20.489] [4.0] debug:  task/cgroup: task_cgroup_cpuset_create: job abstract cores are '0-119'
+[2024-01-26T22:01:20.489] [4.0] debug:  task/cgroup: task_cgroup_cpuset_create: step abstract cores are '0-119'
+[2024-01-26T22:01:20.490] [4.0] debug:  task/cgroup: task_cgroup_cpuset_create: job physical CPUs are '0-119'
+[2024-01-26T22:01:20.490] [4.0] debug:  task/cgroup: task_cgroup_cpuset_create: step physical CPUs are '0-119'
+[2024-01-26T22:01:20.491] [4.0] task/cgroup: _memcg_initialize: job: alloc=443520MB mem.limit=443520MB memsw.limit=unlimited
+[2024-01-26T22:01:20.491] [4.0] task/cgroup: _memcg_initialize: step: alloc=443520MB mem.limit=443520MB memsw.limit=unlimited
+[2024-01-26T22:01:20.540] [4.0] debug levels are stderr='error', logfile='debug', syslog='quiet'
+[2024-01-26T22:01:20.541] [4.0] debug:  IO handler started pid=53444
+[2024-01-26T22:01:20.541] [4.0] starting 1 tasks
+[2024-01-26T22:01:20.541] [4.0] task 0 (53449) started 2024-01-26T22:01:20
+[2024-01-26T22:01:20.542] [4.0] debug:  Sending launch resp rc=0
+[2024-01-26T22:01:20.542] [4.0] debug:  mpi/none: mpi_p_slurmstepd_task: Using mpi/none
+[2024-01-26T22:01:20.542] [4.0] debug:  task/affinity: task_p_pre_launch: affinity StepId=4.0, task:0 bind:none,one_thread
+[2024-01-26T22:01:40.500] [4.batch] debug:  Handling REQUEST_STEP_UID
+[2024-01-26T22:01:40.500] debug:  _rpc_signal_tasks: sending signal 9 to StepId=4.0 flag 0
+[2024-01-26T22:01:40.500] [4.0] debug:  Handling REQUEST_SIGNAL_CONTAINER
+[2024-01-26T22:01:40.500] [4.0] debug:  _handle_signal_container for StepId=4.0 uid=11100 signal=9
+[2024-01-26T22:01:40.501] [4.0] error: *** STEP 4.0 ON beeondtest2-hpc-1 CANCELLED AT 2024-01-26T22:01:40 ***
+[2024-01-26T22:01:40.501] [4.0] Sent signal 9 to StepId=4.0
+[2024-01-26T22:01:40.502] [4.0] task 0 (53449) exited. Killed by signal 9.
+[2024-01-26T22:01:40.503] [4.0] debug:  task/affinity: task_p_post_term: affinity StepId=4.0, task 0
+[2024-01-26T22:01:40.503] [4.0] debug:  signaling condition
+[2024-01-26T22:01:40.503] [4.0] debug:  Waiting for IO
+[2024-01-26T22:01:40.503] [4.0] debug:  Closing debug channel
+[2024-01-26T22:01:40.503] [4.0] debug:  IO handler exited, rc=0
+[2024-01-26T22:01:40.512] [4.0] debug:  task/cgroup: fini: Tasks containment cgroup plugin unloaded
+[2024-01-26T22:01:40.515] [4.0] debug:  get_exit_code task 0 killed by cmd
+[2024-01-26T22:01:40.517] [4.batch] debug:  Handling REQUEST_STEP_UID
+[2024-01-26T22:01:40.517] debug:  _rpc_signal_tasks: sending signal 991 to StepId=4.0 flag 0
+[2024-01-26T22:01:40.517] [4.0] debug:  Handling REQUEST_SIGNAL_CONTAINER
+[2024-01-26T22:01:40.517] [4.0] debug:  _handle_signal_container for StepId=4.0 uid=11100 signal=991

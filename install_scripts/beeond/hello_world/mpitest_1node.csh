@@ -3,7 +3,7 @@
 ## data on /beeond data directory
 #SBATCH -J 1_node_MPI_Test
 #SBATCH -N 1
-#SBATCH --ntasks-per-node=96
+#SBATCH --ntasks-per-node=120
 #SBATCH -o %x.%j.out
 #SBATCH -e %x.%j.err
  
@@ -16,4 +16,4 @@ beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g ~/test_dir -l /mnt/beeond/
 mpicc mpitest.c -o mpitest
 
 echo 'Start mpirun at ' `date`
-mpirun ./mpitest
+mpirun -nolocal -vv  --mca oob_tcp_base_verbose 100 -np 120 ./mpitest
