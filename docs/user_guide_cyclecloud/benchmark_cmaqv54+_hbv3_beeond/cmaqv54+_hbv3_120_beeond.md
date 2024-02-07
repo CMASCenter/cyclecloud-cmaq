@@ -1,6 +1,6 @@
 CMAQv4+ CONUS Benchmark Tutorial using 12US1 Domain
 
-## Use Cycle Cloud pre-installed with CMAQv5.4+ software and 12US1 Benchmark data.
+## Use Cycle Cloud with CMAQv5.4+ software and 12US1 Benchmark data.
 
 Step by step instructions for running the CMAQ 12US1 Benchmark for 2 days on a Cycle Cloud using beeond parallel filesystem for input data.
 
