@@ -27,12 +27,12 @@ Do not use the Apply to all option.
 Select Scheduler and copy and paste the contents of scheduler-cloud-init.sh
 
 ```
-scheduler-cloud-init.sh 
+cat scheduler-cloud-init.sh 
 ```
 Select hpc and copy and paste the contents of hpc-cloud-init.sh into the shell
 
 ```
-hpc-cloud-init.sh
+cat hpc-cloud-init.sh
 ```
 
 Save this setting, and then terminate and then restart the cluster.
