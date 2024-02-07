@@ -24,8 +24,16 @@ cd install_scripts/beeond
 Edit the cluster and use the Cloud-init option for your CycleCloud to install the code in the file: beeond-cloud-init-almalinux8.5-HBv3
 
 Do not use the Apply to all option. 
-Select Scheduler and copy and paste the contents of scheduler-cloud-init.sh into the shell 
+Select Scheduler and copy and paste the contents of scheduler-cloud-init.sh
+
+```
+scheduler-cloud-init.sh 
+```
 Select hpc and copy and paste the contents of hpc-cloud-init.sh into the shell
+
+```
+hpc-cloud-init.sh
+```
 
 Save this setting, and then terminate and then restart the cluster.
 
