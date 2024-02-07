@@ -18,10 +18,9 @@ module load mpi/openmpi-4.1.5
 
 ## Copy files to /mnt/beeond, note, it may take 5 minutes to prepare the /mnt/beeond filesystem and to copy the data
 
-beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/2018_12US1 -l /mnt/beeond/data/2018_12US1
-
 # need to make the output directory prior to the beeond-cp
 mkdir -p /shared/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_1x96/LOGS
+beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/2018_12US1 -l /mnt/beeond/data/2018_12US1
 beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output -l /mnt/beeond/data/output
 
 chmod -R 777 /mnt/beeond
@@ -788,7 +787,6 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   set rtarray = "${rtarray} `tail -3 buff_${EXECUTION_ID}.txt | grep -Eo '[+-]?[0-9]+([.][0-9]+)?' | head -1` "
   rm -rf buff_${EXECUTION_ID}.txt
 
-  beeond-cp stageout -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output/output_${RUNID} -l /mnt/beeond/data/output/output_${RUNID}
 
   #> Abort script if abnormal termination
   setenv LOCAL_S_CGRID         "/shared/data/output/output_${RUNID}/CCTM_CGRID_${CTM_APPL}.nc"  
@@ -800,7 +798,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
     echo "**   exists with writing output. The runscript will now     **"
     echo "**   abort rather than proceeding to subsequent days.       **"
     echo "**************************************************************"
-    break
+#    break
   endif
 
   #> Print Concluding Text
@@ -828,6 +826,11 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   set TODAYJ = `date -ud "${TODAYG}" +%Y%j` #> Convert YYYY-MM-DD to YYYYJJJ
 
 end  #Loop to the next Simulation Day
+
+## Copy the files
+  #beeond-cp stageout -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output/output_${RUNID} -l /mnt/beeond/data/output/output_${RUNID}
+  beeond-cp copy -n /shared/home/$SLURM_JOB_USER/nodefile-$SLURM_JOB_ID /mnt/beeond/data/output/output_${RUNID} /shared/data/output/output_${RUNID}
+
 
 # ===================================================================
 #> Generate Timing Report

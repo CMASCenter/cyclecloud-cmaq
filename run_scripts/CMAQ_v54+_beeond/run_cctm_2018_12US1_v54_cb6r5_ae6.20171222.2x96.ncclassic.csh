@@ -7,8 +7,8 @@
 #SBATCH --ntasks-per-node=96
 #SBATCH --exclusive
 #SBATCH -J CMAQ
-#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.1day.20171222start.2x96.log
-#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.1day.20171222start.2x96.log
+#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2days.20171222start.2x96.log
+#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2days.20171222start.2x96.log
 #SBATCH -p hpc
 ##SBATCH --constraint=BEEOND
 ###SBATCH --beeond
@@ -33,6 +33,8 @@ beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/2018_12US1 -l /mnt
 mkdir -p /shared/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_2x96/LOGS
 
 beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output -l /mnt/beeond/data/output
+
+mkdir -p /mnt/beeond/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_2x96/LOGS
 
 #sudo mkdir /mnt/beeond/data
 #sudo chown lizadams /mnt/beeond/data
@@ -123,7 +125,7 @@ echo 'Start Model Run At ' `date`
 #> Set Start and End Days for looping
  setenv NEW_START TRUE             #> Set to FALSE for model restart
  set START_DATE = "2017-12-22"     #> beginning date (January 22, 2017)
- set END_DATE   = "2017-12-22"     #> ending date    (December 31, 2018)
+ set END_DATE   = "2017-12-23"     #> ending date    (December 31, 2018)
 
 #> Set Timestepping Parameters
 set STTIME     = 000000            #> beginning GMT time (HHMMSS)
@@ -805,7 +807,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   set rtarray = "${rtarray} `tail -3 buff_${EXECUTION_ID}.txt | grep -Eo '[+-]?[0-9]+([.][0-9]+)?' | head -1` "
   rm -rf buff_${EXECUTION_ID}.txt
 
-  beeond-cp stageout -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output/output_${RUNID} -l /mnt/beeond/data/output/output_${RUNID}
+  rsync -a /mnt/beeond/data/output/output_${RUNID}/  /shared/data/output/output_${RUNID}
 
   #> Abort script if abnormal termination
   setenv LOCAL_S_CGRID         "/shared/data/output/output_${RUNID}/CCTM_CGRID_${CTM_APPL}.nc"  

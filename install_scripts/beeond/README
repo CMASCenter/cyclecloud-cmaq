@@ -1,5 +1,21 @@
-sinfo -V
-slurm 22.05.10
+Please add the “beeond start” command at the top of the job script, and “beeond stop” to the end:
 
+# ===================================================================
 
+#> Start Beeond filesystem
 
+# ===================================================================
+
+beeond start -P -m 2 -n /shared/home/$SLURM_JOB_USER/nodefile-$SLURM_JOB_ID  -d /mnt/nvme -c /mnt/beeond -f /etc/beegfs
+
+ 
+
+ 
+
+# ===================================================================
+
+#> Stop Beeond filesystem
+
+# ===================================================================
+
+beeond stop -n /shared/home/$SLURM_JOB_USER/nodefile-$SLURM_JOB_ID -L -d -c

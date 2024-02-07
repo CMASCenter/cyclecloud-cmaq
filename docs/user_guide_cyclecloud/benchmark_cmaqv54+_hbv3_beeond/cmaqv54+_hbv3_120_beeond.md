@@ -23,7 +23,9 @@ cd install_scripts/beeond
 
 Edit the cluster and use the Cloud-init option for your CycleCloud to install the code in the file: beeond-cloud-init-almalinux8.5-HBv3
 
-Use the Apply to all option, so that the code is installed on both the scheduler and the compute nodes.
+Do not use the Apply to all option. 
+Select Scheduler and copy and paste the contents of scheduler-cloud-init.sh into the shell 
+Select hpc and copy and paste the contents of hpc-cloud-init.sh into the shell
 
 Save this setting, and then terminate and then restart the cluster.
 
@@ -50,45 +52,24 @@ Create the output directory
 mkdir -p /shared/data/output
 ```
 
-## Change directories to the Cyclecloud software and run the download_sched.csh to update the slurm scheduler to use the slurm-prolog-beeond.sh and slurm-epilog-beeond.sh
-
-```
-cd /shared/cyclecloud-cmaq/install_scripts/beeond
-./download_sched.sh
-```
-
-## Validate the setup
-
-```
-wget https://raw.githubusercontent.com/themorey/cyclecloud-scripts/main/slurm-beeond/beeond-test.sbatch
-```
-
-## Submit the test job
-
-```
-sbatch beeond-test.sbatch
-```
-
-Note, we did not get the same results as in the blog post
+The beeond filesystem will be created using the 1.8 T nvme disks that are on the compute nodes when the run script is submitted. 
+If you use two nodes, the shared beeond filesysetm will be a size of 3.5 T.
 
 beegfs_ondemand    3.5T  103M  3.5T   1% /mnt/beeond
 
 
+## Download the input data from the AWS Open Data CMAS Data Warehouse using the aws copy command.
 
-
-## Download the input data from the AWS Open Data CMAS Data Warehouse.
-
-Do a git pull to obtain the latest scripts in the cyclecloud-cmaq repo.
 
 ```
-cd /shared/cyclecloud-cmaq
-git pull
+cd cyclecloud-cmaq/s3_scripts/
+./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_shared_20171222_cb6r5_uncompressed.csh
 ```
 
 ## Verify Input Data
 
 ```
-cd /shared/data/CMAQ_Modeling_Platform_2018/2018_12US1
+cd /shared/data/2018_12US1
 du -h
 ```
 
@@ -128,15 +109,10 @@ Output
 
 ## Examine CMAQ Run Scripts
 
-The run scripts are available in two locations, one in the CMAQ scripts directory. 
-
-Another copy is available in the cyclecloud-cmaq repo.
-
-Copy the run scripts from the repo.
-Note, there are different run scripts depending on what compute node is used. This tutorial assumes hpc6a-48xlarge is the compute node.
+Obtain a copy of the CMAQ run script that has been edited to use the /mnt/beeond shared filesystem.
 
 ```
-cp /shared/data/CMAQ_Modeling_Platform_2018/2018_12US1/CMAQ_v54+_cb6r5_scripts/* /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
+cp run_scripts/CMAQ_v54+_beeond/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.csh /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
 ```
 
 ```{note}
@@ -154,33 +130,34 @@ head -n 30 /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm_2018_12US1_
 #!/bin/csh -f
 
 ## For CycleCloud 120pe
-## input data on /mnt/beeond directory on each compute node
-## output data saved to /shared/data/output/
+## data on /lustre data directory
 ## https://dataverse.unc.edu/dataset.xhtml?persistentId=doi:10.15139/S3/LDTWKH
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=96
 #SBATCH --exclusive
 #SBATCH -J CMAQ
-#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2day.20171222start.2x96.log
-#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2day.20171222start.2x96.log
+#SBATCH -o /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2days.20171222start.2x96.log
+#SBATCH -e /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2days.20171222start.2x96.log
+#SBATCH -p hpc
+##SBATCH --constraint=BEEOND
+###SBATCH --beeond
 
-
-###Copy data
-
-#beeond-cp copy -n /shared/home/$SLURM_JOB_USER/nodefile-1  /shared/data/CMAQ_Modeling_Platform_2018 /mnt/beeond
-
-#sleep 1000
-
-# ===================== CCTMv5.4.X Run Script ========================= 
-# Usage: run.cctm >&! cctm_2018_12US1.log &                                
-#
-# To report problems or request help with this script/program:
-#             http://www.epa.gov/cmaq    (EPA CMAQ Website)
-#             http://www.cmascenter.org  (CMAS Website)
-# ===================================================================  
+Please add the “beeond start” command at the top of the job script, and “beeond stop” to the end:
 
 # ===================================================================
-#> Runtime Environment Options
+
+#> Start Beeond filesystem
+
+# ===================================================================
+
+beeond start -P -m 2 -n /shared/home/$SLURM_JOB_USER/nodefile-$SLURM_JOB_ID  -d /mnt/nvme -c /mnt/beeond -f /etc/beegfs
+
+
+## Copy files to /mnt/beeond, note, it may take 5 minutes to prepare the /mnt/beeond filesystem and to copy the data
+
+
+beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/2018_12US1 -l /mnt/beeond/data/2018_12US1
+
 ```
 
 ```{note}
@@ -204,6 +181,8 @@ Output:
    setenv NPCOL_NPROW "$NPCOL $NPROW"; 
 
 ```
+
+Verify that the modules are loaded 
 
 ```
 module list
@@ -245,20 +224,6 @@ It takes about 5-8 minutes for the compute nodes to spin up, after the nodes are
                 25       hpc     CMAQ lizadams  R      56:26      2 CycleCloud8-5Beond-hpc-[3-4]
 ```
 
-### Copying the input data to the /mnt/beeond doesn't seem to be working.
-
-Added the following to the run script at the top of the script:
-
-```
-###Copy data
-
-beeond-cp copy -n /shared/home/$SLURM_JOB_USER/nodefile-1  /shared/data/CMAQ_Modeling_Platform_2018 /mnt/beeond
-
-sleep 500
-```
-
-## note the beeond-cp copy command doesn't seem to be working. I am logging into each compute node and using recursive copy to copy the input data to /mnt/beeond
-
 
 
 ### Once the job is successfully running 
@@ -296,7 +261,7 @@ Output:
 Once the job has completed running the two day benchmark check the log file for the timings.
 
 ```
-tail -n 18 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2day.20171222start.2x96.log
+tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2days.20171222start.2x96.log
 ```
 
 Output:
@@ -316,10 +281,21 @@ Number of Processes:       192
    All times are in seconds.
 
 Num  Day        Wall Time
-01   2017-12-22   1700.4
-02   2017-12-23   2314.8
-     Total Time = 4015.20
-      Avg. Time = 2007.60
+01   2017-12-22   1966.4
+02   2017-12-23   2170.2
+     Total Time = 4136.60
+      Avg. Time = 2068.30
+INFO: Using status information file: /tmp/beeond.tmp
+INFO: Checking reachability of host 10.10.0.5
+INFO: Checking reachability of host 10.10.0.7
+INFO: Unmounting file system on host: 10.10.0.5
+sudo: do_stoplocal: command not found
+INFO: Unmounting file system on host: 10.10.0.7
+sudo: do_stoplocal: command not found
+INFO: Stopping remaining processes on host: 10.10.0.5
+INFO: Stopping remaining processes on host: 10.10.0.7
+INFO: Deleting status file on host: 10.10.0.5
+INFO: Deleting status file on host: 10.10.0.7
 
 ```
 
@@ -397,7 +373,7 @@ Output
 ## Check results when job has completed successfully
 
 ```
-tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.288.16x24pe.2day.20171222start.3x96.log
+tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.384.16x24pe.2day.20171222start.3x96.log
 ```
 
 Output
@@ -406,98 +382,3 @@ Output
 
 ```
 
-
-
-I am getting this error
-
-sbatch beeond-test.sbatch
-
-cat slurm-30.out
-
-```
-
-#####################################################################################
-df -h:
-Filesystem          Size  Used Avail Use% Mounted on
-devtmpfs            225G     0  225G   0% /dev
-tmpfs               225G     0  225G   0% /dev/shm
-tmpfs               225G   18M  225G   1% /run
-tmpfs               225G     0  225G   0% /sys/fs/cgroup
-/dev/sda2            59G   27G   33G  45% /
-/dev/sda1           994M  209M  786M  21% /boot
-/dev/sda15          495M  5.9M  489M   2% /boot/efi
-/dev/sdb1           472G  176K  448G   1% /mnt
-/dev/md10           1.8T   13G  1.8T   1% /mnt/nvme
-10.10.0.10:/sched    30G  247M   30G   1% /sched
-10.10.0.10:/shared 1000G  114G  886G  12% /shared
-tmpfs                45G     0   45G   0% /run/user/0
-#####################################################################################
-#####################################################################################
-
-beegfs-ctl --mount=/mnt/beeond --listnodes --nodetype=storage:
-
-Error: Given mountpoint is invalid: /mnt/beeond
-
-[BeeGFS Control Tool Version: 7.2.4
-Refer to the default config file (/etc/beegfs/beegfs-client.conf)
-or visit http://www.beegfs.com to find out about configuration options.]
-
-#####################################################################################
-#####################################################################################
-
-beegfs-ctl --mount=/mnt/beeond --listnodes --nodetype=metadata:
-
-Error: Given mountpoint is invalid: /mnt/beeond
-
-[BeeGFS Control Tool Version: 7.2.4
-Refer to the default config file (/etc/beegfs/beegfs-client.conf)
-or visit http://www.beegfs.com to find out about configuration options.]
-
-#####################################################################################
-#####################################################################################
-
-beegfs-ctl --mount=/mnt/beeond --getentryinfo:
-
-Error: Given mountpoint is invalid: /mnt/beeond
-
-[BeeGFS Control Tool Version: 7.2.4
-Refer to the default config file (/etc/beegfs/beegfs-client.conf)
-or visit http://www.beegfs.com to find out about configuration options.]
-
-#####################################################################################
-#####################################################################################
-
-beegfs-net:
-df: no file systems processed
-No active BeeGFS mounts found.
-```
-
-But when I login to the ssh lizadams@10.10.0.5 or compute node, I see this:
-
-```
-df -h
-Filesystem          Size  Used Avail Use% Mounted on
-devtmpfs            225G     0  225G   0% /dev
-tmpfs               225G     0  225G   0% /dev/shm
-tmpfs               225G   26M  225G   1% /run
-tmpfs               225G     0  225G   0% /sys/fs/cgroup
-/dev/sda2            59G   27G   33G  45% /
-/dev/sda1           994M  209M  786M  21% /boot
-/dev/sda15          495M  5.9M  489M   2% /boot/efi
-/dev/sdb1           472G   68G  380G  16% /mnt
-/dev/md10           1.8T   13G  1.8T   1% /mnt/nvme
-10.10.0.10:/sched    30G  247M   30G   1% /sched
-10.10.0.10:/shared 1000G  114G  886G  12% /shared
-tmpfs                45G     0   45G   0% /run/user/20001
-[lizadams@cyclecloud8-5beond-hpc-5 ~]$ ls /mnt
-beeond  cluster-init  DATALOSS_WARNING_README.txt  lost+found  nvme  resource  scratch
-[lizadams@cyclecloud8-5beond-hpc-5 ~]$ ls /mnt/beeond
-CMAQ_Modeling_Platform_2018
-[lizadams@cyclecloud8-5beond-hpc-5 ~]$ ls -rlt /mnt/beeond
-total 4
-drwxrwxr-x. 5 lizadams lizadams 4096 Jan 12 23:30 CMAQ_Modeling_Platform_2018
-[lizadams@cyclecloud8-5beond-hpc-5 ~]$ du -sh /mnt/beeond
-76G	/mnt/beeond
-```
-
-Note the above is the result obtained when running on 1 compute node.
