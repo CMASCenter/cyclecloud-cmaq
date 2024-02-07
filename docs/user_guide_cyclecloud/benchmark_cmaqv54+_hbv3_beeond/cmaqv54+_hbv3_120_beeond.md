@@ -6,7 +6,7 @@ Step by step instructions for running the CMAQ 12US1 Benchmark for 2 days on a C
 
 Input files are *.nc (uncompressed netCDF)
 
-### Install software and input data
+### Install CMAQv5.4+ software
 
 See instructions in the Advanced Tutorial.
 
