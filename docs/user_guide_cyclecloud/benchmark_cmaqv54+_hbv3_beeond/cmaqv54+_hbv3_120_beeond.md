@@ -47,7 +47,7 @@ Use your username and credentials to login
 ssh -Y username@IP-address
 ```
 
-Change the group and ownership permissions on the /shared/data directory
+Change the group and ownership permissions on the /shared/data directory. Note, in the example below the username azureuser is used. If you are logging in using a different username, use that instead.
 
 ```
 sudo chown azureuser /shared/data
@@ -120,18 +120,17 @@ Output
 Obtain a copy of the CMAQ run script that has been edited to use the /mnt/beeond shared filesystem.
 
 ```
-cp run_scripts/CMAQ_v54+_beeond/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.csh /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
+cp run_scripts/CMAQ_v54+_beeond/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.*.ncclassic.csh /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
 ```
 
 ```{note}
-The time that it takes the 2 day CONUS benchmark to run will vary based on the number of CPUs used, and the compute node that is being used, and what disks are used for the I/O (shared, beeond or lustre).
-The Benchmark Scaling Plot for hbv3_120 on lustre, beeond, and shared (include here).
+The time that it takes the 2 day CONUS benchmark to run will vary based on the number of CPUs used, and the compute node that is being used, and what disks are used for the I/O (shared, beeond or lustre). The timings reported below are from the beeond filesystem on HB120v3 compute nodes.
 ```
 
 Examine how the run script is configured
 
 ```
-head -n 30 /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.csh
+head -n 30 /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.csh
 ```
 
 ```
@@ -150,7 +149,7 @@ head -n 30 /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm_2018_12US1_
 ##SBATCH --constraint=BEEOND
 ###SBATCH --beeond
 
-Please add the “beeond start” command at the top of the job script, and “beeond stop” to the end:
+The “beeond start” command was added to the top of the job script, and “beeond stop” to the end. Note, the -m 2 option is specific to using two nodes, this should be modified to match the number of nodes specified in the `SBATCH --nodes=`  command above:
 
 # ===================================================================
 
@@ -336,10 +335,10 @@ Number of Processes:       96
    All times are in seconds.
 
 Num  Day        Wall Time
-01   2017-12-22   3124.4
-02   2017-12-23   3629.7
-     Total Time = 6754.10
-      Avg. Time = 3377.05
+01   2017-12-22   3278.9
+02   2017-12-23   3800.7
+     Total Time = 7079.60
+      Avg. Time = 3539.80
 
 ```
 
@@ -387,6 +386,23 @@ tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.384.16x24pe.2day
 Output
 
 ```
+==================================
+  ***** CMAQ TIMING REPORT *****
+==================================
+Start Day: 2017-12-22
+End Day:   2017-12-23
+Number of Simulation Days: 2
+Domain Name:               12US1
+Number of Grid Cells:      4803435  (ROW x COL x LAY)
+Number of Layers:          35
+Number of Processes:       288
+   All times are in seconds.
+
+Num  Day        Wall Time
+01   2017-12-22   1588.4
+02   2017-12-23   1721.8
+     Total Time = 3310.20
+      Avg. Time = 1655.10
 
 ```
 
