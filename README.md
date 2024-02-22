@@ -2,7 +2,10 @@
 
 ## Scripts and code to configure an Azure Virtual Machine or Cycle Cloud Cluster to run CMAQ for 2 day CONUS2 Domain
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10694085.svg)](https://doi.org/10.5281/zenodo.10694085)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10694324.svg)](https://doi.org/10.5281/zenodo.10694324)
+
+
 
 ### To obtain this code use the following command.
 
