@@ -3,14 +3,14 @@
 ## Scripts and code to configure an Azure Virtual Machine or Cycle Cloud Cluster to run CMAQ for 2 day CONUS2 Domain
 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10694324.svg)](https://doi.org/10.5281/zenodo.10694324)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10696804.svg)](https://doi.org/10.5281/zenodo.10696804)
 
 
 
 ### To obtain this code use the following command.
 
 ```
-git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git
+git clone -b CMAQv5.3.3 https://github.com/CMASCenter/cyclecloud-cmaq.git
 ```
 
 Note, there are two sets of install scripts as the build path is sensitive to the mpi version!
