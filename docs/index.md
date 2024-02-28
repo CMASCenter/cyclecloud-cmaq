@@ -5,7 +5,7 @@
 
 ```{warning}
 This documentation is under continuous development.
-Previous version is available here: <a href="https://cyclecloud-cmaq.readthedocs.io/en/cmaqv5.33/">CMAQv5.3.3 on Azure Tutorial</a>
+Previous version is available here: <a href="https://cyclecloud-cmaq.readthedocs.io/en/cmaqv5.3.3/">CMAQv5.3.3 on Azure Tutorial</a>
 ```
 
 ## Overview of CMAQv5.4+ on Azure
