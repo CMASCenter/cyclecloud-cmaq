@@ -17,8 +17,18 @@ Using a modified version of the instructions available on this <a href="https://
 
 Full Beeond: BeeGFS on Demand <a href="https://doc.beegfs.io/latest/advanced_topics/beeond.html">User Manual</a>
 
+Use the files in the cyclecloud-cmaq github repository from your local computer.
+
+To get this repo, if you don't already have it use the command;
+
 ```
-cd install_scripts/beeond
+git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git
+```
+
+Change directories to the following location:
+
+```
+cd cyclecloud-cmaq/install_scripts/beeond
 ```
 
 Edit the cluster and use the Cloud-init option for your CycleCloud to install the code in the file: beeond-cloud-init-almalinux8.5-HBv3
