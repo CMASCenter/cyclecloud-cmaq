@@ -1,4 +1,6 @@
-Please add the “beeond start” command at the top of the job script, and “beeond stop” to the end:
+Please add the “beeond start” command at the top of the job script, and “beeond stop” to the end of the job script:
+
+(Note, this example is for two nodes. To run on three nodes, change the -m 2 to -m 3.
 
 # ===================================================================
 
@@ -7,8 +9,6 @@ Please add the “beeond start” command at the top of the job script, and “b
 # ===================================================================
 
 beeond start -P -m 2 -n /shared/home/$SLURM_JOB_USER/nodefile-$SLURM_JOB_ID  -d /mnt/nvme -c /mnt/beeond -f /etc/beegfs
-
- 
 
  
 
