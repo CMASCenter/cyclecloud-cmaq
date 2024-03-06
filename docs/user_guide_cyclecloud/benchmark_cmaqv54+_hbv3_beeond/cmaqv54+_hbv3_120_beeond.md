@@ -195,12 +195,12 @@ Build CMAQ
 ./gcc_cmaqv54+.csh
 ```
 
-## Examine CMAQ Run Scripts
+## Copy and Examine CMAQ Run Scripts
 
 Obtain a copy of the CMAQ run script that has been edited to use the /mnt/beeond shared filesystem.
 
 ```
-cp run_scripts/CMAQ_v54+_beeond/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.*.ncclassic.csh /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
+cp /shared/cyclecloud-cmaq/run_scripts/CMAQ_v54+_beeond/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.*.ncclassic.csh /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
 ```
 
 ```{note}
