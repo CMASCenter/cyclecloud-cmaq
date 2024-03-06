@@ -14,6 +14,11 @@ else
   exit 255
 fi
 
+#cloud-config
+
+sudo rpm --import https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux
+
+
 # create a script to configure connection authentication file for beegfs
 cat << EOF>>/tmp/beeond-connauthfile.sh
 #!/bin/bash

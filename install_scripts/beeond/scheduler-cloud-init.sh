@@ -11,6 +11,10 @@ while [[ ! -L /etc/slurm/slurm.conf ]]; do
   sleep 30
 done
 
+#cloud-config
+sudo rpm --import https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux
+
+
 # Determine Slurm cluster name for sched path
 CLUSTER=\$(sudo -i jetpack config cyclecloud.cluster.name)
 
