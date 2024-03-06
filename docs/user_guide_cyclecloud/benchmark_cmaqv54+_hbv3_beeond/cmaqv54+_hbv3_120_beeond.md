@@ -6,11 +6,6 @@ Step by step instructions for running the CMAQ 12US1 Benchmark for 2 days on a C
 
 Input files are *.nc (uncompressed netCDF)
 
-### Install CMAQv5.4+ software
-
-See instructions in the Advanced Tutorial.
-
-
 ### Use the files under the following directory to set up the CycleCloud Cluster to use beeond.
 
 Using a modified version of the instructions available on this <a href="https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automate-beeond-filesystem-on-azure-cyclecloud-slurm-cluster/ba-p/3625544">Blog Post</a>, updated for the new CycleCloud version 8.5 and slurm 22.05.10.
@@ -57,11 +52,32 @@ Use your username and credentials to login
 ssh -Y username@IP-address
 ```
 
-Change the group and ownership permissions on the /shared/data directory. Note, in the example below the username azureuser is used. If you are logging in using a different username, use that instead.
+Make the /shared/build directory and change ownership from root to your account.
 
 ```
-sudo chown azureuser /shared/data
-sudo chgrp azureuser /shared/data
+sudo mkdir /shared/build
+sudo chown $USER /shared/build
+``` 
+
+Make the /shared/cyclecloud directory and change ownership from root to your account.
+
+```
+sudo mkdir /shared/cyclecloud-cmaq
+sudo chown $USER /shared/cyclecloud-cmaq
+```
+
+Install the cyclecloud-cmaq repo
+
+```
+cd /shared
+git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git cyclecloud-cmaq
+```
+
+Make the /shared/data directory and change ownership to your account
+
+```
+sudo mkdir /shared/data
+sudo chown $USER /shared/data
 ```
 
 Create the output directory
@@ -78,9 +94,19 @@ beegfs_ondemand    3.5T  103M  3.5T   1% /mnt/beeond
 
 ## Download the input data from the AWS Open Data CMAS Data Warehouse using the aws copy command.
 
+Install AWS CLI to obtain data from AWS S3 Bucket
 
 ```
-cd cyclecloud-cmaq/s3_scripts/
+cd /shared/build
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+Download the data
+
+```
+cd /shared/build/cyclecloud-cmaq/s3_scripts/
 ./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_shared_20171222_cb6r5_uncompressed.csh
 ```
 
@@ -124,6 +150,50 @@ Output
 
 ```
 
+## Install CMAQv5.4+
+
+Change directories to install and build the libraries and CMAQ
+
+
+Install netCDF C and Fortran Libraries
+
+```
+cd /shared/build/cyclecloud-cmaq
+./gcc_netcdf_cluster.csh
+cp dot.cshrc  ~/.cshrc
+```
+
+Execute the .cshrc shell
+
+```
+csh
+env
+```
+
+Verify the LD_LIBRARY_PATH environment variable
+
+```
+echo $LD_LIBRARY_PATH
+```
+
+Output
+
+```
+/opt/openmpi-4.1.5/lib:/opt/gcc-9.2.0/lib64:/shared/build/netcdf/lib
+```
+
+Install I/O API Library
+
+```
+cd /shared/build/cyclecloud-cmaq
+./gcc_ioapi_cluster.csh
+```
+
+Build CMAQ
+
+```
+./gcc_cmaqv54+.csh
+```
 
 ## Examine CMAQ Run Scripts
 
