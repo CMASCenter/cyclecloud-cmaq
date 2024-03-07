@@ -106,7 +106,7 @@ sudo ./aws/install
 Download the data
 
 ```
-cd /shared/build/cyclecloud-cmaq/s3_scripts/
+cd /shared/cyclecloud-cmaq/s3_scripts/
 ./s3_copy_nosign_2018_12US1_conus_cmas_opendata_to_shared_20171222_cb6r5_uncompressed.csh
 ```
 
