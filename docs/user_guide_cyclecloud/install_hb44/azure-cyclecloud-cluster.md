@@ -13,7 +13,7 @@ In the Marketplace search bar, enter "CycleCloud".
 
 Click on the heart in the Azure CycleCloud box to add this as a favorite resource.
 
-Use the Create pulldown menu to select `Azure CycleCloud 8.6` 
+Use the Create pulldown menu to select `Azure CycleCloud 8.2` 
 
 ## Customize your Host Virtual Machine for the CycleCloud Application
 
@@ -21,7 +21,7 @@ Use the Create pulldown menu to select `Azure CycleCloud 8.6`
 2. Select or create a new Resource Group that your CycleCloud instance will run in: note, leave this blank initially, as it will be named after the instance name below by appending _group to the instance name
 3. Name your CycleCloud instance using Virtual Machine name : example name: CycleCloudHost
 4. Select Region: example name:  US East
-5. Verify Image is Azure CycleCloud 8.6 - x64 Gen2 
+5. Verify Image is Azure CycleCloud 8.5 - x64 Gen2 
 6. Select Size, click on see all sizes, enter D4s into the search button and select Standard_D4s_v3- 4cpus, 16GiB memory ($140.16/month)
 7. Select Authentication Type `SSH public key`
 5. Create the Username that you will use to log into the instance: example name: azureuser
@@ -182,20 +182,21 @@ Figure 19. Azure CycleCloud Create a New Cluster - Select SLURM workload Manager
 
 Figure 20. Azure CycleCloud New Slurm Cluster - add a Cluster Name
 
-Example name: CMAQSlurmHBv120AlmaLinux
+Example name: CMAQSlurmHC44rsAlmaLinux
 
 Figure 21.  Azure CycleCloud HPC Queue Select Machine
 
-In the HPC VM Type, select Choose, enter HB in SKU Search, select 
-Select HB120rs_v3, then select Apply
+In the Min Cores box, input 44
+In the Compute Type, select High Performance Compute
+Select HC44rs, then select Apply
 ![Azure CycleCloud HPC Queue Select Machine](../../azure_web_interface_images/Azure_CycleCloud_Select_A_Machine_Type_HC44rs.png)
 
 Figure 22. Select Max HPC Cores
 
-Select Auto-Scaling Max HPC Cores to be a multiple of the number of cpus available on the compute node.  For HB120rs_v3 for a maximum of 4 nodes, it would be 120 x 4 = 480 Max HPC Cores
+Select Auto-Scaling Max HPC Cores to be a multiple of the number of cpus available on the compute node.  For HC44rs for a maximum of 5 nodes, it would be 44 x 5 = 220 Max HPC Cores
 Choose the Networking SubnetID that was created for the CycleCloud.
 
-![Azure CycleCloud HPC VM Type Confirmed](../../azure_web_interface_images/Azure_CycleCloud_HPC_VM_TYPE_HB120rs_v3.png)
+![Azure CycleCloud HPC VM Type Confirmed](../../azure_web_interface_images/Azure_CycleCloud_HPC_VM_TYPE_HC44rs.png)
 
 Figure 23.  Azure CycleCloud Network Attached Storage
 
@@ -204,18 +205,18 @@ Change the size from 100 GB of network attached storage to 1000 GB of network at
 ![Azure CycleCloud Network Attached Storage](../../azure_web_interface_images/Azure_CycleCloud_Network_Attached_Storage.png)
 
 
-Figure 24.  Azure CycleCloud Select OS and Check Name as HostName
+Figure 24.  Azure CycleCloud Select OS and Uncheck Name as HostName
 
 ![Azure CycleCloud Select OS](../../azure_web_interface_images/CycleCloud_Application_Advanced_Settings.png)
 
 
 Figure 25. Azure CycleCloud Select Machine Type for HPC Node
 
-![Azure CycleCloud Select Machine Type for HPC Node](../../azure_web_interface_images/Azure_CycleCloud_Select_Machine_Type_for_HPC_node_filter_by_HB.png)
+![Azure CycleCloud Select Machine Type for HPC Node](../../azure_web_interface_images/Azure_CycleCloud_Select_Machine_Type_for_HPC_node_filter_by_44_cores.png)
 
-Figure 26. Azure Cycle Cloud Required Settings HPC VM Select HB120rs_v3
+Figure 26. Azure Cycle Cloud Required Settings HPC VM Select HC44rs
 
-![Azure Cycle Cloud Required Settings HPC VM Select HB120rs_v3](../../azure_web_interface_images/AzureCycleCloud_Required_Settings_HPC_VM_Select_HB120rs_v3.png)
+![Azure Cycle Cloud Required Settings HPC VM Select HC44rs](../../azure_web_interface_images/AzureCycleCloud_Required_Settings_HPC_VM_Select_HC44rs.png)
 
 Note: the maximum number of CPUs specified for the HPC Compute node can be changed after the cluster has been created. See section 4.1.4 for the command line commands.
 
@@ -246,7 +247,7 @@ Login to Azure Cycle Cloud and verify that the following command works.
 
 Click on the Scheduler node, and obtain the IP address, then login using
 
-ssh -Y $USER@IP-ADDRESS
+ssh -Y azureuser@IP-ADDRESS
 
 Run a bash script for 1 minute by submitting to the hpc node using srun.
 
@@ -256,7 +257,7 @@ You should see the hpc acquiring a single node.
 
 Figure 31. Azure CycleCloud Acquiring Compute Node after running srun command.
 
-![Azure CycleCloud Acquiring Compute Node](../../azure_web_interface_images/Azure_CycleCloud_srun_test_acquiring_hpc_HB120rs_v3_node.png)
+![Azure CycleCloud Acquiring Compute Node](../../azure_web_interface_images/Azure_CycleCloud_srun_test_acquiring_hpc_hc44rs_node.png)
 
 After the compute node is created and the srun command is completed, the compute node will be shut down automatically, after it has been idle for a period of time.
 
@@ -277,23 +278,22 @@ for additional detail:
 Output:
 
 ```
-Job Id:	1
+Job Id:	2
 	Job_Name = bash
-	Job_Owner = lizadams@beeondtest2-copy-scheduler
+	Job_Owner = lizadams@CMAQSlurmHC44rsAlmaLinux-scheduler
 	interactive = True
 	job_state = R
 	queue = hpc
-	qtime = Thu Mar  7 15:49:46 2024
-	mtime = Thu Mar  7 15:49:46 2024
-	ctime = Thu Mar  7 15:50:46 2024
-	exec_host = beeondtest2-copy-hpc-1/2
+	qtime = Tue Jun 14 18:56:17 2022
+	mtime = Tue Jun 14 19:04:13 2022
+	ctime = Tue Jun 14 20:34:13 2022
+	exec_host = cmaqslurmhc44rsalmalinux-hpc-pg0-1/2
 	Priority = 4294901759
 	euser = lizadams(20001)
 	egroup = lizadams(20001)
-	Resource_List.walltime = 00:01:00
+	Resource_List.walltime = 01:30:00
 	Resource_List.nodect = 1
 	Resource_List.ncpus = 2
-
 ```
 
 Figure 32. Azure Cycle Cloud Showing usage of Scheduler Node and Compute Nodes for Srun command
@@ -303,7 +303,7 @@ Figure 32. Azure Cycle Cloud Showing usage of Scheduler Node and Compute Nodes f
 
 ## Instructions to upgrade the number of processors available to the Cycle Cloud Cluster (only needed if you want to modify the number of nodes in the HPC queue)
 
-Edit the HPC config in the cyclecloud web interface to set the CPUs to 600 
+Edit the HPC config in the cyclecloud web interface to set the CPUs to 480 
 Run the following on the scheduler node the changes should get picked up:
 
 `cd /opt/cycle/slurm`
