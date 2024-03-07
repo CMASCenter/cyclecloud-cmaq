@@ -32,12 +32,12 @@ Save this setting, and then terminate and then restart the cluster.
 
 ## Log into the new cluster
 
-To find this IP address you need to go to the webpage where you configured the Azure CycleCloud Clusters: https://IP-address/home
-Double Click Scheduler, 
-Under view details double click scheduler, and a pop-up window will appear
-Click on the connect button in  the upper right corner.
+To find this IP address you need to go to the webpage for your Azure CycleCloud Clusters: https://IP-address/home <br>
 
-Copy and past the login command that is provided. It will have the following syntax:
+Double Click Scheduler, <br>
+Under view details double, click scheduler, and a pop-up window will appear<br>
+Click on the connect button in the upper right corner.<br>
+Copy and past the login command that is provided. It will have the following syntax: <br>
 
 ```
 ssh -Y $USER@IP-address
