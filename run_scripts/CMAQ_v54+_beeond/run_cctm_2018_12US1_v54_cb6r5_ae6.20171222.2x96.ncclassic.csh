@@ -32,9 +32,8 @@ beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/2018_12US1 -l /mnt
 # need to make the output directory prior to the beeond-cp
 mkdir -p /shared/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_2x96/LOGS
 
-beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output -l /mnt/beeond/data/output
+beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_2x96 -l /mnt/beeond/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_2x96
 
-mkdir -p /mnt/beeond/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_2x96/LOGS
 
 #sudo mkdir /mnt/beeond/data
 #sudo chown lizadams /mnt/beeond/data
