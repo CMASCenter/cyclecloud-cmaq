@@ -158,7 +158,7 @@ Change directories to install and build the libraries and CMAQ
 Install netCDF C and Fortran Libraries
 
 ```
-cd /shared/build/cyclecloud-cmaq
+cd /shared/cyclecloud-cmaq
 ./gcc_netcdf_cluster.csh
 cp dot.cshrc  ~/.cshrc
 ```
@@ -185,7 +185,7 @@ Output
 Install I/O API Library
 
 ```
-cd /shared/build/cyclecloud-cmaq
+cd /shared/cyclecloud-cmaq
 ./gcc_ioapi_cluster.csh
 ```
 
@@ -210,7 +210,7 @@ The time that it takes the 2 day CONUS benchmark to run will vary based on the n
 Examine how the run script is configured
 
 ```
-head -n 30 /shared/build/openmpi_gcc/CMAQ_v54+/CCTM/scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.csh
+head -n 30 /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.csh
 ```
 
 ```
