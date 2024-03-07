@@ -300,10 +300,13 @@ It takes about 5-8 minutes for the compute nodes to spin up, after the nodes are
 ```
 
 
-### Check that the /mnt/beeond filesystem has been created on the compute modes
+### Check that the /mnt/beeond filesystem has been created on the compute nodes
 
 Login to the compute node by getting the IP address of the compute node.
-To find this IP address you need to go to the azure portal, to the cyclecloud.
+To find this IP address you need to go to the webpage where you configured the Azure CycleCloud Clusters: https://IP-address/home
+Double click on hpc to show the view details panel.
+Double click on one of the hpc compute nodes, and a pop-up window will appear, click on connect to obtain the IP address of the compute node.
+
 
 ``` 
 ssh $USER@IP-address-compute-node
