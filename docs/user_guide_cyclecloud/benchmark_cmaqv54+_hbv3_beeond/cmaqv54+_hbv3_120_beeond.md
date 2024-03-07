@@ -556,4 +556,7 @@ Confirm that the HPC VMs are deleted by viewing the CycleCloud webpage. <br>
 Resubmit the job
 
 
+If the job does not begin to configure, then you may need to terminate and then restart the cluster.
+
+The terminate option does not delete the software, it only shuts down the scheduler and compute nodes.
 
