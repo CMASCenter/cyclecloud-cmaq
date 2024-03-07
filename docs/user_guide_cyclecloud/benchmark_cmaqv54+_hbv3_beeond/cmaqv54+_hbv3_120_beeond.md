@@ -279,11 +279,16 @@ sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.csh
 
 ### Check status of run
 
-`squeue `
+```
+squeue
+```
 
 Output:
 
 ```
+[lizadams@ip-0A0A000A scripts]$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                 1       hpc     CMAQ lizadams CF       0:01      2 beeondtest2-hpc-[1-2]
 
 ```
 
@@ -292,7 +297,11 @@ It takes about 5-8 minutes for the compute nodes to spin up, after the nodes are
 
 ### Successfully started run
 
-`squeue`
+```
+squeue
+```
+
+Output:
 
 ```
             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
@@ -313,6 +322,10 @@ ssh $USER@IP-address-compute-node
 ```
 
 If you are running on 2 compute nodes, then there are two 1.8 TB /nvme drives. Beeond will create a shared 3.5 TB shared drive on /mnt/beeond
+
+```
+df -h
+```
 
 Output:
 
