@@ -468,7 +468,7 @@ sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.3x96.ncclassic.csh
 Verify the size of the beeond filesystem when using 3 nodes is 5.3 T.
 
 ```
-ssh $USER@IP-address
+ssh $USER@IP-address-compute-node
 ```
 
 ```
