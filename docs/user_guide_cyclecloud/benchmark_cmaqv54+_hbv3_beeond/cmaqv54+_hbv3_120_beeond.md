@@ -538,3 +538,21 @@ squeue
                  3       hpc     CMAQ lizadams PD       0:00      3 (Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)
 ```
 
+The NODELIST reason "launch failed requeued held" requires that the job be canceled using the command:
+
+```
+squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                 3       hpc     CMAQ lizadams PD       0:00      3 (launch failed requeued held)
+```
+
+``` 
+scancel 3
+```
+
+Confirm that the HPC VMs are deleted by viewing the CycleCloud webpage. <br>
+
+Resubmit the job
+
+
+
