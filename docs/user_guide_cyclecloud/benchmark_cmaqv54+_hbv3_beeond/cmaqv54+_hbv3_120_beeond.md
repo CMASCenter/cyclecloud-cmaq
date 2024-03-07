@@ -522,6 +522,8 @@ Num  Day        Wall Time
 
 ```
 
+## Unsuccessful slurm status messages
+
 The NODELIST reason "Nodes required for the job are DOWN..." <br>
 Will be generated if a batch is submitted prior to the previous job successfully terminating the nodes<br>
 Wait 5 -10 minutes and see if the status changes from PD (pending) to CF (configuring).<br>
@@ -555,6 +557,8 @@ Confirm that the HPC VMs are deleted by viewing the CycleCloud webpage. <br>
 
 Resubmit the job
 
+
+## To recover from failure use the terminate cluster option
 
 If the job does not begin to configure, then you may need to terminate and then restart the cluster.
 
