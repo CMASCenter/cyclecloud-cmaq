@@ -496,7 +496,7 @@ Output
 ## Check results when job has completed successfully
 
 ```
-tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.384.16x18pe.2days.20171222start.3x96.log
+tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.288.16x18pe.2days.20171222start.3x96.log
 ```
 
 Output
