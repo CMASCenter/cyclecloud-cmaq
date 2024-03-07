@@ -432,7 +432,7 @@ Check result after job has finished
 
 ```
 
-tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.96.8x12pe.2day.20171222start.1x96.log
+tail -n 30 run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.96.8x12pe.2days.20171222start.1x96.log
 ```
 
 Output
