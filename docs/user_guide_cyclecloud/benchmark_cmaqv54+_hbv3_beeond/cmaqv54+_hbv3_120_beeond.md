@@ -538,13 +538,14 @@ squeue
                  3       hpc     CMAQ lizadams PD       0:00      3 (Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)
 ```
 
-The NODELIST reason "launch failed requeued held" requires that the job be canceled using the command:
+The NODELIST reason "launch failed requeued held" requires that the job be canceled. Note, if you get this message, it may result in the HPC compute nodes staying up and charging, without running the job, so is important to cancel the job using scancel.
 
 ```
 squeue
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
                  3       hpc     CMAQ lizadams PD       0:00      3 (launch failed requeued held)
 ```
+
 
 ``` 
 scancel 3
