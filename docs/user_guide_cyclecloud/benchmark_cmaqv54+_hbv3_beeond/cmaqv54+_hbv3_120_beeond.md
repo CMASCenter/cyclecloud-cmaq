@@ -465,7 +465,35 @@ Num  Day        Wall Time
 sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.3x96.ncclassic.csh
 ```
 
-Login to each node and copy the data from /shared/data to /mnt/beeond
+Verify the size of the beeond filesystem when using 3 nodes is 5.3 T.
+
+```
+ssh $USER@IP-address
+```
+
+```
+df -h
+```
+
+Output:
+
+```
+ df -h
+Filesystem          Size  Used Avail Use% Mounted on
+devtmpfs            225G     0  225G   0% /dev
+tmpfs               225G  789M  224G   1% /dev/shm
+tmpfs               225G   18M  225G   1% /run
+tmpfs               225G     0  225G   0% /sys/fs/cgroup
+/dev/sda2            59G   27G   33G  45% /
+/dev/sda1           994M  209M  786M  21% /boot
+/dev/sda15          495M  5.9M  489M   2% /boot/efi
+/dev/sdb1           472G  216K  448G   1% /mnt
+/dev/md10           1.8T   39G  1.8T   3% /mnt/nvme
+10.10.0.10:/sched    30G  247M   30G   1% /sched
+10.10.0.10:/shared 1000G  223G  778G  23% /shared
+tmpfs                45G     0   45G   0% /run/user/20001
+beegfs_ondemand     5.3T  116G  5.2T   3% /mnt/beeond
+```
 
 ## Check how quickly the processing is being completed
 
