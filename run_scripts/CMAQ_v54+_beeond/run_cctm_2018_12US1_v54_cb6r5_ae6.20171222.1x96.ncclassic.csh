@@ -830,7 +830,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   set rtarray = "${rtarray} `tail -3 buff_${EXECUTION_ID}.txt | grep -Eo '[+-]?[0-9]+([.][0-9]+)?' | head -1` "
   rm -rf buff_${EXECUTION_ID}.txt
 
-  rsync -a /mnt/beeond/data/output/output_${RUNID}/  /shared/data/output/output_${RUNID}
+  rsync -a /mnt/beeond/data/output/output_${RUNID}/  /shared/data/output_${RUNID}
 
   #> Abort script if abnormal termination
   setenv LOCAL_S_CGRID         "/shared/data/output/output_${RUNID}/CCTM_CGRID_${CTM_APPL}.nc"  
