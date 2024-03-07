@@ -309,6 +309,8 @@ To find this IP address you need to go to the azure portal, to the cyclecloud.
 ssh $USER@IP-address-compute-node
 ```
 
+If you are running on 2 compute nodes, then there are two 1.8 TB /nvme drives. Beeond will create a shared 3.5 TB shared drive on /mnt/beeond
+
 Output:
 
 ```
