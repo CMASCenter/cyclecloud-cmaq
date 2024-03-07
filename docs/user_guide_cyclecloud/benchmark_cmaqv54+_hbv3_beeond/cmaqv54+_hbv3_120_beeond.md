@@ -210,6 +210,7 @@ The time that it takes the 2 day CONUS benchmark to run will vary based on the n
 Examine how the run script is configured
 
 ```
+cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
 head -n 30 /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.csh
 ```
 
