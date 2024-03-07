@@ -354,7 +354,7 @@ beegfs_ondemand     3.5T   31G  3.5T   1% /mnt/beeond
 ### Check on the log file status
 
 ```
-grep -i 'Processing completed.' run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2day.20171222start.2x96.log
+grep -i 'Processing completed.' run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2days.20171222start.2x96.log
 ```
 
 Output:
