@@ -305,7 +305,13 @@ It takes about 5-8 minutes for the compute nodes to spin up, after the nodes are
 Login to the compute node by getting the IP address of the compute node.
 To find this IP address you need to go to the azure portal, to the cyclecloud.
 
+``` 
+ssh $USER@IP-address-compute-node
+```
 
+Output:
+
+```
 [lizadams@ip-0A0A000B ~]$ df -h
 Filesystem          Size  Used Avail Use% Mounted on
 devtmpfs            225G     0  225G   0% /dev
@@ -321,7 +327,7 @@ tmpfs               225G     0  225G   0% /sys/fs/cgroup
 10.10.0.10:/shared 1000G   95G  906G  10% /shared
 tmpfs                45G     0   45G   0% /run/user/20001
 beegfs_ondemand     3.5T   31G  3.5T   1% /mnt/beeond
-
+```
 
 ### Check on the log file status
 
