@@ -558,5 +558,5 @@ Resubmit the job
 
 If the job does not begin to configure, then you may need to terminate and then restart the cluster.
 
-The terminate option does not delete the software, it only shuts down the scheduler and compute nodes.
-
+The terminate option does not delete the software, it only shuts down the scheduler and compute nodes. <br>
+The terminate option is equivalent to stopping the cluster. Once it has been stopped, the cluster can be restarted using the Start button.<br>
