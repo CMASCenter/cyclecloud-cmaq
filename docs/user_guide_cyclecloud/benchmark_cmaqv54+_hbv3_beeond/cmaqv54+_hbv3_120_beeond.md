@@ -522,7 +522,9 @@ Num  Day        Wall Time
 
 ```
 
-If you get this message when you check the batch queue
+The NODELIST reason "Nodes required for the job are DOWN..." <br>
+Will be generated if a batch is submitted prior to the previous job successfully terminating the nodes<br>
+Wait 5 -10 minutes and see if the status changes from PD (pending) to CF (configuring).<br>
 
 ```
 squeue
@@ -535,6 +537,4 @@ squeue
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
                  3       hpc     CMAQ lizadams PD       0:00      3 (Nodes required for job are DOWN, DRAINED or reserved for jobs in higher priority partitions)
 ```
-
-It is likely because the nodes have not fully terminated from a previous job. Wait 5 -10 minutes and see if the status changes from PD (pending) to CF (configuring).
 
