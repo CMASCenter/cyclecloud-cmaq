@@ -12,32 +12,19 @@ Using a modified version of the instructions available on this <a href="https://
 
 Full Beeond: BeeGFS on Demand <a href="https://doc.beegfs.io/latest/advanced_topics/beeond.html">User Manual</a>
 
-Use the files in the cyclecloud-cmaq github repository from your local computer.
-
-To get this repo, if you don't already have it use the command;
-
-```
-git clone -b main https://github.com/CMASCenter/cyclecloud-cmaq.git
-```
-
-Change directories to the following location:
-
-```
-cd cyclecloud-cmaq/install_scripts/beeond
-```
 
 Edit the cluster and use the Cloud-init option for your CycleCloud to install the code in the file: beeond-cloud-init-almalinux8.5-HBv3
 
 Do not use the Apply to all option. 
-Select Scheduler and copy and paste the contents of scheduler-cloud-init.sh
+Select Scheduler and copy and paste the contents of scheduler-cloud-init.sh obtained from github as follows:
 
 ```
-cat scheduler-cloud-init.sh 
+wget https://raw.githubusercontent.com/CMASCenter/cyclecloud-cmaq/main/install_scripts/beeond/scheduler-cloud-init.sh
 ```
 Select hpc and copy and paste the contents of hpc-cloud-init.sh into the shell
 
 ```
-cat hpc-cloud-init.sh
+wget https://raw.githubusercontent.com/CMASCenter/cyclecloud-cmaq/main/install_scripts/beeond/hpc-cloud-init.sh
 ```
 
 Save this setting, and then terminate and then restart the cluster.
