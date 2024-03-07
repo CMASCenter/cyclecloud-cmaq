@@ -313,10 +313,30 @@ It takes about 5-8 minutes for the compute nodes to spin up, after the nodes are
 ```
 
 
+### Check that the /mnt/beeond filesystem has been created on the compute modes
 
-### Once the job is successfully running 
+Login to the compute node by getting the IP address of the compute node.
+To find this IP address you need to go to the azure portal, to the cyclecloud.
 
-Check on the log file status
+
+[lizadams@ip-0A0A000B ~]$ df -h
+Filesystem          Size  Used Avail Use% Mounted on
+devtmpfs            225G     0  225G   0% /dev
+tmpfs               225G     0  225G   0% /dev/shm
+tmpfs               225G   18M  225G   1% /run
+tmpfs               225G     0  225G   0% /sys/fs/cgroup
+/dev/sda2            59G   27G   33G  45% /
+/dev/sda1           994M  209M  786M  21% /boot
+/dev/sda15          495M  5.9M  489M   2% /boot/efi
+/dev/sdb1           472G  216K  448G   1% /mnt
+/dev/md10           1.8T   16G  1.8T   1% /mnt/nvme
+10.10.0.10:/sched    30G  247M   30G   1% /sched
+10.10.0.10:/shared 1000G   95G  906G  10% /shared
+tmpfs                45G     0   45G   0% /run/user/20001
+beegfs_ondemand     3.5T   31G  3.5T   1% /mnt/beeond
+
+
+### Check on the log file status
 
 ```
 grep -i 'Processing completed.' run_cctm5.4+_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2day.20171222start.2x96.log

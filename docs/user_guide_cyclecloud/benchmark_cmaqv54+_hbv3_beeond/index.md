@@ -3,5 +3,6 @@
 Run CMAQv5.4+ on a using pre-loaded software and input data on Beeond using HBv3_120 Cycle Cloud.
 
 ```{toctree}
+azure-cyclecloud-cluster.md
 cmaqv54+_hbv3_120_beeond.md
 
