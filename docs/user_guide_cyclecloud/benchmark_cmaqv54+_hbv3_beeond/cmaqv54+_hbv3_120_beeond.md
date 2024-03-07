@@ -113,31 +113,31 @@ Output
 ```
 40K	./CMAQ_v54+_cb6r5_scripts
 44K	./CMAQ_v54+_cracmm_scripts
-1.6G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/cmv_c1c2_12
-2.4G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/cmv_c3_12
-5.1G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/merged_nobeis_norwc
-1.4G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/othpt
-1.3G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/pt_oilgas
-6.7M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptagfire
-255M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptegu
-19M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire
-2.9M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire_grass
-3.0M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire_othna
-5.9G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptnonipm
-18G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready
-3.5G	./emis/cb6r3_ae6_20200131_MYR/premerged/rwc
-3.5G	./emis/cb6r3_ae6_20200131_MYR/premerged
-22G	./emis/cb6r3_ae6_20200131_MYR
+1.5G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/cmv_c1c2_12
+2.3G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/cmv_c3_12
+3.3G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/merged_nobeis_norwc
+1.1G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/othpt
+990M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/pt_oilgas
+4.5M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptagfire
+206M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptegu
+14M	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire
+1004K	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire_grass
+944K	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptfire_othna
+4.7G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready/ptnonipm
+14G	./emis/cb6r3_ae6_20200131_MYR/cmaq_ready
+2.9G	./emis/cb6r3_ae6_20200131_MYR/premerged/rwc
+2.9G	./emis/cb6r3_ae6_20200131_MYR/premerged
+17G	./emis/cb6r3_ae6_20200131_MYR
 60K	./emis/emis_dates
-22G	./emis
-2.3G	./epic
+17G	./emis
+2.2G	./epic
 13G	./icbc/CMAQv54_2018_108NHEMI_M3DRY
 17G	./icbc
-41G	./met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed
-41G	./met
-4.0G	./misc
+26G	./met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed
+26G	./met
+3.9G	./misc
 697M	./surface
-85G	.
+66G	.
 
 ```
 
