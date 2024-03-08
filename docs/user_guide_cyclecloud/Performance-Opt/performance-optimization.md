@@ -109,13 +109,10 @@ Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wit
 
 ## Benchmark Scaling Plot for CycleCloud using HC44rs Compute Nodes
 
-Figure 4. Scaling per Node on HB120rs_v3 Compute Nodes (120 cpu/node)
 
-![Scaling per Node for HB120rs_v3 Compute Nodes (44cpu/node)](../../qa_plots/scaling_plots/hc44rs_Scaling_Node.png)
+Figure 7. 
 
-Figure 7. Scaling per CPU on HBv120 Compute Node (120 cpu/node)
-
-![Scaling per CPU for HBv120 Compute Nodes (120cpu/node](../../qa_plots/scaling_plots/hbv120_Scaling_CPUs.png)
+![Scaling per CPU for HBv120 Compute Nodes (120cpu/node](../../qa_plots/scaling_plots/hbv120_v54_beeond_Scaling_CPUs.png)
 
 Figure 8 shows the scaling per-node, as the configurations that were run were multiples of the number of cpus per node.  CMAQ was not run on a single cpu, as this would have been costly and inefficient.
 
