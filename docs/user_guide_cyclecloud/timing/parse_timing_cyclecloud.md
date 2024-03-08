@@ -86,6 +86,6 @@ cd qa_scripts
 Rscript parse_timing.r
 ```
 
-Timing Plot Comparing GCC run on 20x18 versus 9x10.
+Timing Plot Comparing 96, 192, 288 cpus on HB120rs_v3 using Beeond Filesystem
 
-![gcc_20x18_vs_9x10](../../qa_plots/timing_plots/gcc_20x18pe_9x10pe.png)
+![HB120rs_v3_scaling](../../qa_plots/timing_plots/hb120v3_12US1_CMAQv54+beeondgcc.png)
