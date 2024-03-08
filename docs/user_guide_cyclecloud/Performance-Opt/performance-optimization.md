@@ -119,9 +119,9 @@ Figure 2 shows the scaling per-node, as the configurations that were run were mu
 
 Figure 3. Plot of Total Time and On Demand Cost versus CPUs for HBv120
 
-![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/hbv120_Time_CPUs.png)
+![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/hbv120_v5.4plus_Time_CPUs.png)
 
-Figure 11. Plot of On Demand Cost versus Total Time for HBv120
+Figure 4. Plot of On Demand Cost versus Total Time for HBv120
 ![Plot of On Demand Cost versus Total Time for HBv120](../../qa_plots/scaling_plots/hbv120_Cost_TotalTime.png)
 
 Figure 11. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
