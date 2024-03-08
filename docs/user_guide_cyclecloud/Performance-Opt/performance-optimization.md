@@ -100,8 +100,8 @@ Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wit
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
 | ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
-| 96  | 1   |   1x96   |    12x8        | 3053.34       | 2753.47  |   5806.81  | 1.61  |  no  |     $.8065/hr * 1 nodes * $? = | $? | .8065/hr * 1 nodes * 3.6 = | 2.90   | no | shared | yes |
-| 576 | 6   |   6x96   |    24x24       | 950.89     | 863.18 | 1814.07   | .504  | no     |   $.252/hr * 6 nodes * $? =  | $? | .252/hr * 6 nodes * 3.6 = | 5.44   | no | lustre | yes |
+| 96  | 1   |   1x96   |    12x8        | 3400.95       | 3437.91  |   6838.86  | .950  |  no  |     $1.89/hr * 1 nodes * $? = | $? | 1.89/hr * 1 nodes * 3.6 = | 6.804   | no | lustre | yes |
+| 192 | 2   |   2x96   |    16x12       | 1954.62       | 1920.57  |   3875.19  | .538  | no     |   $1.07/hr * 2 nodes * $? =  | $? | 1.07/hr * 2 nodes * 3.6 = | 7.704   | no | lustre | yes |
 
 
 
