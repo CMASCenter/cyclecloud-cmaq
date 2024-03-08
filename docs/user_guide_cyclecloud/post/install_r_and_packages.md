@@ -90,9 +90,19 @@ sudo yum install gdal-devel proj-devel
 
 ```
 sudo -i R
-install.packages("rgdal")
+install.packages("sp")
+```
+
+```
+cd /shared/cyclecloud-cmaq/qa_scripts/R_packages
+sudo R CMD INSTALL rgdal_1.6-7.tar.gz
+```
+
+```
+sudo -i R
 install.packages("ggplot2")
 ```
+
 
 `sudo R CMD INSTALL M3_0.3.tar.gz`
 
