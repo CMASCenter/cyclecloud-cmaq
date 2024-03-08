@@ -106,3 +106,34 @@ install.packages("ggplot2")
 
 `sudo R CMD INSTALL M3_0.3.tar.gz`
 
+Install ImageMagick to allow display back to your local computer.
+
+To view the script, install imagemagick 
+
+
+```
+sudo yum groupinstall "Development Tools" -y
+sudo yum install ImageMagick
+sudo yum install ImageMagick-devel
+sudo yum install xauth
+```
+
+Logout and then log back in using the ssh -option -Y 
+
+```
+ ssh -Y $USER@IP-address
+```
+
+Other ideas for fixing display back to local host. <a href="https://www.cyberciti.biz/faq/how-to-fix-x11-forwarding-request-failed-on-channel-0/">how-to-fix-x11-forwarding-request-failed-on-channel-0</a>
+
+Make sure that you have Xquartz running on your local machine, and that you have given permission to display back from the cyclecloud server.
+
+On your local terminal:
+`host +`
+
+Test the display
+
+```
+display
+```
+
