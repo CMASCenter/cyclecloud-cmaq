@@ -48,7 +48,7 @@ Table 1. Azure Instance On-Demand versus Spot Pricing (price is subject to chang
 
 | Instance Name	| CPUs |  RAM      |  Memory Bandwidth	| Network Bandwidth | Linux On-Demand Price | Linux Spot Price | 
 | ------------  | ----- | --------  | ---------------   | ---------------   | --------------------  | ---------------  |
-| HBv3-120	| 120	|  448 GiB   |	 350 Gbps	        | 200 Gbps(Infiniband)          |   $3.6/hour         | $1.4/hour     |
+| HBv3-120	| 120	|  448 GiB   |	 350 Gbps	        | 200 Gbps(Infiniband)          |   $3.6/hour         | not available     |
 
 
 
@@ -104,7 +104,6 @@ Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wit
 | 192 | 2   |   2x96   |    16x12       | 1954.62       | 1920.57  |   3875.19  | .538  | no     |   $1.07/hr * 2 nodes * $? =  | $? | 1.07/hr * 2 nodes * 3.6 = | 7.704   | no | lustre | yes |
 
 
-
 # Benchmark Scaling Plots using CycleCloud
 
 ## Benchmark Scaling Plot for CycleCloud using HC44rs Compute Nodes
@@ -133,7 +132,7 @@ Figure 11. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
 
 Note CMAQ scales well up to ~ 288 processors for the CONUS domain.  As more processors are added beyond 288 processors, the CMAQ gets less efficient at using all of them.
 The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
-cost is $39.54 for Cycle Cloud compared to $19.46  for Parallel Cluster for the 2-Day 12US2 CONUS Benchmark.
+cost is $9.76 for Cycle Cloud compared to $??  for Parallel Cluster for the 2-Day 12US1 CONUS Benchmark.
 
 Figure 12. Plot of Total Time and On Demand Cost versus CPUs for HC44RS.
 
@@ -159,7 +158,7 @@ Scheduler node D12v2 compute cost = entire time that the CycleCloud HPC Cluster 
 
 Using 360 cpus on the Cycle Cloud Cluster, it would take ~6.11 days to run a full year, using 3 HBv3-120 compute nodes.
 
-Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.4 Annual Simulation based on 2 day CONUS2 benchmark
+Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark
 
 | Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pinning | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation  | Annual Cost | Days to Complete Annual Simulation |  
 | -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    | --- | ---- | --- |
