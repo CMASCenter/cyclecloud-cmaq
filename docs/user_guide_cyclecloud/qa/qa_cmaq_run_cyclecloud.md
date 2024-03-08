@@ -160,6 +160,8 @@ cd /shared/cyclecloud-cmaq/qa_scripts
 Rscript compare_EQUATES_benchmark_output_CMAS_cyclecloud.r
 ```
 
+Note, if you have a + symbol in the log filename, the script will fail.  Rename 5.4+ to 5.4plus to use the scripts.
+
 View the Operating System
 
 `cat /etc/os-release`
