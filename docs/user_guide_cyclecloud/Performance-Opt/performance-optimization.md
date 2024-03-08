@@ -30,14 +30,12 @@ Number of compute nodes dispatched by the slurm scheduler is specified in the ru
 
 As an example:
 
-For HC44rs, there are 44 CPUs/node, so maximum value of YY is 44 or --ntask-per-node=44.
-For many of the runs that were done, we set --ntask-per-node=36 so that we could compare to the c5n.9xlarge on Parallel Cluster
+For HB120rs_v3, there are 120 CPUs/node, so maximum value of YY is 120 or --ntask-per-node=120
+For many of the runs that were done, we set --ntask-per-node=36 so that we could compare to the Parallel Cluster
 
-If running a job with 180 processors, this would require the --nodes=XX or XX to be set to 5 compute nodes, as 36x5=180.
+If running a job with 192 processors, this would require the --nodes=XX or XX to be set to 2 compute nodes, as 96x2=192.
 
-The setting for NPCOLxNPROW must also be a maximum of 180, ie. 18 x 10 or 10 x 18 to use all of the CPUs in the Cycle Cloud HPC Node.
-
-For HBv120, there are 120 CPUS/node, so maximum value of YY is 120 or --ntask-per-node=120.
+The setting for NPCOLxNPROW must also be a maximum of 192, ie. 16 x 12 or 12 x 16 to use all of the CPUs in the Cycle Cloud HPC Node.
 
 If running a job with 240 processors, this would require the --nodes=XX or XX to be set to 2 compute nodes, as 120x2=240.
 
@@ -54,46 +52,41 @@ Table 1. Azure Instance On-Demand versus Spot Pricing (price is subject to chang
 
 
 
-Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node) I/O on /shared directory
+Table 2. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HB-120rs_v3 Compute Nodes (120 cpu per node) I/O on /shared directory
 
-Note, two different CPUs were used, 
-
-Old CPU (logs between Feb. 16 - March 21, 2022)
+Note, check to see what CPUs were used 
 
 ```
-Vendor ID:             AuthenticAMD
-CPU family:            25
-Model:                 1
-Model name:            AMD EPYC 7V13 64-Core Processor
-Stepping:              0
-CPU MHz:               2445.405
-BogoMIPS:              4890.81
+lscpu
 ```
 
-New CPU (logs after March 22, 2022)
+CPU (logs in March 2023)
 
 ```
-Vendor ID:             AuthenticAMD
-CPU family:            25
-Model:                 1
-Model name:            AMD EPYC 7V73X 64-Core Processor
-Stepping:              2
-CPU MHz:               1846.530
-BogoMIPS:              3693.06
+Vendor ID:           AuthenticAMD
+CPU family:          25
+Model:               1
+Model name:          AMD EPYC 7763 64-Core Processor
+Stepping:            1
+CPU MHz:             3021.872
+BogoMIPS:            4890.85
+Virtualization:      AMD-V
+Hypervisor vendor:   Microsoft
+Virtualization type: full
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            512K
+L3 cache:            32768K
+NUMA node0 CPU(s):   0-3
 ```
+
 
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |   Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | cpuMhz |
 | -----| ---- | -----------    | -----------   | ----------------     | ---------------      | ------------------- |  ------------------ |  ---------        |   -------- | --------- | ---------------      | -- | -- | -- | -- |
-| 90   | 1 |  1x90     |    9x10            |   3153.33            |  2758.12             |   5911.45   | .821 |  no | $1.4/hr * 1 nodes * 1.642 hr = | $2.29             |  $3.6/hr * 1 nodes * 1.642 hr = |  5.911           |  without -march=native compiler flag | shared | 2445.402 |
-| 120  | 1 |   1x120    |    10x12           | 2829.84              |  2516.07             |   5345.91   | .742 |  no | $1.4/hr * 1 nodes * 1.484 hr = | $2.08           | $3.6/hr * 1 nodes * 1.484 hr = | 5.34                     | without -march=native compiler flag | shared | 2445.400 | 
-| 180  | 2 |   2x90          | 10x18         | 2097.37              | 1809.84              |    3907.21  | .542 |  no | $1.4/hr * 2 nodes * 1.08 hr = | $3.03 | $3.6/hr * 2 nodes * 1.08 hr = |  7.81 | with -march=native compiler flag | shared | 2445.395 | 
-| 180  | 2 |   2x90     |    10 x 18         | 1954.20              | 1773.86              |    3728.06  | .518 |  no | $1.4/hr * 2 nodes * 1.036 hr = | $2.9 | $3.6/hr * 2 nodes * 1.036 hr = | 7.46 | without -march=native compiler flag | shared | 2445.405 | 
-| 180  | 5 |  5x36     |   10x18            | 1749.80              | 1571.50              |    3321.30  |  .461  | no | $1.4/hr * 5 nodes * .922 hr = | $6.46 | $3.6/hr * 5 nodes * .922 hr =  | 16.596 | without -march=native compiler flag | shared | 1846.529 | 
-| 240  | 2 |   2x120    |   20x12            |  1856.50             | 1667.68              |    3524.18  | .4895 | no | $1.4/hr * 2 nodes * .97 hr = | $2.716           |  $3.6/hr * 2 nodes * .97 hr = | 6.984   | without -march=native compiler flag | shared | 2445.409 | 
-| 270  | 3 |  3x90          | 15x18         | 1703.19              | 1494.17              |    3197.36  | .444  |  no | $1.4/hr * 3 nodes * .888hr = | $3.72 | 3.6/hr * 3 nodes * .888 = | 9.59  | with -march=native compiler flag | shared | 2445.400 |
-| 360  | 3 |  3x120     |  20x18             | 1520.29              |  1375.54             |    2895.83 | .402   | no | $1.4/hr * 3 nodes * .804 = | $3.38 | 3.6/hr * 3 nodes * .804 = | 8.687 | with -march=native compiler flag | shared | 2445.399 |
-| 360  |  3    |  3x120     | 20x18         | 1512.33               | 1349.54              | 2861.87 | .397   | no  | $1.4/hr * 3 nodes * .795 = | $3.339 | 3.6/hr * 3 nodes * .795 = | 8.586 |      with -march=native compiler flag | shared | 1846.530 |
+| 96   | 1 |  1x96     |    8x12            |   3278.9            |  3800.7             |   7079.60   | .983 |  no | $1.4/hr * 1 nodes * 1.966 hr = | $2.75             |  $3.6/hr * 1 nodes * 1.966 hr = |  7.077           |  without -march=native compiler flag | Beeond | 3021.872 |
+| 192  | 2 |   2x96    |    16x12           | 2027.8              |  2241.6             |   4269.40   | .593 |  no | $1.4/hr * 2 nodes * 1.186 hr = | $3.32           | $3.6/hr * 2 nodes * 1.186 hr = | 8.54                     | without -march=native compiler flag | Beeond | 3021.872 | 
+| 288  | 3 |   3x96          | 16x18         | 1562.7              | 1692.6              |   3255.30  | .452 |  no | $1.4/hr * 3 nodes * .904 hr = | $3.79 | $3.6/hr * 3 nodes * .904 hr = |  9.76 | without -march=native compiler flag | Beeond | 3021.872 | 
 
 Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = $1.4/hr
 
