@@ -107,7 +107,7 @@ Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wit
 
 # Benchmark Scaling Plots using CycleCloud
 
-## Benchmark Scaling Plot for CycleCloud using HC44rs Compute Nodes
+## Benchmark Scaling Plot for CycleCloud using HB120rs_v3 Compute Nodes
 
 
 Figure 1. 
