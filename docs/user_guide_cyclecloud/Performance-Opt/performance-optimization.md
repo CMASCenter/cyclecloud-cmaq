@@ -110,14 +110,14 @@ Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wit
 ## Benchmark Scaling Plot for CycleCloud using HC44rs Compute Nodes
 
 
-Figure 7. 
+Figure 1. 
 
 ![Scaling per CPU for HBv120 Compute Nodes (120cpu/node](../../qa_plots/scaling_plots/hbv120_v54_beeond_Scaling_CPUs.png)
 
-Figure 8 shows the scaling per-node, as the configurations that were run were multiples of the number of cpus per node.  CMAQ was not run on a single cpu, as this would have been costly and inefficient.
+Figure 2 shows the scaling per-node, as the configurations that were run were multiples of the number of cpus per node.  CMAQ was not run on a single cpu, as this would have been costly and inefficient.
 
 
-Figure 10. Plot of Total Time and On Demand Cost versus CPUs for HBv120
+Figure 3. Plot of Total Time and On Demand Cost versus CPUs for HBv120
 
 ![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/hbv120_Time_CPUs.png)
 
@@ -132,16 +132,12 @@ Note CMAQ scales well up to ~ 288 processors for the CONUS domain.  As more proc
 The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
 cost is $9.76 for Cycle Cloud compared to $??  for Parallel Cluster for the 2-Day 12US1 CONUS Benchmark.
 
-Figure 12. Plot of Total Time and On Demand Cost versus CPUs for HC44RS.
-
-![Plot of Total Time and On Demand Cost versus CPUs for HC44RS](../../qa_plots/scaling_plots/HC44rs_Time_Cost_CPUs.png)
 
 Figures: todo - need screenshots of Azure Pricing
 
-Fost by Instance Type - update for Azure 
+Cost by Instance Type - update for Azure 
 
 ![Azure Cost Management Console - Cost by Instance Type](../../qa_plots/cost_plots/Azure_Bench_Cost.png)
-
 
 Figure 13. Cost by Usage Type - Azure Console
 
