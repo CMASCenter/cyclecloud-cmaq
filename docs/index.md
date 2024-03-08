@@ -8,6 +8,7 @@ This documentation is under continuous development.
 Previous version is available here: <a href="https://cyclecloud-cmaq.readthedocs.io/en/cmaqv5.3.3/">CMAQv5.3.3 on Azure Tutorial</a>
 ```
 
+
 ## Overview of CMAQv5.4+ on Azure
 
 This document provides tutorials and information on using Microsoft Azure Online Portal to create either a single Virtual Machine or a Cycle Cloud Cluster to run CMAQ. The tutorials are aimed at users with cloud computing experience that are already familiar with Azure.  For those with no cloud computing experience we recommend reviewing the Additional Resources listed in [chapter 15](user_guide_cyclecloud/help/index.md) of this document.
