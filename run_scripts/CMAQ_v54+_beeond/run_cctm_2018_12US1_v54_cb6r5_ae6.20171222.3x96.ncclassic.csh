@@ -13,6 +13,16 @@
 ##SBATCH --constraint=BEEOND
 ###SBATCH --beeond
 
+echo 'Start Model Run At ' `date`
+echo 'information about processor including whether using hyperthreading'
+lscpu
+echo 'information about cluster'
+sinfo
+echo 'information about filesystem'
+df -h
+echo 'list the mounted volumes'
+showmount -e localhost
+
 Please add the “beeond start” command at the top of the job script, and “beeond stop” to the end:
 
 # ===================================================================
