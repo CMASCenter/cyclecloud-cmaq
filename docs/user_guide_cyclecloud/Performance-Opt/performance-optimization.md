@@ -84,9 +84,9 @@ NUMA node0 CPU(s):   0-3
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |   Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | cpuMhz |
 | -----| ---- | -----------    | -----------   | ----------------     | ---------------      | ------------------- |  ------------------ |  ---------        |   -------- | --------- | ---------------      | -- | -- | -- | -- |
-| 96   | 1 |  1x96     |    8x12            |   3278.9            |  3800.7             |   7079.60   | .983 |  no | $1.4/hr * 1 nodes * 1.966 hr = | $2.75             |  $3.6/hr * 1 nodes * 1.966 hr = |  7.077           |  without -march=native compiler flag | Beeond | 3021.872 |
-| 192  | 2 |   2x96    |    16x12           | 2027.8              |  2241.6             |   4269.40   | .593 |  no | $1.4/hr * 2 nodes * 1.186 hr = | $3.32           | $3.6/hr * 2 nodes * 1.186 hr = | 8.54                     | without -march=native compiler flag | Beeond | 3021.872 | 
-| 288  | 3 |   3x96          | 16x18         | 1562.7              | 1692.6              |   3255.30  | .452 |  no | $1.4/hr * 3 nodes * .904 hr = | $3.79 | $3.6/hr * 3 nodes * .904 hr = |  9.76 | without -march=native compiler flag | Beeond | 3021.872 | 
+| 96   | 1 |  1x96     |    8x12            |   3278.9            |  3800.7             |   7079.60   | .983 |  no | $?/hr * 1 nodes * 1.966 hr = | n/a             |  $3.6/hr * 1 nodes * 1.966 hr = |  7.077           |  without -march=native compiler flag | Beeond | 3021.872 |
+| 192  | 2 |   2x96    |    16x12           | 2027.8              |  2241.6             |   4269.40   | .593 |  no | $?/hr * 2 nodes * 1.186 hr = | n/a           | $3.6/hr * 2 nodes * 1.186 hr = | 8.54                     | without -march=native compiler flag | Beeond | 3021.872 | 
+| 288  | 3 |   3x96          | 16x18         | 1562.7              | 1692.6              |   3255.30  | .452 |  no | $?/hr * 3 nodes * .904 hr = | n/a | $3.6/hr * 3 nodes * .904 hr = |  9.76 | without -march=native compiler flag | Beeond | 3021.872 | 
 
 Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = $1.4/hr
 
