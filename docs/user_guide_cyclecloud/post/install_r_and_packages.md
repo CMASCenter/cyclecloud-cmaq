@@ -3,6 +3,8 @@
 <a href="https://linuxize.com/post/how-to-install-r-on-centos-7/">How to install R on Centos7</a>
 
 May need to install on head node into a local mylibs directory, and then copy to the compute nodes, in order to run post processing R scripts on HTC node using slurm..
+Currently, I seem to need to install as sudo, otherwise the packages are missing dependencies.
+The issue is that if I need to terminate the cluster, then anything in the root or default install directory is deleted. Only the /shared files are retained.
 
 <a href="https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio">Using R on HPC Clusters</a>
 
