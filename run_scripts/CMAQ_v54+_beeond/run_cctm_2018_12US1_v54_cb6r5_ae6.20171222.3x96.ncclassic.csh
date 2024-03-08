@@ -33,6 +33,7 @@ beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/2018_12US1 -l /mnt
 mkdir -p /shared/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_3x96/LOGS
 
 beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_3x96 -l /mnt/beeond/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_3x96
+mkdir -p /mnt/beeond/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_3x96/LOGS
 
 
 #sudo mkdir /mnt/beeond/data
