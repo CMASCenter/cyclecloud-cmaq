@@ -89,20 +89,23 @@ Table 3. Tiiming Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wi
 | 288  | 3 |   3x96          | 16x18         | 1562.7              | 1692.6              |   3255.30  | .452 |  no | $.36/hr * 3 nodes * .904 hr = | .976 | $3.6/hr * 3 nodes * .904 hr = |  9.76 | without -march=native compiler flag | Beeond | 3021.872 | 
 | 384  | 4 |   4x96          | 16x24         | 1356.5              |  1474.2            |  2830.70    | .393 | no  | $.36/hr * 4 nodes * .786 hr = | 1.13 | $3.6/hr * 4 nodes * .786 hr = | 11.3  | without -march=native compiler flag |  Beeond | 3021.872 |
 
-Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = $1.4/hr
+Total HBv3-120 compute cost of Running Benchmarking Suite using SPOT pricing = .36/hr
 
 Total HBv3-120 compute cost of Running Benchmarking Suite using ONDEMAND pricing = $3.6/hr
 
-Savings is ~ 60% for spot versus  ondemand pricing for HBv3-120 compute nodes.
+For CentosOS or Ubuntu Linux in East US Region.
+
+Savings is ~ 90% for spot versus  ondemand pricing for HBv3-120 compute nodes.
 
 <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Azure Spot and On-Demand Pricing</a>
+<a href="https://azure.microsoft.com/en-us/pricing/spot-advisor/">Azure Spot and On-Demand Pricing</a>
 
 Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /lustre 
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
 | ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
-| 96  | 1   |   1x96   |    12x8        | 3400.95       | 3437.91  |   6838.86  | .950  |  no  |     $1.89/hr * 1 nodes * $? = | $? | 1.89/hr * 1 nodes * 3.6 = | 6.804   | no | lustre | yes |
-| 192 | 2   |   2x96   |    16x12       | 1954.62       | 1920.57  |   3875.19  | .538  | no     |   $1.07/hr * 2 nodes * $? =  | $? | 1.07/hr * 2 nodes * 3.6 = | 7.704   | no | lustre | yes |
+| 96  | 1   |   1x96   |    12x8        | 3400.95       | 3437.91  |   6838.86  | .950  |  no  |     $1.89/hr * 1 nodes * $.36 = | $.68 | 1.89/hr * 1 nodes * 3.6 = | 6.804   | no | lustre | yes |
+| 192 | 2   |   2x96   |    16x12       | 1954.62       | 1920.57  |   3875.19  | .538  | no     |   $1.07/hr * 2 nodes * $.36 =  | $.77 | 1.07/hr * 2 nodes * 3.6 = | 7.704   | no | lustre | yes |
 
 
 # Benchmark Scaling Plots using CycleCloud
