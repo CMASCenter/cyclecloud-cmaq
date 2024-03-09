@@ -58,23 +58,30 @@ First check to see what log files are available:
 
 Modify the name of the log file to match what is avaible on your system.
 
-`cd /shared/pcluster-cmaq/qa_scripts`
-
-`vi parse_timing_pcluster.r`
+```
+cd /shared/pcluster-cmaq/qa_scripts
+vi parse_timing.beeond.v54+.2018.12US1.r
+```
 
 Edit the following section of the script to specify the log file names available on your ParallelCluster
 
 ```
-sens.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
-base.dir  <- '/shared/build/openmpi_gcc/CMAQ_v533/CCTM/scripts/'
-files     <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.20x18pe.2day.sleep.cyclecloud.log' )
-b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.9x10pe.2day_remove_native_sleep.cyclecloud.log')
+library(RColorBrewer)
+library(stringr)
+#sens.dir  <- '/shared/cyclecloud-cmaq/run_scripts/HB120v3_singleVM/'
+sens.dir  <- '/shared/cyclecloud-cmaq/run_scripts/HB120v3_12US1_CMAQv54plus/'
+base.dir  <- '/shared/cyclecloud-cmaq/run_scripts/HB120v3_12US1_CMAQv54plus/'
+#files   <- dir(sens.dir, pattern ='run_cctm5.4plus_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.8x12pe.2days.beeond.1x96.log')
+files   <- dir(sens.dir, pattern ='run_cctm5.4plus_Bench_2018_12US1.96.12x8pe.2day.cyclecloud.shared.codefix.log')
+#b.files <- dir(base.dir,pattern='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.shared.codemod.nopin.redo.log')
+b.files <- c('run_cctm5.4plus_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.192.16x12pe.2days.20171222start.2x96.log', 'run_cctm5.4plus_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.288.16x18pe.2days.20171222start.3x96.log', 'run_cctm5.4plus_Bench_2018_12US1_cb6r5_ae6_20200131_MYR.384.16x24pe.2days.20171222start.4x96.log' )
 #Compilers <- c('intel','gcc','pgi')
 Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
 # The project directory name is used for the sensitivity case.
-base.name <- '9x10pe'
-sens.name <- '20x18pe'
+#base.name <- c('data_pin','lustre_pin','shared_pin')
+base.name <- c('cmaq5.4plus_beeond_192', 'cmaq5.4plus_beeond_288', 'cmaq5.4plus_beeond_384' )
+sens.name <- c('cmaq5.4plus_beeond_96')
 ```
 
 
@@ -83,7 +90,7 @@ sens.name <- '20x18pe'
 
 ```
 cd qa_scripts
-Rscript parse_timing.r
+Rscript parse_timing.beeond.v54+.2018.12US1.r
 ```
 
 Timing Plot Comparing 96, 192, 288, 384 cpus on HB120rs_v3 using Beeond Filesystem
