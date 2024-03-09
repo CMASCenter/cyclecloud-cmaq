@@ -152,8 +152,10 @@ Figure 14. Cost by Service Type - Azure Console
 
 Scheduler node D12v2 compute cost = entire time that the CycleCloud HPC Cluster is running ( creation to deletion) = 6 hours * $0.?/hr = $ ? using spot pricing, 6 hours * $?/hr = $? using on demand pricing.
 
+## Annual Cost Estimates
 
-Using 360 cpus on the Cycle Cloud Cluster, it would take ~6.11 days to run a full year, using 3 HBv3-120 compute nodes.
+Using 288 cpus on the Cycle Cloud Cluster, it would take ~3.6 days to run a full year, using 3 HBv3-120 compute nodes.
+
 
 Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark
 
@@ -165,8 +167,8 @@ Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.4 Annual Simulation based
 | 2 day CONUS    |  192          |  HBv3-120  |        2       |  ONDEMAND  | No |    3.6/hour   | 4269.40/3600 = 1.19   |    1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * $3.6 = |  $1558 | 9 | 
 | 2 day CONUS    |  288          |  HBv3-120  |        3       |    SPOT    | No |   .36/hour     |   1692.6/3600 = .47  |    .47/2 * 365 = 85.8 hours/node * 3 nodes = 257.3 * $.36  = |  $92.6 | 3.6 |
 | 2 day CONUS    |  288          |  HBv3-120  |        3       |  ONDEMAND  | No |   3.6/hour   | 1692.6/3600 = .47  |    .47/2 * 365 = 85.8 hours/node * 3 nodes = 257.3 * $3.6 = | $926 | 3.6 |
-| 2 day CONUS    |  384          |  HBv3-120  |        4       |    SPOT    | No |   .36/hour     |   1474.2/3600 = .41  |    .41/2 * 365 = 74.8 hours/node * 4 nodes = 299 * $.36  = |  $108 | 3.6 |
-| 2 day CONUS    |  384          |  HBv3-120  |        4       |  ONDEMAND  | No |   3.6/hour   | 1474.2/3600 = .41  |    .41/2 * 365 = 74.8 hours/node * 4 nodes = 299 * $3.6 = | $1076 | 3.6 |
+| 2 day CONUS    |  384          |  HBv3-120  |        4       |    SPOT    | No |   .36/hour     |   1474.2/3600 = .41  |    .41/2 * 365 = 74.8 hours/node * 4 nodes = 299 * $.36  = |  $108 | 3.11 |
+| 2 day CONUS    |  384          |  HBv3-120  |        4       |  ONDEMAND  | No |   3.6/hour   | 1474.2/3600 = .41  |    .41/2 * 365 = 74.8 hours/node * 4 nodes = 299 * $3.6 = | $1076 | 3.11 |
 
 
 
