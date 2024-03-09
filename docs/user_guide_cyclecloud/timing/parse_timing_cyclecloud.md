@@ -86,6 +86,6 @@ cd qa_scripts
 Rscript parse_timing.r
 ```
 
-Timing Plot Comparing 96, 192, 288 cpus on HB120rs_v3 using Beeond Filesystem
+Timing Plot Comparing 96, 192, 288, 384 cpus on HB120rs_v3 using Beeond Filesystem
 
 ![HB120rs_v3_scaling](../../qa_plots/timing_plots/hb120v3_12US1_CMAQv54+beeondgcc.png)
