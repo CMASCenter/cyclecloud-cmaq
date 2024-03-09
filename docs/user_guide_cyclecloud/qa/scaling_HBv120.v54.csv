@@ -1,5 +1,7 @@
 CPUs	Nodes	NodesxCPU	COLROW	Day1_Timing_sec	Day2_Timing_sec	TotalTime	CPU Hours/day	SBATCHexclusive	Equation using Spot Pricing	SpotCost	Equation using On Demand Pricing	OnDemandCost	compiler flag	InputData	cpuMhz	IdealScaling	Scaling	Efficiency	ComputeNode	MS_Opt_Pin
-96	1	1x96	8x12	3278.9	3800.7	7079.6	0.983	no	$.36/hr * 1 nodes * 1.966 hr =	.71	$3.6/hr * 1 nodes * 1.966 hr =	7.077	without -march=native compiler flag	Beeond	3021.872	1	1	100	HB120rs_v3	no
+96	1	1x96	8x12	3278.9	3800.7	7079.6	0.983	no	$/hr * 1 nodes * 1.966 hr =	.708	$3.6/hr * 1 nodes * 1.966 hr =	7.077	without -march=native compiler flag	Beeond	3021.872	1	1	100	HB120rs_v3	no
 192	2	2x96	16x12	2027.8	2241.6	4269.4	0.593	no	$.36/hr * 2 nodes * 1.186 hr =	.85	$3.6/hr * 2 nodes * 1.186 hr =	8.54	without -march=native compiler flag	Beeond	3021.872	2	1.658218953	82.91094767	HB120rs_v3	no
-288	3	3x96	16x18	1562.7	1692.6	3255.3	0.452	no	$.36/hr * 3 nodes * .904 hr =	1.97	$3.6/hr * 3 nodes * .904 hr =	l9.76	without -march=native compiler flag	Beeond	3021.872	3	2.174791878	72.4930626	HB120rs_v3	no
-384	4	4x96	16x24	1356.5	1474.2	2830.70	0.393	no	$.36/hr * 4 nodes * .786 hr = 	1.13	$3.6/hr * 4 nodes * .786 hr = 11.3	without -march=native compiler flag	Beeond	3021.872	4	2.5	62.52517045	HB120rs_v3	no	
+288	3	3x96	16x18	1562.7	1692.6	3255.3	0.452	no	$.36/hr * 3 nodes * .904 hr =	1.98	$3.6/hr * 3 nodes * .904 hr =	l9.76	without -march=native compiler flag	Beeond	3021.872	3	2.174791878	72.4930626	HB120rs_v3	no
+384	4	4x96	16x24	1356.5	1474.2	2830.7	0.393	no	$.36/hr * 4 nodes * .786 hr = 	1.1	$3.6/hr * 4 nodes * .786 hr = 	11.3	without -march=native compiler flag	Beeond	3021.872	4	2.5	62.52517045	HB120rs_v3	no
+96	1	1x96	12x8	3400.9	3437.9	6838.8	0.950 	no	$.36/hr * 1 nodes * 1.89 hr =	.68	$3.6/hr * 1 nodes * 1.89 hr =	6.804	without -march=native compiler flag	lustre	3021.872	1	1	100	HB120rs_v3	no
+192	2	2x96	16x12	1954.6	1920.5	3875.1	.538	no	$.36/hr * 2 nodes * 1.89 hr =	.77	$3.6/hr * 2 nodes * 1.07 hr =	7.704	without -march=native compiler flag	lustre	3021.872	2	1.764780566	88.23902828	HB120rs_v3	 no
