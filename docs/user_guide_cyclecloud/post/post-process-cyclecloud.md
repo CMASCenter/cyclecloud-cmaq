@@ -99,13 +99,10 @@ sed -i 's/2016195/2017357/g' run_hr2day_conus.csh
 sed -i 's/201607/201712/g' run_hr2day_conus.csh
 sed -i 's/cb6r3_ae7_aq/cb6r5_ae7_aq/g' run_hr2day_conus.csh
 sed -i 's/${VRSN}_${compilerString}_${APPL}/${VRSN}_${MECH}_WR413_MYR_${compilerString}_${APPL}/g' run_hr2day_conus.csh
+sed -i 's/bldoverlay/hr2day/g' run_hr2day_conus.csh
 setenv CMAQ_DATA /shared/data/output
 ./run_hr2day_conus.csh |& tee ./run_hr2day_conus.log
 
-
-getting error 
-
-**ERROR** Cannot open time zone data file:/shared/build/CMAQ_REPO_v54/POST/bldoverlay/inputs/tz.csv
 
 
 ```
