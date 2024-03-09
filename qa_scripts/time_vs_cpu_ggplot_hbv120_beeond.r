@@ -26,13 +26,13 @@ csv_data2 <-  subset(csv_data, ComputeNode=="HB120rs_v3")
 print(csv_data2)
 
 
-p1 <- ggplot(csv_data2[!bad_rows,], aes(y=as.numeric(TotalTime), x=CPUs, color=InputData)) +
+p1 <- ggplot(csv_data2[!bad_rows,], aes(y=as.numeric(TotalTime), x=CPUs, color=InputData, size=cpuMhz)) +
     geom_point() + ggtitle("2 Day Benchmark Total Time versus CPUs") + scale_y_continuous(name = "Total Time (seconds)") + stat_smooth(method="lm")
 
-p2 <- ggplot(csv_data2[!bad_rows,], aes(y=as.numeric(OnDemandCost), x=CPUs, color=InputData)) +
+p2 <- ggplot(csv_data2[!bad_rows,], aes(y=as.numeric(OnDemandCost), x=CPUs, color=InputData, size=cpuMhz)) +
     geom_point() + ggtitle("2 Day Benchmark On Demand Cost versus CPUs") + scale_y_continuous(name = "On Demand Cost ($)") + stat_smooth(method="lm")
 
-p3 <- ggplot(csv_data2[!bad_rows,], aes(y=as.numeric(SpotCost), x=CPUs, color=InputData)) +
+p3 <- ggplot(csv_data2[!bad_rows,], aes(y=as.numeric(SpotCost), x=CPUs, color=InputData, size=cpuMhz)) +
     geom_point() + ggtitle("2 Day Benchmark Spot Cost versus CPUs") + scale_y_continuous(name = "On Demand Cost ($)") + stat_smooth(method="lm")
 
 # Display both charts side by side thanks to the patchwork package
