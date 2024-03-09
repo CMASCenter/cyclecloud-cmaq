@@ -152,9 +152,10 @@ Figure 14. Cost by Service Type - Azure Console
 
 Scheduler node D12v2 compute cost = entire time that the CycleCloud HPC Cluster is running ( creation to deletion) = 6 hours * $0.?/hr = $ ? using spot pricing, 6 hours * $?/hr = $? using on demand pricing.
 
-## Annual Cost Estimates
+## Annual Run Estimates
 
-Using 288 cpus on the Cycle Cloud Cluster, it would take ~3.6 days to run a full year, using 3 HBv3-120 compute nodes.
+Using 288 cpus on the Cycle Cloud Cluster, it would take ~3.6 days to run a full year, using 3 HBv3-120 compute nodes, at a cost of $926 using ondemand nodes, or $92.6 using interruptable spot nodes.
+(Note, spot nodes have not been tried yet in this tutorial.)
 
 
 Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark
