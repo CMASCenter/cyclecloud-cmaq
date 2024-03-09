@@ -75,31 +75,37 @@ sed -i 's/2016-07-14/2017-12-23/g' run_combine_conus.csh
 sed -i 's/cb6r3_ae7_aq/cb6r5_ae7_aq/g' run_combine_conus.csh
 sed -i 's/METCRO3D_$YY$MM$DD.nc/METCRO3D_$YYYY$MM$DD.nc/g' run_combine_conus.csh
 sed -i 's/METCRO2D_$YY$MM$DD.nc/METCRO2D_$YYYY$MM$DD.nc/g' run_combine_conus.csh
+sed -i 's/${VRSN}_${compilerString}_${APPL}/${VRSN}_${MECH}_WR413_MYR_${compilerString}_${APPL}/g' run_combine_conus.csh
 setenv METDIR /shared/data/2018_12US1/met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed/
 setenv CMAQ_DATA /shared/data/output
-./run_combine_conus.csh
+./run_combine_conus.csh |& tee ./run_combine_conus.log
 
 cd $DIR/POST/calc_tmetric/scripts
-./bldit_calc_tmetric.csh gcc |& tee ./bldit_calc_tmetric.gcc.log
 cp run_calc_tmetric.csh run_calc_tmetric_conus.csh
 sed -i 's/Bench_2016_12SE1/2018_12US1_3x96/g' run_calc_tmetric_conus.csh
 sed -i 's/intel/gcc/g' run_calc_tmetric_conus.csh
 sed -i 's/201607/201712/g' run_calc_tmetric_conus.csh
-setenv METDIR /shared/data/2018_12US1/met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed/
+sed -i 's/cb6r3_ae7_aq/cb6r5_ae7_aq/g' run_calc_tmetric_conus.csh
+sed -i 's/${VRSN}_${compilerString}_${APPL}/${VRSN}_${MECH}_WR413_MYR_${compilerString}_${APPL}/g' run_calc_tmetric_conus.csh
 setenv CMAQ_DATA /shared/data/output
-./run_calc_tmetric_conus.csh
+./run_calc_tmetric_conus.csh |& tee ./run_calc_tmetric_conus.log
 
 cd $DIR/POST/hr2day/scripts
-sed -i 's/v532/v533/g' bldit_hr2day.csh
-./bldit_hr2day.csh gcc |& tee ./bldit_hr2day.gcc.log
 cp run_hr2day.csh run_hr2day_conus.csh
 sed -i 's/Bench_2016_12SE1/2018_12US1_3x96/g' run_hr2day_conus.csh
 sed -i 's/intel/gcc/g' run_hr2day_conus.csh
 sed -i 's/2016182/2017356/g' run_hr2day_conus.csh
 sed -i 's/2016195/2017357/g' run_hr2day_conus.csh
 sed -i 's/201607/201712/g' run_hr2day_conus.csh
+sed -i 's/cb6r3_ae7_aq/cb6r5_ae7_aq/g' run_hr2day_conus.csh
+sed -i 's/${VRSN}_${compilerString}_${APPL}/${VRSN}_${MECH}_WR413_MYR_${compilerString}_${APPL}/g' run_hr2day_conus.csh
 setenv CMAQ_DATA /shared/data/output
-./run_hr2day_conus.csh
+./run_hr2day_conus.csh |& tee ./run_hr2day_conus.log
+
+
+getting error 
+
+**ERROR** Cannot open time zone data file:/shared/build/CMAQ_REPO_v54/POST/bldoverlay/inputs/tz.csv
 
 
 ```
