@@ -73,6 +73,8 @@ sed -i 's/intel/gcc/g' run_combine_conus.csh
 sed -i 's/2016-07-01/2017-12-22/g' run_combine_conus.csh
 sed -i 's/2016-07-14/2017-12-23/g' run_combine_conus.csh
 sed -i 's/cb6r3_ae7_aq/cb6r5_ae7_aq/g' run_combine_conus.csh
+sed -i 's/METCRO3D_$YY$MM$DD.nc/METCRO3D_$YYYY$MM$DD.nc/g' run_combine_conus.csh
+sed -i 's/METCRO2D_$YY$MM$DD.nc/METCRO2D_$YYYY$MM$DD.nc/g' run_combine_conus.csh
 setenv METDIR /shared/data/2018_12US1/met/WRFv4.3.3_LTNG_MCIP5.3.3_compressed/
 setenv CMAQ_DATA /shared/data/output
 ./run_combine_conus.csh
