@@ -159,12 +159,15 @@ Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.4 Annual Simulation based
 
 | Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pinning | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation  | Annual Cost | Days to Complete Annual Simulation |  
 | -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    | --- | ---- | --- |
-| 2 day CONUS    |   96          |  HBv3-120  |        1       |    SPOT    | Yes |    1.4/hour   | 3800.7/3600 = 1.06   |    1.06/2 * 365 = 193.4 hours/node * 1 node = 193.4 * $1.4 = | $271 | 8.06 |
-| 2 day CONUS    |   96          |  HBv3-120  |        1       |  ONDEMAND  | Yes |    3.6/hour   | 3800.7/3600 = 1.06   |    1.06/2 * 365 = 193.4 hours/node * 1 node = 193.4 * $3.6 = | $696 | 8.06 | 
-| 2 day CONUS    |  192          |  HBv3-120  |        2       |    SPOT    | Yes |    1.4/hour   | 2241.6/3600 = .623   |    .623/2 * 365 = 115.3 hours/node * 2 nodes = 230.7 * $1.4 = |  $322 | 4.80 |
-| 2 day CONUS    |  192          |  HBv3-120  |        2       |  ONDEMAND  | Yes |    3.6/hour   | 2241.6/3600 = .623   |    .623/2 * 365 = 115.3 hours/node * 2 nodes = 230.7 * $3.6 = |  $830.52 | 4.80 | 
-| 2 day CONUS    |  288          |  HBv3-120  |        3       |    SPOT    | No |   .3168/hour |   1692.6/3600 = .47  |    .47/2 * 365 = 85.8 hours/node * 3 nodes = 257.3 * $1.4  = |  $360 | 3.6 |
-| 2 day CONUS    |  288          |  HBv3-120  |        3       |  ONDEMAND  | No |   3.168/hour   | 1692.6/3600 = .47  |    .47/2 * 365 = 85.8 hours/node * 3 nodes = 257.3 * $3.6 = | $925 | 3.6 |
+| 2 day CONUS    |   96          |  HBv3-120  |        1       |    SPOT    | No |    .36/hour   | 7079.60/3600 = 1.96  |    1.96/2 * 365 = 359 hours/node * 1 node = 359 * $.36 = | $129 | 14.9 |
+| 2 day CONUS    |   96          |  HBv3-120  |        1       |  ONDEMAND  | No |    3.6/hour   | 7079.60/3600 = 1.96  |    1.96/2 * 365 = 359 hours/node * 1 node = 359 * $3.6 = | $1292 | 14.9 | 
+| 2 day CONUS    |  192          |  HBv3-120  |        2       |    SPOT    | No |    .36/hour   | 4269.40/3600 = 1.19   |    1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * $.36 = |  $155.8 | 9 |
+| 2 day CONUS    |  192          |  HBv3-120  |        2       |  ONDEMAND  | No |    3.6/hour   | 4269.40/3600 = 1.19   |    1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * $3.6 = |  $1558 | 9 | 
+| 2 day CONUS    |  288          |  HBv3-120  |        3       |    SPOT    | No |   .36/hour     |   1692.6/3600 = .47  |    .47/2 * 365 = 85.8 hours/node * 3 nodes = 257.3 * $.36  = |  $92.6 | 3.6 |
+| 2 day CONUS    |  288          |  HBv3-120  |        3       |  ONDEMAND  | No |   3.6/hour   | 1692.6/3600 = .47  |    .47/2 * 365 = 85.8 hours/node * 3 nodes = 257.3 * $3.6 = | $926 | 3.6 |
+| 2 day CONUS    |  384          |  HBv3-120  |        4       |    SPOT    | No |   .36/hour     |   1474.2/3600 = .41  |    .41/2 * 365 = 74.8 hours/node * 4 nodes = 299 * $.36  = |  $108 | 3.6 |
+| 2 day CONUS    |  384          |  HBv3-120  |        4       |  ONDEMAND  | No |   3.6/hour   | 1474.2/3600 = .41  |    .41/2 * 365 = 74.8 hours/node * 4 nodes = 299 * $3.6 = | $1076 | 3.6 |
+
 
 
 
