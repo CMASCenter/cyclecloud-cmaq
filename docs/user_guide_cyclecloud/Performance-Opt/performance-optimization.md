@@ -184,6 +184,23 @@ Table 7. Shared SSD File System Pricing
 | --------     | ----------------  |   ------------------------------------    | -----------------  |  ---------------  | ------  |
 | Persistant 1TB  | 200 MB/s/TB       | 	5,000 (30,000)                                  |	$122.88/month |  $6.57                 |
 
+## Lustre File System Pricing
+
+According to the Azure calculators, the price varies by I/O Speed, and different tiers have different minimum storage size requirements.:
+
+Standard tier delivers 125 MB/s for provisioned TiB. Under this tier, storage capacity is available in multiples of 16,000 GiB.
+
+16000 GiB (17 TB) x 730 Hours x 0.000198Per GiB/hour = $2312 / month
+
+Premium tier delivers 250 MB/s for provisioned TiB. Under this tier, storage capacity is available in multiples of 8,000 GiB.
+
+8000 GiB (9 TB)  x 730 Hours x $0.000287 Per GiB/hour = $1676 / month
+
+Ultra tier delivers 500 MB/s for provisioned TiB. Under this tier, storage capacity is available in multiples of 4,000 GiB.
+
+4000 GiB (4.3 TB) x 730 Hours x 0.000466Per GiB/hour = $1361 / month
+
+
 
 
 Table 8. Extrapolated Cost of File system for CMAQv5.4 Annual Simulation based on 2 day CONUS benchmark
