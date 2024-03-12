@@ -75,19 +75,21 @@ For more information about these matters see
 https://www.gnu.org/licenses/.
 ```
 
-
-
-
-
+Install packages
 
 ```
 sudo yum install epel-release
 sudo yum config-manager --set-enabled powertools
+```
+
+Alternatively, you can install as root, to the /bin directory, but then if you terminate the cluster, you will need to reinstall R
+
+```
 sudo yum install R
 R --version
 ```
 
-Install packages as root - to make them available to all users
+Install packages as root - to make them available to all users (if installed R as root) Otherwise, install without sudo
 
 ```
 sudo -i R
@@ -121,8 +123,8 @@ Load the gcc and openmpi module before building the hdf5 enabled netcdf librarie
 
 ```
 module avail
-module load mpi/openmpi-4.1.1
-module load gcc-9.2.1
+module load mpi/openmpi-4.1.5
+module load gcc-9.2.0
 ```
 
 ```
