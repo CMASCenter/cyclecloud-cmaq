@@ -26,7 +26,7 @@ cd R-${R_VERSION}
 Install packages required.
 
 ```
-sudo yum install readline-devel
+sudo yum install readline-devel -y
 sudo yum install libX11-devel libXt-devel -y
 sudo yum install bzip2-devel -y
 sudo yum install pcre2-devel -y
@@ -38,9 +38,9 @@ Install ImageMagick to allow display back to your local computer.
 
 ```
 sudo yum groupinstall "Development Tools" -y
-sudo yum install ImageMagick
-sudo yum install ImageMagick-devel
-sudo yum install xauth
+sudo yum install ImageMagick -y
+sudo yum install ImageMagick-devel -y
+sudo yum install xauth -y
 ```
 
 Logout and then log back in using the ssh -option -Y
@@ -78,8 +78,8 @@ https://www.gnu.org/licenses/.
 Install packages
 
 ```
-sudo yum install epel-release
-sudo yum config-manager --set-enabled powertools
+sudo yum install epel-release -y 
+sudo yum config-manager --set-enabled powertools -y
 ```
 
 Alternatively, you can install as root, to the /bin directory, but then if you terminate the cluster, you will need to reinstall R
@@ -93,6 +93,9 @@ Install packages as root - to make them available to all users (if installed R a
 
 ```
 sudo -i R
+#or
+R
+
 install.packages("stringr")
 install.packages("patchwork")
 install.packages("dplyr")
@@ -115,8 +118,8 @@ ERROR: configuration failed for package ‘ncdf4’
 building netcdf with HDF5 support requires curl.
 
 ```
-sudo yum install curl
-sudo yum install libcurl-devel
+sudo yum install curl -y
+sudo yum install libcurl-devel -y
 ```
 
 Load the gcc and openmpi module before building the hdf5 enabled netcdf libraries.
@@ -157,8 +160,8 @@ install.packages("mapdata")
 M3 package requires gdal
 
 ```
-sudo yum install gdal
-sudo yum install gdal-devel proj-devel
+sudo yum install gdal -y
+sudo yum install gdal-devel proj-devel -y
 ```
 
 ```
@@ -176,28 +179,14 @@ sudo -i R
 install.packages("ggplot2")
 ```
 
-
-`sudo R CMD INSTALL M3_0.3.tar.gz`
-
-Install ImageMagick to allow display back to your local computer.
-
-To view the script, install imagemagick 
-
-
 ```
-sudo yum groupinstall "Development Tools" -y
-sudo yum install ImageMagick
-sudo yum install ImageMagick-devel
-sudo yum install xauth
+cd  /shared/cyclecloud-cmaq/qa_scripts/R_packages
+R CMD INSTALL M3_0.3.tar.gz
 ```
 
-Logout and then log back in using the ssh -option -Y 
+If you hare having X11 display issues:
 
-```
- ssh -Y $USER@IP-address
-```
-
-Other ideas for fixing display back to local host. <a href="https://www.cyberciti.biz/faq/how-to-fix-x11-forwarding-request-failed-on-channel-0/">how-to-fix-x11-forwarding-request-failed-on-channel-0</a>
+<a href="https://www.cyberciti.biz/faq/how-to-fix-x11-forwarding-request-failed-on-channel-0/">how-to-fix-x11-forwarding-request-failed-on-channel-0</a>
 
 Make sure that you have Xquartz running on your local machine, and that you have given permission to display back from the cyclecloud server.
 
