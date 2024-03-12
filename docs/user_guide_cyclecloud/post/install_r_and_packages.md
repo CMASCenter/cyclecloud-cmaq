@@ -26,12 +26,15 @@ cd R-${R_VERSION}
 Install packages required.
 
 ```
+sudo yum update -y
 sudo yum install readline-devel -y
 sudo yum install libX11-devel libXt-devel -y
 sudo yum install bzip2-devel -y
 sudo yum install pcre2-devel -y
 sudo yum install libcurl-devel -y
-yum install java-1.8.0-openjdk -y
+sudo yum install java-1.8.0-openjdk -y
+sudo yum install libjpeg libjpeg-devel
+yum install xorg-x11-server-Xvfb
 ```
 
 Install ImageMagick to allow display back to your local computer.
@@ -99,6 +102,7 @@ R
 install.packages("stringr")
 install.packages("patchwork")
 install.packages("dplyr")
+install.packages("jpeg")
 ```
 
 Had an issue installing ncdf4
