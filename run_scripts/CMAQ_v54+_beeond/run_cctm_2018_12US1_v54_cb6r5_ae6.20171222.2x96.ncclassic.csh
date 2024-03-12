@@ -18,7 +18,7 @@ echo 'information about processor including whether using hyperthreading'
 lscpu
 echo 'information about cluster'
 sinfo
-echo 'information about filesystem'
+echo 'information about the local filesystem, will not capture information about beeond, as it is on the compute nodes'
 df -h
 echo 'list the mounted volumes'
 showmount -e localhost
