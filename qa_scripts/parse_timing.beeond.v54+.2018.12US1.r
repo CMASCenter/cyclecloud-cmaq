@@ -89,8 +89,12 @@ for( comp in Compilers) {
    #remove all leading whitespace
    n.proc.plot <- str_trim(n.proc.plot, "left")
 
-   # write csv
-   write.csv(bar.data, hb120v3_12US1_CMAQv54+beeond.csv)
+      # write csv
+   write.csv(bar.data, "/shared/cyclecloud-cmaq/qa_scripts/beeond.csv")
+   write.csv(n.proc.plot, "/shared/cyclecloud-cmaq/qa_scripts/beeond_proc.csv")
+   write.csv(b.names, "/shared/cyclecloud-cmaq/qa_scripts/beeond_names.csv")
+   
+   
    
    # plot data
    my.colors <- brewer.pal(12, "Paired")
