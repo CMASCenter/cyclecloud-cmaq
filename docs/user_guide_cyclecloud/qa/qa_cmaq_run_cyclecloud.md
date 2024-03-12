@@ -155,23 +155,6 @@ REDHAT_SUPPORT_PRODUCT="centos"
 REDHAT_SUPPORT_PRODUCT_VERSION="7"
 ```
 
-To view the script, install imagemagick
-
-
-```
-sudo yum groupinstall "Development Tools" -y
-sudo yum install ImageMagick
-sudo yum install ImageMagick-devel
-sudo yum install xauth
-```
-
-Other ideas for fixing display back to local host. <a href="https://www.cyberciti.biz/faq/how-to-fix-x11-forwarding-request-failed-on-channel-0/">how-to-fix-x11-forwarding-request-failed-on-channel-0</a>
-
-Make sure that you have Xquartz running on your local machine, and that you have given permission to display back from the cyclecloud server.
-
-On your local terminal:
-`host +`
-
 Example output plots are available for the CONUS Benchmark in the following directory
 
 When NPCOL is fixed, we are seeing no difference in the answers.
