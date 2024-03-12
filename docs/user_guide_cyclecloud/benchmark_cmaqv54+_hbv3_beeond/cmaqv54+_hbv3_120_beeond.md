@@ -550,6 +550,10 @@ Num  Day        Wall Time
 
 ```
 
+## Check to see if spot VMs are available
+
+<a href="https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20%27Virtual%20Machines%27%20and%20meterName%20eq%20%27HB120rs_v3%20Spot%27%20and%20location%20eq%20%27US%20East%27">Spot Pricing Search for HB120rs_v3</a>
+
 ## Unsuccessful slurm status messages
 
 The NODELIST reason "Nodes required for the job are DOWN..." <br>
@@ -592,3 +596,4 @@ If the job does not begin to configure, then you may need to terminate and then 
 
 The terminate option does not delete the software, it only shuts down the scheduler and compute nodes. <br>
 The terminate option is equivalent to stopping the cluster. Once it has been stopped, the cluster can be restarted using the Start button.<br>
+

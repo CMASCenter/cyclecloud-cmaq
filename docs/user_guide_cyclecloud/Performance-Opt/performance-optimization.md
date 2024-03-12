@@ -2,7 +2,7 @@ Performance Optimization for Cycle Cloud
 
 ## Right-sizing Compute Nodes for the CycleCloud
 
-Selection of the compute nodes depends on the domain size and resolution for the CMAQ case, and what your model run time requirements are.
+Selection of the compute nodes depends on the domain size and resolution for the CMAQ case, and what your model run time requirements are, and the disks (beeond, lustre, or shared) used for input and output.
 Larger hardware and memory configurations may also be required for instrumented versions of CMAQ incuding CMAQ-ISAM and CMAQ-DDM3D.
 The CycleCloud allows you to run the compute nodes only as long as the job requires, and you can also update the compute nodes as needed for your domain.
 
@@ -80,7 +80,7 @@ L3 cache:            32768K
 NUMA node0 CPU(s):   0-3
 ```
 
-Table 3. Tiiming Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /mnt/beeond
+Table 3. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /mnt/beeond
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |   Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | cpuMhz |
 | -----| ---- | -----------    | -----------   | ----------------     | ---------------      | ------------------- |  ------------------ |  ---------        |   -------- | --------- | ---------------      | -- | -- | -- | -- |
@@ -100,7 +100,7 @@ Savings is ~ 90% for spot versus  ondemand pricing for HBv3-120 compute nodes.
 <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Azure Spot and On-Demand Pricing</a>
 <a href="https://azure.microsoft.com/en-us/pricing/spot-advisor/">Azure Spot and On-Demand Pricing</a>
 
-Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /lustre 
+Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv2-120 Compute Nodes (120 cpu per node), I/O on /lustre 
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
 | ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
@@ -110,7 +110,7 @@ Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wit
 
 # Benchmark Scaling Plots using CycleCloud
 
-## Benchmark Scaling Plot for CycleCloud using HB120rs_v3 Compute Nodes
+## Benchmark Scaling Plot for CycleCloud using HB120rs_v3 (Lustre) Compute Nodes
 
 
 Figure 1. 
@@ -127,9 +127,6 @@ Figure 3. Plot of Total Time and On Demand Cost versus CPUs for HBv120
 Figure 4. Plot of On Demand Cost versus Total Time for HBv120
 ![Plot of On Demand Cost versus Total Time for HBv120](../../qa_plots/scaling_plots/hbv120_v5.4plus_Cost_TotalTime.png)
 
-Figure 11. Scaling Plot Comparison of Parallel Cluster and Cycle Cloud
-
-![Scaling Plot Comparison of Parallel Cluster and Cycle Cloud](../../qa_plots/scaling_plots/Scaling_Parallel_Cluster_vs_Cycle_Cloud.png)
 
 Note CMAQ scales well up to ~ 288 processors for the CONUS domain.  As more processors are added beyond 288 processors, the CMAQ gets less efficient at using all of them.
 The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
