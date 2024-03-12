@@ -804,6 +804,7 @@ while ($TODAYJ <= $STOP_DAY )  #>Compare dates in terms of YYYYJJJ
   #( time -p $BLD/$EXEC ) |& tee buff_${EXECUTION_ID}.txt
 
   #> Executable call for multi PE, configure for your system 
+    printenv | grep SLURM | sort
   # set MPI = /usr/local/intel/impi/3.2.2.006/bin64
   # set MPIRUN = $MPI/mpirun
   #( time mpirun -np $NPROCS --hostfile beyondtest-hpc-1, beyondtest-hpc-2 $BLD/$EXEC ) |& tee buff_${EXECUTION_ID}.txt
