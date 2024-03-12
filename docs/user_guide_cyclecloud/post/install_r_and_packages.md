@@ -12,6 +12,58 @@ Use the following commands, and also install packages - note, see website above 
 
 Install R
 
+cd /shared/build/
+
+```
+setenv R_VERSION 4.3.3
+curl -O https://cran.rstudio.com/src/base/R-4/R-${R_VERSION}.tar.gz
+tar -xzvf R-${R_VERSION}.tar.gz
+cd R-${R_VERSION}
+```
+
+<a href="https://docs.posit.co/resources/install-r-source/">Installing R from source</a>
+
+Install packages required.
+
+```
+sudo yum install readline-devel
+sudo yum install libX11-devel libXt-devel -y
+sudo yum install bzip2-devel -y
+sudo yum install pcre2-devel -y
+sudo yum install libcurl-devel -y
+```
+
+Install ImageMagick to allow display back to your local computer.
+
+```
+sudo yum groupinstall "Development Tools" -y
+sudo yum install ImageMagick
+sudo yum install ImageMagick-devel
+sudo yum install xauth
+```
+
+Install R in /shared/build directory
+
+```
+./configure --prefix=/shared/build/R/${R_VERSION} --enable-R-shlib --enable-memory-profiling
+make
+make install
+```
+
+Verify that R is working
+
+```
+/shared/build/R/${R_VERSION}/bin/R --version
+```
+
+
+
+
+Logout and then log back in using the ssh -option -Y
+
+
+
+
 ```
 sudo yum install epel-release
 sudo yum config-manager --set-enabled powertools
