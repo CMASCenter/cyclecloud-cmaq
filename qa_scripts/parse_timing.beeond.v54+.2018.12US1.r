@@ -88,6 +88,9 @@ for( comp in Compilers) {
    
    #remove all leading whitespace
    n.proc.plot <- str_trim(n.proc.plot, "left")
+
+   # write csv
+   write.csv(bar.data, hb120v3_12US1_CMAQv54+beeond.csv)
    
    # plot data
    my.colors <- brewer.pal(12, "Paired")
