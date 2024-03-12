@@ -30,19 +30,19 @@ Table 1. Azure Instance On-Demand versus Spot Pricing (price is subject to chang
 
 | Instance Name	| CPUs |  RAM      |  Memory Bandwidth	| Network Bandwidth | Linux On-Demand Price | Linux Spot Price | 
 | ------------  | ----- | --------  | ---------------   | ---------------   | --------------------  | ---------------  |
-| HBv3-120	| 120	|  448 GiB   |	 350 Gbps	        | 200 Gbps(Infiniband)          |   $3.6/hour         | $1.4/hour     |
+| HBv3-120	| 120	|  448 GiB   |	 350 Gbps	        | 200 Gbps(Infiniband)          |   $3.6/hour         | $.36/hour     |
 
 
 
-Table 2. Timing Results for CMAQv5.3.3 2 Day CONUS2 Run on Single Virtual Machine HBv120 (120 cpu per node) I/O on /shared directory
+Table 2. Timing Results for CMAQv5.4+ 2 Day CONUS2 Run on Single Virtual Machine HBv120 (120 cpu per node) I/O on /shared directory (UPDATE)
 
 |CPUs |   NodesbyCPU |  NPCOLxNPROW  |   Day1 Timing (sec)  |  Day2 Timing (sec) |  TotalTime  | CPU Hours/day |  SBATCH --exclusive | Data Imported or Copied  |   Equation using Spot Pricing |  SpotCost  |    Equation using On Demand Pricing |  OnDemandCost |   compiler flag |  i/o dir |
 | --  | ----------   | -----------   |  -----------------   |  ----------------  |  ---------  | ------------  |  -----------------  |  ----------------------  |   --------------   |  --------------------------  |  -------------------------         |  --------     |   ------------  | -------  |
-|16   |   1x16  |  4x4  |   10374.66 |       9310.67  |       19685.33 |       2.734 |  no  |    copied |   $1.44/hr * 1 nodes * 5.468 = |   7.87 |   3.6/hr * 1 nodes * 5.468 = |     19.68 |  with -march=native compiler flag |       shared/data |
-|36   |   1x36  |  6x6  |   5102.89  |       4714.96  |       9817.85  |       1.36  |  no  |    copied |  $1.44/hr * 1 nodes * 2.72 =   |  3.92  |  3.6/hr * 1 nodes * 2.72  =  |    9.79   | with -march=native compiler flag  |      /shared/data |
-|72   |   1x72  |  8x9  |   3130.73  |       2747.3   |       5878.03  |       .815  |  no  |    copied |   $1.44/hr * 1 nodes * 1.63 =   |  2.35  |  3.6/hr * 1 nodes * 1.63  =  |    5.87   | with -march=native compiler flag  |      /shared/data | 
-|90   |   1x90  |  9x10 |   2739.38  |       2417.26  |       5156.64  |       .715  |  no  |    copied |   $1.44/hr * 1 nodes * 1.43 =   |  2.06  |  3.6/hr * 1 nodes * 1.43 =   |    5.15   | with -march=native compiler flag  |      /shared/data |
-|120  |   1x120 |  10x12 |   2646.52 |        2374.21 |        5020.73 |        .6973 |   no |   copied |    $1.44/hr * 1 nodes * 1.3946 = |  2.01 |    3.6/hr * 1 nodes * 1.39 = |      5.00 |   with -march=native compiler flag |        /shared/data |
+|16   |   1x16  |  4x4  |   10374.66 |       9310.67  |       19685.33 |       2.734 |  no  |    copied |   $.36/hr * 1 nodes * 5.468 = |   7.87 |   3.6/hr * 1 nodes * 5.468 = |     19.68 |  with -march=native compiler flag |       shared/data |
+|36   |   1x36  |  6x6  |   5102.89  |       4714.96  |       9817.85  |       1.36  |  no  |    copied |  $.36/hr * 1 nodes * 2.72 =   |  3.92  |  3.6/hr * 1 nodes * 2.72  =  |    9.79   | with -march=native compiler flag  |      /shared/data |
+|72   |   1x72  |  8x9  |   3130.73  |       2747.3   |       5878.03  |       .815  |  no  |    copied |   $.36/hr * 1 nodes * 1.63 =   |  2.35  |  3.6/hr * 1 nodes * 1.63  =  |    5.87   | with -march=native compiler flag  |      /shared/data | 
+|90   |   1x90  |  9x10 |   2739.38  |       2417.26  |       5156.64  |       .715  |  no  |    copied |   $.36/hr * 1 nodes * 1.43 =   |  2.06  |  3.6/hr * 1 nodes * 1.43 =   |    5.15   | with -march=native compiler flag  |      /shared/data |
+|120  |   1x120 |  10x12 |   2646.52 |        2374.21 |        5020.73 |        .6973 |   no |   copied |    $.36/hr * 1 nodes * 1.3946 = |  2.01 |    3.6/hr * 1 nodes * 1.39 = |      5.00 |   with -march=native compiler flag |        /shared/data |
 
 
 
