@@ -31,6 +31,7 @@ sudo yum install libX11-devel libXt-devel -y
 sudo yum install bzip2-devel -y
 sudo yum install pcre2-devel -y
 sudo yum install libcurl-devel -y
+yum install java-1.8.0-openjdk -y
 ```
 
 Install ImageMagick to allow display back to your local computer.
@@ -41,6 +42,9 @@ sudo yum install ImageMagick
 sudo yum install ImageMagick-devel
 sudo yum install xauth
 ```
+
+Logout and then log back in using the ssh -option -Y
+
 
 Install R in /shared/build directory
 
@@ -56,10 +60,22 @@ Verify that R is working
 /shared/build/R/${R_VERSION}/bin/R --version
 ```
 
+Output:
+
+```
+/shared/build/R/${R_VERSION}/bin/R --version
+R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under the terms of the
+GNU General Public License versions 2 or 3.
+For more information about these matters see
+https://www.gnu.org/licenses/.
+```
 
 
-
-Logout and then log back in using the ssh -option -Y
 
 
 
