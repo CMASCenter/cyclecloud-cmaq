@@ -33,8 +33,8 @@ sudo yum install bzip2-devel -y
 sudo yum install pcre2-devel -y
 sudo yum install libcurl-devel -y
 sudo yum install java-1.8.0-openjdk -y
-sudo yum install libjpeg libjpeg-devel
-yum install xorg-x11-server-Xvfb
+sudo yum install libjpeg libjpeg-devel -y
+sudo yum install xorg-x11-server-Xvfb -y
 ```
 
 Install ImageMagick to allow display back to your local computer.
