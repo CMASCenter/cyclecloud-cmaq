@@ -1,6 +1,6 @@
 ## Install R, Rscript and Packages
 
-<a href="https://linuxize.com/post/how-to-install-r-on-centos-7/">How to install R on Centos7</a>
+<a href="https://linuxize.com/post/how-to-install-r-on-centos-7/">How to install R on AlmaLinux</a>
 
 Install R from source on the scheduler node into a local mylibs directory (/shared/build/R-4.3.3)
 If R is installed using yum install, then need to install R packages as sudo, otherwise the packages are missing dependencies.
