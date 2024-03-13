@@ -2,15 +2,15 @@
 
 <a href="https://linuxize.com/post/how-to-install-r-on-centos-7/">How to install R on Centos7</a>
 
-May need to install on head node into a local mylibs directory, and then copy to the compute nodes, in order to run post processing R scripts on HTC node using slurm..
-Currently, I seem to need to install as sudo, otherwise the packages are missing dependencies.
-The issue is that if I need to terminate the cluster, then anything in the root or default install directory is deleted. Only the /shared files are retained.
+Install R from source on the scheduler node into a local mylibs directory (/shared/build/R-4.3.3)
+If R is installed using yum install, then need to install R packages as sudo, otherwise the packages are missing dependencies.
+If R is installed under /usr/bin, then when you terminate the cluster, anything in the root or default install directory is deleted. Only files on the /shared and /home directory are retained.
 
 <a href="https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio">Using R on HPC Clusters</a>
 
 Use the following commands, and also install packages - note, see website above for full details:
 
-Install R
+Install R from source
 
 cd /shared/build/
 
@@ -146,7 +146,7 @@ Run command to install ncdf4 package
 
 `cd /shared/cyclecloud-cmaq/qa_scripts/R_packages`
 
-`sudo R CMD INSTALL ncdf4_1.13.tar.gz --configure-args="--with-nc-config=/shared/build-hdf5/install/bin/nc-config"`
+`R CMD INSTALL ncdf4_1.13.tar.gz --configure-args="--with-nc-config=/shared/build-hdf5/install/bin/nc-config"`
 
 or to install to local directory
 
@@ -156,7 +156,7 @@ or to install to local directory
 Install additional packages as root so that all users will have access.
 
 ```
-sudo -i R
+R
 install.packages("fields")
 install.packages("mapdata")
 ```
@@ -169,17 +169,17 @@ sudo yum install gdal-devel proj-devel -y
 ```
 
 ```
-sudo -i R
+R
 install.packages("sp")
 ```
 
 ```
 cd /shared/cyclecloud-cmaq/qa_scripts/R_packages
-sudo R CMD INSTALL rgdal_1.6-7.tar.gz
+R CMD INSTALL rgdal_1.6-7.tar.gz
 ```
 
 ```
-sudo -i R
+R
 install.packages("ggplot2")
 ```
 
