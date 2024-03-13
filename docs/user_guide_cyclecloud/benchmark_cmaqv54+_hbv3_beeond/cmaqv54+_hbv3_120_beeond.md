@@ -597,3 +597,22 @@ If the job does not begin to configure, then you may need to terminate and then 
 The terminate option does not delete the software, it only shuts down the scheduler and compute nodes. <br>
 The terminate option is equivalent to stopping the cluster. Once it has been stopped, the cluster can be restarted using the Start button.<br>
 
+## If SLURM jobs are in a bad state
+
+When the job fails the compute nodes are put into an unusable Slurm state.  You can try to reset them with scontrol like so:
+
+sudo scontrol update nodename=hpc-[1-2] state=resume
+
+If that doesn’t reset them you can try the CycleCloud command to shutdown the nodes (suspend):
+
+sudo -i azslurm suspend –node-list hpc-[1-2]
+
+
+Likewise you can start nodes that are in a “bad” Slurm state like this:
+
+
+sudo -i azslurm resume –node-list hpc-[1-2]
+
+
+In all the cases above replace hpc-[1-2] with your specific node list.
+
