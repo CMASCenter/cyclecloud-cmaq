@@ -589,6 +589,8 @@ Confirm that the HPC VMs are deleted by viewing the CycleCloud webpage. <br>
 
 Resubmit the job
 
+Note, some of these instructions do not work, as azslurm is not found on the AlmaLinux8 OS.
+Additional instructions are available here: <a href="https://learn.microsoft.com/en-us/azure/cyclecloud/slurm?view=cyclecloud-8">Azure CycleCloud 8 help for Slurm</a>
 
 ## To recover from failure use the terminate cluster option
 
