@@ -417,7 +417,7 @@ Num  Day        Wall Time
 
 ```
 
-Going to test running on 96 cpu/node
+Going to test running on 96 cpu/node on 2 nodes
 
 ```
 sbatch run_cctm_2018_12US1_v54_cb6r3_ae6.20171222.2x96.csh
