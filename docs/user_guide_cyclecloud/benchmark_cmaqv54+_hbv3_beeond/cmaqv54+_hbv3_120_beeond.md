@@ -3,6 +3,7 @@ CMAQv4+ CONUS Benchmark Tutorial using 12US1 Domain
 ## Use Cycle Cloud with CMAQv5.4+ software and 12US1 Benchmark data.
 
 Step by step instructions for running the CMAQ 12US1 Benchmark for 2 days on a Cycle Cloud using beeond parallel filesystem for input data.
+Note, cpus are required to do create the beeond shared filesystem, to copy the data in, and copy the data out. Therefore, it is necessary to leave some cpus available for this work, and to not use all of the cpus in the CMAQ domain decomposition (NPCOLxNPROW)
 
 Input files are *.nc (uncompressed netCDF)
 
