@@ -2,7 +2,7 @@ Performance Optimization for Cycle Cloud
 
 ## Right-sizing Compute Nodes for the CycleCloud
 
-Selection of the compute nodes depends on the domain size and resolution for the CMAQ case, and what your model run time requirements are, and the disks (beeond, lustre, or shared) used for input and output.
+Selection of the compute nodes depends on the domain size and resolution for the CMAQ case, the CMAQ Version, the model run time requirements, and the disks (beeond, lustre, or shared) used for input and output.
 Larger hardware and memory configurations may also be required for instrumented versions of CMAQ incuding CMAQ-ISAM and CMAQ-DDM3D.
 The CycleCloud allows you to run the compute nodes only as long as the job requires, and you can also update the compute nodes as needed for your domain.
 
