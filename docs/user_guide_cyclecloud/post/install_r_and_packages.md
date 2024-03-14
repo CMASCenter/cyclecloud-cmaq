@@ -1,12 +1,14 @@
 ## Install R, Rscript and Packages
 
-<a href="https://linuxize.com/post/how-to-install-r-on-centos-7/">How to install R on AlmaLinux</a>
 
 Install R from source on the scheduler node into a local mylibs directory (/shared/build/R-4.3.3)
 If R is installed using yum install, then need to install R packages as sudo, otherwise the packages are missing dependencies.
 If R is installed under /usr/bin, then when you terminate the cluster, anything in the root or default install directory is deleted. Only files on the /shared and /home directory are retained.
 
 <a href="https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio">Using R on HPC Clusters</a>
+
+The instruction to install using a package manager were  obtained from the following reference:
+<a href="https://linuxize.com/post/how-to-install-r-on-centos-7/">How to install R using package manager (not recommended for this application)</a>
 
 Use the following commands, and also install packages - note, see website above for full details:
 
