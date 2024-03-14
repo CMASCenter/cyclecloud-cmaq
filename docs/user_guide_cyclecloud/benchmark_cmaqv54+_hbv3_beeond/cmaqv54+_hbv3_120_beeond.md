@@ -587,7 +587,56 @@ scancel 3
 
 Confirm that the HPC VMs are deleted by viewing the CycleCloud webpage. <br>
 
-Resubmit the job
+## Change to HB176_v4 compute node
+
+Terminate the cluster
+
+Edit the cluster configuration
+
+Select HB174_v4 for the HPC compute nodes
+
+Start the cluster
+
+Submit following run script
+
+
+```
+cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts 
+sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.1x176.ncclassic.beeond.csh
+
+```
+
+
+Login to the compute node to verify beeond was created
+
+```
+df -h
+```
+
+output
+
+```
+df -h
+Filesystem          Size  Used Avail Use% Mounted on
+devtmpfs            378G     0  378G   0% /dev
+tmpfs               378G     0  378G   0% /dev/shm
+tmpfs               378G   18M  378G   1% /run
+tmpfs               378G     0  378G   0% /sys/fs/cgroup
+/dev/sda2            59G   27G   33G  45% /
+/dev/sda1           994M  209M  786M  21% /boot
+/dev/sda15          495M  5.9M  489M   2% /boot/efi
+/dev/sdb1           472G  216K  448G   1% /mnt
+/dev/md10           3.5T   28G  3.5T   1% /mnt/nvme
+10.10.0.10:/sched    30G  247M   30G   1% /sched
+10.10.0.10:/shared 1000G  421G  580G  43% /shared
+tmpfs                76G     0   76G   0% /run/user/20001
+beegfs_ondemand     3.5T   28G  3.5T   1% /mnt/beeond
+```
+
+
+
+
+
 
 Note, some of these instructions do not work, as azslurm is not found on the AlmaLinux8 OS.
 Additional instructions are available here: <a href="https://learn.microsoft.com/en-us/azure/cyclecloud/slurm?view=cyclecloud-8">Azure CycleCloud 8 help for Slurm</a>
