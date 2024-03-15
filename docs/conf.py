@@ -57,13 +57,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 
-def setup(app):
-    app.add_css_file('custom.css')
-
 html_static_path = ['_static']
 html_theme = 'furo'
 html_last_updated_fmt = '%Y-%m-%d %H:%M:%S %z'
-html_style = 'custom.css' 
+html_style = 'css/custom.css' 
 html_css_files = [
     'custom.css',
 ]
