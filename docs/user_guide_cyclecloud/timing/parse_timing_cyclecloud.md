@@ -1,4 +1,7 @@
-:hide-toc:
+---
+hide-toc: true
+---
+
 # Parse timings from the log file 
 
 ## Compare CONUS CycleCloud Runs
