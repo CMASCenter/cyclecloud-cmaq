@@ -56,6 +56,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+
+def setup(app):
+    app.add_css_file('custom.css')
+
 html_static_path = ['_static']
 html_theme = 'furo'
 html_last_updated_fmt = '%Y-%m-%d %H:%M:%S %z'
