@@ -63,6 +63,7 @@ def setup(app):
 html_static_path = ['_static']
 html_theme = 'furo'
 html_last_updated_fmt = '%Y-%m-%d %H:%M:%S %z'
+html_style = 'custom.css' 
 html_css_files = [
     'custom.css',
 ]
