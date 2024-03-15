@@ -151,7 +151,7 @@ Scheduler node D12v2 compute cost = entire time that the CycleCloud HPC Cluster 
 
 ## Annual Run Estimates
 
-Using 288 cpus on the Cycle Cloud Cluster, it would take ~3.6 days to run a full year, using 3 HBv3-120 compute nodes, at a cost of $926 using ondemand nodes, or $92.6 using interruptable spot nodes.
+Using 288 cpus on the Cycle Cloud Cluster, it would take 1 week to run a full year, using 3 HBv3-120 compute nodes, at a cost of $1782 using ondemand nodes, or $178.2 using interruptable spot nodes.
 (Note, spot nodes have not been tried yet in this tutorial.)
 
 
@@ -163,10 +163,10 @@ Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.4 Annual Simulation based
 | 2 day CONUS    |   96          |  HBv3-120  |        1       |  ONDEMAND  | No |    3.6/hour   | 7079.60/3600 = 1.96  |    1.96/2 * 365 = 359 hours/node * 1 node = 359 * $3.6 = | $1292 | 14.9 | 
 | 2 day CONUS    |  192          |  HBv3-120  |        2       |    SPOT    | No |    .36/hour   | 4269.40/3600 = 1.19   |    1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * $.36 = |  $155.8 | 9 |
 | 2 day CONUS    |  192          |  HBv3-120  |        2       |  ONDEMAND  | No |    3.6/hour   | 4269.40/3600 = 1.19   |    1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * $3.6 = |  $1558 | 9 | 
-| 2 day CONUS    |  288          |  HBv3-120  |        3       |    SPOT    | No |   .36/hour     |   1692.6/3600 = .47  |    .47/2 * 365 = 85.8 hours/node * 3 nodes = 257.3 * $.36  = |  $92.6 | 3.6 |
-| 2 day CONUS    |  288          |  HBv3-120  |        3       |  ONDEMAND  | No |   3.6/hour   | 1692.6/3600 = .47  |    .47/2 * 365 = 85.8 hours/node * 3 nodes = 257.3 * $3.6 = | $926 | 3.6 |
-| 2 day CONUS    |  384          |  HBv3-120  |        4       |    SPOT    | No |   .36/hour     |   1474.2/3600 = .41  |    .41/2 * 365 = 74.8 hours/node * 4 nodes = 299 * $.36  = |  $108 | 3.11 |
-| 2 day CONUS    |  384          |  HBv3-120  |        4       |  ONDEMAND  | No |   3.6/hour   | 1474.2/3600 = .41  |    .41/2 * 365 = 74.8 hours/node * 4 nodes = 299 * $3.6 = | $1076 | 3.11 |
+| 2 day CONUS    |  288          |  HBv3-120  |        3       |    SPOT    | No |   .36/hour     |   3255.3/3600 = .904  |    .904/2 * 365 = 165 hours/node * 3 nodes = 495 * $.36  = |  $178.2 | 3.6 |
+| 2 day CONUS    |  288          |  HBv3-120  |        3       |  ONDEMAND  | No |   3.6/hour   | 3255.3/3600 = .904  |    .904/2 * 365 = 165 hours/node * 3 nodes = 257.3 * $3.6 = | $1782 | 3.6 |
+| 2 day CONUS    |  384          |  HBv3-120  |        4       |    SPOT    | No |   .36/hour     |   2830.70/3600 = .786  |    .786/2 * 365 = 143.5 hours/node * 4 nodes = 574 * $.36  = |  $206.7 | 3.11 |
+| 2 day CONUS    |  384          |  HBv3-120  |        4       |  ONDEMAND  | No |   3.6/hour   | 2830.70/3600 = .786  |    .786/2 * 365 = 143.5 hours/node * 4 nodes = 574 * $3.6 = | $2066 | 3.11 |
 
 
 
