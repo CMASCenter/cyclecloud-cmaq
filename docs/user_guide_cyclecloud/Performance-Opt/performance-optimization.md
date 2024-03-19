@@ -48,13 +48,13 @@ Table 1. Azure Instance On-Demand versus Spot Pricing (price is subject to chang
 
 | Instance Name	| CPUs |  RAM      |  Memory Bandwidth	| Network Bandwidth | Linux On-Demand Price | Linux Spot Price | 
 | ------------  | ----- | --------  | ---------------   | ---------------   | --------------------  | ---------------  |
-| HBv3-120	| 120	|  448 GiB   |	 350 Gbps	        | 200 Gbps(Infiniband)          |   $3.6/hour         | $.36     |
+| HB120rs_v3	| 120	|  448 GiB   |	 350 Gbps	    | 200 Gbps(Infiniband)  |   $3.6/hour         | $.36     |
+| HB176_v4      | 176   |   656 GiB  |   780 Gbps       | 400 Gbps(Infiiniband) |  $7.2/hour          | $.41     |
 
+<a href="https://learn.microsoft.com/en-us/azure/virtual-machines/hbv3-series">Azure HBv3-series Specifications</a>
+<a href="https://learn.microsoft.com/en-us/azure/virtual-machines/hbv4-series">Azure HBv4-series Specifications</a>
 
-
-Table 2. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HB-120rs_v3 Compute Nodes (120 cpu per node) I/O on /shared directory
-
-Note, check to see what CPUs were used 
+Note, check to see what processors were used 
 
 ```
 lscpu
@@ -80,7 +80,7 @@ L3 cache:            32768K
 NUMA node0 CPU(s):   0-3
 ```
 
-Table 3. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /mnt/beeond
+Table 2. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /mnt/beeond
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |   Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | cpuMhz |
 | -----| ---- | -----------    | -----------   | ----------------     | ---------------      | ------------------- |  ------------------ |  ---------        |   -------- | --------- | ---------------      | -- | -- | -- | -- |
@@ -100,7 +100,7 @@ Savings is ~ 90% for spot versus  ondemand pricing for HBv3-120 compute nodes.
 <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Azure Spot and On-Demand Pricing</a>
 <a href="https://azure.microsoft.com/en-us/pricing/spot-advisor/">Azure Spot and On-Demand Pricing</a>
 
-Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv2-120 Compute Nodes (120 cpu per node), I/O on /lustre 
+Table 3. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv2-120 Compute Nodes (120 cpu per node), I/O on /lustre 
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
 | ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
@@ -129,11 +129,7 @@ Figure 4. Plot of On Demand Cost versus Total Time for HBv120
 
 
 Note CMAQ scales well up to ~ 288 processors for the CONUS domain.  As more processors are added beyond 288 processors, the CMAQ gets less efficient at using all of them.
-The Cycle Cloud HC44RS performance is similar to the c5n.18xlarge using 36 cpus/node on 8 nodes, or 288 cpus.
-cost is $9.76 for Cycle Cloud compared to $??  for Parallel Cluster for the 2-Day 12US1 CONUS Benchmark.
 
-
-Figures: todo - need screenshots of Azure Pricing
 
 Cost by Instance Type - update for Azure 
 
