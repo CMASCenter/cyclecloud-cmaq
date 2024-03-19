@@ -31,7 +31,7 @@ Number of compute nodes dispatched by the slurm scheduler is specified in the ru
 As an example:
 
 For HB120rs_v3, there are 120 CPUs/node, so maximum value of YY is 120 or --ntask-per-node=120
-For many of the runs that were done, we set --ntask-per-node=36 so that we could compare to the Parallel Cluster
+For many of the runs that were done, we set --ntask-per-node=96 so that we could compare to the Parallel Cluster, and to avoid oversubscribing the cores.
 
 If running a job with 192 processors, this would require the --nodes=XX or XX to be set to 2 compute nodes, as 96x2=192.
 
@@ -177,24 +177,24 @@ Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.4 Annual Simulation based
 
 Table 7. Shared SSD File System Pricing
 
-| Storage Type | Storage options   | 	Max IOPS (Max IOPS w/ bursting)	| Pricing (monthly)  |  Pricing | Price per mount per month (Shared Disk) |
+| Storage Type | Storage throughput   | 	Max IOPS (Max IOPS w/ bursting)	| Pricing (monthly)  |  Pricing | Price per mount per month (Shared Disk) |
 | --------     | ----------------  |   ------------------------------------    | -----------------  |  ---------------  | ------  |
 | Persistant 1TB  | 200 MB/s/TB       | 	5,000 (30,000)                                  |	$122.88/month |  $6.57                 |
 
 ## Lustre File System Pricing
 
+
+|  Storage Type | Storage throughput | Storage Capacity Availability (in multiples of) | Cost per GiB/hr  |Cost/month for minimum capacity available |
+| -----------   | ----------------   | --------------------------------                |    -------------- |  ------------                 |
+| Standard tier |  125 MB/s          |  16,000 GiB                                     | .000198           | $2312  |
+| Premium tier  |  250 MB/s          |  8,000  GiB                                     | .000287           | $1676  |
+| Ultra tier    |  500 MB/s          |  4,000  GiB                                     | .000466           | $1361  |
+
 According to the Azure calculators, the price varies by I/O Speed, and different tiers have different minimum storage size requirements.:
 
-Standard tier delivers 125 MB/s for provisioned TiB. Under this tier, storage capacity is available in multiples of 16,000 GiB.
-
+Calculations:
 16000 GiB (17 TB) x 730 Hours x 0.000198Per GiB/hour = $2312 / month
-
-Premium tier delivers 250 MB/s for provisioned TiB. Under this tier, storage capacity is available in multiples of 8,000 GiB.
-
 8000 GiB (9 TB)  x 730 Hours x $0.000287 Per GiB/hour = $1676 / month
-
-Ultra tier delivers 500 MB/s for provisioned TiB. Under this tier, storage capacity is available in multiples of 4,000 GiB.
-
 4000 GiB (4.3 TB) x 730 Hours x 0.000466Per GiB/hour = $1361 / month
 
 
