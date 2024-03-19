@@ -192,10 +192,10 @@ Table 7. Shared SSD File System Pricing
 
 According to the Azure calculators, the price varies by I/O Speed, and different tiers have different minimum storage size requirements.:
 
-Calculations:
-16000 GiB (17 TB) x 730 Hours x 0.000198Per GiB/hour = $2312 / month
-8000 GiB (9 TB)  x 730 Hours x $0.000287 Per GiB/hour = $1676 / month
-4000 GiB (4.3 TB) x 730 Hours x 0.000466Per GiB/hour = $1361 / month
+Calculations: <br>
+16000 GiB (17 TB) x 730 Hours x 0.000198Per GiB/hour = $2312 / month <br>
+8000 GiB (9 TB)  x 730 Hours x $0.000287 Per GiB/hour = $1676 / month <br>
+4000 GiB (4.3 TB) x 730 Hours x 0.000466Per GiB/hour = $1361 / month <br>
 
 
 
