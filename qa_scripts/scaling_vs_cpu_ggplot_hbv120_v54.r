@@ -1,5 +1,6 @@
 library(ggplot2)
 library(patchwork) # To display 2 charts together
+library(ggrepel) # To add labels for the number of nodes
 
 # Script author: Liz Adams
 # Affiliation: UNC CMAS Center 
@@ -16,12 +17,13 @@ bad_rows <-
     is.na(csv_data$Scaling) |
     is.na(csv_data$Efficiency) |
     is.na(csv_data$MS_Opt_Pin)
-p1 <- ggplot(csv_data[!bad_rows,], aes(y=Scaling, x=CPUs, color=ComputeNode, size=cpuMhz)) + xlim ( 96,288 ) + ylim ( 1,3 ) +
-    geom_point() + ggtitle("2 Day Benchmark Scaling versus CPU using HB120rs_v3 with Beeond ")
+p1 <- ggplot(csv_data[!bad_rows,], aes(y=Scaling, x=CPUs,  group=interaction(ComputeNode,InputData), color=interaction(ComputeNode,InputData), shape=ComputeNode)) +
+    geom_point() + ggtitle("2 Day Benchmark Scaling versus CPU using HB120rs_v3") +  scale_y_continuous(name = "Scaling") + stat_smooth(method="lm") + geom_point(size=3.0) + geom_label_repel(aes(label = Nodes))
 
 
-p2 <- ggplot(csv_data[!bad_rows,], aes(y=Efficiency, x=CPUs, color=ComputeNode, size=cpuMhz )) +
-    geom_point() + ggtitle("2 Day Benchmark Parallel Efficiency versus CPU using HB120rs_v3 with Beeond")
+p2 <- ggplot(csv_data[!bad_rows,], aes(y=Efficiency, x=CPUs,  group=interaction(ComputeNode,InputData), color=interaction(ComputeNode,InputData), shape=ComputeNode )) +
+    geom_point() + ggtitle("2 Day Benchmark Parallel Efficiency versus CPU using HB120rs_v3") + geom_line(size=1.5) + stat_smooth(method="lm") + geom_point(size=3.0) + geom_label_repel(aes(label = Nodes))
 
 # Display both charts side by side thanks to the patchwork package
-p1 + geom_abline(intercept = 0, slope = .0552) + p2
+#p1 + geom_abline(intercept = 0, slope = .0552) + p2
+p1
