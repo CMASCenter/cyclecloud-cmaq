@@ -100,12 +100,19 @@ Savings is ~ 90% for spot versus  ondemand pricing for HBv3-120 compute nodes.
 <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/">Azure Spot and On-Demand Pricing</a>
 <a href="https://azure.microsoft.com/en-us/pricing/spot-advisor/">Azure Spot and On-Demand Pricing</a>
 
-Table 3. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv2-120 Compute Nodes (120 cpu per node), I/O on /lustre 
+Table 3. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv2-120 Compute Nodes (120 cores per node), I/O on /mnt/beeond
 
 | CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
 | ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
-| 96  | 1   |   1x96   |    12x8        | 3400.95       | 3437.91  |   6838.86  | .950  |  no  |     $1.89/hr * 1 nodes * $.36 = | $.68 | 1.89/hr * 1 nodes * 3.6 = | 6.804   | no | lustre | yes |
-| 192 | 2   |   2x96   |    16x12       | 1954.62       | 1920.57  |   3875.19  | .538  | no     |   $1.07/hr * 2 nodes * $.36 =  | $.77 | 1.07/hr * 2 nodes * 3.6 = | 7.704   | no | lustre | yes |
+| 96  | 1   |   1x96   |    12x8        | 3400.95       | 3437.91  |   6838.86  | .950  |  no  |     $1.89/hr * 1 nodes * $.36 = | $.68 | 1.89/hr * 1 nodes * 3.6 = | 6.804   | no | Beeond | no |
+| 192 | 2   |   2x96   |    16x12       | 1954.62       | 1920.57  |   3875.19  | .538  | no     |   $1.07/hr * 2 nodes * $.36 =  | $.77 | 1.07/hr * 2 nodes * 3.6 = | 7.704   | no | Beeond | no |
+
+
+Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HB176_v3 Compute Nodes (176 cores per node), I/O using Beeond
+| CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
+| ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
+| 160  | 1   |   1x176   |    16x10        | 2062.9       | 2235.3  |   4298.2  | 0.597  |  no  |     $1.19/hr * 1 nodes * $.41 = | $.4879 | 1.19/hr * 1 nodes * 7.2 = | 8.568   | no | beeond | no |
+| 320  | 2   |   2x176   |    16x20        | 1644.4       | 1728.3  |   3372.7  | 0.468  |  no  |     $.938/hr * 1 nodes * $.41 = | $.769 | .938/hr * 2 nodes * 7.2 = | 13.51   | no | beeond | no |
 
 
 # Benchmark Scaling Plots using CycleCloud
@@ -151,9 +158,9 @@ Using 288 cpus on the Cycle Cloud Cluster, it would take 1 week to run a full ye
 (Note, spot nodes have not been tried yet in this tutorial.)
 
 
-Table 6. Extrapolated Cost for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark, without pinning
+Table 5. Extrapolated Cost for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark, without pinning
 
-| Virtual Machine |  Nodes | Cores | SPOT Price/hr | OnDemand Price/hr | 2 day time seconds | 2 day time hours | Annual Cost Equation | Total CPU hours | Annual Cost Spot | Annual Cost OnDemand | Days to Complete Annual Simulation |  
+| Virtual Machine |  Nodes | Cores | SPOT $/hr | OnDemand $/hr | 2 day time seconds | 2 day time hours | Annual Cost Equation | Total CPU hours | Annual Cost Spot | Annual Cost OnDemand | Days to Complete Annual Simulation |  
 | --------  | -- | --  | ----- |  ---- |  ------ | ------ | --------------------------------------------------- |  ---- | ----- | ----- | ----    |
 |  HB120_v3 |  1 |  96 |  $.36 |  $3.6 | 7079.60 |  1.96  | 1.96/2 * 365 = 359 hours/node * 1 node              | 359   | $129  | $1292 | 14.9 |
 |  HB120_v3 | 2  | 192 |  $.36  | $3.6 | 4269.40 |  1.19  | 1.19/2 * 365 = 216 hours/node * 2 nodes             | 432   |  $155.8 | $1558 |  9 |
