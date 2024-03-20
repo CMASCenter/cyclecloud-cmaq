@@ -122,16 +122,14 @@ Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wit
 
 Figure 1. 
 
-![Scaling per CPU for HBv120 Compute Nodes (120cpu/node](../../qa_plots/scaling_plots/hbv120_v54_beeond_Scaling_CPUs.png)
-
-Figure 2 shows the scaling per-node, as the configurations that were run were multiples of the number of cpus per node.  CMAQ was not run on a single cpu, as this would have been costly and inefficient.
+![Scaling per CPU for HB120_v3 (120cores/node) ](../../qa_plots/scaling_plots/hbv120_v54_beeond_Scaling_CPUs.png)
 
 
-Figure 3. Plot of Total Time and On Demand Cost versus CPUs for HBv120
+Figure 2. Plot of Total Time and On Demand Cost versus CPUs for HB120_v3 and HB176_v4
 
 ![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/hbv120_v5.4plus_Time_CPUs.png)
 
-Figure 4. Plot of On Demand Cost versus Total Time for HBv120
+Figure 3. Plot of On Demand Cost versus Total Time for HB120_v3 and HB176_v4
 ![Plot of On Demand Cost versus Total Time for HBv120](../../qa_plots/scaling_plots/hbv120_v5.4plus_Cost_TotalTime.png)
 
 
