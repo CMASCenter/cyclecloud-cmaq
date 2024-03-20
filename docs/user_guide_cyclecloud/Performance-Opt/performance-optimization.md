@@ -120,9 +120,9 @@ Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wit
 ## Benchmark Scaling Plot for CycleCloud using HB120rs_v3 (Lustre) Compute Nodes
 
 
-Figure 1. 
+Figure 1. Plot of Scaling per Core 
 
-![Scaling per CPU for HB120_v3 (120cores/node) ](../../qa_plots/scaling_plots/hbv120_v54_beeond_Scaling_CPUs.png)
+![Scaling per Core for HB120_v3 (120cores/node) and HB176_v4 (176 cores/node ](../../qa_plots/scaling_plots/hbv120_v54_beeond_Scaling_CPUs.png)
 
 
 Figure 2. Plot of Total Time and On Demand Cost versus CPUs for HB120_v3 and HB176_v4
