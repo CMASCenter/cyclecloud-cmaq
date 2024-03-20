@@ -10,10 +10,10 @@ The CycleCloud allows you to run the compute nodes only as long as the job requi
 
 Quote from the following link.
 
-"IMPORTANT: The optimal value of --nodes and --ntasks for a parallel code must be determined empirically by conducting a scaling analysis. As these quantities increase, the parallel efficiency tends to decrease. The parallel efficiency is the serial execution time divided by the product of the parallel execution time and the number of tasks. If multiple nodes are used then in most cases one should try to use all of the CPU-cores on each node."
+"IMPORTANT: The optimal value of --nodes and --ntasks for a parallel code must be determined empirically by conducting a scaling analysis. As these quantities increase, the parallel efficiency tends to decrease. The parallel efficiency is the serial execution time divided by the product of the parallel execution time and the number of tasks. If multiple nodes are used then in most cases one should try to use all of the Cores on each node."
 
 ```{note}
-For the scaling analysis that was performed with CMAQ, the parallel efficiency was determined as the runtime for the smallest number of CPUs divided by the product of the parallel execution time and the number of additional cpus used. If smallest NPCOLxNPROW configuration was 18 cpus, the run time for that case was used, and then the parallel efficiency for the case where 36 cpus were used would be parallel efficiency = runtime_18cpu/(runtime_36cpu*2)*100
+For the scaling analysis that was performed with CMAQ, the parallel efficiency was determined as the runtime for the smallest number of Cores divided by the product of the parallel execution time and the number of additional cpus used. If smallest NPCOLxNPROW configuration was 18 cpus, the run time for that case was used, and then the parallel efficiency for the case where 36 cpus were used would be parallel efficiency = runtime_18cpu/(runtime_36cpu*2)*100
 ```
 
 ```{seealso}
@@ -26,16 +26,16 @@ For the scaling analysis that was performed with CMAQ, the parallel efficiency w
 
 Azure CycleCloud relies on SLURM to make the job allocation and scaling decisions. The jobs are launched, terminated, and resources maintained according to the Slurm instructions in the CMAQ run script. The CycleCloud Web Interface is used to set the identity of the head node and the compute node, and the maximum number of compute nodes that can be submitted to the queue. 
 
-Number of compute nodes dispatched by the slurm scheduler is specified in the run script using #SBATCH --nodes=XX #SBATCH --ntasks-per-node=YY where the maximum value of tasks per node or YY limited by many CPUs are on the compute node.
+Number of compute nodes dispatched by the slurm scheduler is specified in the run script using #SBATCH --nodes=XX #SBATCH --ntasks-per-node=YY where the maximum value of tasks per node or YY limited by many Cores are on the compute node.
 
 As an example:
 
-For HB120rs_v3, there are 120 CPUs/node, so maximum value of YY is 120 or --ntask-per-node=120
+For HB120rs_v3, there are 120 Cores/node, so maximum value of YY is 120 or --ntask-per-node=120
 For many of the runs that were done, we set --ntask-per-node=96 so that we could compare to the Parallel Cluster, and to avoid oversubscribing the cores.
 
 If running a job with 192 processors, this would require the --nodes=XX or XX to be set to 2 compute nodes, as 96x2=192.
 
-The setting for NPCOLxNPROW must also be a maximum of 192, ie. 16 x 12 or 12 x 16 to use all of the CPUs in the Cycle Cloud HPC Node.
+The setting for NPCOLxNPROW must also be a maximum of 192, ie. 16 x 12 or 12 x 16 to use all of the Cores in the Cycle Cloud HPC Node.
 
 If running a job with 240 processors, this would require the --nodes=XX or XX to be set to 2 compute nodes, as 120x2=240.
 
@@ -46,7 +46,7 @@ If running a job with 240 processors, this would require the --nodes=XX or XX to
 
 Table 1. Azure Instance On-Demand versus Spot Pricing (price is subject to change)
 
-| Instance Name	| CPUs |  RAM      |  Memory Bandwidth	| Network Bandwidth | Linux On-Demand Price | Linux Spot Price | 
+| Instance Name	| Cores |  RAM      |  Memory Bandwidth	| Network Bandwidth | Linux On-Demand Price | Linux Spot Price | 
 | ------------  | ----- | --------  | ---------------   | ---------------   | --------------------  | ---------------  |
 | HB120rs_v3	| 120	|  448 GiB   |	 350 Gbps	    | 200 Gbps(Infiniband)  |   $3.6/hour         | $.36     |
 | HB176_v4      | 176   |   656 GiB  |   780 Gbps       | 400 Gbps(Infiiniband) |  $7.2/hour          | $.41     |
@@ -60,7 +60,7 @@ Note, check to see what processors were used
 lscpu
 ```
 
-CPU (logs in March 2023)
+Core (logs in March 2023)
 
 ```
 Vendor ID:           AuthenticAMD
@@ -82,7 +82,7 @@ NUMA node0 CPU(s):   0-3
 
 Table 2. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /mnt/beeond
 
-| CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |   Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | cpuMhz |
+| Cores | Nodes | NodesxCores | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | VM Hours/day | SBATCHexclusive |   Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | cpuMhz |
 | -----| ---- | -----------    | -----------   | ----------------     | ---------------      | ------------------- |  ------------------ |  ---------        |   -------- | --------- | ---------------      | -- | -- | -- | -- |
 | 96   | 1 |  1x96     |    8x12            |   3278.9            |  3800.7             |   7079.60   | .983 |  no | $.36/hr * 1 nodes * 1.966 hr = | .708   |  $3.6/hr * 1 nodes * 1.966 hr = |  7.077 |  without -march=native compiler flag | Beeond | 3021.872 |
 | 192  | 2 |   2x96    |    16x12           | 2027.8              |  2241.6             |   4269.40   | .593 |  no | $.36/hr * 2 nodes * 1.186 hr = | .854   | $3.6/hr * 2 nodes * 1.186 hr = | 8.54 | without -march=native compiler flag | Beeond | 3021.872 | 
@@ -102,14 +102,14 @@ Savings is ~ 90% for spot versus  ondemand pricing for HBv3-120 compute nodes.
 
 Table 3. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv2-120 Compute Nodes (120 cores per node), I/O on /mnt/beeond
 
-| CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
+| Cores | Nodes | NodesxCore | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | VM Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
 | ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
 | 96  | 1   |   1x96   |    12x8        | 3400.95       | 3437.91  |   6838.86  | .950  |  no  |     $1.89/hr * 1 nodes * $.36 = | $.68 | 1.89/hr * 1 nodes * 3.6 = | 6.804   | no | Beeond | no |
 | 192 | 2   |   2x96   |    16x12       | 1954.62       | 1920.57  |   3875.19  | .538  | no     |   $1.07/hr * 2 nodes * $.36 =  | $.77 | 1.07/hr * 2 nodes * 3.6 = | 7.704   | no | Beeond | no |
 
 
 Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HB176_v3 Compute Nodes (176 cores per node), I/O using Beeond
-| CPUs | Nodes | NodesxCPU | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | CPU Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
+| Cores | Nodes | NodesxCore | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | VM Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
 | ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
 | 160  | 1   |   1x176   |    16x10        | 2062.9       | 2235.3  |   4298.2  | 0.597  |  no  |     $1.19/hr * 1 nodes * $.41 = | $.4879 | 1.19/hr * 1 nodes * 7.2 = | 8.568   | no | beeond | no |
 | 320  | 2   |   2x176   |    16x20        | 1644.4       | 1728.3  |   3372.7  | 0.468  |  no  |     $.938/hr * 1 nodes * $.41 = | $.769 | .938/hr * 2 nodes * 7.2 = | 13.51   | no | beeond | no |
@@ -124,15 +124,15 @@ Figure 1. Plot of Scaling per Core
 ![Scaling per Core for HB120_v3 (120cores/node) and HB176_v4 (176 cores/node ](../../qa_plots/scaling_plots/hbv120_v54_beeond_Scaling_Cores.png)
 
 
-Figure 2. Plot of Total Time and On Demand Cost versus CPUs for HB120_v3 and HB176_v4
+Figure 2. Plot of Total Time and On Demand Cost versus Cores for HB120_v3 and HB176_v4
 
-![Plot of Total Time and On Demand Cost versus CPUs for HBv120](../../qa_plots/scaling_plots/hbv120_v5.4plus_Time_Cores.png)
+![Plot of Total Time and On Demand Cost versus Cores for HB120 and HB176](../../qa_plots/scaling_plots/hbv120_v5.4plus_Time_Cores.png)
 
 Figure 3. Plot of On Demand Cost versus Total Time for HB120_v3 and HB176_v4
 ![Plot of On Demand Cost versus Total Time for HBv120](../../qa_plots/scaling_plots/hbv120_v5.4plus_Cost_TotalTime.png)
 
 
-Note CMAQ scales well up to ~ 288 processors for the CONUS domain.  As more processors are added beyond 288 processors, the CMAQ gets less efficient at using all of them.
+Note CMAQ scales well up to ~ 288 Cores for the CONUS domain.  As more cores are added beyond 288 cores, the CMAQ gets less efficient at using all of them.
 
 Scheduler node D12v2 compute cost = Will be charged for the scheduler for the entire time that the CycleCloud HPC Cluster is running ( creation to deletion) = 6 hours * $0.?/hr = $ ? using spot pricing, 6 hours * $?/hr = $? using on demand pricing.
 
@@ -144,7 +144,7 @@ Using 288 cpus on the Cycle Cloud Cluster, it would take 1 week to run a full ye
 
 Table 5. Extrapolated Cost for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark, without pinning
 
-| Virtual Machine |  Nodes | Cores | SPOT $/hr | OnDemand $/hr | 2 day time seconds | 2 day time hours | Annual Cost Equation | Total CPU hours | Annual Cost Spot | Annual Cost OnDemand | Days to Complete Annual Simulation |  
+| Virtual Machine |  Nodes | Cores | SPOT $/hr | OnDemand $/hr | 2 day time seconds | 2 day time hours | Annual Cost Equation | Total Core hours | Annual Cost Spot | Annual Cost OnDemand | Days to Complete Annual Simulation |  
 | --------  | -- | --  | ----- |  ---- |  ------ | ------ | --------------------------------------------------- |  ---- | ----- | ----- | ----    |
 |  HB120_v3 |  1 |  96 |  $.36 |  $3.6 | 7079.60 |  1.96  | 1.96/2 * 365 = 359 hours/node * 1 node              | 359   | $129  | $1292 | 14.9 |
 |  HB120_v3 | 2  | 192 |  $.36  | $3.6 | 4269.40 |  1.19  | 1.19/2 * 365 = 216 hours/node * 2 nodes             | 432   |  $155.8 | $1558 |  9 |
