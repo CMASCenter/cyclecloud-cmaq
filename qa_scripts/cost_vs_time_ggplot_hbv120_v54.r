@@ -16,7 +16,7 @@ print(csv_data)
 bad_rows <-
     is.na(csv_data$TotalTime) |
     is.na(csv_data$Day1_Timing_sec) |
-    is.na(csv_data$CPUs) |
+    is.na(csv_data$Cores) |
     is.na(csv_data$OnDemandCost) |
     is.na(csv_data$MS_Opt_Pin) |
     is.na(csv_data$SpotCost)
@@ -28,8 +28,8 @@ csv_data2 <-  subset(csv_data, ComputeNode=="HB120rs_v3")
 
 p1 <- ggplot(csv_data[!bad_rows,], aes(y=OnDemandCost, x=TotalTime, group=interaction(ComputeNode,InputData), color=interaction(ComputeNode,InputData), shape=ComputeNode )) +
     geom_point() + ggtitle("2 Day Benchmark OnDemandCost versus Total Time") + scale_y_continuous(name = "OnDemand Cost ($)") + stat_smooth(method="lm") + geom_point(size=3.0) + geom_label_repel(aes(label = Nodes))
-p2 <- ggplot(csv_data[!bad_rows,], aes(y=TotalTime, x=CPUs, group=interaction(ComputeNode,InputData), color=interaction(ComputeNode,InputData), shape=ComputeNode)) +
-    geom_point() + ggtitle("2 Day Benchmark TotalTime versus CPUs") + scale_y_continuous(name = "TotalTime (sec)") + stat_smooth(method="lm") + geom_point(size=3.0)  + geom_label_repel(aes(label = Nodes))
+p2 <- ggplot(csv_data[!bad_rows,], aes(y=TotalTime, x=Cores, group=interaction(ComputeNode,InputData), color=interaction(ComputeNode,InputData), shape=ComputeNode)) +
+    geom_point() + ggtitle("2 Day Benchmark TotalTime versus Cores") + scale_y_continuous(name = "TotalTime (sec)") + stat_smooth(method="lm") + geom_point(size=3.0)  + geom_label_repel(aes(label = Nodes))
 
 # Display both charts side by side thanks to the patchwork package
 p1 + p2
