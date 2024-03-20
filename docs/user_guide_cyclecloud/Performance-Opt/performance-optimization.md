@@ -151,18 +151,16 @@ Using 288 cpus on the Cycle Cloud Cluster, it would take 1 week to run a full ye
 (Note, spot nodes have not been tried yet in this tutorial.)
 
 
-Table 6. Extrapolated Cost of HBv3-120 used for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark
+Table 6. Extrapolated Cost for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark
 
-| Benchmark Case | Number of PES | Compute Nodes | Number of HBv3-120 Nodes | Pinning | Pricing    |   Cost per node | Time to completion (hour)   | Extrapolate Cost for Annual Simulation  | Annual Cost | Days to Complete Annual Simulation |  
-| -------------  | ------------  |  -------      | --------------- | -------    |  -------------- | ------------------          |  --------------------------------------------------    | --- | ---- | --- |
-| 2 day CONUS    |   96          |  HBv3-120  |        1       |    SPOT    | No |    .36/hour   | 7079.60/3600 = 1.96  |    1.96/2 * 365 = 359 hours/node * 1 node = 359 * $.36 = | $129 | 14.9 |
-| 2 day CONUS    |   96          |  HBv3-120  |        1       |  ONDEMAND  | No |    3.6/hour   | 7079.60/3600 = 1.96  |    1.96/2 * 365 = 359 hours/node * 1 node = 359 * $3.6 = | $1292 | 14.9 | 
-| 2 day CONUS    |  192          |  HBv3-120  |        2       |    SPOT    | No |    .36/hour   | 4269.40/3600 = 1.19   |    1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * $.36 = |  $155.8 | 9 |
-| 2 day CONUS    |  192          |  HBv3-120  |        2       |  ONDEMAND  | No |    3.6/hour   | 4269.40/3600 = 1.19   |    1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * $3.6 = |  $1558 | 9 | 
-| 2 day CONUS    |  288          |  HBv3-120  |        3       |    SPOT    | No |   .36/hour     |   3255.3/3600 = .904  |    .904/2 * 365 = 165 hours/node * 3 nodes = 495 * $.36  = |  $178.2 | 3.6 |
-| 2 day CONUS    |  288          |  HBv3-120  |        3       |  ONDEMAND  | No |   3.6/hour   | 3255.3/3600 = .904  |    .904/2 * 365 = 165 hours/node * 3 nodes = 257.3 * $3.6 = | $1782 | 3.6 |
-| 2 day CONUS    |  384          |  HBv3-120  |        4       |    SPOT    | No |   .36/hour     |   2830.70/3600 = .786  |    .786/2 * 365 = 143.5 hours/node * 4 nodes = 574 * $.36  = |  $206.7 | 3.11 |
-| 2 day CONUS    |  384          |  HBv3-120  |        4       |  ONDEMAND  | No |   3.6/hour   | 2830.70/3600 = .786  |    .786/2 * 365 = 143.5 hours/node * 4 nodes = 574 * $3.6 = | $2066 | 3.11 |
+| Benchmark Case | Number of PES | Compute Nodes | Number of Compute Nodes | Pinning | SPOT Price  | OnDemand Price   |   Cost per node | Time to completion (hour)   | Equation | Annual Cost Spot | Annual Cost OnDemand | Days to Complete Annual Simulation |  
+| -------------  | ------------  |  -------   | -------------- | ----- |  ---- | ---------- | ------------------          |  --------------------------------------------------    | --- | ---- | --- | --- |
+| 2 day 12US1    |   96          |  HB120_v3  |        1       |    .36 | 3.6    | No |   .36/hour |  3.6/hour | 7079.60/3600 = 1.96  | 1.96/2 * 365 = 359 hours/node * 1 node = 359 * (.36 or 3.6) = | $129 | $1292 | 14.9 |
+| 2 day 12US1    |  192          |  HB120_v3  |        2       |    .36 | 3.6    | No |    .36/hour | 3.6/hour | 4269.40/3600 = 1.19   | 1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * (.36 or 3.6) = |  $155.8 | $1558 |  9 |
+| 2 day 12US1    |  288          |  HB120_v3  |        3       |    .36 | 3.6    | No |   .36/hour  | 3.6/hour |   3255.3/3600 = .904  |.904/2 * 365 = 165 hours/node * 3 nodes = 495 * (.36 or 3.6)  = |  $178.2 | $1782 | 6.8 |
+| 2 day 12US1    |  384          |  HB120_v3  |        4       |    .36 | 3.6    | No |   .36/hour  | 3.6/hour |  2830.70/3600 = .786 | .786/2 * 365 = 143.5 hours/node * 4 nodes = 574 * (.36 or 3.6) = |  $206.7 | $2066 | 5.95 |
+| 2 day 12US1    |  160          |  HB176_v4  |        1       |    .41 | 7.2    | No |   .41/hour  | 7.2/hour | 4298.2/3600 = 1.19 | 1.19/2 * 365 = 217.9 hours/node * 1 node = 217.9 * (.41 or 7.2) = | $89.3 | $1569 || 4.53 | 
+| 2 day 12US1    |  320          |  HB176_v4  |        2       |   .41  | 7.2    | No |   .41/hour  | 7.2/hour | 3372.7/3600 = 0.94 | .94/2 * 365 = 171.55 hours/node * 2 node = 343.1 * (.41 or 7.2) = | $140.7 | #2470.3 |
 
 
 
