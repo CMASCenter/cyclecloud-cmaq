@@ -2,7 +2,7 @@ Performance Optimization for Cycle Cloud
 
 ## Right-sizing Compute Nodes for the CycleCloud
 
-Selection of the compute nodes depends on the domain size and resolution for the CMAQ case, the CMAQ Version, the model run time requirements, and the disks (beeond, lustre, or shared) used for input and output.
+Selection of the compute nodes (virtual machines) depends on the domain size and resolution for the CMAQ case, the CMAQ Version, the model run time requirements, and the disks (beeond, lustre, or shared) used for input and output.
 Larger hardware and memory configurations may also be required for instrumented versions of CMAQ incuding CMAQ-ISAM and CMAQ-DDM3D.
 The CycleCloud allows you to run the compute nodes only as long as the job requires, and you can also update the compute nodes as needed for your domain.
 
@@ -82,7 +82,7 @@ NUMA node0 CPU(s):   0-3
 
 Table 2. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv3-120 Compute Nodes (120 cpu per node), I/O on /mnt/beeond
 
-| Cores | Nodes | NodesxCores | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | VM Hours/day | SBATCHexclusive |   Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | cpuMhz |
+| Cores | Nodes | NodesxCores | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | Compute Node Hours/day | SBATCHexclusive |   Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | cpuMhz |
 | -----| ---- | -----------    | -----------   | ----------------     | ---------------      | ------------------- |  ------------------ |  ---------        |   -------- | --------- | ---------------      | -- | -- | -- | -- |
 | 96   | 1 |  1x96     |    8x12            |   3278.9            |  3800.7             |   7079.60   | .983 |  no | $.36/hr * 1 nodes * 1.966 hr = | .708   |  $3.6/hr * 1 nodes * 1.966 hr = |  7.077 |  without -march=native compiler flag | Beeond | 3021.872 |
 | 192  | 2 |   2x96    |    16x12           | 2027.8              |  2241.6             |   4269.40   | .593 |  no | $.36/hr * 2 nodes * 1.186 hr = | .854   | $3.6/hr * 2 nodes * 1.186 hr = | 8.54 | without -march=native compiler flag | Beeond | 3021.872 | 
@@ -102,14 +102,14 @@ Savings is ~ 90% for spot versus  ondemand pricing for HBv3-120 compute nodes.
 
 Table 3. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HBv2-120 Compute Nodes (120 cores per node), I/O on /mnt/beeond
 
-| Cores | Nodes | NodesxCore | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | VM Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
+| Cores | Nodes | NodesxCore | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | Compute Node Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
 | ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
 | 96  | 1   |   1x96   |    12x8        | 3400.95       | 3437.91  |   6838.86  | .950  |  no  |     $1.89/hr * 1 nodes * $.36 = | $.68 | 1.89/hr * 1 nodes * 3.6 = | 6.804   | no | Beeond | no |
 | 192 | 2   |   2x96   |    16x12       | 1954.62       | 1920.57  |   3875.19  | .538  | no     |   $1.07/hr * 2 nodes * $.36 =  | $.77 | 1.07/hr * 2 nodes * 3.6 = | 7.704   | no | Beeond | no |
 
 
 Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud with D12v2 schedulare node and HB176_v3 Compute Nodes (176 cores per node), I/O using Beeond
-| Cores | Nodes | NodesxCore | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | VM Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
+| Cores | Nodes | NodesxCore | COLROW | Day1 Timing (sec) | Day2 Timing (sec) | TotalTime | Compute Node Hours/day | SBATCHexclusive |  Equation using Spot Pricing | SpotCost | Equation using On Demand Pricing | OnDemandCost | compiler flag | InputData | Pin |
 | ---- | ----  | -----------   | ----------------     | ---------------      | ----------- | -----      | --------------          | ---------                              | --------- | ------ | ---------------      | --- | ---- | ---- | --- |
 | 160  | 1   |   1x176   |    16x10        | 2062.9       | 2235.3  |   4298.2  | 0.597  |  no  |     $1.19/hr * 1 nodes * $.41 = | $.4879 | 1.19/hr * 1 nodes * 7.2 = | 8.568   | no | beeond | no |
 | 320  | 2   |   2x176   |    16x20        | 1644.4       | 1728.3  |   3372.7  | 0.468  |  no  |     $.938/hr * 1 nodes * $.41 = | $.769 | .938/hr * 2 nodes * 7.2 = | 13.51   | no | beeond | no |
