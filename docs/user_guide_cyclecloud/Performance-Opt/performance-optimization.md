@@ -117,10 +117,7 @@ Table 4. Timing Results for CMAQv5.4+ 2 Day 12US1 (CONUS) Run on Cycle Cloud wit
 
 # Benchmark Scaling Plots using CycleCloud
 
-## Benchmark Scaling Plot for CycleCloud using HB120rs_v3 (Lustre) Compute Nodes
-
 Note: the numbers on the plot surrounded by a box indicates the number of Compute Nodes or Virtual Machines.
-
 
 Figure 1. Plot of Scaling per Core 
 
