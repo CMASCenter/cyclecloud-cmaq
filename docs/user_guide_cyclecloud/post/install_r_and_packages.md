@@ -105,6 +105,7 @@ install.packages("stringr")
 install.packages("patchwork")
 install.packages("dplyr")
 install.packages("jpeg")
+install.packages("ggrepel")
 ```
 
 Had an issue installing ncdf4
