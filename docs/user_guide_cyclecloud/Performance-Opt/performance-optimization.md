@@ -153,14 +153,14 @@ Using 288 cpus on the Cycle Cloud Cluster, it would take 1 week to run a full ye
 
 Table 6. Extrapolated Cost for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark, without pinning
 
-| Compute Nodes |  # Compute Nodes | #Cores | SPOT Price | OnDemand Price | 2 day benchark time seconds / (60sec/min*60min/hr) | Equation | Annual Cost Spot | Annual Cost OnDemand | Days to Complete Annual Simulation |  
-| --------  | ---- | ----  | --------- |  -------- |  --------------------------- | ---------------------------------------------------------------------------------------------     |  ---- | ----- | --- |
-|  HB120_v3 |  1 |  96 |  .36/hour |  3.6/hour | 7079.60/3600 = 1.96  | 1.96/2 * 365 = 359 hours/node * 1 node = 359 * (.36 or 3.6) = | $129 | $1292 | 14.9 |
-|  HB120_v3 | 2  | 192 | .36/hour  | 3.6/hour | 4269.40/3600 = 1.19  | 1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * (.36 or 3.6) = |  $155.8 | $1558 |  9 |
-|  HB120_v3 | 3  | 288 | .36/hour  | 3.6/hour |   3255.3/3600 = .904 |.904/2 * 365 = 165 hours/node * 3 nodes = 495 * (.36 or 3.6)  = |  $178.2 | $1782 | 6.8 |
-|  HB120_v3 | 4  | 384 | .36/hour  | 3.6/hour |  2830.70/3600 = .786 | .786/2 * 365 = 143.5 hours/node * 4 nodes = 574 * (.36 or 3.6) = |  $206.7 | $2066 | 5.95 |
-|  HB176_v4 | 1  | 160 | .41/hour  | 7.2/hour | 4298.2/3600 = 1.19 | 1.19/2 * 365 = 217.9 hours/node * 1 node = 217.9 * (.41 or 7.2) = | $89.3 | $1569 | 9.04` | 
-|  HB176_v4 | 2  | 320 | .41/hour  | 7.2/hour | 3372.7/3600 = 0.94 | .94/2 * 365 = 171.55 hours/node * 2 node = 343.1 * (.41 or 7.2) = | $140.7 | $2470.3 | 7.2 |
+| Compute Nodes |  # Compute Nodes | #Cores | SPOT Price/hr | OnDemand Price | 2 day time seconds | 2 day time hours | Annual Cost Equation | Total CPU hours | Annual Cost Spot | Annual Cost OnDemand | Days to Complete Annual Simulation |  
+| --------  | -- | --  | ----- |  ---- |  ------ | ------ | ----------------------------------------------- |  ---- | ----- | --- | ----    |
+|  HB120_v3 |  1 |  96 |  $.36 |  $3.6 | 7079.60 |  1.96  | 1.96/2 * 365 = 359 hours/node * 1 node | 359    | $129 | $1292 | 14.9 |
+|  HB120_v3 | 2  | 192 |  $.36  | $3.6 | 4269.40 |  1.19  | 1.19/2 * 365 = 216 hours/node * 2 nodes | 432   |  $155.8 | $1558 |  9 |
+|  HB120_v3 | 3  | 288 |  $.36  | $3.6 | 3255.3  | .904 |.904/2 * 365 = 165 hours/node * 3 nodes    | 495   |  $178.2 | $1782 | 6.8 |
+|  HB120_v3 | 4  | 384 |  $.36 | $3.6  |  2830.70 | .786 | .786/2 * 365 = 143.5 hours/node * 4 nodes | 574  |  $206.7 | $2066 | 5.95 |
+|  HB176_v4 | 1  | 160 |  $.41  | $7.2 | 4298.2   |  1.19 | 1.19/2 * 365 = 217.9 hours/node * 1 node | 218  | $89.3 | $1569 | 9.04` | 
+|  HB176_v4 | 2  | 320 |  $.41  | $7.2 | 3372.7 | 0.94 | .94/2 * 365 = 171.55 hours/node * 2 node = |  343 | $140.7 | $2470.3 | 7.2 |
 
 
 
