@@ -153,8 +153,8 @@ Using 288 cpus on the Cycle Cloud Cluster, it would take 1 week to run a full ye
 
 Table 6. Extrapolated Cost for CMAQv5.4 Annual Simulation based on 2 day 12US1 CONUS benchmark, without pinning
 
-| Compute Nodes |  # Compute Nodes | #Cores | SPOT Price  | OnDemand Price | 2 day benchark time seconds / (60sec/min*60min/hr) | Equation | Annual Cost Spot | Annual Cost OnDemand | Days to Complete Annual Simulation |  
-| --------  | -- | --  | --------- |  -------- |  ------------------- | --------------------------------------------------------     |  ---- | ----- | --- |
+| Compute Nodes |  # Compute Nodes | #Cores | SPOT Price | OnDemand Price | 2 day benchark time seconds / (60sec/min*60min/hr) | Equation | Annual Cost Spot | Annual Cost OnDemand | Days to Complete Annual Simulation |  
+| --------  | ---- | ----  | --------- |  -------- |  --------------------------- | ---------------------------------------------------------------------------------------------     |  ---- | ----- | --- |
 |  HB120_v3 |  1 |  96 |  .36/hour |  3.6/hour | 7079.60/3600 = 1.96  | 1.96/2 * 365 = 359 hours/node * 1 node = 359 * (.36 or 3.6) = | $129 | $1292 | 14.9 |
 |  HB120_v3 | 2  | 192 | .36/hour  | 3.6/hour | 4269.40/3600 = 1.19  | 1.19/2 * 365 = 216 hours/node * 2 nodes = 432 * (.36 or 3.6) = |  $155.8 | $1558 |  9 |
 |  HB120_v3 | 3  | 288 | .36/hour  | 3.6/hour |   3255.3/3600 = .904 |.904/2 * 365 = 165 hours/node * 3 nodes = 495 * (.36 or 3.6)  = |  $178.2 | $1782 | 6.8 |
