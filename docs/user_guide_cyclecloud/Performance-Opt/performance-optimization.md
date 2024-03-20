@@ -135,20 +135,7 @@ Figure 3. Plot of On Demand Cost versus Total Time for HB120_v3 and HB176_v4
 
 Note CMAQ scales well up to ~ 288 processors for the CONUS domain.  As more processors are added beyond 288 processors, the CMAQ gets less efficient at using all of them.
 
-
-Cost by Instance Type - update for Azure 
-
-![Azure Cost Management Console - Cost by Instance Type](../../qa_plots/cost_plots/Azure_Bench_Cost.png)
-
-Figure 13. Cost by Usage Type - Azure Console
-
-![Azure Cost Management Console - Cost by Usage Type](../../qa_plots/cost_plots/Azure_Bench_Usage_Type_Cost.png)
-
-Figure 14. Cost by Service Type - Azure Console
-
-![Azure Cost Management Console - Cost by Service Type](../../qa_plots/cost_plots/Azure_Bench_Service_Type_Cost.png)
-
-Scheduler node D12v2 compute cost = entire time that the CycleCloud HPC Cluster is running ( creation to deletion) = 6 hours * $0.?/hr = $ ? using spot pricing, 6 hours * $?/hr = $? using on demand pricing.
+Scheduler node D12v2 compute cost = Will be charged for the scheduler for the entire time that the CycleCloud HPC Cluster is running ( creation to deletion) = 6 hours * $0.?/hr = $ ? using spot pricing, 6 hours * $?/hr = $? using on demand pricing.
 
 ## Annual Run Estimates
 
@@ -174,13 +161,16 @@ Table 5. Extrapolated Cost for CMAQv5.4 Annual Simulation based on 2 day 12US1 C
 <a href="https://azure.microsoft.com/en-us/pricing/details/managed-disks/">Azure SSD Disk Pricing</a>
 
 
-Table 7. Shared SSD File System Pricing
+Table 6. Shared SSD File System Pricing
 
 | Storage Type | Storage throughput   | 	Max IOPS (Max IOPS w/ bursting)	| Pricing (monthly)  |  Pricing | Price per mount per month (Shared Disk) |
 | --------     | ----------------  |   ------------------------------------    | -----------------  |  ---------------  | ------  |
 | Persistant 1TB  | 200 MB/s/TB       | 	5,000 (30,000)                                  |	$122.88/month |  $6.57                 |
 
 ## Lustre File System Pricing
+
+Table 7. Lustre File System Pricing
+*note, there isn't currently a method that starts and stops the Lustre Filesystem as part of the CycleCloud start and stop, so there is a danger of leaving the lustre file system on for long periods of time. It is recommended that you use the Beeond Filesystem, where we get similar performance, but at zero cost.
 
 
 |  Storage Type | Storage throughput | Storage Capacity Availability (in multiples of) | Cost per GiB/hr  |Cost/month for minimum capacity available |
@@ -199,7 +189,7 @@ Calculations: <br>
 
 
 
-Table 8. Extrapolated Cost of File system for CMAQv5.4 Annual Simulation based on 2 day CONUS benchmark
+Table 7. Extrapolated Cost of File system for CMAQv5.4 Annual Simulation based on 2 day CONUS benchmark
 
 
 Need to create table
