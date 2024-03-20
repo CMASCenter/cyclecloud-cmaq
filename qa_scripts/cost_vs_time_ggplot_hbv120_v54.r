@@ -1,6 +1,7 @@
 library(ggplot2)
 library(patchwork) # To display 2 charts together
 library(dplyr)
+library(ggrepel)
 
 # Script author: Liz Adams
 # Affiliation: UNC CMAS Center 
@@ -25,11 +26,10 @@ bad_rows <-
 csv_data2 <-  subset(csv_data, ComputeNode=="HB120rs_v3")
 
 
-p1 <- ggplot(csv_data2[!bad_rows,], aes(y=OnDemandCost, x=TotalTime, size=cpuMhz, color=InputData)) +
-    geom_point() + ggtitle("2 Day Benchmark OnDemandCost versus Total Time") + scale_y_continuous(name = "OnDemand Cost ($)") + stat_smooth(method="lm")
-
-p2 <- ggplot(csv_data2[!bad_rows,], aes(y=TotalTime, x=CPUs, size=cpuMhz, color=InputData)) +
-    geom_point() + ggtitle("2 Day Benchmark TotalTime versus CPUs") + scale_y_continuous(name = "TotalTime (sec)") + stat_smooth(method="lm")
+p1 <- ggplot(csv_data[!bad_rows,], aes(y=OnDemandCost, x=TotalTime, group=interaction(ComputeNode,InputData), color=interaction(ComputeNode,InputData), shape=ComputeNode )) +
+    geom_point() + ggtitle("2 Day Benchmark OnDemandCost versus Total Time") + scale_y_continuous(name = "OnDemand Cost ($)") + stat_smooth(method="lm") + geom_point(size=3.0) + geom_label_repel(aes(label = Nodes))
+p2 <- ggplot(csv_data[!bad_rows,], aes(y=TotalTime, x=CPUs, group=interaction(ComputeNode,InputData), color=interaction(ComputeNode,InputData), shape=ComputeNode)) +
+    geom_point() + ggtitle("2 Day Benchmark TotalTime versus CPUs") + scale_y_continuous(name = "TotalTime (sec)") + stat_smooth(method="lm") + geom_point(size=3.0)  + geom_label_repel(aes(label = Nodes))
 
 # Display both charts side by side thanks to the patchwork package
 p1 + p2
