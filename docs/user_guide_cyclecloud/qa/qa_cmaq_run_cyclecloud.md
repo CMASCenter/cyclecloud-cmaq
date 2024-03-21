@@ -114,6 +114,7 @@ output
 
 ### If CMAQ were compiled with -march=native, then you would see differences in the output if NPCOL was different, see previous version of this tutorial for more information
 
+## R analysis scripts
 
 ### Run the following R script to create box plots and spatial plots showing difference between two CMAQ runs. 
 
@@ -172,7 +173,7 @@ Box plot shows no difference between ACONC output for a CMAQv5.4 run using diffe
 
 Spatial plots were not created by the script, as there were not differences between the output files.
 
-### Use Jupyter Notebook to plot the daily average of O3 and NO2.
+## Use Jupyter Notebook to plot the daily average of O3 and NO2.
 
 ```
 cd /shared/cyclecloud-cmaq/notebook
