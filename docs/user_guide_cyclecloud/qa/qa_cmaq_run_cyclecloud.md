@@ -175,7 +175,7 @@ Spatial plots were not created by the script, as there were not differences betw
 ### Use Jupyter Notebook to plot the daily average of O3 and NO2.
 
 ```
-cd /shared/cyclecloud/notebook
+cd /shared/cyclecloud-cmaq/notebook
 juptyer notebook
 ```
 
