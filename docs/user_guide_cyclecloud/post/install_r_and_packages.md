@@ -46,6 +46,9 @@ sudo yum groupinstall "Development Tools" -y
 sudo yum install ImageMagick -y
 sudo yum install ImageMagick-devel -y
 sudo yum install xauth -y
+sudo yum install firefox -y 
+sudo yum install  mesa-libGL -y
+
 ```
 
 Logout and then log back in using the ssh -option -Y
