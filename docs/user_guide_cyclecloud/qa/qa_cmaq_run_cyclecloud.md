@@ -171,3 +171,23 @@ Box plot shows no difference between ACONC output for a CMAQv5.4 run using diffe
 
 
 Spatial plots were not created by the script, as there were not differences between the output files.
+
+Use Jupyter Notebook to plot the daily average of O3 and NO2.
+
+```
+cd /shared/cyclecloud/notebook
+juptyer notebook
+```
+
+You will need to edit the path to the file, and the filenames.
+Output:
+
+![Mean_O3_20171222.png](../../qa_plots/notebook/Mean_O3_20171222.png)
+
+![Mean_NO2_20171222.png](../../qa_plots/notebook/Mean_NO2_20171222.png)
+
+
+
+
+~[
+
