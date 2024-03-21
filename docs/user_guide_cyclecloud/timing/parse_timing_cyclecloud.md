@@ -82,7 +82,7 @@ Timing Plot Comparing Total Run Time of CMAQv5.4 on 1, 2, 3, 4 Compute Nodes usi
 
 Note: Click on Full Screen to see plot (icon in lower right corner, see icon circled in red in the image below the plot)
 ```{image}
-[Click on Full Screen Icon highlighted in red](../../Click_on_Fullscreen.png)
+../../Click_on_Fullscreen.png
 :align: right
 ```
 
