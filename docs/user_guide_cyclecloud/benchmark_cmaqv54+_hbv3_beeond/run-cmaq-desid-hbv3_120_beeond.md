@@ -200,6 +200,16 @@ Output
         NY:var_desc = "NY fractional area per grid cell
 ```
 
+### Edit the output directory name in the 
+
+
+```csh
+# need to make the output directory prior to the beeond-cp
+mkdir -p /shared/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_DESID_REDUCE/LOGS
+
+beeond-cp stagein -n ~/nodefile-$SLURM_JOB_ID -g /shared/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_DESID_REDUCE -l /mnt/beeond/data/output/output_v54_cb6r5_ae7_aq_WR413_MYR_gcc_2018_12US1_DESID_REDUCE
+```
+
 ### Run CMAQ using DESID
 
 ```{note}
@@ -243,7 +253,7 @@ htop
 ![ec2-user](/static/images/2-run-cmaq-htop.png)
 
 After the beeond copy copies the input data from /shared/data to the /mnt/beeond/data then CMAQ should start running.
-Htop should show that 96 processes are running and that 80.2G out of 124 G of memory is being used.
+Htop should show that 96 processes are running and that 62G out of 756 G of memory is being used.
 ~                                                                                                                
 
 ### Review Log file from DESID run
