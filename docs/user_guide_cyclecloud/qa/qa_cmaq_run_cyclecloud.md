@@ -189,6 +189,12 @@ Output:
 
 ![Mean_NO2_20171222.png](../../qa_plots/notebook/Mean_NO2_20171222.png)
 
+### Use Jupyter Notebook to plot the averges, average differences difference and average percent differences
+
+This notebook produces a panel of plots per species where the top two plots are averages and then the bottom two are average differences and average percent differences
+
+
+
 
 
 
