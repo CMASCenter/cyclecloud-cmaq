@@ -66,7 +66,6 @@ Modify the following section to use the NY region that is specified in the CMAQ_
 
   StreamFamilyName(2)     = 'PT_EGUS'
   StreamFamilyMembers(2,1:1)= 'PT_EGU'
-&Desid_Diag
 ```
 
 5. **activate DESID diagnostics to report the reduction in PT_EGU emissions.**
@@ -108,20 +107,26 @@ diff CMAQ_Control_DESID_RED_EGU_POINT_NY.nml /shared/pcluster-cmaq/qa_scripts/wo
 1. **Copy the Run script and edit it to use the DESID namelist files**
 
 ```csh
-cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc
+cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/
 cp run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.csh run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic_DESID_RED_NY.csh
 ```
 
 2. **Change APPL to a new name**
 
 ```csh
-set APPL      = 12US1_DESID_REDUCE        #> Application Name (e.g. Gridname)
+vi run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic_DESID_RED_NY.csh
+```
+
+Change APPL
+
+```csh
+set APPL      = 2018_12US1_DESID_REDUCE        #> Application Name (e.g. Gridname)
 ```
 
 3. **Verify the following emission stream names match the names used in the DESID namelist.**
 
 ```csh
-grep STK_EMIS_LAB_00 ../run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic_DESID_RED_NY.csh
+grep STK_EMIS_LAB_00 run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic_DESID_RED_NY.csh
 ```
 
 Output
@@ -141,7 +146,7 @@ setenv STK_EMIS_LAB_009 PT_CMV_C1C2
 4. **Compare the above settings to those used in the Emission Stream Family defined in the DESID Namelist.**
 
 ```csh
-grep -A 2 -B 2 StreamFamilyMembers CMAQ_Control_DESID_RED_EGU_POINT_NY.nml
+grep -A 2 -B 2 StreamFamilyMembers ./BLD_CCTM_v54_gcc/CMAQ_Control_DESID_RED_EGU_POINT_NY.nml
 ```
 
 
@@ -162,7 +167,7 @@ CMAQ won’t crash if the stream name in CMAQ_Control_DESID_<MECH>_RED_EGU_POINT
 5. **Update the DESID namelist file names in the run script to use the Reduced PT_EGU and diagnostic instructions.**
 
 ```csh
-cd  /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts/BLD_CCTM_v54_gcc
+cd  /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
 vi run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic_DESID_RED_NY.csh 
 ```
 
@@ -177,13 +182,13 @@ setenv DESID_CHEM_CTRL_NML ${BLD}/CMAQ_Control_DESID_${MECH}_RED_EGU_POINT_NY.nm
 
 ```csh
 #> Spatial Masks For Emissions Scaling
-  setenv CMAQ_MASKS $SZpath/GRIDMASK_STATES_12US1_m3clple_12listos.ncf
+  setenv CMAQ_MASKS $SZpath/GRIDMASK_STATES_12US1.nc
 ```
 
 7. **Verify that the file contains New York**
 
 ```csh
-ncdump /shared/build/GRIDMASK/GRIDMASK_STATES_12US1.nc | grep NY
+ncdump /shared/data/2018_12US1/surface/GRIDMASK_STATES_12US1.nc | grep NY
 ```
 
 Output
@@ -210,7 +215,7 @@ cd /shared/build/openmpi_gcc/CMAQ_v54/CCTM/scripts
 
 2. **Submit the Run script to the SLURM queue**
 ```csh
-sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic.DESID_RED_NY.csh
+sbatch run_cctm_2018_12US1_v54_cb6r5_ae6.20171222.2x96.ncclassic_DESID_RED_NY.csh
 ```
 
 3. **Check the status of the job**
@@ -222,6 +227,7 @@ squeue
 Output
 
 ```
+                 1       hpc     CMAQ lizadams CF       0:11      2 beeondtest2-hpc-[1-2]
 ```
 
 Wait for the status to change from CF to R
@@ -236,7 +242,8 @@ htop
 
 ![ec2-user](/static/images/2-run-cmaq-htop.png)
 
-Htop should show that 64 processes are running and that 80.2G out of 124 G of memory is being used.
+After the beeond copy copies the input data from /shared/data to the /mnt/beeond/data then CMAQ should start running.
+Htop should show that 96 processes are running and that 80.2G out of 124 G of memory is being used.
 ~                                                                                                                
 
 ### Review Log file from DESID run
