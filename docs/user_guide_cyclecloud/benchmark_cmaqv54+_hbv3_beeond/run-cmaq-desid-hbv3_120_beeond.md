@@ -1,4 +1,4 @@
-# Run DESID CMAQ on hbv3_120
+# Run DESID CMAQ on hbv3_120 using the beeond filesystem
 
 ## Run CMAQ for DESID
 
