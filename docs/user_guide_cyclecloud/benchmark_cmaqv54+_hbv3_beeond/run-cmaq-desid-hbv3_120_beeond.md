@@ -245,15 +245,15 @@ Wait for the status to change from CF to R
 4. **Login to the compute node, install  and run htop**
 
 ```csh
-ssh -Y compute-dy-hpc7g-1
+ssh -Y IP-address
 sudo yum install -y htop
 htop
 ```
 
-![ec2-user](/static/images/2-run-cmaq-htop.png)
+![htop screenshot](../../azure_web_interface_images/hb120v3_cmaq_htop.png)
 
 After the beeond copy copies the input data from /shared/data to the /mnt/beeond/data then CMAQ should start running.
-Htop should show that 96 processes are running and that 62G out of 756 G of memory is being used.
+Htop should show that 96 processes are running and that 96G out of 756 G of memory is being used.
 ~                                                                                                                
 
 ### Review Log file from DESID run
