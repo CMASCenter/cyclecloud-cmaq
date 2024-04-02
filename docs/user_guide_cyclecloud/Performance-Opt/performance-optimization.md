@@ -218,6 +218,7 @@ Also need estimate for Archive Storage cost for storing an annual simulation
 
 
 * Assuming that you have an anual simulation turn-around time requirement of < 8 days (less than 3787 seconds for 2 day benchmark)
+* Assuming you have the scheduler and filesystems available for 2 * the length of the compute node time for building CMAQ, installing input data, and copying output data to S3 bucket.
 * Note, SPOT pricing is not available for AWS hpc7g.16xlarge
 * Note, SPOT pricing is not recomended for the scheduler node
 *Note, instructions for how to use SPOT pricing on Azure are not yet available 
