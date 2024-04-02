@@ -186,17 +186,9 @@ Calculations: <br>
 4000 GiB (4.3 TB) x 730 Hours x 0.000466Per GiB/hour = $1361 / month <br>
 
 
-
-
-Table 7. Extrapolated Cost of File system for CMAQv5.4 Annual Simulation based on 2 day CONUS benchmark
-
-
-Need to create table
-
-
-Also need estimate for Archive Storage cost for storing an annual simulation
-
 ### CycleCloud and ParallelCluster Price Comparison of Cost Estimate for Annual Simulation (Filesystem + Compute)
+
+Table 8. Price Estimate for Annual Simulation (Filesystem + Compute)
 
 | Vendor | Cluster Name | Resource Type | Virtual Machine | Nodes | Cores | Minimum Storage Size (GB) | Storage Hourly Price | SPOT $/hr | OnDemand $/hr | CMAQv5.4 two-day runtime (sec) | CMAQv5.4 two-day runtime (hr) | Annual Cost Equation | Total Time (hr/node) | Annual Cost Spot | Annual Cost OnDemand | Storage Cost NFS | Storage Cost Lustre | Storage Cost Beeond | Days to Complete Annual Simulation | Total Cost for Annual Run (Lustre, Compute Node, Scheduler, NFS Storage) | Total Cost for Annual Run (Beeond, Compute Node, Scheduler, NFS Storage) | Cost Savings of using Beeond Filesystem |
 | ----   | -----------  | ------------  | --------------  | ----- | ----  | -----------------------   | -------------------  | --------  | ------------  | ----------------------------   | ----------------------------  | -------------------  | -------------------  | ---------------  | -------------------  | ---------------  | ------------------  | ------------------  |  ------------------------------    |  ------------------------------- | ------------ | ----- |
