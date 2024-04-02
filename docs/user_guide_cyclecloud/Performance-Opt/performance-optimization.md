@@ -196,6 +196,17 @@ Need to create table
 
 Also need estimate for Archive Storage cost for storing an annual simulation
 
+### Comparison of CycleCloud and ParallelCluster Pricing (Filesystem + Compute)
+
+| Vendor | Cluster Name | Resource Type | Virtual Machine | Nodes | Cores | Minimum Storage Size (GB) | Storage Hourly Price | SPOT $/hr | OnDemand $/hr | CMAQv5.4 two-day runtime (sec) | CMAQv5.4 two-day runtime (hr) | Annual Cost Equation | Total Time (hr/node) | Annual Cost Spot | Annual Cost OnDemand | Storage Cost NFS | Storage Cost Lustre | Storage Cost Beeond | Days to Complete Annual Simulation | Total Cost for Annual Run (Lustre, Compute Node, Scheduler, NFS Storage) | Total Cost for Annual Run (Beeond, Compute Node, Scheduler, NFS Storage) |
+| ----   | -----------  | ------------  | --------------  | ----- | ----  | -----------------------   | -------------------  | --------  | ------------  | ----------------------------   | ----------------------------  | -------------------  | -------------------  | ---------------  | -------------------  | ---------------  | ------------------  | ------------------  |  ------------------------------    |  ------------------------------- | ------------ |
+| Azure  |  CycleCloud  | Compute       | HB120_v3        | 3     | 288   |                          |                       | $0.36     | $3.60         | 3255.3                         | 0.90425                       | .904/2 * 365 = 165 hours/node * 3 nodes | 165.025 | $178.23    | $1,782               |            |                           |                     |   6.876067708                      | $2,154.214804                                                   | $1,847 |   
+| Azure  |  CycleCloud  | Login         | Standard_D8as_v4 | 1    | 8     |                          |                     | N/A         | $0.0048       | 6510.6                                  | 1.8085               | 1.388/2*365 = 253 * 1 node= | 330.05125           | N/A           | $2                |   |  |  |  |  |
+| Azure  |  CycleCloud  | Scheduler     |  Standard_D4s_v3 | 1    |  4    |                          |                     | N/A         | $0.19         | 6510.6                                  | 1.8085               | 1.388/2*365 = 253 * 1 node= | 330.05125           | N/A           | $63               |   |  |  |  |  |
+| Azure  |  CycleCloud  | NFS Storage   | Premium SSD LRS  |      |       |  1                       | $0.0001100          |             |               |                                         |                      |                             |                     |               |   $0.0363056     |                | | | | |
+| Azure  |  CycleCloud  | Lustre Storage| Ultra tier (500 MB/s/TiB) | | | 4000                       | $0.000466           |             |               |                                         |                      |                             |                     |               |                  |                 | $307.607765 | | | | |
+| Azure | CycleCloud    | Beeond        | 2 * 960 GB NVMe (block) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  $0 | | | | 
+
 
 ### Recommended Workflow
 
