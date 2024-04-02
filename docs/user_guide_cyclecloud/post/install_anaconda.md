@@ -19,3 +19,12 @@ set path = ($path /shared/build/anaconda3/bin)
 # The base environment is activated by default
 conda config --set auto_activate_base True
 ```
+
+
+Install additional packages
+
+```
+conda install netcdf4
+conda install pyproj
+conda install cartopy
+```
