@@ -195,6 +195,4 @@ This notebook produces a panel of plots per species where the top two plots are 
 
 ![Average_Difference.png](../../qa_plots/notebook/PM25_NO3_average_difference_between_CMAQv54_vs_DESID.png)
 
-![PM25_NO3_avg_diff_between_CMAQv54_vs_DESID_25_perc_reduction_in_NY.png](../../qa_plots/notebook/PM25_NO3_avg_diff_between_CMAQv54_vs_DESID_25_perc_reduction_in_NY.png)
 
-test
