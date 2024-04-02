@@ -1,6 +1,6 @@
 ## Install Anaconda on the /shared/build directory 
 
-Follow instructions available here: https://docs.anaconda.com/free/anaconda/install/linux/
+Follow instructions available here: <a href="https://docs.anaconda.com/free/anaconda/install/linux/">Install Anaconda on Linux</a>
 
 
 cd /shared/build/
