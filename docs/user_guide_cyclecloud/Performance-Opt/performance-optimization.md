@@ -207,7 +207,7 @@ Also need estimate for Archive Storage cost for storing an annual simulation
 | Azure  |  CycleCloud  | Lustre Storage| Ultra tier (500 MB/s/TiB) | | | 4000                       | $0.000466           |             |               |                                         |                      |                             |                     |               |                  |                 | $307.607765 | | | | | | 
 | Azure | CycleCloud    | Beeond        | 2 * 960 GB NVMe (block) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  $0 | | | |  |
 |       |               |               |                         |  |  |  |  |  |  |  |  |  |  |  |  |  |  |     | | | |  |
-| AWS   | ParallelCluster | Compute     | hpc7g.16xlarge  | 3     | 192   |                          |                     | N/A         | $1.68         | 3509.8                          | 0.9749444444                 | .9749/2 * 365 | 177.9273611 | N/A | $898 |     |   |   |  7.4 | **$1,006** | $81.9 |
+| AWS   | ParallelCluster | Compute     | hpc7g.16xlarge  | 3     | 192   |                          |                     | N/A         | $1.68         | 3509.8                          | 0.9749444444                 | .9749/2 * 365 | 177.9273611 | N/A | $898 |     |   |   |  7.4 | **$1,006** | |  $81.9 |
 | AWS   |  ParallelCluster | Scheduler  | c7g.large | 1  | 2  |   |   |  N/A  | $0.07 | 7019.6 | 1.949888889 | 1.949/2*365= | 355.8547222 | N/A  | $25.73  |  |  |  |  |  |  | |
 | AWS   |   ParallelCluster | Shared Storage | EBS: GP3 |  |  |  1  | $0.00010959 |  |  |  |  |  |  |  |  |  $0.03899812 | |  |  |  |  | |
 | AWS   |  ParallelCluster  | Lustre  | Scratch SSD 200 MB/s/TiB |  |  |  1200  | $0.00019178 |  |  |  |  |  |  |  |  |  |  $40.94749118 | |  |  |  |  |
