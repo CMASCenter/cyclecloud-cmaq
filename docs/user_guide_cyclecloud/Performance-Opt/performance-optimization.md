@@ -225,6 +225,8 @@ Also need estimate for Archive Storage cost for storing an annual simulation
 * Note, Lustre Filesystem is created before Azure CycleCloud, and would need manual deletion after the run, recommend using Beeond Filesystem due to level of difficulty of provisioning Lustre Filesystem on CycleCloud
 * Assuming that you have the scheduler node running 2x longer than the compute nodes
 
+Parallel Cluster Performance Timings and Cost Estimates are available from the CMAQ on AWS Tutorial <a href="https://pcluster-cmaq.readthedocs.io/en/latest/user_guide_pcluster/Performance-Opt/performance-optimization.html#compute-node-cost-estimate">ParallelCluster Cost Estimate</a>
+
 ### Recommended Workflow
 
 Post-process monthly save output and/or post-processed outputs to archive storage at the end of each month.
