@@ -193,5 +193,6 @@ Output:
 
 This notebook produces a panel of plots per species where the top two plots are averages and then the bottom two are average differences and average percent differences
 
-![Average_Difference](../../qa_plots/notebook/PM25_NO3_average_difference_between_CMAQv54_vs_DESID_25%_reduction_in_NY_EGU.png)
+![Average_Difference.png](../../qa_plots/notebook/PM25_NO3_average_difference_between_CMAQv54_vs_DESID.png)
 
+test
