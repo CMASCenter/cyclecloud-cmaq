@@ -213,19 +213,17 @@ Also need estimate for Archive Storage cost for storing an annual simulation
 | AWS   |  ParallelCluster  | Lustre  | Scratch SSD 200 MB/s/TiB |  |  |  1200  | $0.00019178 |  |  |  |  |  |  |  |  |  |  $40.94749118 | |  |  |  |  |
 
 
-### ParallelCluster Price Estimate for Annual Simulation (Filesystem + Compute)
-
-
+### Assumptions for Price Estimate for Annual Simulation (Filesystem + Compute)
 
 * Assuming that you have an anual simulation turn-around time requirement of < 8 days (less than 3787 seconds for 2 day benchmark)
 * Assuming you have the scheduler and filesystems available for 2 * the length of the compute node time for building CMAQ, installing input data, and copying output data to S3 bucket.
 * Note, SPOT pricing is not available for AWS hpc7g.16xlarge
 * Note, SPOT pricing is not recomended for the scheduler node
-*Note, instructions for how to use SPOT pricing on Azure are not yet available 
-*Note, have not replicated using the Beeond Filesystem on AWS
-*Note, assuming Lustre Filesystem is used at least as long as the scheduler node
-*Note, Lustre Filesystem is created before Azure CycleCloud, and would need manual deletion after the run, recommend using Beeond Filesystem due to level of difficulty of provisioning Lustre Filesystem on CycleCloud
-*Assuming that you have the scheduler node running 2x longer than the compute nodes
+* Note, instructions for how to use SPOT pricing on Azure are not yet available 
+* Note, have not replicated using the Beeond Filesystem on AWS
+* Note, assuming Lustre Filesystem is used at least as long as the scheduler node
+* Note, Lustre Filesystem is created before Azure CycleCloud, and would need manual deletion after the run, recommend using Beeond Filesystem due to level of difficulty of provisioning Lustre Filesystem on CycleCloud
+* Assuming that you have the scheduler node running 2x longer than the compute nodes
 
 ### Recommended Workflow
 
