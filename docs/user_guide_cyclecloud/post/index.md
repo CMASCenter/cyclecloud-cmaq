@@ -6,4 +6,5 @@ Instructions to install R and packages for QA of CMAQ difference in output betwe
 ```{toctree}
 post-process-cyclecloud.md
 install_r_and_packages.md
+install_anaconda.md
 ```
