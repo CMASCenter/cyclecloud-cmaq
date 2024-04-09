@@ -66,4 +66,4 @@ html_last_updated_fmt = '%Y-%m-%d %H:%M:%S %z'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 def setup(app):
-   app.add_css_file("css/custom.css")
+   app.add_css_file("_static/css/custom.css")
