@@ -67,3 +67,4 @@ html_last_updated_fmt = '%Y-%m-%d %H:%M:%S %z'
 html_static_path = ['_static']
 def setup(app):
    app.add_css_file("stylesheet.css")
+   app.add_css_file("custom.css")
