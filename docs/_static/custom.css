@@ -1,5 +1,6 @@
 section {
     text-align: justify;
+    max-width: none;
 }
 .wy-nav-content {
     padding: 1.618em 1.236em;
