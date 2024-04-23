@@ -2,6 +2,7 @@ section {
     text-align: justify;
 }
 .wy-nav-content {
-    max-width: 1200px !important;
+    padding: 1.618em 3.236em;
+    height: 100%;
+    margin: auto;
 }
-
