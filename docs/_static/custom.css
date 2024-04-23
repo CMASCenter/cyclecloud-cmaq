@@ -3,6 +3,7 @@ section {
 }
 .wy-nav-content {
     padding: 1.618em 1.236em;
+    max-width: none;
     height: 100%;
     margin: auto;
 }
