@@ -91,7 +91,7 @@ for( comp in Compilers) {
    #my.colors <- terrain.colors(length(n.proc))
    xmax <- dim(bar.data)[2]*1.5
    #png(file = paste('lustre3_1-6nodes_',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   pdf(file = paste('lustre3_1-6nodes_',comp,'_all',sens.name,'_',base.name,'.pdf',sep=''), width = 1024, height = 768, bg='white')
+   pdf(file = paste('lustre3_1-6nodes_',comp,'_all',sens.name,'_',base.name,'.pdf',sep=''), width = 9, height = 7, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
    barplot(bar.data, main = 'Process Timing on /lustre 250 using 1-6 nodes with 96 cpus/node on HB120v3 with pinning',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
    box()
