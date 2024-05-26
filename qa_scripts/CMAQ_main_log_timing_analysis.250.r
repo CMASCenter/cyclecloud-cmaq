@@ -6,8 +6,8 @@
 library(RColorBrewer)
 library(stringr)
 
-sens.dir  <- '/shared/cyclecloud-cmaq/run_scripts/CycleCloud_HB120v3_lustre3_250/'
-base.dir  <- '/shared/cyclecloud-cmaq/run_scripts/CycleCloud_HB120v3_lustre3_250/'
+sens.dir  <- '../../cyclecloud-cmaq/run_scripts/CycleCloud_HB120v3_lustre3_250/'
+base.dir  <- '../../cyclecloud-cmaq/run_scripts/CycleCloud_HB120v3_lustre3_250/'
 #files   <- dir(sens.dir, pattern ='CTM_LOG_000.v533_gcc_2016_CONUS_480_24x20pe_lustre3_codemod_pin_precision_20151222')
 files   <- dir(sens.dir, pattern ='run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.lustre3.codemod.pin.precision.log')
 #b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.480.24x20pe.2day.cyclecloud.lustre3.codemod.pin.log')
