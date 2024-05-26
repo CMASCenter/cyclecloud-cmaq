@@ -91,7 +91,7 @@ for( comp in Compilers) {
    xmax <- dim(bar.data)[2]*1.2
    png(file = paste('lustre_combined_250_150_1-6nodes_',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing on lustre-250 and lustre-150 using 1-6 nodes with 96 cores/node on HB120v3 with pinning',names.arg = b.names,ylab='seconds',xlab='Cores,Filesystem(lustre-250,lustre-150)',col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
+   barplot(bar.data, main = 'Process Timing on Filesystems (Left-lustre-250, Right-lustre-150) using 1-6 nodes with 96 cores/node on HB120v3 with pinning',names.arg = b.names,ylab='seconds',xlab='Cores,Filesystem(lustre-250,lustre-150)',col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
        # Add abline
          abline(v=c(7.3) , col="grey")
    box()
