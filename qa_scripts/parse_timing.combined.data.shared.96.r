@@ -87,7 +87,7 @@ for( comp in Compilers) {
    my.colors <- brewer.pal(12, "Paired")
    #my.colors <- terrain.colors(length(n.proc))
    xmax <- dim(bar.data)[2]*1.2
-   png(file = paste('hb120v3_data_1-6nodes_',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
+   png(file = paste('hb120v3_combined_data_shared_1-6nodes_',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
    barplot(bar.data, main = 'Process Timing on Filesystems (Left-data,Right-shared) using 1-6 nodes with 96 cpus/node on HB120v3 with pinning',names.arg = b.names,ylab='seconds', xlab="Cores,Filesystem(data,shared)", col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
       # Add abline
