@@ -10,11 +10,11 @@ library(stringr)
 sens.dir  <- '/proj/ie/proj/CMAS/CMAQ/cyclecloud-cmaq/run_scripts/storage_logs/'
 base.dir  <- '/proj/ie/proj/CMAS/CMAQ/pcluster-cmaq/run_scripts/hpc6a_ebs_fsx/'
 s.files <- c('run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.shared.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.data.codemod.pin.log','run_cctmv5.3.3_Bench_2016_12US2.96.12x8pe.2day.cyclecloud.lustre3.codemod.pin.log','run_cctm_2016_12US2.96pe.1x96.cyclecloud.nvme.pin.log')
-b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.hpc6a.48xlarge.96.1x96.12x8pe.2day.pcluster.shared.pin.codemod_liz.writevar.log','run_cctmv5.3.3_Bench_2016_12US2.hpc6a.48xlarge.96.1x96.12x8pe.2day.pcluster.shared.pin.codemod_liz.writevar.log','run_cctmv5.3.3_Bench_2016_12US2.hpc6a.48xlarge.96.1x96.12x8pe.2day.pcluster.fsx.pin.codemod_liz.writevar.log','run_cctmv5.3.3_Bench_2016_12US2.hpc6a.48xlarge.96.1x96.12x8pe.2day.pcluster.fsx.pin.codemod_liz.writevar.log')
+b.files <- c('run_cctmv5.3.3_Bench_2016_12US2.hpc6a.48xlarge.96.1x96.12x8pe.2day.pcluster.shared.pin.codemod_liz.writevar.log', 'run_cctmv5.3.3_Bench_2016_12US2.hpc6a.48xlarge.96.1x96.12x8pe.2day.pcluster.fsx.pin.codemod_liz.writevar.log')
 Compilers <- c('gcc')
 # name of the base case timing. I am using the current master branch from the CMAQ_Dev repository.
 # The project directory name is used for the sensitivity case.
-base.name <- c('shared-hpc6a','s-pin-hpc6a','lustre-hpc6a','l-pin-hpc6a')
+base.name <- c('shared-hpc6a','lustre-hpc6a')
 sens.name <- c('shared-hbv120','data-hbv120','lustre-hbv120','nvme-hbv120')
 
 
@@ -87,10 +87,15 @@ for( comp in Compilers) {
    # plot data
    my.colors <- brewer.pal(12, "Paired")
    #my.colors <- terrain.colors(length(n.proc))
-   xmax <- dim(bar.data)[2]*1.5
+   xmax <- dim(bar.data)[2]*1.34
    png(file = paste('hb120v3_1nodes_96pe_all_filesystem_',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing on all filesystems with 1 node, 96 cpus/node on HB120v3 with pinning',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
+   barplot(bar.data, main = 'Process Timing on all filesystems with 1 node, 96 cpus/node on HB120v3 and HPC6a',names.arg = b.names,ylab='seconds', xlab="Filesystem,Cluster(HBv120,HPC6a)", col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,6000.))
+      # Add abline
+      abline(v=c(4.9) , col="black", lwd=3, lty=2)
+      # Add text
+      text(x = 0, y = 5900, "CycleCloud") 
+      text(x= 5.3, y = 5900, "ParallelCluster")
    box()
    dev.off()
  

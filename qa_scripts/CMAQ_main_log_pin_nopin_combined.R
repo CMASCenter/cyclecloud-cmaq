@@ -84,10 +84,17 @@ for( comp in Compilers) {
    # plot data
    my.colors <- brewer.pal(12, "Paired")
    #my.colors <- terrain.colors(length(n.proc))
-   xmax <- dim(bar.data)[2]*1.5
+   xmax <- dim(bar.data)[2]*1.2
    png(file = paste('hb120v3_5nodes_576pe_',comp,'_all',sens.name,'_',base.name,'.png',sep=''), width = 1024, height = 768, bg='white')
   # png(file = paste(comp,'_',sens.name,'.png',sep=''), width = 1024, height = 768, bg='white')
-   barplot(bar.data, main = 'Process Timing on /shared and /lustre using 6 nodes with 96 cpus/node on HB120v3 and HPC6a without and with pinning',names.arg = b.names,ylab='seconds', col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,2500.))
+   barplot(bar.data, main = 'Process Timing on /shared and /lustre using 6 nodes with 96 cpus/node on HPC6a and HB120v3 without and with pinning',names.arg = b.names,ylab='seconds', xlab="Filesystem(shared,lustre),Pinning(nopin, pin),Cluster(HBv120,HPC6a)", col = my.colors, legend = n.proc.plot, xlim = c(0.,xmax),ylim = c(0.,3000.))
+   # Add abline
+   abline(v=c(2.5) , col="black", lwd=3, lty=2)
+   abline(v=c(4.9) , col="black", lwd=3, lty=2)
+         text(x = .5, y = 2900, "ParallelCluster shared")
+         text(x= 3.2, y = 2900, "ParallelCluster lustre")
+	 text(x=5.5, y= 2900, "CycleCloud lustre")
+
    box()
    dev.off()
  
