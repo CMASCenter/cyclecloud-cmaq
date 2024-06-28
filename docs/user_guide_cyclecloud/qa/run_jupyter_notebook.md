@@ -46,19 +46,29 @@ jupyter notebook
 
   ![Time Series Plot Comparison](../../../../qa_scripts/Timeseries_SO2_20171223_desid_4_1.png)
 
-6. Create Daily Average Plot of O3 and NO2.
+6. Create Plot of Daily Average of O3 and NO2.
+
+    a. Double Click on the cmaq_tutorial.ipynb
+
+    b. In each cell you can use the 'shift return' or 'shift enter' to run each cell
+
+    c. In the section "Set up your Inputs" you will use shift+enter, then enter the value, and then enter to submit the answer.
+
+    d. View the plots within the Jupyter Notebook in cells after the plots have been generated
+
+    e. Plot of Mean Ozone and NO2
 
 
-You will need to edit the path to the file, and the filenames.
-Output:
+![Mean_O3_20171222.png](../../../qa_scripts/workshop/Mean_O3_20171222.png)
 
-![Mean_O3_20171222.png](../../qa_scripts/workshop/Mean_O3_20171222.png)
+![Mean_NO2_20171222.png](../../../qa_scripts/workshop/Mean_NO2_20171222.png)
 
-![Mean_NO2_20171222.png](../../qa_scripts/workshop/Mean_NO2_20171222.png)
+7. Create Panel Plots of Average Difference for PM25_NO3
 
-### Use Jupyter Notebook to plot the averges, average differences difference and average percent differences
 
 This notebook produces a panel of plots per species where the top two plots are averages and then the bottom two are average differences and average percent differences
 
-![Average_Difference.png](../../qa_scripts/workshop/PM25_NO3_average_difference_between_CMAQv54_vs_DESID.png)
+![Average_Difference.png](../../../qa_scripts/workshop/PM25_NO3_average_difference_between_CMAQv54_vs_DESID.png)
+
+
 
