@@ -173,26 +173,4 @@ Box plot shows no difference between ACONC output for a CMAQv5.4 run using diffe
 
 <b><u>Spatial plots were not created by the script, as there were not differences between the output files.</u></b>
 
-## Jupyter Notebook
-
-### Use Jupyter Notebook to plot the daily average of O3 and NO2.
-
-```
-cd /shared/cyclecloud-cmaq/notebook
-juptyer notebook
-```
-
-You will need to edit the path to the file, and the filenames.
-Output:
-
-![Mean_O3_20171222.png](../../qa_plots/notebook/Mean_O3_20171222.png)
-
-![Mean_NO2_20171222.png](../../qa_plots/notebook/Mean_NO2_20171222.png)
-
-### Use Jupyter Notebook to plot the averges, average differences difference and average percent differences
-
-This notebook produces a panel of plots per species where the top two plots are averages and then the bottom two are average differences and average percent differences
-
-![Average_Difference.png](../../qa_plots/notebook/PM25_NO3_average_difference_between_CMAQv54_vs_DESID.png)
-
 
