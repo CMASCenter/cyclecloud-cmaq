@@ -171,7 +171,7 @@ Box Plot for ANO3J when -march=native compiler flag is removed
 Box plot shows no difference between ACONC output for a CMAQv5.4 run using different PE configurations as long as NPCOL is fixed (this is true for all species that were plotted (AOTHRJ, CO, NH3, NO2, O3, OH, SO2), or when not using march=native in the compiler flag
 
 
-Spatial plots were not created by the script, as there were not differences between the output files.
+<b><u>Spatial plots were not created by the script, as there were not differences between the output files.</u></b>
 
 ## Jupyter Notebook
 
