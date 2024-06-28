@@ -32,7 +32,7 @@ jupyter notebook
 
     e. Plot of Difference of SO2 Base minus SO2 DESID REDUCE CMAQ
 
- ![Difference Plot Comparison](../../../../qa_scripts/workshop/SO2_difference_between_Base_CMAQ_vs_DESID_PT_EGU_NY_reduction_on_12-22-2017.png)
+ ![Difference Plot Comparison](../../../qa_scripts/workshop/SO2_difference_between_Base_CMAQ_vs_DESID_PT_EGU_NY_reduction_on_12-22-2017.png)
 
 5. Create Timeseries Plot at Cell where PT_EGU emissions were reduced
 
@@ -44,7 +44,7 @@ jupyter notebook
 
     d. Plot comparing two time series, one for base case and one for DESID reduce case.
 
-  ![Time Series Plot Comparison](../../../../qa_scripts/Timeseries_SO2_20171223_desid_4_1.png)
+  ![Time Series Plot Comparison](../../../qa_scripts/Timeseries_SO2_20171223_desid_4_1.png)
 
 6. Create Plot of Daily Average of O3 and NO2.
 
