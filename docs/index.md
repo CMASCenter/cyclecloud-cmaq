@@ -3,12 +3,15 @@
 %   You can adapt this file completely to your liking, but it should at least
 %   contain the root `toctree` directive.
 
+## CMAQ on Azure Tutorial
+
 ```{warning}
 This documentation is under continuous development.
 Previous version is available here: <a href="https://cyclecloud-cmaq.readthedocs.io/en/cmaqv5.3.3/">CMAQv5.3.3 on Azure Tutorial</a>
 ```
 
-## CMAQ on Azure Tutorial
+## Community Multiscale Air Quality Model
+
 The Community Multiscale Air Quality (CMAQ) modeling system an active open-source development project of the U.S. EPA. The CMAQ system is a Linux-based suite of models that requires significant computational resources and specific system configurations to run. CMAQ combines current knowledge in atmospheric science and air quality modeling, multi-processor computing techniques, and an open-source framework to deliver fast, technically sound estimates of ozone, particulates, toxics and acid deposition. 
 
 * For additional background on CMAQ please visit the <a href="http://www.epa.gov/CMAQ">U.S. EPA CMAQ Website</a>.
