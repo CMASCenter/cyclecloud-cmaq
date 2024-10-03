@@ -3,13 +3,10 @@
 %   You can adapt this file completely to your liking, but it should at least
 %   contain the root `toctree` directive.
 
-## Warning
-
 ```{warning}
 This documentation is under continuous development.
 Previous version is available here: <a href="https://cyclecloud-cmaq.readthedocs.io/en/cmaqv5.3.3/">CMAQv5.3.3 on Azure Tutorial</a>
 ```
-
 
 ## CMAQ on Azure
 
