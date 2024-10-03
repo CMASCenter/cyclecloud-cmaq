@@ -9,12 +9,14 @@ Previous version is available here: <a href="https://cyclecloud-cmaq.readthedocs
 ```
 
 ## CMAQ on Azure
+The Community Multiscale Air Quality (CMAQ) modeling system an active open-source development project of the U.S. EPA. The CMAQ system is a Linux-based suite of models that requires significant computational resources and specific system configurations to run. CMAQ combines current knowledge in atmospheric science and air quality modeling, multi-processor computing techniques, and an open-source framework to deliver fast, technically sound estimates of ozone, particulates, toxics and acid deposition. 
+
+* For additional background on CMAQ please visit the <a href="http://www.epa.gov/CMAQ">U.S. EPA CMAQ Website</a>.
+* CMAQ is a community modeling effort that is supported by the <a href="http://www.cmascenter.org">Community Modeling and Analysis System (CMAS) Center</a> at the University of North Caroline at Chapel Hill.
+
+## Tutorial Overview
 
 This document provides tutorials and information on using Microsoft Azure Online Portal to create either a single Virtual Machine or a Cycle Cloud Cluster to run CMAQ. The tutorials are aimed at users with cloud computing experience that are already familiar with Azure.  For those with no cloud computing experience we recommend reviewing the Additional Resources listed in [chapter 15](user_guide_cyclecloud/help/index.md) of this document.
-
-
-
-## Format of this documentation
 
 This document provides three hands-on tutorials that are designed to be read in order.  The Introductory Tutorial will walk you through setting up an Azure Account and logging into the Azure Portal Website.  You will learn how to set up your Azure Resource ID, configure and create a demo virtual machine, and exit and delete the virtual machine and all of the resources associated with it by deleting resource group.  The Intermediate Tutorial steps you through running a CMAQ test case on a single Virtual Machine with instructions to install CMAQ, libraries, and input data.  The Advanced Tutorial explains how to create a CycleCloud (High Performance Cluster) for larger compute jobs and install CMAQ, requried libraries and input data.  The remaining sections provide instructions on post-processing CMAQ output, comparing output and runtimes from multiple simulations, and copying output from CycleCloud to an Amazon Web Services (AWS) Simple Storage Service (S3) bucket.
 
