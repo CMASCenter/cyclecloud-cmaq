@@ -26,7 +26,7 @@ This document provides three hands-on tutorials that are designed to be read in 
 ## GMD Paper
 
 Efstathiou, C. I., Adams, E., Coats, C. J., Zelt, R., Reed, M., McGee, J., Foley, K. M., Sidi, F. I., Wong, D. C., Fine, S., and Arunachalam, S.: Enabling high-performance cloud computing for the Community Multiscale Air Quality Model (CMAQ) version 5.3.3: performance evaluation and benefits for the user community, Geosci. Model Dev., 17, 7001–7027, <a href="https://doi.org/10.5194/gmd-17-7001-2024">https://doi.org/10.5194/gmd-17-7001-2024</a>, 2024. 
-<a href="https://gmd.copernicus.org/articles/17/7001/2024/gmd-17-7001-2024.pdf>Enabling high-performance cloud computing for the Community Multiscale Air Quality Model (CMAQ) version 5.3.3: performance evaluation and benefits for the user community</a>
+<a href="https://gmd.copernicus.org/articles/17/7001/2024/gmd-17-7001-2024.pdf>Enabling high-performance cloud computing for the Community Multiscale Air Quality Model (CMAQ) version 5.3.3: performance evaluation and benefits for the user community"</a>
 
 ## Azure Subscriptions 
 
